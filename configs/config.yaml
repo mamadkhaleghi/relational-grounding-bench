@@ -1,0 +1,25 @@
+paths:
+  coco_images_dir: data/raw/coco/train2014
+  refcoco_annotations_dir: data/raw/refcoco
+  visual_genome_dir: data/raw/visual_genome
+  processed_dir: data/processed
+  splits_dir: data/splits
+  results_dir: results
+  checkpoints_dir: checkpoints
+model:
+  base_model: Qwen/Qwen2.5-VL-3B-Instruct
+  load_in_4bit: true
+  max_image_long_edge: 640
+lora:
+  rank: 8
+  alpha: 16
+  target_modules: [q_proj, v_proj]
+  freeze_vision_tower: true
+training:
+  batch_size: 1
+  grad_accum_steps: 8
+  epochs: 3
+  learning_rate: 2e-4
+  seed: 42
+eval:
+  iou_threshold: 0.5
