@@ -69,13 +69,118 @@ The default model is configured in `configs/config.yaml` as `Qwen/Qwen2.5-VL-3B-
 
 ## Data Preparation
 
-Place local datasets at the paths expected by `configs/config.yaml`:
+Place local datasets at the paths expected by `configs/config.yaml`. The commands below use `curl`, `unzip`, and POSIX shell syntax from the repository root.
 
 | Source | Required local path | Files expected by the scripts |
 | --- | --- | --- |
 | RefCOCO / RefCOCO+ / RefCOCOg annotations | `data/raw/refcoco/<dataset>/` | one `refs(*).p` file and `instances.json` per dataset |
 | COCO train2014 images | `data/raw/coco/train2014/` | COCO image files referenced by the RefCOCO annotations |
 | Visual Genome | `data/raw/visual_genome/` | `relationships.json`, `objects.json`, `image_data.json` |
+
+### Download RefCOCO / RefCOCO+ / RefCOCOg Annotations
+
+The original `lichengunc/refer` API documents the RefCOCO-family downloads, but its README currently notes that the old UNC webserver may be unavailable and points users to the open download-link issue: <https://github.com/lichengunc/refer/issues/14>. Use the official links first; if they fail, download the same three archives from a mirror referenced in that issue and place/extract them into the same target paths.
+
+```bash
+mkdir -p data/raw/refcoco
+
+curl -L -o /tmp/refcoco.zip \
+  https://bvisionweb1.cs.unc.edu/licheng/referit/data/refcoco.zip
+curl -L -o /tmp/refcoco_plus.zip \
+  https://bvisionweb1.cs.unc.edu/licheng/referit/data/refcoco+.zip
+curl -L -o /tmp/refcocog.zip \
+  https://bvisionweb1.cs.unc.edu/licheng/referit/data/refcocog.zip
+
+unzip -q /tmp/refcoco.zip -d data/raw/refcoco
+unzip -q /tmp/refcoco_plus.zip -d data/raw/refcoco
+unzip -q /tmp/refcocog.zip -d data/raw/refcoco
+```
+
+After extraction, verify the expected layout:
+
+```bash
+find data/raw/refcoco -maxdepth 2 -type f | sort
+```
+
+The project expects these files:
+
+```text
+data/raw/refcoco/refcoco/instances.json
+data/raw/refcoco/refcoco/refs(unc).p
+data/raw/refcoco/refcoco+/instances.json
+data/raw/refcoco/refcoco+/refs(unc).p
+data/raw/refcoco/refcocog/instances.json
+data/raw/refcoco/refcocog/refs(umd).p
+```
+
+`data/prepare_refcoco.py` requires exactly one `refs(*).p` file per dataset directory. If `refcocog` extracts both Google and UMD split files, keep `refs(umd).p` in `data/raw/refcoco/refcocog/` and move the other `refs(*).p` file out of that directory before running the pipeline.
+
+### Download COCO train2014 Images
+
+```bash
+mkdir -p data/raw/coco
+
+curl -L -o data/raw/coco/train2014.zip \
+  http://images.cocodataset.org/zips/train2014.zip
+
+unzip -q data/raw/coco/train2014.zip -d data/raw/coco
+```
+
+Expected path after extraction:
+
+```text
+data/raw/coco/train2014/COCO_train2014_000000000009.jpg
+```
+
+### Download Visual Genome Metadata
+
+The relation joiner only needs Visual Genome metadata JSON files, not the Visual Genome image archives.
+
+```bash
+mkdir -p data/raw/visual_genome
+
+curl -L -o /tmp/vg_image_data.zip \
+  https://homes.cs.washington.edu/~ranjay/visualgenome/data/dataset/image_data.json.zip
+curl -L -o /tmp/vg_objects.zip \
+  https://homes.cs.washington.edu/~ranjay/visualgenome/data/dataset/objects_v1_2.json.zip
+curl -L -o /tmp/vg_relationships.zip \
+  https://homes.cs.washington.edu/~ranjay/visualgenome/data/dataset/relationships_v1_2.json.zip
+
+unzip -p /tmp/vg_image_data.zip \
+  "$(unzip -Z1 /tmp/vg_image_data.zip | grep 'image_data.*json$' | head -n 1)" \
+  > data/raw/visual_genome/image_data.json
+unzip -p /tmp/vg_objects.zip \
+  "$(unzip -Z1 /tmp/vg_objects.zip | grep 'objects.*json$' | head -n 1)" \
+  > data/raw/visual_genome/objects.json
+unzip -p /tmp/vg_relationships.zip \
+  "$(unzip -Z1 /tmp/vg_relationships.zip | grep 'relationships.*json$' | head -n 1)" \
+  > data/raw/visual_genome/relationships.json
+```
+
+If any Visual Genome extraction command fails, inspect the archive contents manually:
+
+```bash
+unzip -l /tmp/vg_image_data.zip
+unzip -l /tmp/vg_objects.zip
+unzip -l /tmp/vg_relationships.zip
+```
+
+Then extract the listed JSON name into the unversioned path expected by the repository.
+
+```bash
+unzip -p /tmp/vg_objects.zip <listed-objects-json-name> > data/raw/visual_genome/objects.json
+unzip -p /tmp/vg_relationships.zip <listed-relationships-json-name> > data/raw/visual_genome/relationships.json
+```
+
+Verify the three required Visual Genome files:
+
+```bash
+ls -lh data/raw/visual_genome/image_data.json \
+  data/raw/visual_genome/objects.json \
+  data/raw/visual_genome/relationships.json
+```
+
+### Run the Data Pipeline
 
 Prepare RefCOCO-family JSONL files:
 
@@ -149,7 +254,19 @@ data/splits/<dataset>_<split>_classification_log.csv
 
 ## Manual Classifier Validation
 
-Open `notebooks/validate_expression_split.ipynb` in Jupyter or VS Code with the `rgb` environment selected. Set `LOG_CSV_PATH` to the classification log under `data/splits/`, run the notebook cells, and write the balanced audit annotations to:
+Register the environment as a notebook kernel if needed:
+
+```bash
+python -m ipykernel install --user --name rgb --display-name "Python (rgb)"
+```
+
+Open `notebooks/validate_expression_split.ipynb` in Jupyter or VS Code with the `Python (rgb)` kernel selected. Set `LOG_CSV_PATH` in the first code cell to the split you want to audit, for example:
+
+```python
+LOG_CSV_PATH = Path("data/splits/refcoco_val_classification_log.csv")
+```
+
+Run the notebook cells, manually fill `human_correct` for the sampled rows, and save the balanced audit annotations to:
 
 ```text
 results/expression_classifier_audit.csv
@@ -161,7 +278,46 @@ The notebook samples the classifier log, records `human_correct`, and reports pe
 
 ## Running the Experiments
 
-The commands below use `refcoco` / `val` as the reporting split. Replace `--dataset`, `--split`, and `--subset` for other datasets or splits.
+The commands below use `refcoco` / `val` as the reporting split. Replace `--dataset`, `--split`, and `--subset` for other datasets or splits. Conditions A and B produce prediction JSONL files directly. Conditions C and D currently train LoRA adapters; scoring C/D requires prediction JSONL files with the schema documented below.
+
+### Full Run Order
+
+After data is downloaded, the intended run order is:
+
+```bash
+# 1. Prepare processed RefCOCO-family files and classified splits.
+make prepare-data
+make classify DATASET=refcoco SPLIT=val
+
+# 2. Perform the manual classifier audit in notebooks/validate_expression_split.ipynb,
+#    then paste the measured precision values into this README.
+
+# 3. Run condition A/B inference for both subsets.
+make baseline DATASET=refcoco SPLIT=val SUBSET=relational
+make baseline DATASET=refcoco SPLIT=val SUBSET=attribute
+make prompted DATASET=refcoco SPLIT=val SUBSET=relational
+make prompted DATASET=refcoco SPLIT=val SUBSET=attribute
+
+# 4. Train condition C/D adapters.
+make finetune DATASET=refcoco LORA_RANK=8
+make finetune-context DATASET=refcoco LORA_RANK=8
+
+# 5. Score A/B prediction JSONL files.
+make eval CONDITION=A DATASET=refcoco SPLIT=val SUBSET=relational
+make eval CONDITION=A DATASET=refcoco SPLIT=val SUBSET=attribute
+make eval CONDITION=B DATASET=refcoco SPLIT=val SUBSET=relational \
+  PREDICTIONS=results/predictions_condB_refcoco_val_relational_all.jsonl
+make eval CONDITION=B DATASET=refcoco SPLIT=val SUBSET=attribute \
+  PREDICTIONS=results/predictions_condB_refcoco_val_attribute_all.jsonl
+
+# 6. After C/D prediction JSONLs exist, score them with the explicit
+#    eval/compute_accuracy_iou.py commands below.
+
+# 7. Build README-ready tables.
+python eval/build_results_table.py --config configs/config.yaml
+```
+
+Use the explicit commands in the subsections below when you need exact filenames or ablation settings.
 
 ### Condition A: Zero-Shot Baseline
 
@@ -291,6 +447,8 @@ Use these target names for consistency with the evaluator and result-table build
 results/predictions_condC_refcoco_val_<subset>.jsonl
 results/predictions_condD_refcoco_val_<subset>_all.jsonl
 ```
+
+There is not yet a separate adapter-inference script in this repository. Until one is added, C/D training is reproducible from the commands above, while C/D evaluation can only be run after generating prediction JSONL files externally or adding an inference wrapper that loads the saved adapter from `checkpoints/`.
 
 ## Evaluation
 
