@@ -15,7 +15,8 @@ from data.classify_expressions import match_relational_cue
         ("lamp above the desk", "relational", "above"),
         ("the red shirt", "attribute", None),
         ("small striped umbrella", "attribute", None),
-        ("person with a blue backpack", "attribute", None),
+        ("person with a blue backpack", "relational", "with_object"),
+        ("man with a striped shirt", "attribute", None),
     ],
 )
 def test_match_relational_cue(expression, expected_label, expected_cue):
