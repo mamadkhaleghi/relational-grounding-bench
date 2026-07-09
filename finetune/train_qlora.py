@@ -5,19 +5,16 @@ from __future__ import annotations
 import argparse
 import csv
 import json
-import sys
 import time
-from pathlib import Path
 from typing import Any
 
 import torch
 from PIL import Image
 from torch.utils.data import Dataset
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
-if str(REPO_ROOT) not in sys.path:
-    sys.path.insert(0, str(REPO_ROOT))
-
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from common.utils import load_config, resize_long_edge, set_seed, setup_logger  # noqa: E402
 from prompting.vlm_utils import build_prompt, load_vlm  # noqa: E402
 

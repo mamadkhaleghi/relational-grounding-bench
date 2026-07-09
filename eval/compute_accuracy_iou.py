@@ -6,14 +6,11 @@ import argparse
 import csv
 import json
 import re
-import sys
-from pathlib import Path
 from typing import Any
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
-if str(REPO_ROOT) not in sys.path:
-    sys.path.insert(0, str(REPO_ROOT))
-
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from common.utils import compute_iou, load_config  # noqa: E402
 
 TABLE_COLUMNS = [
