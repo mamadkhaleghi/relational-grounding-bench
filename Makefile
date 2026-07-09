@@ -34,7 +34,7 @@ prepare-data:
 		done; \
 	done; \
 	for split in $(REFCOCOG_SPLITS); do \
-		$(PYTHON) data/prepare_refcoco.py --config $(CONFIG) --dataset refcocog --split $$split; \
+		$(PYTHON) data/prepare_refcoco.py --config $(CONFIG) --dataset refcocog --split $$split --split_by umd; \
 	done; \
 	$(PYTHON) data/join_visual_genome.py --config $(CONFIG)
 

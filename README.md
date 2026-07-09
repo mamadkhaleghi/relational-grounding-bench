@@ -79,7 +79,7 @@ Place local datasets at the paths expected by `configs/config.yaml`. The command
 
 ### Download RefCOCO / RefCOCO+ / RefCOCOg Annotations
 
-The original `lichengunc/refer` API documents the RefCOCO-family downloads, but its README currently notes that the old UNC webserver may be unavailable and points users to the open download-link issue: <https://github.com/lichengunc/refer/issues/14>. Use the official links first; if they fail, download the same three archives from a mirror referenced in that issue and place/extract them into the same target paths.
+The original UNC webserver (`bvisionweb1.cs.unc.edu`) has been down since 2022 ([tracked here](https://github.com/lichengunc/refer/issues/14)). The commands below use a Wayback Machine snapshot of the same three archives instead.
 
 ```bash
 mkdir -p data/raw/refcoco
@@ -113,10 +113,11 @@ data/raw/refcoco/refcoco/refs(unc).p
 data/raw/refcoco/refcoco+/instances.json
 data/raw/refcoco/refcoco+/refs(unc).p
 data/raw/refcoco/refcocog/instances.json
+data/raw/refcoco/refcocog/refs(google).p
 data/raw/refcoco/refcocog/refs(umd).p
 ```
 
-`data/prepare_refcoco.py` requires exactly one `refs(*).p` file per dataset directory. If `refcocog` extracts both Google and UMD split files, keep `refs(umd).p` in `data/raw/refcoco/refcocog/` and move the other `refs(*).p` file out of that directory before running the pipeline.
+Both `refcocog` files are kept in place; `data/prepare_refcoco.py`'s `--split_by {umd,google}` flag (default: `umd`) selects between them explicitly, so no file moving is needed.
 
 ### Download COCO train2014 Images
 
@@ -201,9 +202,14 @@ for split in train val; do
   python data/prepare_refcoco.py \
     --config configs/config.yaml \
     --dataset refcocog \
-    --split "$split"
+    --split "$split" \
+    --split_by umd
 done
 ```
+
+RefCOCOg ships two split protocols in the same annotation folder (`refs(umd).p` and
+`refs(google).p`); `--split_by umd` selects the standard protocol with full train/val/test
+coverage used across the referring-expression literature.
 
 Expected outputs:
 
@@ -212,6 +218,14 @@ data/processed/refcoco_<split>.jsonl
 data/processed/refcoco+_<split>.jsonl
 data/processed/refcocog_<split>.jsonl
 ```
+
+Verified row counts (expression rows written, 0 failed resolves):
+
+| Dataset | train | val | testA | testB |
+| --- | ---: | ---: | ---: | ---: |
+| refcoco | 120624 | 10834 | 5657 | 5095 |
+| refcoco+ | 120191 | 10758 | 5726 | 4889 |
+| refcocog (umd) | 80512 | 4896 | - | - |
 
 Join Visual Genome relation triplets by COCO id:
 
