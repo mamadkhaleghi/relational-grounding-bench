@@ -319,7 +319,17 @@ make prompted DATASET=refcoco SPLIT=val SUBSET=attribute
 make finetune DATASET=refcoco LORA_RANK=8
 make finetune-context DATASET=refcoco LORA_RANK=8
 
-# 5. Score A/B prediction JSONL files.
+# 5. Run condition C/D adapter inference for both subsets.
+make finetuned-infer CONDITION=C DATASET=refcoco SPLIT=val SUBSET=relational \
+  ADAPTER_DIR=checkpoints/qlora_r8
+make finetuned-infer CONDITION=C DATASET=refcoco SPLIT=val SUBSET=attribute \
+  ADAPTER_DIR=checkpoints/qlora_r8
+make finetuned-infer CONDITION=D DATASET=refcoco SPLIT=val SUBSET=relational \
+  ADAPTER_DIR=checkpoints/qlora_context_r8
+make finetuned-infer CONDITION=D DATASET=refcoco SPLIT=val SUBSET=attribute \
+  ADAPTER_DIR=checkpoints/qlora_context_r8
+
+# 6. Score A/B prediction JSONL files.
 make eval CONDITION=A DATASET=refcoco SPLIT=val SUBSET=relational
 make eval CONDITION=A DATASET=refcoco SPLIT=val SUBSET=attribute
 make eval CONDITION=B DATASET=refcoco SPLIT=val SUBSET=relational \
@@ -327,10 +337,10 @@ make eval CONDITION=B DATASET=refcoco SPLIT=val SUBSET=relational \
 make eval CONDITION=B DATASET=refcoco SPLIT=val SUBSET=attribute \
   PREDICTIONS=results/predictions_condB_refcoco_val_attribute_all.jsonl
 
-# 6. After C/D prediction JSONLs exist, score them with the explicit
+# 7. After C/D prediction JSONLs exist, score them with the explicit
 #    eval/compute_accuracy_iou.py commands below.
 
-# 7. Build README-ready tables.
+# 8. Build README-ready tables.
 python eval/build_results_table.py --config configs/config.yaml
 ```
 
@@ -439,6 +449,33 @@ python finetune/train_qlora.py \
   --output_dir checkpoints/qlora_r8_unfrozen
 ```
 
+Run inference with the default rank-8 adapter:
+
+```bash
+python prompting/finetuned_inference.py \
+  --config configs/config.yaml \
+  --dataset refcoco \
+  --split val \
+  --subset relational \
+  --adapter_dir checkpoints/qlora_r8 \
+  --condition C
+
+python prompting/finetuned_inference.py \
+  --config configs/config.yaml \
+  --dataset refcoco \
+  --split val \
+  --subset attribute \
+  --adapter_dir checkpoints/qlora_r8 \
+  --condition C
+```
+
+Default outputs:
+
+```text
+results/predictions_condC_refcoco_val_relational.jsonl
+results/predictions_condC_refcoco_val_attribute.jsonl
+```
+
 The training script appends run metadata to `results/finetune_run_log.csv` and saves adapters under `checkpoints/`.
 
 ### Condition D: QLoRA Fine-Tuning With Relation Context
@@ -450,6 +487,33 @@ python finetune/train_qlora_with_context.py \
   --split train \
   --lora_rank 8 \
   --output_dir checkpoints/qlora_context_r8
+```
+
+Run inference with the default rank-8 context adapter:
+
+```bash
+python prompting/finetuned_inference.py \
+  --config configs/config.yaml \
+  --dataset refcoco \
+  --split val \
+  --subset relational \
+  --adapter_dir checkpoints/qlora_context_r8 \
+  --condition D
+
+python prompting/finetuned_inference.py \
+  --config configs/config.yaml \
+  --dataset refcoco \
+  --split val \
+  --subset attribute \
+  --adapter_dir checkpoints/qlora_context_r8 \
+  --condition D
+```
+
+Default outputs:
+
+```text
+results/predictions_condD_refcoco_val_relational_all.jsonl
+results/predictions_condD_refcoco_val_attribute_all.jsonl
 ```
 
 Condition C/D evaluation is prediction-file based. Adapter inference outputs should follow the same JSONL contract as conditions A/B:
@@ -464,8 +528,6 @@ Use these target names for consistency with the evaluator and result-table build
 results/predictions_condC_refcoco_val_<subset>.jsonl
 results/predictions_condD_refcoco_val_<subset>_all.jsonl
 ```
-
-There is not yet a separate adapter-inference script in this repository. Until one is added, C/D training is reproducible from the commands above, while C/D evaluation can only be run after generating prediction JSONL files externally or adding an inference wrapper that loads the saved adapter from `checkpoints/`.
 
 ## Evaluation
 
