@@ -13,7 +13,8 @@ env/
 .mypy_cache/
 .ipynb_checkpoints/
 data/raw/
-data/
+data/splits/
+data/processed/
 checkpoints/
 results/*.png
 wandb/

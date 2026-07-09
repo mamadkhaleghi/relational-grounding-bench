@@ -1,10 +1,17 @@
-"""Classify prepared RefCOCO expressions as relational or attribute."""
+"""Classify prepared RefCOCO expressions as relational or attribute.
+
+This version is stricter than the original classifier:
+- It avoids treating every spaCy prepositional dependency as relational.
+  This prevents common false positives such as "man in red", "bowl of soup",
+  and "guy with black shirt".
+"""
 
 from __future__ import annotations
 
 import argparse
 import csv
 import json
+import re
 from functools import lru_cache
 
 import sys
@@ -18,22 +25,130 @@ VALID_SPLITS = {
     "refcoco+": {"train", "val", "testA", "testB"},
     "refcocog": {"train", "val"},
 }
-RELATIONAL_CUES = [
+
+# A cue must relate to a second, distinct object, matching Visual Genome's
+# subject-predicate-object triplets; frame-only positions fall through to "attribute".
+RELATIONAL_PHRASE_CUES = [
     "left of",
     "right of",
     "next to",
     "near",
+    "beside",
     "behind",
     "in front of",
-    "on",
-    "under",
-    "holding",
-    "riding",
+    "front of",
     "above",
     "below",
+    "under",
+    "beneath",
+    "over",
     "between",
     "touching",
+    "holding",
+    "carrying",
+    "riding",
+    "throwing to",
+    "throwing at",
+    "sitting on",
+    "standing on",
+    "lying on",
+    "on top of",
 ]
+
+# Verbs that generally express interaction between entities.
+RELATIONAL_VERBS = {
+    "touch",
+    "hold",
+    "carry",
+    "ride",
+    "throw",
+    "pull",
+    "push",
+    "grab",
+    "hug",
+    "kiss",
+    "feed",
+    "eat",
+    "drink",
+    "hit",
+    "kick",
+    "catch",
+    "look",
+    "watch",
+    "point",
+}
+
+# Prepositions that usually encode spatial relations. We intentionally do not
+# include broad prepositions such as "in", "with", or "of" here, because they
+# caused many false positives: "man in red", "bowl of soup", etc.
+SPATIAL_ADPOSITIONS = {
+    "on",
+    "under",
+    "below",
+    "above",
+    "beneath",
+    "over",
+    "between",
+    "behind",
+    "beside",
+    "near",
+    "next",
+    "around",
+}
+
+# Nouns that usually make "with X" an attribute/clothing description, not a
+# true relation. Example: "guy with black shirt and dark jeans".
+ATTIRE_OR_BODY_NOUNS = {
+    "shirt",
+    "tshirt",
+    "t-shirt",
+    "tee",
+    "jeans",
+    "pants",
+    "shorts",
+    "dress",
+    "jacket",
+    "coat",
+    "sweater",
+    "hoodie",
+    "hat",
+    "cap",
+    "helmet",
+    "glasses",
+    "sunglasses",
+    "hair",
+    "beard",
+    "mustache",
+    "moustache",
+    "face",
+    "head",
+    "back",
+    "arm",
+    "leg",
+    "hand",
+    "shoe",
+    "shoes",
+}
+
+# Nouns that usually make "with X" a real object association.
+ASSOCIATED_OBJECT_NOUNS = {
+    "bag",
+    "backpack",
+    "purse",
+    "laptop",
+    "umbrella",
+    "phone",
+    "cellphone",
+    "camera",
+    "ball",
+    "bat",
+    "racket",
+    "stick",
+    "bottle",
+    "cup",
+    "plate",
+    "kite",
+}
 
 
 class InputFileError(Exception):
@@ -120,15 +235,51 @@ def safe_int(value) -> int | None:
 
 
 def normalize_expression(expression: str) -> str:
-    return " ".join(expression.casefold().split())
+    normalized = expression.casefold()
+    normalized = re.sub(r"[^a-z0-9+\- ]+", " ", normalized)
+    normalized = re.sub(r"\s+", " ", normalized).strip()
+    return normalized
+
+
+def tokenize_expression(expression: str) -> list[str]:
+    return normalize_expression(expression).split()
+
+
+def contains_phrase(normalized: str, phrase: str) -> bool:
+    return re.search(rf"(?<!\w){re.escape(phrase)}(?!\w)", normalized) is not None
+
+
+def match_with_object_relation(expression: str) -> str | None:
+    """Handle useful 'with X' cases without over-labeling clothing attributes."""
+    tokens = tokenize_expression(expression)
+    if "with" not in tokens:
+        return None
+
+    with_index = tokens.index("with")
+    after_with = tokens[with_index + 1 :]
+    if not after_with:
+        return None
+
+    if any(noun in after_with for noun in ASSOCIATED_OBJECT_NOUNS):
+        return "with_object"
+
+    if any(noun in after_with for noun in ATTIRE_OR_BODY_NOUNS):
+        return None
+
+    return None
 
 
 def match_relational_cue(expression: str) -> str | None:
     normalized = normalize_expression(expression)
-    padded = f" {normalized} "
-    for cue in sorted(RELATIONAL_CUES, key=len, reverse=True):
-        if f" {cue} " in padded:
+
+    for cue in sorted(RELATIONAL_PHRASE_CUES, key=len, reverse=True):
+        if contains_phrase(normalized, cue):
             return cue
+
+    with_object_cue = match_with_object_relation(expression)
+    if with_object_cue is not None:
+        return with_object_cue
+
     return None
 
 
@@ -205,7 +356,28 @@ def dependency_path_tokens(token_a, token_b):
     return upward + downward
 
 
+def token_text_or_lemma(token) -> set[str]:
+    return {token.text.casefold(), token.lemma_.casefold()}
+
+
+def is_relational_token(token) -> bool:
+    forms = token_text_or_lemma(token)
+    if token.pos_ in {"VERB", "AUX"} and forms & RELATIONAL_VERBS:
+        return True
+    if (token.dep_ == "prep" or token.pos_ == "ADP") and forms & SPATIAL_ADPOSITIONS:
+        return True
+    return False
+
+
 def has_relational_dependency(expression: str) -> bool:
+    """Conservative spaCy fallback.
+
+    The original fallback returned relational for almost any prepositional or
+    verbal connection between noun chunks. That caught true relations, but it
+    also mislabeled many attributes such as "man in red", "bowl of soup", and
+    "guy with black shirt". This version only accepts known spatial adpositions
+    or known interaction verbs.
+    """
     nlp = load_spacy_model()
     doc = nlp(expression)
     noun_chunks = list(doc.noun_chunks)
@@ -225,16 +397,12 @@ def has_relational_dependency(expression: str) -> bool:
             continue
 
         interior = path[1:-1]
-        if any(token.dep_ == "prep" or token.pos_ == "ADP" for token in interior):
-            return True
-        if any(token.pos_ in {"VERB", "AUX"} for token in interior):
+        if any(is_relational_token(token) for token in interior):
             return True
 
         ancestor = other_chunk.root
         while ancestor != ancestor.head and ancestor != root_chunk.root:
-            if ancestor.dep_ == "prep" or ancestor.pos_ == "ADP":
-                return True
-            if ancestor.pos_ in {"VERB", "AUX"}:
+            if is_relational_token(ancestor):
                 return True
             ancestor = ancestor.head
 
@@ -246,7 +414,7 @@ def classify_expression(expression: str) -> tuple[str, str]:
     if matched_cue is not None:
         return "relational", matched_cue
     if has_relational_dependency(expression):
-        return "relational", "spacy_dependency"
+        return "relational", "spacy_dependency_conservative"
     return "attribute", ""
 
 
