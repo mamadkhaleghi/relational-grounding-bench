@@ -40,6 +40,12 @@ def parse_args() -> argparse.Namespace:
         help="Dataset split to export.",
     )
     parser.add_argument(
+        "--split_by",
+        choices=["umd", "google"],
+        default="umd",
+        help="RefCOCOg split protocol to use.",
+    )
+    parser.add_argument(
         "--config",
         default="configs/config.yaml",
         help="Path to the repository config YAML.",
@@ -81,19 +87,9 @@ def require_config_path(config: dict, key: str) -> Path:
     return resolve_repo_path(value)
 
 
-def find_refs_pickle(dataset_dir: Path) -> Path:
-    matches = sorted(dataset_dir.glob("refs(*).p"))
-    if not matches:
-        raise InputFileError(
-            f"Missing required refs pickle: expected a file matching "
-            f"'{dataset_dir / 'refs(*).p'}'. Download or place it there and rerun."
-        )
-    if len(matches) > 1:
-        raise InputFileError(
-            f"Expected exactly one refs pickle in '{dataset_dir}', found {len(matches)}: "
-            f"{', '.join(path.name for path in matches)}. Keep the intended file only and rerun."
-        )
-    return matches[0]
+def find_refs_pickle(dataset_dir: Path, dataset: str, split_by: str) -> Path:
+    protocol = split_by if dataset == "refcocog" else "unc"
+    return dataset_dir / f"refs({protocol}).p"
 
 
 def load_refs(path: Path):
@@ -134,7 +130,9 @@ def safe_int(value) -> int | None:
         return None
 
 
-def export_split(dataset: str, split: str, config_path_str: str) -> int:
+def export_split(
+    dataset: str, split: str, config_path_str: str, split_by: str = "umd"
+) -> int:
     if split not in VALID_SPLITS[dataset]:
         LOGGER.warning(
             "Split '%s' is not available for dataset '%s'; skipping without writing an output file.",
@@ -148,7 +146,7 @@ def export_split(dataset: str, split: str, config_path_str: str) -> int:
     coco_images_dir = require_config_path(config, "coco_images_dir")
     processed_dir = require_config_path(config, "processed_dir")
 
-    refs_path = ensure_file(find_refs_pickle(dataset_dir), "refs pickle")
+    refs_path = ensure_file(find_refs_pickle(dataset_dir, dataset, split_by), "refs pickle")
     instances_path = ensure_file(dataset_dir / "instances.json", "instances annotation file")
 
     refs = load_refs(refs_path)
@@ -191,7 +189,7 @@ def export_split(dataset: str, split: str, config_path_str: str) -> int:
             ann_id_int = safe_int(ann_id)
             image_id_int = safe_int(ref.get("image_id"))
             annotation = annotations_by_id.get(ann_id_int) if ann_id_int is not None else None
-            file_name = ref.get("file_name") or images_by_id.get(image_id_int)
+            file_name = images_by_id.get(image_id_int)
             coco_id = parse_coco_id(file_name) if isinstance(file_name, str) else None
             image_path = coco_images_dir / file_name if isinstance(file_name, str) else None
 
@@ -261,7 +259,7 @@ def export_split(dataset: str, split: str, config_path_str: str) -> int:
 
 def main() -> int:
     args = parse_args()
-    return export_split(args.dataset, args.split, args.config)
+    return export_split(args.dataset, args.split, args.config, args.split_by)
 
 
 if __name__ == "__main__":
