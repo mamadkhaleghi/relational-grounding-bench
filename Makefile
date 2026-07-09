@@ -1,4 +1,4 @@
-.PHONY: env prepare-data classify baseline prompted finetune finetune-context eval results test lint
+.PHONY: env prepare-data classify baseline prompted finetune finetune-context finetuned-infer eval results test lint
 
 PYTHON ?= python
 CONFIG ?= configs/config.yaml
@@ -17,6 +17,7 @@ LORA_RANK ?= 8
 FINETUNE_OUTPUT_DIR ?= checkpoints/qlora_r$(LORA_RANK)
 FINETUNE_CONTEXT_OUTPUT_DIR ?= checkpoints/qlora_context_r$(LORA_RANK)
 CONDITION ?= A
+ADAPTER_DIR ?= $(if $(filter D,$(CONDITION)),$(FINETUNE_CONTEXT_OUTPUT_DIR),$(FINETUNE_OUTPUT_DIR))
 PREDICTIONS ?= results/predictions_cond$(CONDITION)_$(DATASET)_$(SPLIT)_$(SUBSET).jsonl
 GROUND_TRUTH ?= data/processed/$(DATASET)_$(SPLIT).jsonl
 SUBSET_FILE ?= data/splits/$(DATASET)_$(SPLIT)_$(SUBSET).jsonl
@@ -52,6 +53,9 @@ finetune:
 
 finetune-context:
 	$(PYTHON) finetune/train_qlora_with_context.py --config $(CONFIG) --dataset $(DATASET) --split train --lora_rank $(LORA_RANK) --output_dir $(FINETUNE_CONTEXT_OUTPUT_DIR)
+
+finetuned-infer:
+	$(PYTHON) prompting/finetuned_inference.py --config $(CONFIG) --dataset $(DATASET) --split $(SPLIT) --subset $(SUBSET) --adapter_dir $(ADAPTER_DIR) --condition $(CONDITION) $(MAX_RELATIONS_ARG)
 
 eval:
 	$(PYTHON) eval/compute_accuracy_iou.py --config $(CONFIG) --predictions $(PREDICTIONS) --ground_truth $(GROUND_TRUTH) --subset_file $(SUBSET_FILE) --condition $(CONDITION) --dataset $(DATASET) --split $(SPLIT) --subset $(SUBSET)
