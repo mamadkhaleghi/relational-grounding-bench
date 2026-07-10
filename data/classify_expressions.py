@@ -159,6 +159,22 @@ ATTIRE_OR_BODY_NOUNS = {
     "shoes",
 }
 
+PERSON_NOUNS = {
+    "man",
+    "woman",
+    "guy",
+    "girl",
+    "boy",
+    "person",
+    "people",
+    "lady",
+    "kid",
+    "child",
+    "gentleman",
+    "gal",
+    "dude",
+}
+
 # Nouns that usually make "with X" a real object association.
 ASSOCIATED_OBJECT_NOUNS = {
     "bag",
@@ -446,15 +462,11 @@ def is_position_or_ordinal_root(token) -> bool:
     return bool(token_text_or_lemma(token) & (POSITION_WORDS | ORDINAL_WORDS))
 
 
-def is_relational_token(token, other_root=None) -> bool:
+def is_relational_token(token) -> bool:
     forms = token_text_or_lemma(token)
     if token.pos_ in {"VERB", "AUX"} and forms & RELATIONAL_VERBS:
         return True
     if (token.dep_ == "prep" or token.pos_ == "ADP") and forms & SPATIAL_ADPOSITIONS:
-        if "on" in forms:
-            return other_root is not None and not bool(
-                token_text_or_lemma(other_root) & ATTIRE_OR_BODY_NOUNS
-            )
         return True
     return False
 
@@ -478,6 +490,17 @@ def has_relational_dependency(expression: str) -> bool:
     if root_chunk is None:
         return False
 
+    def is_attire_worn_by_person(root_chunk, other_chunk) -> bool:
+        root_forms = token_text_or_lemma(root_chunk.root)
+        other_forms = token_text_or_lemma(other_chunk.root)
+        root_is_attire = bool(root_forms & ATTIRE_OR_BODY_NOUNS)
+        other_is_attire = bool(other_forms & ATTIRE_OR_BODY_NOUNS)
+        root_is_person = bool(root_forms & PERSON_NOUNS)
+        other_is_person = bool(other_forms & PERSON_NOUNS)
+        return (root_is_attire and other_is_person) or (
+            other_is_attire and root_is_person
+        )
+
     for other_chunk in noun_chunks:
         if other_chunk == root_chunk or spans_overlap(root_chunk, other_chunk):
             continue
@@ -489,14 +512,27 @@ def has_relational_dependency(expression: str) -> bool:
             continue
 
         interior = path[1:-1]
-        if any(is_relational_token(token, other_chunk.root) for token in interior):
-            return True
+        skip_candidate = False
+        for token in interior:
+            if is_relational_token(token):
+                if "on" in token_text_or_lemma(token) and is_attire_worn_by_person(
+                    root_chunk, other_chunk
+                ):
+                    skip_candidate = True
+                    break
+                return True
+        if skip_candidate:
+            continue
 
         if is_position_or_ordinal_root(other_chunk.root):
             continue
         ancestor = other_chunk.root
         while ancestor != ancestor.head and ancestor != root_chunk.root:
-            if is_relational_token(ancestor, other_chunk.root):
+            if is_relational_token(ancestor):
+                if "on" in token_text_or_lemma(ancestor) and is_attire_worn_by_person(
+                    root_chunk, other_chunk
+                ):
+                    break
                 return True
             ancestor = ancestor.head
 
