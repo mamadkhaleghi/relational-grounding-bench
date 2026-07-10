@@ -40,7 +40,8 @@ This repository tests a targeted question in referring-expression comprehension:
 |-- prompting/
 |   |-- vlm_utils.py
 |   |-- zero_shot_baseline.py
-|   `-- relation_prompted.py
+|   |-- relation_prompted.py
+|   `-- finetuned_inference.py
 |-- finetune/
 |   |-- train_qlora.py
 |   `-- train_qlora_with_context.py
@@ -199,7 +200,7 @@ for dataset in refcoco refcoco+; do
   done
 done
 
-for split in train val; do
+for split in train val test; do
   python data/prepare_refcoco.py \
     --config configs/config.yaml \
     --dataset refcocog \
@@ -212,21 +213,28 @@ RefCOCOg ships two split protocols in the same annotation folder (`refs(umd).p` 
 `refs(google).p`); `--split_by umd` selects the standard protocol with full train/val/test
 coverage used across the referring-expression literature.
 
+Explicit RefCOCOg UMD test command:
+
+```bash
+python data/prepare_refcoco.py --config configs/config.yaml --dataset refcocog --split test --split_by umd
+```
+
 Expected outputs:
 
 ```text
 data/processed/refcoco_<split>.jsonl
 data/processed/refcoco+_<split>.jsonl
 data/processed/refcocog_<split>.jsonl
+data/processed/refcocog_test.jsonl
 ```
 
 Verified row counts (expression rows written, 0 failed resolves):
 
-| Dataset | train | val | testA | testB |
-| --- | ---: | ---: | ---: | ---: |
-| refcoco | 120624 | 10834 | 5657 | 5095 |
-| refcoco+ | 120191 | 10758 | 5726 | 4889 |
-| refcocog (umd) | 80512 | 4896 | - | - |
+| Dataset | train | val | test | testA | testB |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| refcoco | 120624 | 10834 | - | 5657 | 5095 |
+| refcoco+ | 120191 | 10758 | - | 5726 | 4889 |
+| refcocog (umd) | 80512 | 4896 | 9602 | - | - |
 
 Join Visual Genome relation triplets by COCO id:
 
@@ -252,7 +260,7 @@ for dataset in refcoco refcoco+; do
   done
 done
 
-for split in train val; do
+for split in train val test; do
   python data/classify_expressions.py \
     --config configs/config.yaml \
     --dataset refcocog \
@@ -267,9 +275,40 @@ data/splits/<dataset>_<split>_relational.jsonl
 data/splits/<dataset>_<split>_positional.jsonl
 data/splits/<dataset>_<split>_attribute.jsonl
 data/splits/<dataset>_<split>_classification_log.csv
+data/splits/refcocog_test_relational.jsonl
+data/splits/refcocog_test_positional.jsonl
+data/splits/refcocog_test_attribute.jsonl
+data/splits/refcocog_test_classification_log.csv
 ```
 
-> **Coverage stats:** TODO - fill in after running `join_visual_genome.py`.
+> **Coverage stats:** VG-relation coverage by dataset/split.
+
+| Dataset | Split | Coverage | Matched / Total |
+|---|---:|---:|---:|
+| refcoco | train | 38.38% | 46294 / 120624 |
+| refcoco | val | 37.37% | 4049 / 10834 |
+| refcoco | testA | 36.31% | 2054 / 5657 |
+| refcoco | testB | 37.11% | 1891 / 5095 |
+| refcoco+ | train | 38.28% | 46010 / 120191 |
+| refcoco+ | val | 37.55% | 4040 / 10758 |
+| refcoco+ | testA | 36.81% | 2108 / 5726 |
+| refcoco+ | testB | 36.45% | 1782 / 4889 |
+| refcocog (umd) | train | 38.20% | 30758 / 80512 |
+| refcocog (umd) | val | 38.30% | 1875 / 4896 |
+| refcocog (umd) | test | 39.23% | 3767 / 9602 |
+
+### Classifier Validation History
+
+The expression classifier was refined through four audit rounds with measured precision for each active label. Round 2 showed that reducing false positives from the original broad spaCy fallback exposed a hidden false-negative problem: frame-position language such as "right bear" and "left man" did not fit either original category. That evidence motivated the 3-way split in round 3, and round 4 closed the remaining audit-identified gaps around phrasal verbs, camera/frame references, and missing position-word forms.
+
+| Round | Change | attribute | positional | relational |
+|---|---|---:|---:|---:|
+| 1 | Original keyword classifier (2-way: relational/attribute) | 0.390 | n/a | 0.860 |
+| 2 | Stricter spaCy fallback + with/attire disambiguation (still 2-way) | 0.350 | n/a | 0.960 |
+| 3 | Introduced 3-way split (relational/positional/attribute) | ~0.84 | ~0.99 | ~0.91-0.93 |
+| 4 | Fixed phrasal-verb "over", viewer/frame references, leftmost/rightmost/front/back gaps | ~0.98-0.99 | ~0.99-1.00 | ~0.98-0.99 |
+
+This audit trail is part of the experimental methodology: category definitions were revised only when measured errors indicated a systematic semantic distinction that mattered for the relational-grounding comparison.
 
 ## Manual Classifier Validation
 
@@ -663,10 +702,10 @@ _TODO: paste table + one-sentence takeaway_
 ## Limitations
 
 - RefCOCO/Visual Genome overlap is not complete; exact retained coverage is TODO after running the VG join and expression classifier.
-- The rule-based plus spaCy expression classifier has measurable label noise; measured relational, positional, and attribute precision are TODO after the manual audit.
-- Visual Genome relation triplets cannot ground frame-position-only expressions, so those were split into their own `positional` category rather than left mixed into `attribute` or `relational`, a design decision empirically motivated by two rounds of manual audit.
+- The rule-based plus spaCy expression classifier has measurable label noise; audit precision is documented above and should be rechecked whenever classifier rules or dataset coverage change.
+- Visual Genome relation triplets cannot ground frame-position-only expressions, so those were split into their own `positional` category rather than left mixed into `attribute` or `relational`, a design decision empirically motivated by successive manual audits.
 - Oracle relation prompting is an upper bound, not a deployable setting, because it assumes ground-truth Visual Genome relations are available at inference time.
-- The current repository trains LoRA adapters and evaluates prediction JSONL files; adapter inference for conditions C/D must emit the documented prediction schema before those rows can be scored.
+- Conditions C/D should be scored from adapter-inference JSONL files emitted with the documented prediction schema.
 
 ## Relation to Prior Work
 
@@ -675,6 +714,8 @@ This project continues GraPLUS (Khaleghi et al., CVIU 2025), where scene-graph s
 ## Hardware Notes
 
 The intended workstation profile is 8 GB VRAM and 16 GB RAM.
+
+Peak VRAM for QLoRA fine-tuning has not yet been empirically confirmed on this exact 8GB card; `finetune/train_qlora.py` logs peak CUDA memory to `results/finetune_run_log.csv`, so this will be verified directly once conditions C/D are run, rather than assumed.
 
 | Component | Hardware implication |
 | --- | --- |
