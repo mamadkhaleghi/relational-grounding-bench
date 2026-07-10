@@ -472,6 +472,40 @@ python prompting/relation_prompted.py \
   --max_relations 5
 ```
 
+### Smoke Tests and Proxy Troubleshooting
+
+Conditions A and B accept `--limit_samples N` for deterministic smoke tests on the first `N`
+examples in the selected subset. Smoke-test outputs append `_smoketest` before `.jsonl`, so they
+cannot silently overwrite full-run predictions. For example:
+
+```bash
+python prompting/zero_shot_baseline.py \
+  --config configs/config.yaml \
+  --dataset refcoco \
+  --split val \
+  --subset relational \
+  --limit_samples 10
+```
+
+If Hugging Face model loading fails with `Unknown scheme for proxy URL URL('socks://...')`, the
+current shell has proxy environment variables that HTTPX cannot use. If a proxy is not required,
+disable those variables for only the smoke-test invocation:
+
+```bash
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    python prompting/zero_shot_baseline.py \
+      --config configs/config.yaml \
+      --dataset refcoco \
+      --split val \
+      --subset relational \
+      --limit_samples 10
+```
+
+This does not change the parent shell environment. If a SOCKS proxy is required, configure it
+with a supported `socks5://` URL and install HTTPX SOCKS support in the active environment.
+
 ### Condition C: QLoRA Fine-Tuning
 
 Train the default rank-8 adapter:
