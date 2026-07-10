@@ -1,6 +1,6 @@
 import pytest
 
-from data.classify_expressions import match_relational_cue
+from data.classify_expressions import classify_expression, match_relational_cue
 
 
 @pytest.mark.parametrize(
@@ -25,3 +25,23 @@ def test_match_relational_cue(expression, expected_label, expected_cue):
 
     assert label == expected_label
     assert matched_cue == expected_cue
+
+
+@pytest.mark.parametrize(
+    ("expression", "expected_label"),
+    [
+        ("the dog left of the chair", "relational"),
+        ("man holding a surfboard", "relational"),
+        ("top carrot in bag", "relational"),
+        ("blue jacket on woman", "attribute"),
+        ("right bear", "positional"),
+        ("left man", "positional"),
+        ("top sandwich", "positional"),
+        ("elephant on the right", "positional"),
+        ("second plane", "positional"),
+        ("the red shirt", "attribute"),
+        ("small striped umbrella", "attribute"),
+    ],
+)
+def test_classify_expression_three_way(expression, expected_label):
+    assert classify_expression(expression)[0] == expected_label
