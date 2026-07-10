@@ -494,21 +494,40 @@ def append_run_log(
     peak_mem_mb: float,
     train_seconds: float,
     output_dir: Path,
+    resumed_from: str | None,
 ) -> None:
     results_dir.mkdir(parents=True, exist_ok=True)
     log_path = results_dir / "finetune_run_log.csv"
     write_header = not log_path.exists() or log_path.stat().st_size == 0
+    fieldnames = [
+        "rank",
+        "freeze_vision_tower",
+        "peak_mem_mb",
+        "train_seconds",
+        "output_dir",
+        "resumed_from",
+    ]
+    legacy_fieldnames = fieldnames[:-1]
+
+    if not write_header:
+        with log_path.open(newline="", encoding="utf-8") as handle:
+            reader = csv.DictReader(handle)
+            existing_fieldnames = reader.fieldnames
+            legacy_rows = list(reader)
+        if existing_fieldnames == legacy_fieldnames:
+            migrated_path = log_path.with_suffix(f"{log_path.suffix}.tmp")
+            with migrated_path.open("w", newline="", encoding="utf-8") as handle:
+                writer = csv.DictWriter(handle, fieldnames=fieldnames)
+                writer.writeheader()
+                writer.writerows(legacy_rows)
+            migrated_path.replace(log_path)
+        elif existing_fieldnames != fieldnames:
+            raise InputFileError(
+                f"Unexpected columns in run log '{log_path}': {existing_fieldnames}."
+            )
+
     with log_path.open("a", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(
-            handle,
-            fieldnames=[
-                "rank",
-                "freeze_vision_tower",
-                "peak_mem_mb",
-                "train_seconds",
-                "output_dir",
-            ],
-        )
+        writer = csv.DictWriter(handle, fieldnames=fieldnames)
         if write_header:
             writer.writeheader()
         writer.writerow(
@@ -518,6 +537,7 @@ def append_run_log(
                 "peak_mem_mb": f"{peak_mem_mb:.2f}",
                 "train_seconds": f"{train_seconds:.2f}",
                 "output_dir": str(output_dir),
+                "resumed_from": resumed_from or "",
             }
         )
 
@@ -582,6 +602,7 @@ def run(
         peak_mem_mb,
         train_seconds,
         output_dir,
+        resume_checkpoint,
     )
     logger.info("Saved LoRA adapter to %s", output_dir)
     return 0
