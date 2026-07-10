@@ -588,7 +588,23 @@ results/predictions_condC_refcoco_val_positional.jsonl
 results/predictions_condC_refcoco_val_attribute.jsonl
 ```
 
-The training script appends run metadata to `results/finetune_run_log.csv` and saves adapters under `checkpoints/`.
+Both QLoRA training scripts save resumable Hugging Face Trainer checkpoints every 50 update steps by default. Use `--save_steps N` to change the interval and `--save_total_limit N` to cap retained checkpoints (default: 3). Checkpoints include optimizer and scheduler state; the final LoRA adapter is still saved directly in `--output_dir` after training completes.
+
+To resume a specific run, repeat the original command with the same stable `--output_dir` and add `--resume_from_checkpoint auto`:
+
+```bash
+python finetune/train_qlora.py \
+  --config configs/config.yaml \
+  --dataset refcoco \
+  --split train \
+  --lora_rank 8 \
+  --output_dir checkpoints/qlora_r8 \
+  --resume_from_checkpoint auto
+```
+
+`auto` selects the latest `checkpoint-<step>` directory under `--output_dir`, or starts fresh if none exists. To select one checkpoint explicitly, pass its path instead, for example `--resume_from_checkpoint checkpoints/qlora_r8/checkpoint-150`. Omitting `--resume_from_checkpoint` starts a fresh run. The scripts log the selected mode, resolved checkpoint path, and resume step when available.
+
+The training scripts append completed-run metadata to `results/finetune_run_log.csv` and save adapters under `checkpoints/`.
 
 ### Condition D: QLoRA Fine-Tuning With Relation Context
 

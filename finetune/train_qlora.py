@@ -14,7 +14,9 @@ from torch.utils.data import Dataset
 
 import sys
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO_ROOT))
 from common.utils import load_config, resize_long_edge, set_seed, setup_logger  # noqa: E402
 from prompting.vlm_utils import build_prompt, load_vlm  # noqa: E402
 
@@ -107,13 +109,44 @@ def parse_args(description: str | None = None) -> argparse.Namespace:
     parser.add_argument(
         "--output_dir",
         default=None,
-        help="Directory where the LoRA adapter is saved.",
+        help=(
+            "Stable directory for periodic checkpoints and the final LoRA adapter. "
+            "Reuse the same value when resuming a run."
+        ),
+    )
+    parser.add_argument(
+        "--save_steps",
+        type=int,
+        default=50,
+        help="Save a resumable Trainer checkpoint every N update steps (default: 50).",
+    )
+    parser.add_argument(
+        "--save_total_limit",
+        type=int,
+        default=3,
+        help="Keep at most this many Trainer checkpoints (default: 3).",
+    )
+    parser.add_argument(
+        "--resume_from_checkpoint",
+        nargs="?",
+        default=None,
+        const=None,
+        metavar="PATH|auto",
+        help=(
+            "Checkpoint directory to resume from, or 'auto' to use the latest "
+            "checkpoint in --output_dir. Omit this option (or provide it without "
+            "a value) to start fresh."
+        ),
     )
     args = parser.parse_args()
 
     rank = args.lora_rank if args.lora_rank is not None else default_rank
     if rank <= 0:
         parser.error("--lora_rank must be positive")
+    if args.save_steps <= 0:
+        parser.error("--save_steps must be positive")
+    if args.save_total_limit <= 0:
+        parser.error("--save_total_limit must be positive")
     if args.output_dir is None:
         args.output_dir = f"checkpoints/qlora_r{rank}"
     return args
@@ -385,13 +418,73 @@ def trainer_args(args: argparse.Namespace, config: dict, output_dir: Path):
         num_train_epochs=float(training_config.get("epochs", 1)),
         seed=int(training_config.get("seed", 42)),
         logging_steps=10,
-        save_strategy="no",
+        save_strategy="steps",
+        save_steps=args.save_steps,
+        save_total_limit=args.save_total_limit,
         report_to=[],
         remove_unused_columns=False,
         bf16=bf16,
         fp16=fp16,
         optim="paged_adamw_8bit" if torch.cuda.is_available() else "adamw_torch",
     )
+
+
+def checkpoint_step(checkpoint_path: Path) -> int | None:
+    trainer_state_path = checkpoint_path / "trainer_state.json"
+    try:
+        trainer_state = json.loads(trainer_state_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        trainer_state = {}
+    step = safe_int(trainer_state.get("global_step"))
+    if step is not None:
+        return step
+
+    prefix = "checkpoint-"
+    if checkpoint_path.name.startswith(prefix):
+        return safe_int(checkpoint_path.name.removeprefix(prefix))
+    return None
+
+
+def resolve_resume_checkpoint(
+    resume_from_checkpoint: str | None,
+    output_dir: Path,
+    logger=LOGGER,
+) -> str | None:
+    if resume_from_checkpoint is None:
+        logger.info("Checkpoint resume mode: fresh start")
+        return None
+
+    if resume_from_checkpoint == "auto":
+        from transformers.trainer_utils import get_last_checkpoint
+
+        resolved = get_last_checkpoint(str(output_dir))
+        if resolved is None:
+            logger.info(
+                "Checkpoint resume mode: auto; no checkpoint found in %s; "
+                "starting fresh",
+                output_dir,
+            )
+            return None
+        checkpoint_path = Path(resolved).resolve()
+        mode = "auto-detected"
+    else:
+        checkpoint_path = resolve_repo_path(resume_from_checkpoint).resolve()
+        if not checkpoint_path.is_dir():
+            raise InputFileError(
+                "Resume checkpoint directory does not exist: "
+                f"expected '{checkpoint_path}'."
+            )
+        mode = "explicit"
+
+    step = checkpoint_step(checkpoint_path)
+    step_text = f" at step {step}" if step is not None else ""
+    logger.info(
+        "Checkpoint resume mode: %s; resuming from %s%s",
+        mode,
+        checkpoint_path,
+        step_text,
+    )
+    return str(checkpoint_path)
 
 
 def append_run_log(
@@ -443,6 +536,11 @@ def run(
     results_dir = require_config_path(config, "results_dir")
     output_dir = resolve_repo_path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
+    resume_checkpoint = resolve_resume_checkpoint(
+        args.resume_from_checkpoint,
+        output_dir,
+        logger,
+    )
 
     train_dataset = dataset_builder(
         args,
@@ -468,7 +566,7 @@ def run(
     if torch.cuda.is_available():
         torch.cuda.reset_peak_memory_stats()
     started = time.perf_counter()
-    trainer.train()
+    trainer.train(resume_from_checkpoint=resume_checkpoint)
     train_seconds = time.perf_counter() - started
     peak_mem_mb = (
         torch.cuda.max_memory_allocated() / (1024**2)
