@@ -11,7 +11,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from common.utils import load_config  # noqa: E402
 
 CONDITIONS = ["A", "B", "C", "D"]
-SUBSETS = ["relational", "attribute"]
 
 
 class InputFileError(Exception):
@@ -85,7 +84,7 @@ def normalize_subset(value: str | None) -> str | None:
     if value is None:
         return None
     text = value.strip().lower()
-    return text if text in SUBSETS else None
+    return text or None
 
 
 def parse_float(value: str | None) -> float | None:
@@ -124,36 +123,47 @@ def accuracy_value(row: dict) -> float | None:
 
 def build_accuracy_table(rows: list[dict]) -> str:
     latest: dict[tuple[str, str], float | None] = {}
+    subsets: list[str] = []
     for row in rows:
         condition = normalize_condition(row.get("condition"))
         subset = normalize_subset(row.get("subset"))
         if condition is None or subset is None:
             continue
+        if subset not in subsets:
+            subsets.append(subset)
         latest[(condition, subset)] = accuracy_value(row)
 
     if not latest:
         return "_Accuracy results unavailable._"
 
+    columns = ["condition", *subsets, "gap", "gap_positional"]
     lines = [
-        "| condition | relational | attribute | gap |",
-        "| --- | ---: | ---: | ---: |",
+        "| " + " | ".join(columns) + " |",
+        "| " + " | ".join(["---", *(["---:"] * (len(columns) - 1))]) + " |",
     ]
     for condition in CONDITIONS:
         relational = latest.get((condition, "relational"))
         attribute = latest.get((condition, "attribute"))
+        positional = latest.get((condition, "positional"))
         gap = (
             attribute - relational
             if relational is not None and attribute is not None
             else None
         )
-        lines.append(
-            "| {condition} | {relational} | {attribute} | {gap} |".format(
-                condition=condition,
-                relational=format_metric(relational),
-                attribute=format_metric(attribute),
-                gap=format_metric(gap),
-            )
+        gap_positional = (
+            attribute - positional
+            if "positional" in subsets
+            and positional is not None
+            and attribute is not None
+            else None
         )
+        values = [
+            condition,
+            *(format_metric(latest.get((condition, subset))) for subset in subsets),
+            format_metric(gap),
+            format_metric(gap_positional),
+        ]
+        lines.append("| " + " | ".join(values) + " |")
     return "\n".join(lines)
 
 
