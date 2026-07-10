@@ -23,7 +23,7 @@ LOGGER = setup_logger("classify_expressions")
 VALID_SPLITS = {
     "refcoco": {"train", "val", "testA", "testB"},
     "refcoco+": {"train", "val", "testA", "testB"},
-    "refcocog": {"train", "val"},
+    "refcocog": {"train", "val", "test"},
 }
 
 POSITION_WORDS = {
@@ -45,6 +45,7 @@ POSITION_WORDS = {
     "back",
     "backmost",
     "foreground",
+    "forefront",
     "foregrounds",
     "background",
     "backgrounds",
@@ -288,7 +289,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--split",
         required=True,
-        choices=["train", "val", "testA", "testB"],
+        choices=["train", "val", "test", "testA", "testB"],
         help="Dataset split to classify.",
     )
     return parser.parse_args()
@@ -472,6 +473,9 @@ def match_positional_cue(expression: str) -> str | None:
         match = re.search(pattern, normalized)
         if match is not None:
             return match.group(0)
+
+    if contains_phrase(normalized, "out of view"):
+        return "out of view"
 
     for token in tokens:
         if token in POSITION_WORDS or token in ORDINAL_WORDS:

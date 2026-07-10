@@ -17,7 +17,7 @@ COCO_ID_PATTERN = re.compile(r"_(\d+)\.")
 VALID_SPLITS = {
     "refcoco": {"train", "val", "testA", "testB"},
     "refcoco+": {"train", "val", "testA", "testB"},
-    "refcocog": {"train", "val"},
+    "refcocog": {"train", "val", "test"},
 }
 
 
@@ -36,7 +36,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--split",
         required=True,
-        choices=["train", "val", "testA", "testB"],
+        choices=["train", "val", "test", "testA", "testB"],
         help="Dataset split to export.",
     )
     parser.add_argument(
