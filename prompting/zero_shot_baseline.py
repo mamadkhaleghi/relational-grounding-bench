@@ -23,7 +23,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--config", default="configs/config.yaml")
     parser.add_argument("--dataset", required=True)
     parser.add_argument("--split", required=True)
-    parser.add_argument("--subset", required=True, choices=["relational", "attribute"])
+    parser.add_argument("--subset", required=True, choices=["relational", "positional", "attribute"])
     parser.add_argument("--output", default=None)
     return parser.parse_args()
 

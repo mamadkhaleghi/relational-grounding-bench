@@ -30,7 +30,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--dataset", required=True)
     parser.add_argument("--split", required=True)
     parser.add_argument(
-        "--subset", required=True, choices=["relational", "attribute"]
+        "--subset", required=True, choices=["relational", "positional", "attribute"]
     )
     parser.add_argument("--adapter_dir", required=True)
     parser.add_argument("--condition", required=True, choices=["C", "D"])

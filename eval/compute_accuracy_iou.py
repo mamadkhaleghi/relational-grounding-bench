@@ -21,7 +21,7 @@ TABLE_COLUMNS = [
     "n_examples",
     "accuracy_at_iou50",
 ]
-SUBSETS = {"relational", "attribute"}
+SUBSETS = ["relational", "positional", "attribute"]
 
 
 class InputFileError(Exception):
@@ -49,7 +49,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--condition", default=None)
     parser.add_argument("--dataset", default=None)
     parser.add_argument("--split", default=None)
-    parser.add_argument("--subset", default=None, choices=sorted(SUBSETS))
+    parser.add_argument("--subset", default=None, choices=SUBSETS)
     return parser.parse_args()
 
 
