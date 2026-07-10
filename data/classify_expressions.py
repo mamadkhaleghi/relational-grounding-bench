@@ -28,14 +28,26 @@ VALID_SPLITS = {
 
 POSITION_WORDS = {
     "left",
+    "leftmost",
     "right",
+    "rightmost",
     "center",
     "centre",
     "middle",
     "top",
+    "topmost",
     "bottom",
+    "bottommost",
     "upper",
     "lower",
+    "front",
+    "frontmost",
+    "back",
+    "backmost",
+    "foreground",
+    "foregrounds",
+    "background",
+    "backgrounds",
     "closest",
     "nearest",
     "farthest",
@@ -83,6 +95,33 @@ RELATIONAL_PHRASE_CUES = [
     "lying on",
     "on top of",
 ]
+
+PHRASAL_OVER_VERBS = {
+    "bend",
+    "bending",
+    "bent",
+    "crouch",
+    "crouched",
+    "crouching",
+    "fall",
+    "fallen",
+    "falling",
+    "fell",
+    "hang",
+    "hanging",
+    "hunch",
+    "hunched",
+    "hunching",
+    "lean",
+    "leaned",
+    "leaning",
+    "stoop",
+    "stooped",
+    "stooping",
+    "tip",
+    "tipped",
+    "tipping",
+}
 
 # Verbs that generally express interaction between entities.
 RELATIONAL_VERBS = {
@@ -195,6 +234,39 @@ ASSOCIATED_OBJECT_NOUNS = {
     "kite",
 }
 
+FRAME_REFERENCE_NOUNS = {
+    "frame",
+    "image",
+    "photo",
+    "photograph",
+    "pic",
+    "picture",
+    "screen",
+}
+
+FRAME_REGION_NOUNS = {
+    "background",
+    "backgrounds",
+    "corner",
+    "edge",
+    "foreground",
+    "foregrounds",
+    "side",
+}
+
+VIEWER_REFERENCE_NOUNS = {
+    "camera",
+    "me",
+    "photographer",
+    "us",
+    "viewer",
+    "you",
+}
+
+FRAME_OR_VIEWER_NOUNS = (
+    FRAME_REFERENCE_NOUNS | FRAME_REGION_NOUNS | VIEWER_REFERENCE_NOUNS
+)
+
 
 class InputFileError(Exception):
     """Raised when an expected local input file or model is missing."""
@@ -294,6 +366,37 @@ def contains_phrase(normalized: str, phrase: str) -> bool:
     return re.search(rf"(?<!\w){re.escape(phrase)}(?!\w)", normalized) is not None
 
 
+def matches_phrasal_over(normalized: str) -> bool:
+    verbs = "|".join(sorted(map(re.escape, PHRASAL_OVER_VERBS), key=len, reverse=True))
+    return re.search(rf"\b(?:{verbs})\s+over\b", normalized) is not None
+
+
+def relational_cue_targets_frame_or_viewer_reference(normalized: str, cue: str) -> bool:
+    target_terms = "|".join(
+        sorted(
+            map(re.escape, FRAME_OR_VIEWER_NOUNS),
+            key=len,
+            reverse=True,
+        )
+    )
+    position_terms = "|".join(
+        sorted(
+            map(re.escape, POSITION_WORDS | ORDINAL_WORDS | {"far", "very"}),
+            key=len,
+            reverse=True,
+        )
+    )
+    return (
+        re.search(
+            rf"(?<!\w){re.escape(cue)}\s+"
+            rf"(?:the\s+)?(?:(?:{position_terms})\s+)*"
+            rf"(?:{target_terms})(?!\w)",
+            normalized,
+        )
+        is not None
+    )
+
+
 def match_with_object_relation(expression: str) -> str | None:
     """Handle useful 'with X' cases without over-labeling clothing attributes."""
     tokens = tokenize_expression(expression)
@@ -339,6 +442,10 @@ def match_relational_cue(expression: str) -> str | None:
 
     for cue in sorted(RELATIONAL_PHRASE_CUES, key=len, reverse=True):
         if contains_phrase(normalized, cue):
+            if cue == "over" and matches_phrasal_over(normalized):
+                continue
+            if relational_cue_targets_frame_or_viewer_reference(normalized, cue):
+                continue
             return cue
 
     with_object_cue = match_with_object_relation(expression)
@@ -462,6 +569,10 @@ def is_position_or_ordinal_root(token) -> bool:
     return bool(token_text_or_lemma(token) & (POSITION_WORDS | ORDINAL_WORDS))
 
 
+def is_frame_or_viewer_root(token) -> bool:
+    return bool(token_text_or_lemma(token) & FRAME_OR_VIEWER_NOUNS)
+
+
 def is_relational_token(token) -> bool:
     forms = token_text_or_lemma(token)
     if token.pos_ in {"VERB", "AUX"} and forms & RELATIONAL_VERBS:
@@ -480,6 +591,7 @@ def has_relational_dependency(expression: str) -> bool:
     "guy with black shirt". This version only accepts known spatial adpositions
     or known interaction verbs.
     """
+    normalized = normalize_expression(expression)
     nlp = load_spacy_model()
     doc = nlp(expression)
     noun_chunks = list(doc.noun_chunks)
@@ -504,7 +616,9 @@ def has_relational_dependency(expression: str) -> bool:
     for other_chunk in noun_chunks:
         if other_chunk == root_chunk or spans_overlap(root_chunk, other_chunk):
             continue
-        if is_position_or_ordinal_root(other_chunk.root):
+        if is_position_or_ordinal_root(other_chunk.root) or is_frame_or_viewer_root(
+            other_chunk.root
+        ):
             continue
 
         path = dependency_path_tokens(root_chunk.root, other_chunk.root)
@@ -515,6 +629,11 @@ def has_relational_dependency(expression: str) -> bool:
         skip_candidate = False
         for token in interior:
             if is_relational_token(token):
+                if "over" in token_text_or_lemma(token) and matches_phrasal_over(
+                    normalized
+                ):
+                    skip_candidate = True
+                    break
                 if "on" in token_text_or_lemma(token) and is_attire_worn_by_person(
                     root_chunk, other_chunk
                 ):
@@ -524,11 +643,17 @@ def has_relational_dependency(expression: str) -> bool:
         if skip_candidate:
             continue
 
-        if is_position_or_ordinal_root(other_chunk.root):
+        if is_position_or_ordinal_root(other_chunk.root) or is_frame_or_viewer_root(
+            other_chunk.root
+        ):
             continue
         ancestor = other_chunk.root
         while ancestor != ancestor.head and ancestor != root_chunk.root:
             if is_relational_token(ancestor):
+                if "over" in token_text_or_lemma(ancestor) and matches_phrasal_over(
+                    normalized
+                ):
+                    break
                 if "on" in token_text_or_lemma(ancestor) and is_attire_worn_by_person(
                     root_chunk, other_chunk
                 ):
