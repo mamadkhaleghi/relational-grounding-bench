@@ -7,6 +7,8 @@ import json
 
 import sys
 from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from common.utils import load_config, parse_bbox_from_text, setup_logger  # noqa: E402
 from prompting.vlm_utils import build_prompt, load_vlm, run_inference  # noqa: E402
