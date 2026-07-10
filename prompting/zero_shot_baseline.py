@@ -25,7 +25,16 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--split", required=True)
     parser.add_argument("--subset", required=True, choices=["relational", "positional", "attribute"])
     parser.add_argument("--output", default=None)
-    return parser.parse_args()
+    parser.add_argument(
+        "--limit_samples",
+        type=int,
+        default=None,
+        help="Limit inference to the first N examples after subset filtering.",
+    )
+    args = parser.parse_args()
+    if args.limit_samples is not None and args.limit_samples < 0:
+        parser.error("--limit_samples must be non-negative")
+    return args
 
 
 def resolve_repo_path(path_str: str) -> Path:
@@ -106,9 +115,20 @@ def run(args: argparse.Namespace) -> int:
         "classified split JSONL",
     )
     output_path = default_output_path(args, results_dir)
+    if args.limit_samples is not None:
+        output_path = output_path.with_name(
+            f"{output_path.stem}_smoketest{output_path.suffix}"
+        )
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     rows = load_jsonl(split_path)
+    if args.limit_samples is not None:
+        rows = rows[: args.limit_samples]
+        LOGGER.info(
+            "Smoke test: running %d examples (limit=%d)",
+            len(rows),
+            args.limit_samples,
+        )
     LOGGER.info("Loaded %d examples from %s", len(rows), split_path)
     model, processor = load_vlm(config)
 

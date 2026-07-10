@@ -26,9 +26,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--subset", required=True, choices=["relational", "positional", "attribute"])
     parser.add_argument("--output", default=None)
     parser.add_argument("--max_relations", type=int, default=None)
+    parser.add_argument(
+        "--limit_samples",
+        type=int,
+        default=None,
+        help="Limit inference to the first N examples after subset filtering.",
+    )
     args = parser.parse_args()
     if args.max_relations is not None and args.max_relations < 0:
         parser.error("--max_relations must be non-negative")
+    if args.limit_samples is not None and args.limit_samples < 0:
+        parser.error("--limit_samples must be non-negative")
     return args
 
 
@@ -144,9 +152,20 @@ def run(args: argparse.Namespace) -> int:
         "Visual Genome relation mapping",
     )
     output_path = default_output_path(args, results_dir)
+    if args.limit_samples is not None:
+        output_path = output_path.with_name(
+            f"{output_path.stem}_smoketest{output_path.suffix}"
+        )
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     rows = load_jsonl(split_path)
+    if args.limit_samples is not None:
+        rows = rows[: args.limit_samples]
+        LOGGER.info(
+            "Smoke test: running %d examples (limit=%d)",
+            len(rows),
+            args.limit_samples,
+        )
     relations_by_coco_id = load_relations_by_coco_id(relations_path)
     LOGGER.info("Loaded %d examples from %s", len(rows), split_path)
     LOGGER.info("Loaded relations for %d COCO ids", len(relations_by_coco_id))
