@@ -3,14 +3,15 @@
 ![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)
 ![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)
 
-This repository tests a targeted question in referring-expression comprehension: does explicit relational context, represented as subject-predicate-object triplets, help a small vision-language model ground expressions that require relational reasoning, compared with attribute-only expressions? The study separates prompt-time relation injection from parameter-efficient fine-tuning to measure whether QLoRA alone closes the relational grounding gap, or whether structured scene context remains useful when the base model is adapted.
+This repository tests a targeted question in referring-expression comprehension: does explicit relational context, represented as subject-predicate-object triplets, help a small vision-language model ground expressions that require relational reasoning, compared with expressions that rely on frame position or attributes only? The study separates prompt-time relation injection from parameter-efficient fine-tuning to measure whether QLoRA alone closes the relational grounding gap, or whether structured scene context remains useful when the base model is adapted.
 
 ## Approach Summary
 
 - Join oracle Visual Genome relation triplets to RefCOCO, RefCOCO+, and RefCOCOg examples through shared COCO image ids.
-- Partition expressions into `relational` and `attribute` subsets with a rule-based cue list plus a spaCy dependency fallback.
+- Partition expressions into three categories with a rule-based cue list plus a spaCy dependency fallback: `relational` expressions require reasoning about a second, distinct, Visual-Genome-annotated object; `positional` expressions require frame-position or ordinal reasoning, such as "right bear", but no second object, and Visual Genome relation triplets cannot help ground these because VG does not annotate frame position; `attribute` expressions require no spatial reasoning at all, such as "red boat".
+- This three-way split was added after manual audit showed frame-position language was a large, systematic category that did not fit cleanly into either original bucket.
 - Compare four conditions: A zero-shot VLM prompting, B relation-prompted VLM inference, C QLoRA fine-tuning, and D QLoRA fine-tuning with relation context.
-- Use stratified `accuracy@IoU-0.5` on relational versus attribute subsets as the headline metric.
+- Use stratified `accuracy@IoU-0.5` on relational, positional, and attribute subsets as the headline metric.
 - Log fine-tuning memory/time for LoRA rank sweeps and frozen-versus-unfrozen vision tower variants.
 - Extend the GraPLUS thesis line from scene graphs for semantic object placement to scene-graph-style relational grounding in a general-purpose VLM, replacing a task-specific GAN+GNN stack with text-facing VLM prompts and QLoRA adaptation.
 
@@ -239,7 +240,7 @@ Expected output:
 data/processed/vg_relations_by_coco_id.jsonl
 ```
 
-Classify expressions into relational and attribute subsets:
+Classify expressions into relational, positional, and attribute subsets:
 
 ```bash
 for dataset in refcoco refcoco+; do
@@ -263,6 +264,7 @@ Expected outputs:
 
 ```text
 data/splits/<dataset>_<split>_relational.jsonl
+data/splits/<dataset>_<split>_positional.jsonl
 data/splits/<dataset>_<split>_attribute.jsonl
 data/splits/<dataset>_<split>_classification_log.csv
 ```
@@ -289,9 +291,9 @@ Run the notebook cells, manually fill `human_correct` for the sampled rows, and 
 results/expression_classifier_audit.csv
 ```
 
-The notebook samples the classifier log, records `human_correct`, and reports per-label precision for `relational` and `attribute`.
+The notebook samples the classifier log, records `human_correct`, and reports per-label precision for `relational`, `positional`, and `attribute`.
 
-> **Precision (relational / attribute): TODO / TODO** - from `results/expression_classifier_audit.csv`.
+> **Precision (relational / positional / attribute): TODO / TODO / TODO** - from `results/expression_classifier_audit.csv`.
 
 ## Running the Experiments
 
@@ -309,31 +311,40 @@ make classify DATASET=refcoco SPLIT=val
 # 2. Perform the manual classifier audit in notebooks/validate_expression_split.ipynb,
 #    then paste the measured precision values into this README.
 
-# 3. Run condition A/B inference for both subsets.
+# 3. Run condition A/B inference for all three subsets.
 make baseline DATASET=refcoco SPLIT=val SUBSET=relational
+make baseline DATASET=refcoco SPLIT=val SUBSET=positional
 make baseline DATASET=refcoco SPLIT=val SUBSET=attribute
 make prompted DATASET=refcoco SPLIT=val SUBSET=relational
+make prompted DATASET=refcoco SPLIT=val SUBSET=positional
 make prompted DATASET=refcoco SPLIT=val SUBSET=attribute
 
 # 4. Train condition C/D adapters.
 make finetune DATASET=refcoco LORA_RANK=8
 make finetune-context DATASET=refcoco LORA_RANK=8
 
-# 5. Run condition C/D adapter inference for both subsets.
+# 5. Run condition C/D adapter inference for all three subsets.
 make finetuned-infer CONDITION=C DATASET=refcoco SPLIT=val SUBSET=relational \
+  ADAPTER_DIR=checkpoints/qlora_r8
+make finetuned-infer CONDITION=C DATASET=refcoco SPLIT=val SUBSET=positional \
   ADAPTER_DIR=checkpoints/qlora_r8
 make finetuned-infer CONDITION=C DATASET=refcoco SPLIT=val SUBSET=attribute \
   ADAPTER_DIR=checkpoints/qlora_r8
 make finetuned-infer CONDITION=D DATASET=refcoco SPLIT=val SUBSET=relational \
+  ADAPTER_DIR=checkpoints/qlora_context_r8
+make finetuned-infer CONDITION=D DATASET=refcoco SPLIT=val SUBSET=positional \
   ADAPTER_DIR=checkpoints/qlora_context_r8
 make finetuned-infer CONDITION=D DATASET=refcoco SPLIT=val SUBSET=attribute \
   ADAPTER_DIR=checkpoints/qlora_context_r8
 
 # 6. Score A/B prediction JSONL files.
 make eval CONDITION=A DATASET=refcoco SPLIT=val SUBSET=relational
+make eval CONDITION=A DATASET=refcoco SPLIT=val SUBSET=positional
 make eval CONDITION=A DATASET=refcoco SPLIT=val SUBSET=attribute
 make eval CONDITION=B DATASET=refcoco SPLIT=val SUBSET=relational \
   PREDICTIONS=results/predictions_condB_refcoco_val_relational_all.jsonl
+make eval CONDITION=B DATASET=refcoco SPLIT=val SUBSET=positional \
+  PREDICTIONS=results/predictions_condB_refcoco_val_positional_all.jsonl
 make eval CONDITION=B DATASET=refcoco SPLIT=val SUBSET=attribute \
   PREDICTIONS=results/predictions_condB_refcoco_val_attribute_all.jsonl
 
@@ -359,6 +370,12 @@ python prompting/zero_shot_baseline.py \
   --config configs/config.yaml \
   --dataset refcoco \
   --split val \
+  --subset positional
+
+python prompting/zero_shot_baseline.py \
+  --config configs/config.yaml \
+  --dataset refcoco \
+  --split val \
   --subset attribute
 ```
 
@@ -366,6 +383,7 @@ Default outputs:
 
 ```text
 results/predictions_condA_refcoco_val_relational.jsonl
+results/predictions_condA_refcoco_val_positional.jsonl
 results/predictions_condA_refcoco_val_attribute.jsonl
 ```
 
@@ -382,6 +400,12 @@ python prompting/relation_prompted.py \
   --config configs/config.yaml \
   --dataset refcoco \
   --split val \
+  --subset positional
+
+python prompting/relation_prompted.py \
+  --config configs/config.yaml \
+  --dataset refcoco \
+  --split val \
   --subset attribute
 ```
 
@@ -389,6 +413,7 @@ Default outputs:
 
 ```text
 results/predictions_condB_refcoco_val_relational_all.jsonl
+results/predictions_condB_refcoco_val_positional_all.jsonl
 results/predictions_condB_refcoco_val_attribute_all.jsonl
 ```
 
@@ -464,6 +489,14 @@ python prompting/finetuned_inference.py \
   --config configs/config.yaml \
   --dataset refcoco \
   --split val \
+  --subset positional \
+  --adapter_dir checkpoints/qlora_r8 \
+  --condition C
+
+python prompting/finetuned_inference.py \
+  --config configs/config.yaml \
+  --dataset refcoco \
+  --split val \
   --subset attribute \
   --adapter_dir checkpoints/qlora_r8 \
   --condition C
@@ -473,6 +506,7 @@ Default outputs:
 
 ```text
 results/predictions_condC_refcoco_val_relational.jsonl
+results/predictions_condC_refcoco_val_positional.jsonl
 results/predictions_condC_refcoco_val_attribute.jsonl
 ```
 
@@ -504,6 +538,14 @@ python prompting/finetuned_inference.py \
   --config configs/config.yaml \
   --dataset refcoco \
   --split val \
+  --subset positional \
+  --adapter_dir checkpoints/qlora_context_r8 \
+  --condition D
+
+python prompting/finetuned_inference.py \
+  --config configs/config.yaml \
+  --dataset refcoco \
+  --split val \
   --subset attribute \
   --adapter_dir checkpoints/qlora_context_r8 \
   --condition D
@@ -513,6 +555,7 @@ Default outputs:
 
 ```text
 results/predictions_condD_refcoco_val_relational_all.jsonl
+results/predictions_condD_refcoco_val_positional_all.jsonl
 results/predictions_condD_refcoco_val_attribute_all.jsonl
 ```
 
@@ -534,7 +577,7 @@ results/predictions_condD_refcoco_val_<subset>_all.jsonl
 Compute `accuracy@IoU-0.5` for each condition and subset. The evaluator appends rows to `results/accuracy_table.csv`.
 
 ```bash
-for subset in relational attribute; do
+for subset in relational positional attribute; do
   python eval/compute_accuracy_iou.py \
     --config configs/config.yaml \
     --predictions results/predictions_condA_refcoco_val_${subset}.jsonl \
@@ -546,7 +589,7 @@ for subset in relational attribute; do
     --subset $subset
 done
 
-for subset in relational attribute; do
+for subset in relational positional attribute; do
   python eval/compute_accuracy_iou.py \
     --config configs/config.yaml \
     --predictions results/predictions_condB_refcoco_val_${subset}_all.jsonl \
@@ -558,7 +601,7 @@ for subset in relational attribute; do
     --subset $subset
 done
 
-for subset in relational attribute; do
+for subset in relational positional attribute; do
   python eval/compute_accuracy_iou.py \
     --config configs/config.yaml \
     --predictions results/predictions_condC_refcoco_val_${subset}.jsonl \
@@ -570,7 +613,7 @@ for subset in relational attribute; do
     --subset $subset
 done
 
-for subset in relational attribute; do
+for subset in relational positional attribute; do
   python eval/compute_accuracy_iou.py \
     --config configs/config.yaml \
     --predictions results/predictions_condD_refcoco_val_${subset}_all.jsonl \
@@ -620,7 +663,8 @@ _TODO: paste table + one-sentence takeaway_
 ## Limitations
 
 - RefCOCO/Visual Genome overlap is not complete; exact retained coverage is TODO after running the VG join and expression classifier.
-- The rule-based plus spaCy expression classifier has measurable label noise; measured relational and attribute precision are TODO after the manual audit.
+- The rule-based plus spaCy expression classifier has measurable label noise; measured relational, positional, and attribute precision are TODO after the manual audit.
+- Visual Genome relation triplets cannot ground frame-position-only expressions, so those were split into their own `positional` category rather than left mixed into `attribute` or `relational`, a design decision empirically motivated by two rounds of manual audit.
 - Oracle relation prompting is an upper bound, not a deployable setting, because it assumes ground-truth Visual Genome relations are available at inference time.
 - The current repository trains LoRA adapters and evaluates prediction JSONL files; adapter inference for conditions C/D must emit the documented prediction schema before those rows can be scored.
 
