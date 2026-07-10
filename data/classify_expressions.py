@@ -1,4 +1,4 @@
-"""Classify prepared RefCOCO expressions as relational or attribute.
+"""Classify prepared RefCOCO expressions as relational, positional, or attribute.
 
 This version is stricter than the original classifier:
 - It avoids treating every spaCy prepositional dependency as relational.
@@ -26,8 +26,37 @@ VALID_SPLITS = {
     "refcocog": {"train", "val"},
 }
 
+POSITION_WORDS = {
+    "left",
+    "right",
+    "center",
+    "centre",
+    "middle",
+    "top",
+    "bottom",
+    "upper",
+    "lower",
+    "closest",
+    "nearest",
+    "farthest",
+    "furthest",
+    "last",
+}
+ORDINAL_WORDS = {
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth",
+    "seventh",
+    "eighth",
+    "ninth",
+    "tenth",
+}
+
 # A cue must relate to a second, distinct object, matching Visual Genome's
-# subject-predicate-object triplets; frame-only positions fall through to "attribute".
+# subject-predicate-object triplets; frame-only positions fall through to "positional".
 RELATIONAL_PHRASE_CUES = [
     "left of",
     "right of",
@@ -269,6 +298,26 @@ def match_with_object_relation(expression: str) -> str | None:
     return None
 
 
+def match_in_object_relation(expression: str) -> str | None:
+    """Handle useful 'in X' object cases without over-labeling clothing attributes."""
+    tokens = tokenize_expression(expression)
+    if "in" not in tokens:
+        return None
+
+    in_index = tokens.index("in")
+    after_in = tokens[in_index + 1 :]
+    if not after_in:
+        return None
+
+    if any(noun in after_in for noun in ASSOCIATED_OBJECT_NOUNS):
+        return "in_object"
+
+    if any(noun in after_in for noun in ATTIRE_OR_BODY_NOUNS):
+        return None
+
+    return None
+
+
 def match_relational_cue(expression: str) -> str | None:
     normalized = normalize_expression(expression)
 
@@ -279,6 +328,39 @@ def match_relational_cue(expression: str) -> str | None:
     with_object_cue = match_with_object_relation(expression)
     if with_object_cue is not None:
         return with_object_cue
+
+    in_object_cue = match_in_object_relation(expression)
+    if in_object_cue is not None:
+        return in_object_cue
+
+    return None
+
+
+def match_positional_cue(expression: str) -> str | None:
+    normalized = normalize_expression(expression)
+    tokens = tokenize_expression(expression)
+
+    grid_patterns = [
+        r"\b(?:top|upper|bottom|lower|middle|center|centre)\s+(?:left|right|middle|center|centre)\b",
+        r"\b(?:left|right)\s+(?:top|upper|bottom|lower|middle|center|centre)\b",
+        r"\b(?:far|farthest|furthest)\s+(?:left|right|top|bottom)\b",
+    ]
+    for pattern in grid_patterns:
+        match = re.search(pattern, normalized)
+        if match is not None:
+            return match.group(0)
+
+    for token in tokens:
+        if token in POSITION_WORDS or token in ORDINAL_WORDS:
+            return token
+
+    if (
+        "background" in tokens
+        or contains_phrase(normalized, "back of frame")
+        or contains_phrase(normalized, "in back")
+        or contains_phrase(normalized, "back row")
+    ):
+        return "back"
 
     return None
 
@@ -360,11 +442,19 @@ def token_text_or_lemma(token) -> set[str]:
     return {token.text.casefold(), token.lemma_.casefold()}
 
 
-def is_relational_token(token) -> bool:
+def is_position_or_ordinal_root(token) -> bool:
+    return bool(token_text_or_lemma(token) & (POSITION_WORDS | ORDINAL_WORDS))
+
+
+def is_relational_token(token, other_root=None) -> bool:
     forms = token_text_or_lemma(token)
     if token.pos_ in {"VERB", "AUX"} and forms & RELATIONAL_VERBS:
         return True
     if (token.dep_ == "prep" or token.pos_ == "ADP") and forms & SPATIAL_ADPOSITIONS:
+        if "on" in forms:
+            return other_root is not None and not bool(
+                token_text_or_lemma(other_root) & ATTIRE_OR_BODY_NOUNS
+            )
         return True
     return False
 
@@ -391,18 +481,22 @@ def has_relational_dependency(expression: str) -> bool:
     for other_chunk in noun_chunks:
         if other_chunk == root_chunk or spans_overlap(root_chunk, other_chunk):
             continue
+        if is_position_or_ordinal_root(other_chunk.root):
+            continue
 
         path = dependency_path_tokens(root_chunk.root, other_chunk.root)
         if not path:
             continue
 
         interior = path[1:-1]
-        if any(is_relational_token(token) for token in interior):
+        if any(is_relational_token(token, other_chunk.root) for token in interior):
             return True
 
+        if is_position_or_ordinal_root(other_chunk.root):
+            continue
         ancestor = other_chunk.root
         while ancestor != ancestor.head and ancestor != root_chunk.root:
-            if is_relational_token(ancestor):
+            if is_relational_token(ancestor, other_chunk.root):
                 return True
             ancestor = ancestor.head
 
@@ -415,6 +509,9 @@ def classify_expression(expression: str) -> tuple[str, str]:
         return "relational", matched_cue
     if has_relational_dependency(expression):
         return "relational", "spacy_dependency_conservative"
+    positional_cue = match_positional_cue(expression)
+    if positional_cue is not None:
+        return "positional", positional_cue
     return "attribute", ""
 
 
@@ -474,14 +571,17 @@ def classify_split(dataset: str, split: str, config_path_str: str) -> int:
 
     splits_dir.mkdir(parents=True, exist_ok=True)
     relational_path = splits_dir / f"{dataset}_{split}_relational.jsonl"
+    positional_path = splits_dir / f"{dataset}_{split}_positional.jsonl"
     attribute_path = splits_dir / f"{dataset}_{split}_attribute.jsonl"
     audit_path = splits_dir / f"{dataset}_{split}_classification_log.csv"
 
     relational_count = 0
+    positional_count = 0
     attribute_count = 0
 
     with (
         relational_path.open("w", encoding="utf-8") as relational_handle,
+        positional_path.open("w", encoding="utf-8") as positional_handle,
         attribute_path.open("w", encoding="utf-8") as attribute_handle,
         audit_path.open("w", encoding="utf-8", newline="") as audit_handle,
     ):
@@ -517,17 +617,22 @@ def classify_split(dataset: str, split: str, config_path_str: str) -> int:
             if label == "relational":
                 relational_handle.write(json.dumps(output_row, ensure_ascii=False) + "\n")
                 relational_count += 1
+            elif label == "positional":
+                positional_handle.write(json.dumps(output_row, ensure_ascii=False) + "\n")
+                positional_count += 1
             else:
                 attribute_handle.write(json.dumps(output_row, ensure_ascii=False) + "\n")
                 attribute_count += 1
 
     LOGGER.info(
-        "Finished %s/%s classification: %d relational, %d attribute. Outputs: %s, %s, %s",
+        "Finished %s/%s classification: %d relational, %d positional, %d attribute. Outputs: %s, %s, %s, %s",
         dataset,
         split,
         relational_count,
+        positional_count,
         attribute_count,
         relational_path,
+        positional_path,
         attribute_path,
         audit_path,
     )
