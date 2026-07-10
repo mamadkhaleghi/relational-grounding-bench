@@ -332,7 +332,12 @@ results/expression_classifier_audit.csv
 
 The notebook samples the classifier log, records `human_correct`, and reports per-label precision for `relational`, `positional`, and `attribute`.
 
-> **Precision (relational / positional / attribute): TODO / TODO / TODO** - from `results/expression_classifier_audit.csv`.
+> **Precision (relational / positional / attribute):** see the Classifier Validation History
+table above. Rounds 1-2 were measured via the notebook's interactive `human_correct` review loop
+saved to `results/expression_classifier_audit.csv`; rounds 3-4 were estimated via structured
+manual review of exported stratified samples (100 per label, via the notebook's
+export-for-review cells) rather than that saved-CSV mechanism, which is why those figures are
+reported as approximate ranges rather than exact values.
 
 ## Running the Experiments
 
