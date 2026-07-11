@@ -341,7 +341,7 @@ reported as approximate ranges rather than exact values.
 
 ## Running the Experiments
 
-The commands below use `refcoco` / `val` as the reporting split. Replace `--dataset`, `--split`, and `--subset` for other datasets or splits. Conditions A and B produce prediction JSONL files directly. Conditions C and D currently train LoRA adapters; scoring C/D requires prediction JSONL files with the schema documented below.
+The commands below use `refcoco` / `val` as the reporting split. Replace `--dataset`, `--split`, and `--subset` for other datasets or splits. Conditions A and B produce prediction JSONL files directly. Conditions C and D currently train LoRA adapters; scoring C/D requires prediction JSONL files with the schema documented below. A local proxy environment variable can hang or time out Hugging Face downloads/loads, so model-loading commands unset those variables for their duration.
 
 ### Full Run Order
 
@@ -356,29 +356,71 @@ make classify DATASET=refcoco SPLIT=val
 #    then paste the measured precision values into this README.
 
 # 3. Run condition A/B inference for all three subsets.
-make baseline DATASET=refcoco SPLIT=val SUBSET=relational
-make baseline DATASET=refcoco SPLIT=val SUBSET=positional
-make baseline DATASET=refcoco SPLIT=val SUBSET=attribute
-make prompted DATASET=refcoco SPLIT=val SUBSET=relational
-make prompted DATASET=refcoco SPLIT=val SUBSET=positional
-make prompted DATASET=refcoco SPLIT=val SUBSET=attribute
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    make baseline DATASET=refcoco SPLIT=val SUBSET=relational
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    make baseline DATASET=refcoco SPLIT=val SUBSET=positional
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    make baseline DATASET=refcoco SPLIT=val SUBSET=attribute
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    make prompted DATASET=refcoco SPLIT=val SUBSET=relational
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    make prompted DATASET=refcoco SPLIT=val SUBSET=positional
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    make prompted DATASET=refcoco SPLIT=val SUBSET=attribute
 
 # 4. Train condition C/D adapters.
-make finetune DATASET=refcoco LORA_RANK=8
-make finetune-context DATASET=refcoco LORA_RANK=8
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    make finetune DATASET=refcoco LORA_RANK=8
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    make finetune-context DATASET=refcoco LORA_RANK=8
 
 # 5. Run condition C/D adapter inference for all three subsets.
-make finetuned-infer CONDITION=C DATASET=refcoco SPLIT=val SUBSET=relational \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    make finetuned-infer CONDITION=C DATASET=refcoco SPLIT=val SUBSET=relational \
   ADAPTER_DIR=checkpoints/qlora_r8
-make finetuned-infer CONDITION=C DATASET=refcoco SPLIT=val SUBSET=positional \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    make finetuned-infer CONDITION=C DATASET=refcoco SPLIT=val SUBSET=positional \
   ADAPTER_DIR=checkpoints/qlora_r8
-make finetuned-infer CONDITION=C DATASET=refcoco SPLIT=val SUBSET=attribute \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    make finetuned-infer CONDITION=C DATASET=refcoco SPLIT=val SUBSET=attribute \
   ADAPTER_DIR=checkpoints/qlora_r8
-make finetuned-infer CONDITION=D DATASET=refcoco SPLIT=val SUBSET=relational \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    make finetuned-infer CONDITION=D DATASET=refcoco SPLIT=val SUBSET=relational \
   ADAPTER_DIR=checkpoints/qlora_context_r8
-make finetuned-infer CONDITION=D DATASET=refcoco SPLIT=val SUBSET=positional \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    make finetuned-infer CONDITION=D DATASET=refcoco SPLIT=val SUBSET=positional \
   ADAPTER_DIR=checkpoints/qlora_context_r8
-make finetuned-infer CONDITION=D DATASET=refcoco SPLIT=val SUBSET=attribute \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    make finetuned-infer CONDITION=D DATASET=refcoco SPLIT=val SUBSET=attribute \
   ADAPTER_DIR=checkpoints/qlora_context_r8
 
 # 6. Score A/B prediction JSONL files.
@@ -404,19 +446,28 @@ Use the explicit commands in the subsections below when you need exact filenames
 ### Condition A: Zero-Shot Baseline
 
 ```bash
-python prompting/zero_shot_baseline.py \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    python prompting/zero_shot_baseline.py \
   --config configs/config.yaml \
   --dataset refcoco \
   --split val \
   --subset relational
 
-python prompting/zero_shot_baseline.py \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    python prompting/zero_shot_baseline.py \
   --config configs/config.yaml \
   --dataset refcoco \
   --split val \
   --subset positional
 
-python prompting/zero_shot_baseline.py \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    python prompting/zero_shot_baseline.py \
   --config configs/config.yaml \
   --dataset refcoco \
   --split val \
@@ -434,19 +485,28 @@ results/predictions_condA_refcoco_val_attribute.jsonl
 ### Condition B: Relation-Prompted Inference
 
 ```bash
-python prompting/relation_prompted.py \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    python prompting/relation_prompted.py \
   --config configs/config.yaml \
   --dataset refcoco \
   --split val \
   --subset relational
 
-python prompting/relation_prompted.py \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    python prompting/relation_prompted.py \
   --config configs/config.yaml \
   --dataset refcoco \
   --split val \
   --subset positional
 
-python prompting/relation_prompted.py \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    python prompting/relation_prompted.py \
   --config configs/config.yaml \
   --dataset refcoco \
   --split val \
@@ -464,7 +524,10 @@ results/predictions_condB_refcoco_val_attribute_all.jsonl
 Limit injected relations for an ablation:
 
 ```bash
-python prompting/relation_prompted.py \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    python prompting/relation_prompted.py \
   --config configs/config.yaml \
   --dataset refcoco \
   --split val \
@@ -479,7 +542,10 @@ examples in the selected subset. Smoke-test outputs append `_smoketest` before `
 cannot silently overwrite full-run predictions. For example:
 
 ```bash
-python prompting/zero_shot_baseline.py \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    python prompting/zero_shot_baseline.py \
   --config configs/config.yaml \
   --dataset refcoco \
   --split val \
@@ -511,7 +577,10 @@ with a supported `socks5://` URL and install HTTPX SOCKS support in the active e
 Train the default rank-8 adapter:
 
 ```bash
-python finetune/train_qlora.py \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    python finetune/train_qlora.py \
   --config configs/config.yaml \
   --dataset refcoco \
   --split train \
@@ -523,7 +592,10 @@ LoRA rank sweep:
 
 ```bash
 for r in 4 8 16; do
-  python finetune/train_qlora.py \
+  env -u ALL_PROXY -u all_proxy \
+      -u HTTP_PROXY -u http_proxy \
+      -u HTTPS_PROXY -u https_proxy \
+      python finetune/train_qlora.py \
     --lora_rank $r \
     --config configs/config.yaml \
     --dataset refcoco \
@@ -535,7 +607,10 @@ done
 Frozen-versus-unfrozen vision tower variant:
 
 ```bash
-python finetune/train_qlora.py \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    python finetune/train_qlora.py \
   --config configs/config.yaml \
   --dataset refcoco \
   --split train \
@@ -543,7 +618,10 @@ python finetune/train_qlora.py \
   --freeze_vision_tower \
   --output_dir checkpoints/qlora_r8_frozen
 
-python finetune/train_qlora.py \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    python finetune/train_qlora.py \
   --config configs/config.yaml \
   --dataset refcoco \
   --split train \
@@ -555,7 +633,10 @@ python finetune/train_qlora.py \
 Run inference with the default rank-8 adapter:
 
 ```bash
-python prompting/finetuned_inference.py \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    python prompting/finetuned_inference.py \
   --config configs/config.yaml \
   --dataset refcoco \
   --split val \
@@ -563,7 +644,10 @@ python prompting/finetuned_inference.py \
   --adapter_dir checkpoints/qlora_r8 \
   --condition C
 
-python prompting/finetuned_inference.py \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    python prompting/finetuned_inference.py \
   --config configs/config.yaml \
   --dataset refcoco \
   --split val \
@@ -571,7 +655,10 @@ python prompting/finetuned_inference.py \
   --adapter_dir checkpoints/qlora_r8 \
   --condition C
 
-python prompting/finetuned_inference.py \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    python prompting/finetuned_inference.py \
   --config configs/config.yaml \
   --dataset refcoco \
   --split val \
@@ -593,7 +680,10 @@ Both QLoRA training scripts save resumable Hugging Face Trainer checkpoints ever
 To resume a specific run, repeat the original command with the same stable `--output_dir` and add `--resume_from_checkpoint auto`:
 
 ```bash
-python finetune/train_qlora.py \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    python finetune/train_qlora.py \
   --config configs/config.yaml \
   --dataset refcoco \
   --split train \
@@ -609,7 +699,10 @@ The training scripts append completed-run metadata to `results/finetune_run_log.
 ### Condition D: QLoRA Fine-Tuning With Relation Context
 
 ```bash
-python finetune/train_qlora_with_context.py \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    python finetune/train_qlora_with_context.py \
   --config configs/config.yaml \
   --dataset refcoco \
   --split train \
@@ -620,7 +713,10 @@ python finetune/train_qlora_with_context.py \
 Run inference with the default rank-8 context adapter:
 
 ```bash
-python prompting/finetuned_inference.py \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    python prompting/finetuned_inference.py \
   --config configs/config.yaml \
   --dataset refcoco \
   --split val \
@@ -628,7 +724,10 @@ python prompting/finetuned_inference.py \
   --adapter_dir checkpoints/qlora_context_r8 \
   --condition D
 
-python prompting/finetuned_inference.py \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    python prompting/finetuned_inference.py \
   --config configs/config.yaml \
   --dataset refcoco \
   --split val \
@@ -636,7 +735,10 @@ python prompting/finetuned_inference.py \
   --adapter_dir checkpoints/qlora_context_r8 \
   --condition D
 
-python prompting/finetuned_inference.py \
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    python prompting/finetuned_inference.py \
   --config configs/config.yaml \
   --dataset refcoco \
   --split val \
