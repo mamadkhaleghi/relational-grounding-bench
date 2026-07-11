@@ -11,7 +11,7 @@ from typing import Any
 
 import torch
 from PIL import Image
-from torch.utils.data import Dataset
+from torch.utils.data import Dataset, Subset
 
 import sys
 from pathlib import Path
@@ -128,6 +128,15 @@ def parse_args(description: str | None = None) -> argparse.Namespace:
         help="Keep at most this many Trainer checkpoints (default: 3).",
     )
     parser.add_argument(
+        "--max_train_samples",
+        type=int,
+        default=None,
+        help=(
+            "Deterministically subsample the processed training split to at most "
+            "this many examples using training.seed."
+        ),
+    )
+    parser.add_argument(
         "--max_steps",
         type=int,
         default=None,
@@ -159,6 +168,8 @@ def parse_args(description: str | None = None) -> argparse.Namespace:
         parser.error("--save_total_limit must be positive")
     if args.max_steps is not None and args.max_steps <= 0:
         parser.error("--max_steps must be positive")
+    if args.max_train_samples is not None and args.max_train_samples <= 0:
+        parser.error("--max_train_samples must be positive")
     if args.output_dir is None:
         args.output_dir = f"checkpoints/qlora_r{rank}"
     if args.max_steps is not None:
@@ -513,6 +524,7 @@ def append_run_log(
     train_seconds: float,
     output_dir: Path,
     resumed_from: str | None,
+    max_train_samples: int | None = None,
 ) -> None:
     results_dir.mkdir(parents=True, exist_ok=True)
     log_path = results_dir / "finetune_run_log.csv"
@@ -524,6 +536,7 @@ def append_run_log(
         "train_seconds",
         "output_dir",
         "resumed_from",
+        "max_train_samples",
     ]
     legacy_fieldnames = fieldnames[:-1]
 
@@ -556,6 +569,9 @@ def append_run_log(
                 "train_seconds": f"{train_seconds:.2f}",
                 "output_dir": str(output_dir),
                 "resumed_from": resumed_from or "",
+                "max_train_samples": (
+                    str(max_train_samples) if max_train_samples is not None else ""
+                ),
             }
         )
 
@@ -599,6 +615,15 @@ def run(
         max_image_long_edge(config),
     )
     logger.info("Loaded %d training examples", len(train_dataset))
+    max_train_samples = getattr(args, "max_train_samples", None)
+    if max_train_samples is not None:
+        training_seed = int(config.get("training", {}).get("seed", 42))
+        generator = torch.Generator().manual_seed(training_seed)
+        indices = torch.randperm(len(train_dataset), generator=generator)[
+            :max_train_samples
+        ].tolist()
+        train_dataset = Subset(train_dataset, indices)
+    logger.info("Effective training examples: %d", len(train_dataset))
 
     model, processor = load_vlm(force_4bit_config(config))
     model = build_peft_model(model, args, config)
@@ -637,6 +662,7 @@ def run(
         train_seconds,
         output_dir,
         resume_checkpoint,
+        max_train_samples,
     )
     logger.info("Saved LoRA adapter to %s", output_dir)
     return 0
