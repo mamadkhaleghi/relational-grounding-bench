@@ -710,6 +710,23 @@ env -u ALL_PROXY -u all_proxy \
   --output_dir checkpoints/qlora_context_r8
 ```
 
+To resume a specific run, repeat the original command with the same stable `--output_dir` and add `--resume_from_checkpoint auto`:
+
+```bash
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    python finetune/train_qlora_with_context.py \
+  --config configs/config.yaml \
+  --dataset refcoco \
+  --split train \
+  --lora_rank 8 \
+  --output_dir checkpoints/qlora_context_r8 \
+  --resume_from_checkpoint auto
+```
+
+`auto` selects the latest `checkpoint-<step>` directory under `--output_dir`, or starts fresh if none exists. To select one checkpoint explicitly, pass its path instead, for example `--resume_from_checkpoint checkpoints/qlora_context_r8/checkpoint-150`. Omitting `--resume_from_checkpoint` starts a fresh run. The scripts log the selected mode, resolved checkpoint path, and resume step when available. Completed resumed runs also record the resolved checkpoint in the `resumed_from` column of `results/finetune_run_log.csv`; existing rows from the older five-column format are preserved with an empty value in that column.
+
 Run inference with the default rank-8 context adapter:
 
 ```bash
