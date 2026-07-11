@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import shutil
 import time
 from typing import Any
 
@@ -443,7 +444,6 @@ def trainer_args(args: argparse.Namespace, config: dict, output_dir: Path):
     max_steps = getattr(args, "max_steps", None)
     if max_steps is not None:
         kwargs["max_steps"] = max_steps
-        kwargs["overwrite_output_dir"] = True
     return TrainingArguments(**kwargs)
 
 
@@ -573,6 +573,17 @@ def run(
     coco_images_dir = require_config_path(config, "coco_images_dir")
     results_dir = require_config_path(config, "results_dir")
     output_dir = resolve_repo_path(args.output_dir)
+    if (
+        args.max_steps is not None
+        and args.resume_from_checkpoint is None
+        and output_dir.exists()
+        and any(output_dir.iterdir())
+    ):
+        logger.info(
+            "Smoke-test mode: clearing existing output directory %s for a fresh run",
+            output_dir,
+        )
+        shutil.rmtree(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     resume_checkpoint = resolve_resume_checkpoint(
         args.resume_from_checkpoint,
