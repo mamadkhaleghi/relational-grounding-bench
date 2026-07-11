@@ -443,6 +443,7 @@ def trainer_args(args: argparse.Namespace, config: dict, output_dir: Path):
     max_steps = getattr(args, "max_steps", None)
     if max_steps is not None:
         kwargs["max_steps"] = max_steps
+        kwargs["overwrite_output_dir"] = True
     return TrainingArguments(**kwargs)
 
 
