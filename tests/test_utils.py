@@ -33,8 +33,13 @@ def test_compute_iou_partial_overlap():
 
 
 def test_parse_bbox_from_qwen_box_text():
-    text = "The object is at <box>(12,34),(56,78)</box> in the image."
-    assert parse_bbox_from_text(text) == (12.0, 34.0, 56.0, 78.0)
+    text = "<box>(329,270,420,635)"
+    assert parse_bbox_from_text(text) == (329.0, 270.0, 420.0, 635.0)
+
+
+def test_parse_bbox_from_paired_qwen_box_text():
+    text = "<box>(10,20),(50,90)</box>"
+    assert parse_bbox_from_text(text) == (10.0, 20.0, 50.0, 90.0)
 
 
 def test_parse_bbox_from_json_text():

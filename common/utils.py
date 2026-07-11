@@ -14,11 +14,6 @@ import yaml
 from PIL import Image
 
 _NUMBER = r"[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][-+]?\d+)?"
-_QWEN_BOX_PATTERN = re.compile(
-    rf"<box>\s*\(\s*({_NUMBER})\s*,\s*({_NUMBER})\s*\)\s*,\s*"
-    rf"\(\s*({_NUMBER})\s*,\s*({_NUMBER})\s*\)\s*</box>",
-    re.IGNORECASE,
-)
 _JSON_BBOX_PATTERN = re.compile(
     rf'"bbox"\s*:\s*\[\s*({_NUMBER})\s*,\s*({_NUMBER})\s*,\s*({_NUMBER})\s*,\s*({_NUMBER})\s*\]',
     re.IGNORECASE,
@@ -98,9 +93,17 @@ def compute_iou(box_a, box_b) -> float:
 
 def parse_bbox_from_text(text: str) -> Optional[Tuple[float, float, float, float]]:
     """Extract a bounding box from VLM free text output."""
-    match = _QWEN_BOX_PATTERN.search(text)
-    if match:
-        return tuple(float(value) for value in match.groups())
+    box_match = re.search(r"<box>", text, flags=re.IGNORECASE)
+    if box_match:
+        box_text = text[box_match.end() :]
+        closing_tag = re.search(r"</box>", box_text, flags=re.IGNORECASE)
+        if closing_tag:
+            box_text = box_text[: closing_tag.start()]
+
+        numeric_values = re.findall(_NUMBER, box_text)
+        if len(numeric_values) >= 4:
+            x1, y1, x2, y2 = (float(value) for value in numeric_values[:4])
+            return x1, y1, x2, y2
 
     match = _JSON_BBOX_PATTERN.search(text)
     if match:
