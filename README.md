@@ -343,6 +343,8 @@ reported as approximate ranges rather than exact values.
 
 The commands below use `refcoco` / `val` as the reporting split. Replace `--dataset`, `--split`, and `--subset` for other datasets or splits. Conditions A and B produce prediction JSONL files directly. Conditions C and D currently train LoRA adapters; scoring C/D requires prediction JSONL files with the schema documented below. A local proxy environment variable can hang or time out Hugging Face downloads/loads, so model-loading commands unset those variables for their duration.
 
+To fit available compute on an 8 GB GPU, training uses a fixed, seeded 4,000-example subset of the roughly 120,000-example train split rather than the full split, for which the measured training rate projected approximately 37.4 hours per epoch.
+
 ### Full Run Order
 
 After data is downloaded, the intended run order is:
@@ -584,6 +586,7 @@ env -u ALL_PROXY -u all_proxy \
   --config configs/config.yaml \
   --dataset refcoco \
   --split train \
+  --max_train_samples 4000 \
   --lora_rank 8 \
   --output_dir checkpoints/qlora_r8
 ```
@@ -600,6 +603,7 @@ for r in 4 8 16; do
     --config configs/config.yaml \
     --dataset refcoco \
     --split train \
+    --max_train_samples 4000 \
     --output_dir checkpoints/qlora_r$r
 done
 ```
@@ -614,6 +618,7 @@ env -u ALL_PROXY -u all_proxy \
   --config configs/config.yaml \
   --dataset refcoco \
   --split train \
+  --max_train_samples 4000 \
   --lora_rank 8 \
   --freeze_vision_tower \
   --output_dir checkpoints/qlora_r8_frozen
@@ -625,6 +630,7 @@ env -u ALL_PROXY -u all_proxy \
   --config configs/config.yaml \
   --dataset refcoco \
   --split train \
+  --max_train_samples 4000 \
   --lora_rank 8 \
   --no-freeze_vision_tower \
   --output_dir checkpoints/qlora_r8_unfrozen
@@ -687,6 +693,7 @@ env -u ALL_PROXY -u all_proxy \
   --config configs/config.yaml \
   --dataset refcoco \
   --split train \
+  --max_train_samples 4000 \
   --lora_rank 8 \
   --output_dir checkpoints/qlora_r8 \
   --resume_from_checkpoint auto
@@ -706,6 +713,7 @@ env -u ALL_PROXY -u all_proxy \
   --config configs/config.yaml \
   --dataset refcoco \
   --split train \
+  --max_train_samples 4000 \
   --lora_rank 8 \
   --output_dir checkpoints/qlora_context_r8
 ```
@@ -720,6 +728,7 @@ env -u ALL_PROXY -u all_proxy \
   --config configs/config.yaml \
   --dataset refcoco \
   --split train \
+  --max_train_samples 4000 \
   --lora_rank 8 \
   --output_dir checkpoints/qlora_context_r8 \
   --resume_from_checkpoint auto
