@@ -127,6 +127,15 @@ def parse_args(description: str | None = None) -> argparse.Namespace:
         help="Keep at most this many Trainer checkpoints (default: 3).",
     )
     parser.add_argument(
+        "--max_steps",
+        type=int,
+        default=None,
+        help=(
+            "Limit training to this many update steps. When set, this overrides "
+            "epoch-based training and uses a '_smoketest' output directory."
+        ),
+    )
+    parser.add_argument(
         "--resume_from_checkpoint",
         nargs="?",
         default=None,
@@ -147,8 +156,12 @@ def parse_args(description: str | None = None) -> argparse.Namespace:
         parser.error("--save_steps must be positive")
     if args.save_total_limit <= 0:
         parser.error("--save_total_limit must be positive")
+    if args.max_steps is not None and args.max_steps <= 0:
+        parser.error("--max_steps must be positive")
     if args.output_dir is None:
         args.output_dir = f"checkpoints/qlora_r{rank}"
+    if args.max_steps is not None:
+        args.output_dir = f"{args.output_dir}_smoketest"
     return args
 
 
@@ -410,7 +423,7 @@ def trainer_args(args: argparse.Namespace, config: dict, output_dir: Path):
     training_config = config.get("training", {})
     bf16 = torch.cuda.is_available() and torch.cuda.is_bf16_supported()
     fp16 = torch.cuda.is_available() and not bf16
-    return TrainingArguments(
+    kwargs = dict(
         output_dir=str(output_dir),
         per_device_train_batch_size=int(training_config.get("batch_size", 1)),
         gradient_accumulation_steps=int(training_config.get("grad_accum_steps", 1)),
@@ -427,6 +440,10 @@ def trainer_args(args: argparse.Namespace, config: dict, output_dir: Path):
         fp16=fp16,
         optim="paged_adamw_8bit" if torch.cuda.is_available() else "adamw_torch",
     )
+    max_steps = getattr(args, "max_steps", None)
+    if max_steps is not None:
+        kwargs["max_steps"] = max_steps
+    return TrainingArguments(**kwargs)
 
 
 def checkpoint_step(checkpoint_path: Path) -> int | None:
@@ -576,6 +593,11 @@ def run(
 
     from transformers import Trainer
 
+    max_steps = getattr(args, "max_steps", None)
+    logger.info(
+        "Effective max_steps: %s",
+        max_steps if max_steps is not None else "unset (epoch-based training)",
+    )
     trainer = Trainer(
         model=model,
         args=trainer_args(args, config, output_dir),
