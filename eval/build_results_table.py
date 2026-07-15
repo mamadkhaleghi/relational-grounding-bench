@@ -7,6 +7,9 @@ import csv
 
 import sys
 from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from common.utils import load_config  # noqa: E402
 
