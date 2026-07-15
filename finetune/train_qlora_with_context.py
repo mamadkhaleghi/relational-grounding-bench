@@ -40,13 +40,37 @@ class RefCocoContextBoxDataset(RefCocoBoxDataset):
         coco_images_dir: Path,
         max_long_edge: int | None,
         relations_by_coco_id: dict[int, list[dict]],
+        max_relations: int,
     ):
         super().__init__(jsonl_path, coco_images_dir, max_long_edge)
         self.relations_by_coco_id = relations_by_coco_id
+        self.max_relations = max_relations
 
     def relations_for_row(self, row: dict) -> list[dict]:
         coco_id = safe_int(row.get("coco_id"))
-        return self.relations_by_coco_id.get(coco_id, [])
+        return self.relations_by_coco_id.get(coco_id, [])[: self.max_relations]
+
+
+def parse_context_args() -> argparse.Namespace:
+    context_parser = argparse.ArgumentParser(add_help=False)
+    context_parser.add_argument(
+        "--max_relations",
+        type=int,
+        default=10,
+        help="Maximum number of Visual Genome relation triplets injected per example.",
+    )
+    context_args, remaining_args = context_parser.parse_known_args()
+    if context_args.max_relations < 0:
+        context_parser.error("--max_relations must be non-negative")
+
+    original_argv = sys.argv
+    try:
+        sys.argv = [original_argv[0], *remaining_args]
+        args = parse_args(__doc__)
+    finally:
+        sys.argv = original_argv
+    args.max_relations = context_args.max_relations
+    return args
 
 
 def build_context_dataset(
@@ -71,13 +95,14 @@ def build_context_dataset(
         coco_images_dir,
         max_long_edge,
         relations_by_coco_id,
+        args.max_relations,
     )
 
 
 def main() -> int:
-    return run(
-        parse_args(__doc__), dataset_builder=build_context_dataset, logger=LOGGER
-    )
+    args = parse_context_args()
+    LOGGER.info("Effective max_relations per example: %d", args.max_relations)
+    return run(args, dataset_builder=build_context_dataset, logger=LOGGER)
 
 
 if __name__ == "__main__":
