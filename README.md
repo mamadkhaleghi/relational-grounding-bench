@@ -794,6 +794,8 @@ results/predictions_condC_refcoco_val_<subset>.jsonl
 results/predictions_condD_refcoco_val_<subset>_all.jsonl
 ```
 
+`--max_relations 10` caps the number of injected Visual Genome relation triplets per training example. This was added after a CUDA OOM at step 318/1500, caused by one training image having an unusually large annotated relation count; it is a training-time memory safeguard not present in condition B's inference.
+
 ## Evaluation
 
 Compute `accuracy@IoU-0.5` for each condition and subset. The evaluator appends rows to `results/accuracy_table.csv`.
@@ -883,6 +885,8 @@ _TODO: paste table + one-sentence takeaway_
 _TODO: paste table + one-sentence takeaway_
 
 ## Limitations
+
+Condition D's training caps injected relation context at 10 triplets per example (`--max_relations 10`, added for memory safety), while condition B's inference used the default, uncapped relation count. This is a real asymmetry between the two relation-context conditions: any accuracy difference observed between B and D is not purely attributable to prompting vs. fine-tuning, since D was also given less relation context per example than B. This could be closed by rerunning condition B with `--max_relations 10` for a strictly matched comparison.
 
 - RefCOCO/Visual Genome overlap is not complete; exact retained coverage is TODO after running the VG join and expression classifier.
 - The rule-based plus spaCy expression classifier has measurable label noise; audit precision is documented above and should be rechecked whenever classifier rules or dataset coverage change.
