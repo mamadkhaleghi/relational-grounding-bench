@@ -864,11 +864,39 @@ results/results_table.md
 
 ## Results
 
-<!-- PASTE results/results_table.md CONTENTS HERE -->
+## Accuracy by Condition
+
+| condition | relational | positional | attribute | gap | gap_positional |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| A | 0.6886 | 0.8771 | 0.8616 | 0.1730 | -0.0155 |
+| B | 0.6557 | 0.8526 | 0.8577 | 0.2020 | 0.0051 |
+| C | 0.7899 | 0.9117 | 0.9355 | 0.1456 | 0.0238 |
+| D | 0.7848 | 0.9079 | 0.9292 | 0.1444 | 0.0213 |
+
+## LoRA Rank-Sweep Ablation
+
+| rank | accuracy | peak_mem_mb | train_seconds |
+| ---: | ---: | ---: | ---: |
+| 8 | NA | 5398.96 | 11136.06 |
+
+Ranks 4 and 16, and the frozen/unfrozen vision-tower variant, are pending -- see the Optional Ablations section of the training plan.
 
 ### Key Finding
 
-_TODO: does condition B narrow the accuracy gap vs. A, and how much of the gap does C alone fail to close?_
+Explicit Visual-Genome relation-triplet context did not narrow the relational-vs-attribute
+accuracy gap, in either the zero-shot or fine-tuned setting. Relation-prompting (B) actually
+widened the gap relative to the zero-shot baseline (A) (0.1730 -> 0.2020), driven by a drop in
+relational accuracy (0.6886 -> 0.6557) rather than any attribute-side change. QLoRA fine-tuning
+alone (C, no relation context) closed roughly 16% of the zero-shot gap (0.1730 -> 0.1456) and
+produced the largest absolute relational-accuracy gain of any condition (+0.1013 over A). Adding
+relation context during fine-tuning (D) did not improve on C: every subset's accuracy was
+marginally lower under D than C (relational -0.0051, positional -0.0038, attribute -0.0063), and
+D's gap (0.1444) was essentially unchanged from C's (0.1456). In this setup, structured
+relational context gave no measurable benefit over fine-tuning alone at either inference time
+(B vs. A) or training time (D vs. C) -- and in the zero-shot case, it appears to modestly hurt
+relational grounding rather than help it. Sample sizes (395 relational / 2368 positional / 1286
+attribute) mean these differences, while directionally consistent across both context
+conditions, should not be read as large-effect-size results without a proper significance test.
 
 ### Qualitative Examples
 
