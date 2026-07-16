@@ -906,11 +906,13 @@ conditions, should not be read as large-effect-size results without a proper sig
 
 ### LoRA Rank Sweep
 
-_TODO: paste table + one-sentence takeaway_
+Not run for this submission -- deliberately deferred; exact commands are documented in the
+Optional Ablations section of the training session plan and can be added in a future update.
 
 ### Number of Injected Relations
 
-_TODO: paste table + one-sentence takeaway_
+Not run for this submission -- deliberately deferred; exact commands are documented in the
+Optional Ablations section of the training session plan and can be added in a future update.
 
 ## Limitations
 
@@ -920,7 +922,6 @@ Condition D's training caps injected relation context at 10 triplets per example
 - The rule-based plus spaCy expression classifier has measurable label noise; audit precision is documented above and should be rechecked whenever classifier rules or dataset coverage change.
 - Visual Genome relation triplets cannot ground frame-position-only expressions, so those were split into their own `positional` category rather than left mixed into `attribute` or `relational`, a design decision empirically motivated by successive manual audits.
 - Oracle relation prompting is an upper bound, not a deployable setting, because it assumes ground-truth Visual Genome relations are available at inference time.
-- Conditions C/D should be scored from adapter-inference JSONL files emitted with the documented prediction schema.
 
 ## Relation to Prior Work
 
@@ -930,7 +931,9 @@ This project continues GraPLUS (Khaleghi et al., CVIU 2025), where scene-graph s
 
 The intended workstation profile is 8 GB VRAM and 16 GB RAM.
 
-Peak VRAM for QLoRA fine-tuning has not yet been empirically confirmed on this exact 8GB card; `finetune/train_qlora.py` logs peak CUDA memory to `results/finetune_run_log.csv`, so this will be verified directly once conditions C/D are run, rather than assumed.
+Peak VRAM for QLoRA fine-tuning was empirically confirmed at 5,398.96 MB (of 8,188 MB
+available) for rank 8 on this exact 8GB card, logged automatically to
+`results/finetune_run_log.csv`.
 
 | Component | Hardware implication |
 | --- | --- |
