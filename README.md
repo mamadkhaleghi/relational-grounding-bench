@@ -918,7 +918,7 @@ Optional Ablations section of the training session plan and can be added in a fu
 
 Condition D's training caps injected relation context at 10 triplets per example (`--max_relations 10`, added for memory safety), while condition B's inference used the default, uncapped relation count. This is a real asymmetry between the two relation-context conditions: any accuracy difference observed between B and D is not purely attributable to prompting vs. fine-tuning, since D was also given less relation context per example than B. This could be closed by rerunning condition B with `--max_relations 10` for a strictly matched comparison.
 
-- RefCOCO/Visual Genome overlap is not complete; exact retained coverage is TODO after running the VG join and expression classifier.
+- RefCOCO/Visual Genome overlap is not complete -- retained coverage ranges from 36.31% to 39.23% depending on dataset/split, see the Coverage stats table above.
 - The rule-based plus spaCy expression classifier has measurable label noise; audit precision is documented above and should be rechecked whenever classifier rules or dataset coverage change.
 - Visual Genome relation triplets cannot ground frame-position-only expressions, so those were split into their own `positional` category rather than left mixed into `attribute` or `relational`, a design decision empirically motivated by successive manual audits.
 - Oracle relation prompting is an upper bound, not a deployable setting, because it assumes ground-truth Visual Genome relations are available at inference time.
