@@ -84,21 +84,7 @@ Place local datasets at the paths expected by `configs/config.yaml`. The command
 The original UNC webserver (`bvisionweb1.cs.unc.edu`) has been down since 2022 ([tracked here](https://github.com/lichengunc/refer/issues/14)). The commands below use a Wayback Machine snapshot of the same three archives instead.
 
 ```bash
-mkdir -p data/raw/refcoco
-
-curl -L -o /tmp/refcoco.zip \
-  "https://web.archive.org/web/20220413011718id_/https://bvisionweb1.cs.unc.edu/licheng/referit/data/refcoco.zip"
-
-curl -L -o /tmp/refcoco_plus.zip \
-  "https://web.archive.org/web/20220413011656id_/https://bvisionweb1.cs.unc.edu/licheng/referit/data/refcoco+.zip"
-
-curl -L -o /tmp/refcocog.zip \
-  "https://web.archive.org/web/20220413012904id_/https://bvisionweb1.cs.unc.edu/licheng/referit/data/refcocog.zip"
-  
-  
-unzip -q /tmp/refcoco.zip -d data/raw/refcoco
-unzip -q /tmp/refcoco_plus.zip -d data/raw/refcoco
-unzip -q /tmp/refcocog.zip -d data/raw/refcoco
+bash scripts/download_refcoco.sh
 ```
 
 After extraction, verify the expected layout:
@@ -123,13 +109,10 @@ Both `refcocog` files are kept in place; `data/prepare_refcoco.py`'s `--split_by
 
 ### Download COCO train2014 Images
 
+Download the COCO train2014 archive with:
+
 ```bash
-mkdir -p data/raw/coco
-
-curl -L -o data/raw/coco/train2014.zip \
-  http://images.cocodataset.org/zips/train2014.zip
-
-unzip -q data/raw/coco/train2014.zip -d data/raw/coco
+bash scripts/download_coco.sh
 ```
 
 Expected path after extraction:
@@ -143,24 +126,15 @@ data/raw/coco/train2014/COCO_train2014_000000000009.jpg
 The relation joiner only needs Visual Genome metadata JSON files, not the Visual Genome image archives.
 
 ```bash
-mkdir -p data/raw/visual_genome
+bash scripts/download_visual_genome.sh
+```
 
-curl -L -o /tmp/vg_image_data.zip \
-  https://homes.cs.washington.edu/~ranjay/visualgenome/data/dataset/image_data.json.zip
-curl -L -o /tmp/vg_objects.zip \
-  https://homes.cs.washington.edu/~ranjay/visualgenome/data/dataset/objects_v1_2.json.zip
-curl -L -o /tmp/vg_relationships.zip \
-  https://homes.cs.washington.edu/~ranjay/visualgenome/data/dataset/relationships_v1_2.json.zip
+Verify the three required Visual Genome files:
 
-unzip -p /tmp/vg_image_data.zip \
-  "$(unzip -Z1 /tmp/vg_image_data.zip | grep 'image_data.*json$' | head -n 1)" \
-  > data/raw/visual_genome/image_data.json
-unzip -p /tmp/vg_objects.zip \
-  "$(unzip -Z1 /tmp/vg_objects.zip | grep 'objects.*json$' | head -n 1)" \
-  > data/raw/visual_genome/objects.json
-unzip -p /tmp/vg_relationships.zip \
-  "$(unzip -Z1 /tmp/vg_relationships.zip | grep 'relationships.*json$' | head -n 1)" \
-  > data/raw/visual_genome/relationships.json
+```bash
+ls -lh data/raw/visual_genome/image_data.json \
+  data/raw/visual_genome/objects.json \
+  data/raw/visual_genome/relationships.json
 ```
 
 If any Visual Genome extraction command fails, inspect the archive contents manually:
@@ -178,35 +152,12 @@ unzip -p /tmp/vg_objects.zip <listed-objects-json-name> > data/raw/visual_genome
 unzip -p /tmp/vg_relationships.zip <listed-relationships-json-name> > data/raw/visual_genome/relationships.json
 ```
 
-Verify the three required Visual Genome files:
-
-```bash
-ls -lh data/raw/visual_genome/image_data.json \
-  data/raw/visual_genome/objects.json \
-  data/raw/visual_genome/relationships.json
-```
-
 ### Run the Data Pipeline
 
-Prepare RefCOCO-family JSONL files:
+Prepare the RefCOCO-family JSONL files, join Visual Genome relation triplets, and classify expressions with:
 
 ```bash
-for dataset in refcoco refcoco+; do
-  for split in train val testA testB; do
-    python data/prepare_refcoco.py \
-      --config configs/config.yaml \
-      --dataset "$dataset" \
-      --split "$split"
-  done
-done
-
-for split in train val test; do
-  python data/prepare_refcoco.py \
-    --config configs/config.yaml \
-    --dataset refcocog \
-    --split "$split" \
-    --split_by umd
-done
+bash scripts/prepare_data.sh
 ```
 
 RefCOCOg ships two split protocols in the same annotation folder (`refs(umd).p` and
@@ -236,11 +187,7 @@ Verified row counts (expression rows written, 0 failed resolves):
 | refcoco+ | 120191 | 10758 | - | 5726 | 4889 |
 | refcocog (umd) | 80512 | 4896 | 9602 | - | - |
 
-Join Visual Genome relation triplets by COCO id:
-
-```bash
-python data/join_visual_genome.py --config configs/config.yaml
-```
+Join Visual Genome relation triplets by COCO id (included in the script above):
 
 Expected output:
 
@@ -248,25 +195,7 @@ Expected output:
 data/processed/vg_relations_by_coco_id.jsonl
 ```
 
-Classify expressions into relational, positional, and attribute subsets:
-
-```bash
-for dataset in refcoco refcoco+; do
-  for split in train val testA testB; do
-    python data/classify_expressions.py \
-      --config configs/config.yaml \
-      --dataset "$dataset" \
-      --split "$split"
-  done
-done
-
-for split in train val test; do
-  python data/classify_expressions.py \
-    --config configs/config.yaml \
-    --dataset refcocog \
-    --split "$split"
-done
-```
+Classify expressions into relational, positional, and attribute subsets (also included in the script above):
 
 Expected outputs:
 
@@ -349,131 +278,29 @@ To fit available compute on an 8 GB GPU, training uses a fixed, seeded 4,000-exa
 
 After data is downloaded, the intended run order is:
 
+1. Prepare processed RefCOCO-family files and classified splits.
+2. Perform the manual classifier audit in notebooks/validate_expression_split.ipynb, then paste the measured precision values into this README.
+3. Run condition A/B inference for all three subsets.
+4. Train condition C/D adapters.
+5. Run condition C/D adapter inference for all three subsets.
+6. Score A/B prediction JSONL files.
+7. After C/D prediction JSONLs exist, score them with the evaluation script below.
+8. Build README-ready tables.
+
+Run the full sequence from the repository root with:
+
 ```bash
-# 1. Prepare processed RefCOCO-family files and classified splits.
-make prepare-data
-make classify DATASET=refcoco SPLIT=val
-
-# 2. Perform the manual classifier audit in notebooks/validate_expression_split.ipynb,
-#    then paste the measured precision values into this README.
-
-# 3. Run condition A/B inference for all three subsets.
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    make baseline DATASET=refcoco SPLIT=val SUBSET=relational
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    make baseline DATASET=refcoco SPLIT=val SUBSET=positional
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    make baseline DATASET=refcoco SPLIT=val SUBSET=attribute
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    make prompted DATASET=refcoco SPLIT=val SUBSET=relational
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    make prompted DATASET=refcoco SPLIT=val SUBSET=positional
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    make prompted DATASET=refcoco SPLIT=val SUBSET=attribute
-
-# 4. Train condition C/D adapters.
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    make finetune DATASET=refcoco LORA_RANK=8
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    make finetune-context DATASET=refcoco LORA_RANK=8
-
-# 5. Run condition C/D adapter inference for all three subsets.
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    make finetuned-infer CONDITION=C DATASET=refcoco SPLIT=val SUBSET=relational \
-  ADAPTER_DIR=checkpoints/qlora_r8
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    make finetuned-infer CONDITION=C DATASET=refcoco SPLIT=val SUBSET=positional \
-  ADAPTER_DIR=checkpoints/qlora_r8
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    make finetuned-infer CONDITION=C DATASET=refcoco SPLIT=val SUBSET=attribute \
-  ADAPTER_DIR=checkpoints/qlora_r8
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    make finetuned-infer CONDITION=D DATASET=refcoco SPLIT=val SUBSET=relational \
-  ADAPTER_DIR=checkpoints/qlora_context_r8
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    make finetuned-infer CONDITION=D DATASET=refcoco SPLIT=val SUBSET=positional \
-  ADAPTER_DIR=checkpoints/qlora_context_r8
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    make finetuned-infer CONDITION=D DATASET=refcoco SPLIT=val SUBSET=attribute \
-  ADAPTER_DIR=checkpoints/qlora_context_r8
-
-# 6. Score A/B prediction JSONL files.
-make eval CONDITION=A DATASET=refcoco SPLIT=val SUBSET=relational
-make eval CONDITION=A DATASET=refcoco SPLIT=val SUBSET=positional
-make eval CONDITION=A DATASET=refcoco SPLIT=val SUBSET=attribute
-make eval CONDITION=B DATASET=refcoco SPLIT=val SUBSET=relational \
-  PREDICTIONS=results/predictions_condB_refcoco_val_relational_all.jsonl
-make eval CONDITION=B DATASET=refcoco SPLIT=val SUBSET=positional \
-  PREDICTIONS=results/predictions_condB_refcoco_val_positional_all.jsonl
-make eval CONDITION=B DATASET=refcoco SPLIT=val SUBSET=attribute \
-  PREDICTIONS=results/predictions_condB_refcoco_val_attribute_all.jsonl
-
-# 7. After C/D prediction JSONLs exist, score them with the explicit
-#    eval/compute_accuracy_iou.py commands below.
-
-# 8. Build README-ready tables.
-python eval/build_results_table.py --config configs/config.yaml
+bash scripts/run_full_pipeline.sh
 ```
 
-Use the explicit commands in the subsections below when you need exact filenames or ablation settings.
+Use the script references in the subsections below when you need the standard runs or ablation settings.
 
 ### Condition A: Zero-Shot Baseline
 
+Run the zero-shot baseline for all three subsets with:
+
 ```bash
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    python prompting/zero_shot_baseline.py \
-  --config configs/config.yaml \
-  --dataset refcoco \
-  --split val \
-  --subset relational
-
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    python prompting/zero_shot_baseline.py \
-  --config configs/config.yaml \
-  --dataset refcoco \
-  --split val \
-  --subset positional
-
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    python prompting/zero_shot_baseline.py \
-  --config configs/config.yaml \
-  --dataset refcoco \
-  --split val \
-  --subset attribute
+bash scripts/run_condition_a.sh
 ```
 
 Default outputs:
@@ -486,33 +313,10 @@ results/predictions_condA_refcoco_val_attribute.jsonl
 
 ### Condition B: Relation-Prompted Inference
 
+Run relation-prompted inference for all three subsets with:
+
 ```bash
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    python prompting/relation_prompted.py \
-  --config configs/config.yaml \
-  --dataset refcoco \
-  --split val \
-  --subset relational
-
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    python prompting/relation_prompted.py \
-  --config configs/config.yaml \
-  --dataset refcoco \
-  --split val \
-  --subset positional
-
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    python prompting/relation_prompted.py \
-  --config configs/config.yaml \
-  --dataset refcoco \
-  --split val \
-  --subset attribute
+bash scripts/run_condition_b.sh
 ```
 
 Default outputs:
@@ -525,17 +329,7 @@ results/predictions_condB_refcoco_val_attribute_all.jsonl
 
 Limit injected relations for an ablation:
 
-```bash
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    python prompting/relation_prompted.py \
-  --config configs/config.yaml \
-  --dataset refcoco \
-  --split val \
-  --subset relational \
-  --max_relations 5
-```
+Use this one-off command because `scripts/run_condition_b.sh` runs the default uncapped relation count: `env -u ALL_PROXY -u all_proxy -u HTTP_PROXY -u http_proxy -u HTTPS_PROXY -u https_proxy python prompting/relation_prompted.py --config configs/config.yaml --dataset refcoco --split val --subset relational --max_relations 5`.
 
 ### Smoke Tests and Proxy Troubleshooting
 
@@ -576,102 +370,25 @@ with a supported `socks5://` URL and install HTTPX SOCKS support in the active e
 
 ### Condition C: QLoRA Fine-Tuning
 
-Train the default rank-8 adapter:
+Train the default rank-8 adapter and run inference for all three subsets with:
 
 ```bash
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    python finetune/train_qlora.py \
-  --config configs/config.yaml \
-  --dataset refcoco \
-  --split train \
-  --max_train_samples 4000 \
-  --lora_rank 8 \
-  --output_dir checkpoints/qlora_r8
+bash scripts/run_condition_c.sh
 ```
 
-LoRA rank sweep:
+Run the LoRA rank sweep with:
 
 ```bash
-for r in 4 8 16; do
-  env -u ALL_PROXY -u all_proxy \
-      -u HTTP_PROXY -u http_proxy \
-      -u HTTPS_PROXY -u https_proxy \
-      python finetune/train_qlora.py \
-    --lora_rank $r \
-    --config configs/config.yaml \
-    --dataset refcoco \
-    --split train \
-    --max_train_samples 4000 \
-    --output_dir checkpoints/qlora_r$r
-done
+bash scripts/ablation_lora_rank_sweep.sh
 ```
 
-Frozen-versus-unfrozen vision tower variant:
+Run the frozen-versus-unfrozen vision tower variant with:
 
 ```bash
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    python finetune/train_qlora.py \
-  --config configs/config.yaml \
-  --dataset refcoco \
-  --split train \
-  --max_train_samples 4000 \
-  --lora_rank 8 \
-  --freeze_vision_tower \
-  --output_dir checkpoints/qlora_r8_frozen
-
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    python finetune/train_qlora.py \
-  --config configs/config.yaml \
-  --dataset refcoco \
-  --split train \
-  --max_train_samples 4000 \
-  --lora_rank 8 \
-  --no-freeze_vision_tower \
-  --output_dir checkpoints/qlora_r8_unfrozen
+bash scripts/ablation_vision_tower.sh
 ```
 
-Run inference with the default rank-8 adapter:
-
-```bash
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    python prompting/finetuned_inference.py \
-  --config configs/config.yaml \
-  --dataset refcoco \
-  --split val \
-  --subset relational \
-  --adapter_dir checkpoints/qlora_r8 \
-  --condition C
-
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    python prompting/finetuned_inference.py \
-  --config configs/config.yaml \
-  --dataset refcoco \
-  --split val \
-  --subset positional \
-  --adapter_dir checkpoints/qlora_r8 \
-  --condition C
-
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    python prompting/finetuned_inference.py \
-  --config configs/config.yaml \
-  --dataset refcoco \
-  --split val \
-  --subset attribute \
-  --adapter_dir checkpoints/qlora_r8 \
-  --condition C
-```
+The base-run script above also runs inference with the default rank-8 adapter for all three subsets.
 
 Default outputs:
 
@@ -685,19 +402,7 @@ Both QLoRA training scripts save resumable Hugging Face Trainer checkpoints ever
 
 To resume a specific run, repeat the original command with the same stable `--output_dir` and add `--resume_from_checkpoint auto`:
 
-```bash
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    python finetune/train_qlora.py \
-  --config configs/config.yaml \
-  --dataset refcoco \
-  --split train \
-  --max_train_samples 4000 \
-  --lora_rank 8 \
-  --output_dir checkpoints/qlora_r8 \
-  --resume_from_checkpoint auto
-```
+For the same run through the Makefile, use `env -u ALL_PROXY -u all_proxy -u HTTP_PROXY -u http_proxy -u HTTPS_PROXY -u https_proxy make finetune DATASET=refcoco LORA_RANK=8 RESUME_FROM_CHECKPOINT=auto`.
 
 `auto` selects the latest `checkpoint-<step>` directory under `--output_dir`, or starts fresh if none exists. To select one checkpoint explicitly, pass its path instead, for example `--resume_from_checkpoint checkpoints/qlora_r8/checkpoint-150`. Omitting `--resume_from_checkpoint` starts a fresh run. The scripts log the selected mode, resolved checkpoint path, and resume step when available. Completed resumed runs also record the resolved checkpoint in the `resumed_from` column of `results/finetune_run_log.csv`; existing rows from the older five-column format are preserved with an empty value in that column.
 
@@ -705,73 +410,19 @@ The training scripts append completed-run metadata to `results/finetune_run_log.
 
 ### Condition D: QLoRA Fine-Tuning With Relation Context
 
+Train the default rank-8 context adapter and run inference for all three subsets with:
+
 ```bash
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    python finetune/train_qlora_with_context.py \
-  --config configs/config.yaml \
-  --dataset refcoco \
-  --split train \
-  --max_train_samples 4000 \
-  --lora_rank 8 \
-  --output_dir checkpoints/qlora_context_r8
+bash scripts/run_condition_d.sh
 ```
 
 To resume a specific run, repeat the original command with the same stable `--output_dir` and add `--resume_from_checkpoint auto`:
 
-```bash
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    python finetune/train_qlora_with_context.py \
-  --config configs/config.yaml \
-  --dataset refcoco \
-  --split train \
-  --max_train_samples 4000 \
-  --lora_rank 8 \
-  --output_dir checkpoints/qlora_context_r8 \
-  --resume_from_checkpoint auto
-```
+For the same context run through the Makefile, use `env -u ALL_PROXY -u all_proxy -u HTTP_PROXY -u http_proxy -u HTTPS_PROXY -u https_proxy make finetune-context DATASET=refcoco LORA_RANK=8 RESUME_FROM_CHECKPOINT=auto`.
 
 `auto` selects the latest `checkpoint-<step>` directory under `--output_dir`, or starts fresh if none exists. To select one checkpoint explicitly, pass its path instead, for example `--resume_from_checkpoint checkpoints/qlora_context_r8/checkpoint-150`. Omitting `--resume_from_checkpoint` starts a fresh run. The scripts log the selected mode, resolved checkpoint path, and resume step when available. Completed resumed runs also record the resolved checkpoint in the `resumed_from` column of `results/finetune_run_log.csv`; existing rows from the older five-column format are preserved with an empty value in that column.
 
-Run inference with the default rank-8 context adapter:
-
-```bash
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    python prompting/finetuned_inference.py \
-  --config configs/config.yaml \
-  --dataset refcoco \
-  --split val \
-  --subset relational \
-  --adapter_dir checkpoints/qlora_context_r8 \
-  --condition D
-
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    python prompting/finetuned_inference.py \
-  --config configs/config.yaml \
-  --dataset refcoco \
-  --split val \
-  --subset positional \
-  --adapter_dir checkpoints/qlora_context_r8 \
-  --condition D
-
-env -u ALL_PROXY -u all_proxy \
-    -u HTTP_PROXY -u http_proxy \
-    -u HTTPS_PROXY -u https_proxy \
-    python prompting/finetuned_inference.py \
-  --config configs/config.yaml \
-  --dataset refcoco \
-  --split val \
-  --subset attribute \
-  --adapter_dir checkpoints/qlora_context_r8 \
-  --condition D
-```
+The base-run script above also runs inference with the default rank-8 context adapter for all three subsets.
 
 Default outputs:
 
@@ -800,61 +451,13 @@ results/predictions_condD_refcoco_val_<subset>_all.jsonl
 
 Compute `accuracy@IoU-0.5` for each condition and subset. The evaluator appends rows to `results/accuracy_table.csv`.
 
-```bash
-for subset in relational positional attribute; do
-  python eval/compute_accuracy_iou.py \
-    --config configs/config.yaml \
-    --predictions results/predictions_condA_refcoco_val_${subset}.jsonl \
-    --ground_truth data/processed/refcoco_val.jsonl \
-    --subset_file data/splits/refcoco_val_${subset}.jsonl \
-    --condition A \
-    --dataset refcoco \
-    --split val \
-    --subset $subset
-done
-
-for subset in relational positional attribute; do
-  python eval/compute_accuracy_iou.py \
-    --config configs/config.yaml \
-    --predictions results/predictions_condB_refcoco_val_${subset}_all.jsonl \
-    --ground_truth data/processed/refcoco_val.jsonl \
-    --subset_file data/splits/refcoco_val_${subset}.jsonl \
-    --condition B \
-    --dataset refcoco \
-    --split val \
-    --subset $subset
-done
-
-for subset in relational positional attribute; do
-  python eval/compute_accuracy_iou.py \
-    --config configs/config.yaml \
-    --predictions results/predictions_condC_refcoco_val_${subset}.jsonl \
-    --ground_truth data/processed/refcoco_val.jsonl \
-    --subset_file data/splits/refcoco_val_${subset}.jsonl \
-    --condition C \
-    --dataset refcoco \
-    --split val \
-    --subset $subset
-done
-
-for subset in relational positional attribute; do
-  python eval/compute_accuracy_iou.py \
-    --config configs/config.yaml \
-    --predictions results/predictions_condD_refcoco_val_${subset}_all.jsonl \
-    --ground_truth data/processed/refcoco_val.jsonl \
-    --subset_file data/splits/refcoco_val_${subset}.jsonl \
-    --condition D \
-    --dataset refcoco \
-    --split val \
-    --subset $subset
-done
-```
-
-Build README-ready tables:
+Run the complete evaluation and results-table build with:
 
 ```bash
-python eval/build_results_table.py --config configs/config.yaml
+bash scripts/evaluate_all.sh
 ```
+
+The evaluation script also builds README-ready tables.
 
 Expected output:
 
