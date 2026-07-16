@@ -1,0 +1,3 @@
+rank,freeze_vision_tower,peak_mem_mb,train_seconds,output_dir,resumed_from,max_train_samples
+8,True,5221.75,13639.14,/home/m/Documents/My_Projects/Github_Enhancement/relational-grounding-bench/checkpoints/qlora_r8,,4000
+8,True,5398.96,11136.06,/home/m/Documents/My_Projects/Github_Enhancement/relational-grounding-bench/checkpoints/qlora_context_r8,/home/m/Documents/My_Projects/Github_Enhancement/relational-grounding-bench/checkpoints/qlora_context_r8/checkpoint-300,4000

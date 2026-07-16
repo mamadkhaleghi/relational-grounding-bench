@@ -1,0 +1,395 @@
+{"ref_id": 277, "expression": "man on right in shorts elephant wants to charge", "predicted_bbox": [329.0, 274.0, 427.0, 640.0], "raw_output": "<box>(329,274),(427,640)</box>"}
+{"ref_id": 396, "expression": "lady on left laying on bed", "predicted_bbox": [0.0, 139.0, 227.0, 364.0], "raw_output": "<box>(0,139),(227,364)</box>"}
+{"ref_id": 465, "expression": "the sheets on the bed in the bottom right corner", "predicted_bbox": [350.0, 348.0, 612.0, 447.0], "raw_output": "<box>(350,348),(612,447)</box>"}
+{"ref_id": 768, "expression": "man in blue shirt holding scissors", "predicted_bbox": [304.0, 91.0, 500.0, 367.0], "raw_output": "<box>(304,91),(500,367)</box>"}
+{"ref_id": 787, "expression": "swirly rug on floor at bottom right area", "predicted_bbox": [275.0, 530.0, 612.0, 608.0], "raw_output": "<box>(275,530),(612,608)</box>"}
+{"ref_id": 788, "expression": "guy in back with arm on chair", "predicted_bbox": [94.0, 203.0, 280.0, 356.0], "raw_output": "<box>(94,203),(280,356)</box>"}
+{"ref_id": 793, "expression": "chair under the guy on the right", "predicted_bbox": [495.0, 387.0, 612.0, 540.0], "raw_output": "<box>(495,387),(612,540)</box>"}
+{"ref_id": 793, "expression": "chair on right next to man in blue shirt", "predicted_bbox": [495.0, 396.0, 612.0, 547.0], "raw_output": "<box>(495,396),(612,547)</box>"}
+{"ref_id": 1176, "expression": "kid in purple shirt furthest right of the four", "predicted_bbox": [389.0, 157.0, 490.0, 420.0], "raw_output": "<box>(389,157),(490,420)</box>"}
+{"ref_id": 1178, "expression": "boy sitting on the bench closest to us", "predicted_bbox": [89.0, 257.0, 243.0, 427.0], "raw_output": "<box>(89,257),(243,427)</box>"}
+{"ref_id": 1383, "expression": "car next to cab", "predicted_bbox": [103.0, 324.0, 271.0, 469.0], "raw_output": "<box>(103,324),(271,469)</box>"}
+{"ref_id": 1460, "expression": "the banana in the middle with 2 black dots on the stem", "predicted_bbox": [247.0, 135.0, 360.0, 289.0], "raw_output": "<box>(247,135),(360,289)</box>"}
+{"ref_id": 1597, "expression": "laptop next to cat", "predicted_bbox": [149.0, 250.0, 396.0, 471.0], "raw_output": "<box>(149,250),(396,471)</box>"}
+{"ref_id": 1925, "expression": "guy near wall", "predicted_bbox": [349.0, 35.0, 490.0, 260.0], "raw_output": "<box>(349,35),(490,260)</box>"}
+{"ref_id": 1925, "expression": "the guy trying to shit on the wall", "predicted_bbox": [348.0, 35.0, 490.0, 260.0], "raw_output": "<box>(348,35),(490,260)</box>"}
+{"ref_id": 1926, "expression": "man with tennis racket", "predicted_bbox": [268.0, 67.0, 394.0, 405.0], "raw_output": "<box>(268,67),(394,405)</box>"}
+{"ref_id": 2186, "expression": "man in middle with cup", "predicted_bbox": [243.0, 116.0, 370.0, 480.0], "raw_output": "<box>(243,116),(370,480)</box>"}
+{"ref_id": 2500, "expression": "bread in the middle behind the bowl", "predicted_bbox": [234.0, 109.0, 395.0, 260.0], "raw_output": "<box>(234,109),(395,260)</box>"}
+{"ref_id": 2500, "expression": "pastry behind everything on plate", "predicted_bbox": [234.0, 109.0, 405.0, 260.0], "raw_output": "<box>(234,109),(405,260)</box>"}
+{"ref_id": 2750, "expression": "directly above tennis players head the person behind the barrier be careful", "predicted_bbox": [96.0, 0.0, 203.0, 194.0], "raw_output": "<box>(96,0),(203,194)</box>"}
+{"ref_id": 2766, "expression": "man holding child", "predicted_bbox": [0.0, 68.0, 573.0, 475.0], "raw_output": "<box>(0,68),(573,475)</box>"}
+{"ref_id": 2766, "expression": "man holding child", "predicted_bbox": [0.0, 68.0, 573.0, 475.0], "raw_output": "<box>(0,68),(573,475)</box>"}
+{"ref_id": 2812, "expression": "giraffe behind other giraffe", "predicted_bbox": [0.0, 56.0, 283.0, 449.0], "raw_output": "<box>(0,56),(283,449)</box>"}
+{"ref_id": 2930, "expression": "man just behind 33", "predicted_bbox": [98.0, 45.0, 386.0, 407.0], "raw_output": "<box>(98,45),(386,407)</box>"}
+{"ref_id": 2930, "expression": "arms behind 33", "predicted_bbox": [108.0, 45.0, 386.0, 407.0], "raw_output": "<box>(108,45),(386,407)</box>"}
+{"ref_id": 3201, "expression": "woman on phone", "predicted_bbox": [428.0, 115.0, 609.0, 427.0], "raw_output": "<box>(428,115),(609,427)</box>"}
+{"ref_id": 3363, "expression": "plant on right of desk", "predicted_bbox": [337.0, 209.0, 640.0, 465.0], "raw_output": "<box>(337,209),(640,465)</box>"}
+{"ref_id": 3371, "expression": "piece of cake to right of milk", "predicted_bbox": [145.0, 60.0, 337.0, 228.0], "raw_output": "<box>(145,60),(337,228)</box>"}
+{"ref_id": 3700, "expression": "shirt with flames on it", "predicted_bbox": [27.0, 0.0, 235.0, 426.0], "raw_output": "<box>(27,0),(235,426)</box>"}
+{"ref_id": 3702, "expression": "the person holding the pie", "predicted_bbox": [304.0, 29.0, 640.0, 427.0], "raw_output": "<box>(304,29),(640,427)</box>"}
+{"ref_id": 4134, "expression": "the girl about to get hit by bat in face", "predicted_bbox": [15.0, 204.0, 136.0, 370.0], "raw_output": "<box>(15,204),(136,370)</box>"}
+{"ref_id": 4135, "expression": "blue under bat", "predicted_bbox": [53.0, 279.0, 218.0, 426.0], "raw_output": "<box>(53,279),(218,426)</box>"}
+{"ref_id": 4583, "expression": "middle plate behind the pizza", "predicted_bbox": [165.0, 130.0, 370.0, 248.0], "raw_output": "<box>(165,130),(370,248)</box>"}
+{"ref_id": 5188, "expression": "a orange and black boat on the green water", "predicted_bbox": [0.0, 245.0, 603.0, 427.0], "raw_output": "<box>(0,245),(603,427)</box>"}
+{"ref_id": 5436, "expression": "bear laying behind pole", "predicted_bbox": [498.0, 235.0, 640.0, 397.0], "raw_output": "<box>(498,235),(640,397)</box>"}
+{"ref_id": 5436, "expression": "the bear hiding behind pole", "predicted_bbox": [498.0, 235.0, 640.0, 378.0], "raw_output": "<box>(498,235),(640,378)</box>"}
+{"ref_id": 5436, "expression": "bear behind tree", "predicted_bbox": [498.0, 235.0, 640.0, 397.0], "raw_output": "<box>(498,235),(640,397)</box>"}
+{"ref_id": 5723, "expression": "red shirt right of dude looking at us person", "predicted_bbox": [193.0, 180.0, 314.0, 476.0], "raw_output": "<box>(193,180),(314,476)</box>"}
+{"ref_id": 5724, "expression": "person looking at something in her hand on right", "predicted_bbox": [264.0, 183.0, 375.0, 500.0], "raw_output": "<box>(264,183),(375,500)</box>"}
+{"ref_id": 5725, "expression": "girl facing us holding red shirt", "predicted_bbox": [193.0, 178.0, 314.0, 406.0], "raw_output": "<box>(193,178),(314,406)</box>"}
+{"ref_id": 5849, "expression": "person on left of the person being interviewed", "predicted_bbox": [109.0, 143.0, 258.0, 376.0], "raw_output": "<box>(109,143),(258,376)</box>"}
+{"ref_id": 5849, "expression": "man on left in bluewhite tie", "predicted_bbox": [108.0, 143.0, 265.0, 427.0], "raw_output": "<box>(108,143),(265,427)</box>"}
+{"ref_id": 5852, "expression": "blond girl holding mic on right", "predicted_bbox": [397.0, 208.0, 640.0, 425.0], "raw_output": "<box>(397,208),(640,425)</box>"}
+{"ref_id": 6440, "expression": "olive on pizza in front", "predicted_bbox": [130.0, 284.0, 357.0, 439.0], "raw_output": "<box>(130,284),(357,439)</box>"}
+{"ref_id": 6506, "expression": "person above laptop", "predicted_bbox": [84.0, 0.0, 293.0, 115.0], "raw_output": "<box>(84,0),(293,115)</box>"}
+{"ref_id": 6506, "expression": "jeans above silver laptop", "predicted_bbox": [83.0, 0.0, 294.0, 115.0], "raw_output": "<box>(83,0),(294,115)</box>"}
+{"ref_id": 6734, "expression": "guy left of john kerry", "predicted_bbox": [137.0, 49.0, 268.0, 235.0], "raw_output": "<box>(137,49),(268,235)</box>"}
+{"ref_id": 6735, "expression": "women to the right of kerry", "predicted_bbox": [368.0, 65.0, 507.0, 329.0], "raw_output": "<box>(368,65),(507,329)</box>"}
+{"ref_id": 7053, "expression": "kid with crap eating grin", "predicted_bbox": [1.0, 76.0, 180.0, 493.0], "raw_output": "<box>(1,76),(180,493)</box>"}
+{"ref_id": 7494, "expression": "right carrot in bag", "predicted_bbox": [238.0, 227.0, 375.0, 390.0], "raw_output": "<box>(238,227),(375,390)</box>"}
+{"ref_id": 7495, "expression": "top carrot in bag", "predicted_bbox": [0.0, 159.0, 263.0, 304.0], "raw_output": "<box>(0,159),(263,304)</box>"}
+{"ref_id": 7552, "expression": "umbrella near cam middle one", "predicted_bbox": [150.0, 60.0, 513.0, 349.0], "raw_output": "<box>(150,60),(513,349)</box>"}
+{"ref_id": 7708, "expression": "center guy touching nuts", "predicted_bbox": [64.0, 83.0, 357.0, 360.0], "raw_output": "<box>(64,83),(357,360)</box>"}
+{"ref_id": 7889, "expression": "horse in middle near man", "predicted_bbox": [247.0, 135.0, 409.0, 386.0], "raw_output": "<box>(247,135),(409,386)</box>"}
+{"ref_id": 8445, "expression": "chair on left by standing person", "predicted_bbox": [46.0, 239.0, 145.0, 408.0], "raw_output": "<box>(46,239),(145,408)</box>"}
+{"ref_id": 8446, "expression": "chair on right edge next to womans arm", "predicted_bbox": [487.0, 265.0, 639.0, 470.0], "raw_output": "<box>(487,265),(639,470)</box>"}
+{"ref_id": 8446, "expression": "gray chair directly behind the woman in black", "predicted_bbox": [137.0, 284.0, 269.0, 440.0], "raw_output": "<box>(137,284),(269,440)</box>"}
+{"ref_id": 8542, "expression": "second elephant behind", "predicted_bbox": [95.0, 143.0, 316.0, 210.0], "raw_output": "<box>(95,143),(316,210)</box>"}
+{"ref_id": 8835, "expression": "white chaise under window", "predicted_bbox": [134.0, 236.0, 378.0, 330.0], "raw_output": "<box>(134,236),(378,330)</box>"}
+{"ref_id": 9129, "expression": "table in front of lady in red", "predicted_bbox": [240.0, 289.0, 553.0, 474.0], "raw_output": "<box>(240,289),(553,474)</box>"}
+{"ref_id": 9132, "expression": "guy looking lost in blue shirt with hand on table", "predicted_bbox": [423.0, 139.0, 640.0, 475.0], "raw_output": "<box>(423,139),(640,475)</box>"}
+{"ref_id": 9134, "expression": "anywhere on the front table but the actual table nothing on it", "predicted_bbox": [160.0, 284.0, 553.0, 479.0], "raw_output": "<box>(160,284),(553,479)</box>"}
+{"ref_id": 9179, "expression": "blue shirt behind cake", "predicted_bbox": [39.0, 0.0, 475.0, 146.0], "raw_output": "<box>(39,0),(475,146)</box>"}
+{"ref_id": 9179, "expression": "spot above the cake", "predicted_bbox": [39.0, 0.0, 475.0, 148.0], "raw_output": "<box>(39,0),(475,148)</box>"}
+{"ref_id": 9179, "expression": "area above cake", "predicted_bbox": [395.0, 0.0, 640.0, 287.0], "raw_output": "<box>(395,0),(640,287)</box>"}
+{"ref_id": 9180, "expression": "hand holding knife", "predicted_bbox": [446.0, 0.0, 640.0, 293.0], "raw_output": "<box>(446,0),(640,293)</box>"}
+{"ref_id": 9316, "expression": "man in blue behind player", "predicted_bbox": [379.0, 56.0, 468.0, 320.0], "raw_output": "<box>(379,56),(468,320)</box>"}
+{"ref_id": 9388, "expression": "woman with tattoos on her left forearm playing wii", "predicted_bbox": [3.0, 184.0, 427.0, 630.0], "raw_output": "<box>(3,184),(427,630)</box>"}
+{"ref_id": 9694, "expression": "wine glass center directly in front of wine bottle", "predicted_bbox": [256.0, 0.0, 367.0, 224.0], "raw_output": "<box>(256,0),(367,224)</box>"}
+{"ref_id": 9824, "expression": "man with back to camera", "predicted_bbox": [98.0, 127.0, 273.0, 420.0], "raw_output": "<box>(98,127),(273,420)</box>"}
+{"ref_id": 10324, "expression": "person on far right standing", "predicted_bbox": [567.0, 3.0, 640.0, 308.0], "raw_output": "<box>(567,3),(640,308)</box>"}
+{"ref_id": 10551, "expression": "extreme left person with red bag", "predicted_bbox": [0.0, 114.0, 63.0, 395.0], "raw_output": "<box>(0,114),(63,395)</box>"}
+{"ref_id": 10552, "expression": "man in gray shirt with bag", "predicted_bbox": [246.0, 75.0, 340.0, 422.0], "raw_output": "<box>(246,75),(340,422)</box>"}
+{"ref_id": 11110, "expression": "little green trees to the left of the carrots", "predicted_bbox": [125.0, 60.0, 234.0, 227.0], "raw_output": "<box>(125,60),(234,227)</box>"}
+{"ref_id": 11370, "expression": "brown chair near fireplace", "predicted_bbox": [250.0, 223.0, 360.0, 374.0], "raw_output": "<box>(250,223),(360,374)</box>"}
+{"ref_id": 11370, "expression": "brown chair on left near fireplace", "predicted_bbox": [250.0, 223.0, 360.0, 374.0], "raw_output": "<box>(250,223),(360,374)</box>"}
+{"ref_id": 11612, "expression": "dk blue to left of boy", "predicted_bbox": [0.0, 87.0, 135.0, 346.0], "raw_output": "<box>(0,87),(135,346)</box>"}
+{"ref_id": 11612, "expression": "suitcase to left of kid", "predicted_bbox": [0.0, 154.0, 137.0, 346.0], "raw_output": "<box>(0,154),(137,346)</box>"}
+{"ref_id": 11612, "expression": "below bright blue bag in back", "predicted_bbox": [3.0, 150.0, 140.0, 346.0], "raw_output": "<box>(3,150),(140,346)</box>"}
+{"ref_id": 11613, "expression": "bag with monkey on it", "predicted_bbox": [406.0, 123.0, 612.0, 365.0], "raw_output": "<box>(406,123),(612,365)</box>"}
+{"ref_id": 11614, "expression": "dude behind kid", "predicted_bbox": [43.0, 0.0, 185.0, 176.0], "raw_output": "<box>(43,0),(185,176)</box>"}
+{"ref_id": 11615, "expression": "a little buy with his juice box going on vacaction", "predicted_bbox": [103.0, 75.0, 264.0, 500.0], "raw_output": "<box>(103,75),(264,500)</box>"}
+{"ref_id": 12500, "expression": "green shirt with soccer on it", "predicted_bbox": [293.0, 150.0, 446.0, 427.0], "raw_output": "<box>(293,150),(446,427)</box>"}
+{"ref_id": 12529, "expression": "man in blakc shirt and jeans facing away from camera", "predicted_bbox": [420.0, 227.0, 516.0, 423.0], "raw_output": "<box>(420,227),(516,423)</box>"}
+{"ref_id": 12529, "expression": "front girl with blue on next to guy with backpack", "predicted_bbox": [420.0, 226.0, 517.0, 422.0], "raw_output": "<box>(420,226),(517,422)</box>"}
+{"ref_id": 12532, "expression": "far right guy with backpack", "predicted_bbox": [540.0, 193.0, 640.0, 427.0], "raw_output": "<box>(540,193),(640,427)</box>"}
+{"ref_id": 12532, "expression": "guy on the right with bag pack in black", "predicted_bbox": [540.0, 193.0, 640.0, 427.0], "raw_output": "<box>(540,193),(640,427)</box>"}
+{"ref_id": 12627, "expression": "pastry next to right hand coffee mug", "predicted_bbox": [304.0, 295.0, 396.0, 378.0], "raw_output": "<box>(304,295),(396,378)</box>"}
+{"ref_id": 12627, "expression": "pastry on rightfront of plate", "predicted_bbox": [273.0, 345.0, 396.0, 458.0], "raw_output": "<box>(273,345),(396,458)</box>"}
+{"ref_id": 12628, "expression": "danish next to the coffee cup on the left", "predicted_bbox": [89.0, 274.0, 265.0, 403.0], "raw_output": "<box>(89,274),(265,403)</box>"}
+{"ref_id": 12628, "expression": "white powder on baked good to the left", "predicted_bbox": [90.0, 273.0, 265.0, 408.0], "raw_output": "<box>(90,273),(265,408)</box>"}
+{"ref_id": 12653, "expression": "man with arm around woman", "predicted_bbox": [243.0, 50.0, 500.0, 357.0], "raw_output": "<box>(243,50),(500,357)</box>"}
+{"ref_id": 13066, "expression": "guy in front on bike", "predicted_bbox": [219.0, 104.0, 430.0, 415.0], "raw_output": "<box>(219,104),(430,415)</box>"}
+{"ref_id": 13066, "expression": "man on motorcycle front middle but not motorcycle", "predicted_bbox": [219.0, 105.0, 430.0, 416.0], "raw_output": "<box>(219,105),(430,416)</box>"}
+{"ref_id": 13066, "expression": "person on bike in center front", "predicted_bbox": [219.0, 104.0, 430.0, 415.0], "raw_output": "<box>(219,104),(430,415)</box>"}
+{"ref_id": 13070, "expression": "guy on far left bike in yellow", "predicted_bbox": [0.0, 90.0, 147.0, 358.0], "raw_output": "<box>(0,90),(147,358)</box>"}
+{"ref_id": 13071, "expression": "center bike not the people on it", "predicted_bbox": [243.0, 150.0, 427.0, 426.0], "raw_output": "<box>(243,150),(427,426)</box>"}
+{"ref_id": 13649, "expression": "pastry above the brown donut", "predicted_bbox": [336.0, 74.0, 480.0, 195.0], "raw_output": "<box>(336,74),(480,195)</box>"}
+{"ref_id": 13649, "expression": "whit dognut at the top next to the black donuts", "predicted_bbox": [336.0, 74.0, 480.0, 195.0], "raw_output": "<box>(336,74),(480,195)</box>"}
+{"ref_id": 13653, "expression": "sprinkled donut on top next to glazed donut", "predicted_bbox": [216.0, 87.0, 340.0, 199.0], "raw_output": "<box>(216,87),(340,199)</box>"}
+{"ref_id": 14036, "expression": "the person in the background under elbow", "predicted_bbox": [0.0, 348.0, 156.0, 637.0], "raw_output": "<box>(0,348),(156,637)</box>"}
+{"ref_id": 14037, "expression": "red shirt behind player", "predicted_bbox": [368.0, 179.0, 427.0, 640.0], "raw_output": "<box>(368,179),(427,640)</box>"}
+{"ref_id": 14062, "expression": "left bike behind the man on left", "predicted_bbox": [84.0, 237.0, 316.0, 365.0], "raw_output": "<box>(84,237),(316,365)</box>"}
+{"ref_id": 14198, "expression": "slice to left of lifter", "predicted_bbox": [50.0, 49.0, 307.0, 286.0], "raw_output": "<box>(50,49),(307,286)</box>"}
+{"ref_id": 14199, "expression": "slice of pie that is just below the left silver handle", "predicted_bbox": [49.0, 50.0, 287.0, 283.0], "raw_output": "<box>(49,50),(287,283)</box>"}
+{"ref_id": 14207, "expression": "elephant with all its feet on the ground", "predicted_bbox": [194.0, 125.0, 370.0, 346.0], "raw_output": "<box>(194,125),(370,346)</box>"}
+{"ref_id": 14207, "expression": "middle standing on all fours", "predicted_bbox": [324.0, 67.0, 440.0, 315.0], "raw_output": "<box>(324,67),(440,315)</box>"}
+{"ref_id": 14700, "expression": "black screen behind boy", "predicted_bbox": [380.0, 279.0, 640.0, 422.0], "raw_output": "<box>(380,279),(640,422)</box>"}
+{"ref_id": 14701, "expression": "black monitor on bottow right", "predicted_bbox": [380.0, 279.0, 640.0, 422.0], "raw_output": "<box>(380,279),(640,422)</box>"}
+{"ref_id": 15287, "expression": "first skier on ski lift on right", "predicted_bbox": [430.0, 156.0, 537.0, 398.0], "raw_output": "<box>(430,156),(537,398)</box>"}
+{"ref_id": 15287, "expression": "skiier on the right in the chair", "predicted_bbox": [430.0, 156.0, 537.0, 398.0], "raw_output": "<box>(430,156),(537,398)</box>"}
+{"ref_id": 15484, "expression": "right blue chair near table", "predicted_bbox": [453.0, 167.0, 620.0, 329.0], "raw_output": "<box>(453,167),(620,329)</box>"}
+{"ref_id": 15484, "expression": "blue chair in front of cupcakes", "predicted_bbox": [450.0, 163.0, 627.0, 329.0], "raw_output": "<box>(450,163),(627,329)</box>"}
+{"ref_id": 15484, "expression": "blue chair next to two tiered dessert display", "predicted_bbox": [453.0, 167.0, 620.0, 329.0], "raw_output": "<box>(453,167),(620,329)</box>"}
+{"ref_id": 15513, "expression": "red stool in very front of green one", "predicted_bbox": [463.0, 107.0, 640.0, 425.0], "raw_output": "<box>(463,107),(640,425)</box>"}
+{"ref_id": 15523, "expression": "the bike on the right with the plate that says ca", "predicted_bbox": [137.0, 229.0, 308.0, 415.0], "raw_output": "<box>(137,229),(308,415)</box>"}
+{"ref_id": 15840, "expression": "set under magazines", "predicted_bbox": [137.0, 146.0, 500.0, 370.0], "raw_output": "<box>(137,146),(500,370)</box>"}
+{"ref_id": 15841, "expression": "right chair next to lady", "predicted_bbox": [207.0, 145.0, 500.0, 369.0], "raw_output": "<box>(207,145),(500,369)</box>"}
+{"ref_id": 16134, "expression": "top left container with meat and orange cup", "predicted_bbox": [19.0, 124.0, 378.0, 320.0], "raw_output": "<box>(19,124),(378,320)</box>"}
+{"ref_id": 16562, "expression": "cow on left eating grass", "predicted_bbox": [0.0, 197.0, 163.0, 428.0], "raw_output": "<box>(0,197),(163,428)</box>"}
+{"ref_id": 16562, "expression": "cow eating grass head down far left side", "predicted_bbox": [0.0, 197.0, 83.0, 345.0], "raw_output": "<box>(0,197),(83,345)</box>"}
+{"ref_id": 16563, "expression": "cow with nose over fence", "predicted_bbox": [340.0, 185.0, 640.0, 479.0], "raw_output": "<box>(340,185),(640,479)</box>"}
+{"ref_id": 16564, "expression": "center of the pic cow eating grass", "predicted_bbox": [334.0, 205.0, 576.0, 448.0], "raw_output": "<box>(334,205),(576,448)</box>"}
+{"ref_id": 16599, "expression": "woman left of gir", "predicted_bbox": [135.0, 120.0, 306.0, 475.0], "raw_output": "<box>(135,120),(306,475)</box>"}
+{"ref_id": 16614, "expression": "man on skies", "predicted_bbox": [190.0, 0.0, 340.0, 356.0], "raw_output": "<box>(190,0),(340,356)</box>"}
+{"ref_id": 16941, "expression": "person on left with mask on", "predicted_bbox": [80.0, 224.0, 253.0, 479.0], "raw_output": "<box>(80,224),(253,479)</box>"}
+{"ref_id": 17091, "expression": "laptop in middle with hands on it", "predicted_bbox": [237.0, 164.0, 375.0, 330.0], "raw_output": "<box>(237,164),(375,330)</box>"}
+{"ref_id": 17795, "expression": "dude touching apple laptop", "predicted_bbox": [470.0, 16.0, 639.0, 335.0], "raw_output": "<box>(470,16),(639,335)</box>"}
+{"ref_id": 17796, "expression": "lady touching the laptop logo", "predicted_bbox": [76.0, 168.0, 350.0, 422.0], "raw_output": "<box>(76,168),(350,422)</box>"}
+{"ref_id": 17824, "expression": "the sushi with the pink stick on it", "predicted_bbox": [209.0, 13.0, 354.0, 151.0], "raw_output": "<box>(209,13),(354,151)</box>"}
+{"ref_id": 17829, "expression": "bowl above the square bowl on right", "predicted_bbox": [368.0, 140.0, 500.0, 270.0], "raw_output": "<box>(368,140),(500,270)</box>"}
+{"ref_id": 18152, "expression": "bed next to the desk", "predicted_bbox": [97.0, 224.0, 480.0, 435.0], "raw_output": "<box>(97,224),(480,435)</box>"}
+{"ref_id": 18402, "expression": "man catching frisbee", "predicted_bbox": [300.0, 131.0, 584.0, 296.0], "raw_output": "<box>(300,131),(584,296)</box>"}
+{"ref_id": 18718, "expression": "animal in front of man in gray pants", "predicted_bbox": [0.0, 234.0, 229.0, 345.0], "raw_output": "<box>(0,234),(229,345)</box>"}
+{"ref_id": 18718, "expression": "black lamb on top of the throat cutted one", "predicted_bbox": [0.0, 225.0, 234.0, 342.0], "raw_output": "<box>(0,225),(234,342)</box>"}
+{"ref_id": 18832, "expression": "right giraffe about to eat little girl", "predicted_bbox": [270.0, 53.0, 440.0, 260.0], "raw_output": "<box>(270,53),(440,260)</box>"}
+{"ref_id": 19404, "expression": "white area left of 59 vase", "predicted_bbox": [0.0, 0.0, 148.0, 427.0], "raw_output": "<box>(0,0),(148,427)</box>"}
+{"ref_id": 19404, "expression": "the small bottle to the left of the big vase", "predicted_bbox": [0.0, 0.0, 153.0, 427.0], "raw_output": "<box>(0,0),(153,427)</box>"}
+{"ref_id": 19404, "expression": "just left of the 59 vase very blurry white part", "predicted_bbox": [137.0, 80.0, 264.0, 422.0], "raw_output": "<box>(137,80),(264,422)</box>"}
+{"ref_id": 19410, "expression": "girl holding a cat", "predicted_bbox": [19.0, 34.0, 256.0, 427.0], "raw_output": "<box>(19,34),(256,427)</box>"}
+{"ref_id": 19691, "expression": "bear on ledge", "predicted_bbox": [409.0, 35.0, 607.0, 248.0], "raw_output": "<box>(409,35),(607,248)</box>"}
+{"ref_id": 20159, "expression": "table under laptop", "predicted_bbox": [57.0, 368.0, 450.0, 427.0], "raw_output": "<box>(57,368),(450,427)</box>"}
+{"ref_id": 20160, "expression": "table behind girl in pink", "predicted_bbox": [48.0, 130.0, 256.0, 217.0], "raw_output": "<box>(48,130),(256,217)</box>"}
+{"ref_id": 20160, "expression": "tables behind", "predicted_bbox": [48.0, 130.0, 256.0, 219.0], "raw_output": "<box>(48,130),(256,219)</box>"}
+{"ref_id": 20160, "expression": "table behind girl", "predicted_bbox": [48.0, 130.0, 256.0, 219.0], "raw_output": "<box>(48,130),(256,219)</box>"}
+{"ref_id": 20164, "expression": "sitting person on back leaning on table", "predicted_bbox": [16.0, 30.0, 159.0, 247.0], "raw_output": "<box>(16,30),(159,247)</box>"}
+{"ref_id": 20494, "expression": "clear container to right of tea on left", "predicted_bbox": [248.0, 109.0, 356.0, 257.0], "raw_output": "<box>(248,109),(356,257)</box>"}
+{"ref_id": 21013, "expression": "yellow area right above cats head", "predicted_bbox": [243.0, 247.0, 420.0, 475.0], "raw_output": "<box>(243,247),(420,475)</box>"}
+{"ref_id": 21013, "expression": "black blacket under cat", "predicted_bbox": [259.0, 280.0, 640.0, 475.0], "raw_output": "<box>(259,280),(640,475)</box>"}
+{"ref_id": 21290, "expression": "kid on bench", "predicted_bbox": [315.0, 89.0, 446.0, 297.0], "raw_output": "<box>(315,89),(446,297)</box>"}
+{"ref_id": 21729, "expression": "elephant the is in the back that is between another elephant and a waterfall", "predicted_bbox": [154.0, 239.0, 316.0, 357.0], "raw_output": "<box>(154,239),(316,357)</box>"}
+{"ref_id": 21842, "expression": "nut and carrot section to the right of the meat section", "predicted_bbox": [390.0, 228.0, 596.0, 475.0], "raw_output": "<box>(390,228),(596,475)</box>"}
+{"ref_id": 21876, "expression": "girl on phone", "predicted_bbox": [118.0, 0.0, 364.0, 375.0], "raw_output": "<box>(118,0),(364,375)</box>"}
+{"ref_id": 21876, "expression": "girl on phone", "predicted_bbox": [117.0, 0.0, 364.0, 375.0], "raw_output": "<box>(117,0),(364,375)</box>"}
+{"ref_id": 21876, "expression": "slut on phone", "predicted_bbox": [118.0, 0.0, 365.0, 375.0], "raw_output": "<box>(118,0),(365,375)</box>"}
+{"ref_id": 21961, "expression": "guy on right sitting", "predicted_bbox": [337.0, 159.0, 540.0, 396.0], "raw_output": "<box>(337,159),(540,396)</box>"}
+{"ref_id": 22010, "expression": "man on snowboard with blue jacket", "predicted_bbox": [235.0, 0.0, 346.0, 189.0], "raw_output": "<box>(235,0),(346,189)</box>"}
+{"ref_id": 22143, "expression": "guy with camera", "predicted_bbox": [126.0, 157.0, 214.0, 403.0], "raw_output": "<box>(126,157),(214,403)</box>"}
+{"ref_id": 22146, "expression": "man to right of 27 frt", "predicted_bbox": [345.0, 176.0, 485.0, 427.0], "raw_output": "<box>(345,176),(485,427)</box>"}
+{"ref_id": 22183, "expression": "leg to the left of man eating", "predicted_bbox": [0.0, 15.0, 89.0, 304.0], "raw_output": "<box>(0,15),(89,304)</box>"}
+{"ref_id": 22183, "expression": "person behind guy in front on left with knee showing", "predicted_bbox": [0.0, 19.0, 86.0, 304.0], "raw_output": "<box>(0,19),(86,304)</box>"}
+{"ref_id": 22185, "expression": "guy behind riling with hands between legs", "predicted_bbox": [329.0, 84.0, 516.0, 257.0], "raw_output": "<box>(329,84),(516,257)</box>"}
+{"ref_id": 22185, "expression": "guy with hat and sunglasses to right on sandwich eater", "predicted_bbox": [329.0, 84.0, 507.0, 260.0], "raw_output": "<box>(329,84),(507,260)</box>"}
+{"ref_id": 22466, "expression": "plain bicycle next to car", "predicted_bbox": [467.0, 98.0, 630.0, 305.0], "raw_output": "<box>(467,98),(630,305)</box>"}
+{"ref_id": 22466, "expression": "bike behind the glitter one", "predicted_bbox": [467.0, 98.0, 630.0, 305.0], "raw_output": "<box>(467,98),(630,305)</box>"}
+{"ref_id": 22519, "expression": "red shirt on the court", "predicted_bbox": [179.0, 108.0, 276.0, 329.0], "raw_output": "<box>(179,108),(276,329)</box>"}
+{"ref_id": 22559, "expression": "blurry buy on left behind bat", "predicted_bbox": [30.0, 168.0, 179.0, 425.0], "raw_output": "<box>(30,168),(179,425)</box>"}
+{"ref_id": 22625, "expression": "kid with the bat", "predicted_bbox": [230.0, 46.0, 405.0, 397.0], "raw_output": "<box>(230,46),(405,397)</box>"}
+{"ref_id": 22995, "expression": "red sofa in front of window", "predicted_bbox": [0.0, 213.0, 149.0, 395.0], "raw_output": "<box>(0,213),(149,395)</box>"}
+{"ref_id": 23046, "expression": "woman on top left tennis player", "predicted_bbox": [23.0, 98.0, 206.0, 415.0], "raw_output": "<box>(23,98),(206,415)</box>"}
+{"ref_id": 23046, "expression": "girl in back with racket", "predicted_bbox": [19.0, 103.0, 207.0, 415.0], "raw_output": "<box>(19,103),(207,415)</box>"}
+{"ref_id": 23278, "expression": "the cow standing on the left", "predicted_bbox": [83.0, 97.0, 224.0, 306.0], "raw_output": "<box>(83,97),(224,306)</box>"}
+{"ref_id": 23279, "expression": "right cow on the ground", "predicted_bbox": [304.0, 190.0, 586.0, 357.0], "raw_output": "<box>(304,190),(586,357)</box>"}
+{"ref_id": 23353, "expression": "man on right at front table", "predicted_bbox": [486.0, 250.0, 623.0, 427.0], "raw_output": "<box>(486,250),(623,427)</box>"}
+{"ref_id": 23642, "expression": "the white thing next to the mouse on the right side", "predicted_bbox": [307.0, 145.0, 476.0, 242.0], "raw_output": "<box>(307,145),(476,242)</box>"}
+{"ref_id": 23730, "expression": "boy on top of orange ramp thingy chekard shirt", "predicted_bbox": [70.0, 106.0, 274.0, 398.0], "raw_output": "<box>(70,106),(274,398)</box>"}
+{"ref_id": 23851, "expression": "keyboard in middle on right betweem 2 mice", "predicted_bbox": [220.0, 293.0, 612.0, 457.0], "raw_output": "<box>(220,293),(612,457)</box>"}
+{"ref_id": 23856, "expression": "keyboard right and sort of middle under mouse facing right", "predicted_bbox": [220.0, 294.0, 612.0, 563.0], "raw_output": "<box>(220,294),(612,563)</box>"}
+{"ref_id": 23950, "expression": "laptop to the right of the other laptop", "predicted_bbox": [354.0, 290.0, 560.0, 447.0], "raw_output": "<box>(354,290),(560,447)</box>"}
+{"ref_id": 23954, "expression": "monitor which looks like a camera in center", "predicted_bbox": [376.0, 294.0, 558.0, 418.0], "raw_output": "<box>(376,294),(558,418)</box>"}
+{"ref_id": 24079, "expression": "person in foreground with backpack", "predicted_bbox": [304.0, 156.0, 602.0, 475.0], "raw_output": "<box>(304,156),(602,475)</box>"}
+{"ref_id": 24081, "expression": "brown rag on head", "predicted_bbox": [130.0, 31.0, 345.0, 296.0], "raw_output": "<box>(130,31),(345,296)</box>"}
+{"ref_id": 24150, "expression": "tan seat cushion behind computer", "predicted_bbox": [0.0, 0.0, 176.0, 143.0], "raw_output": "<box>(0,0),(176,143)</box>"}
+{"ref_id": 24151, "expression": "pink bean bag under brown boot", "predicted_bbox": [107.0, 269.0, 438.0, 465.0], "raw_output": "<box>(107,269),(438,465)</box>"}
+{"ref_id": 24151, "expression": "pink area just below girl butt", "predicted_bbox": [107.0, 268.0, 439.0, 459.0], "raw_output": "<box>(107,268),(439,459)</box>"}
+{"ref_id": 24151, "expression": "the pink bag the part that is touching the green bag", "predicted_bbox": [26.0, 105.0, 530.0, 467.0], "raw_output": "<box>(26,105),(530,467)</box>"}
+{"ref_id": 24152, "expression": "leg of person sitting on green chair in background", "predicted_bbox": [225.0, 0.0, 487.0, 153.0], "raw_output": "<box>(225,0),(487,153)</box>"}
+{"ref_id": 24235, "expression": "lady next to man left", "predicted_bbox": [83.0, 117.0, 264.0, 295.0], "raw_output": "<box>(83,117),(264,295)</box>"}
+{"ref_id": 24235, "expression": "person in brown jacket to left of guy in blue shirt", "predicted_bbox": [84.0, 117.0, 263.0, 295.0], "raw_output": "<box>(84,117),(263,295)</box>"}
+{"ref_id": 24236, "expression": "man in middle coke bottle", "predicted_bbox": [253.0, 108.0, 436.0, 379.0], "raw_output": "<box>(253,108),(436,379)</box>"}
+{"ref_id": 24301, "expression": "woman on far right with suit case", "predicted_bbox": [497.0, 58.0, 603.0, 387.0], "raw_output": "<box>(497,58),(603,387)</box>"}
+{"ref_id": 24336, "expression": "mandarine orange segments on left side of plate", "predicted_bbox": [0.0, 176.0, 280.0, 359.0], "raw_output": "<box>(0,176),(280,359)</box>"}
+{"ref_id": 24809, "expression": "lady all the way tothe left on bike", "predicted_bbox": [4.0, 97.0, 113.0, 350.0], "raw_output": "<box>(4,97),(113,350)</box>"}
+{"ref_id": 24810, "expression": "man on bike", "predicted_bbox": [530.0, 104.0, 627.0, 408.0], "raw_output": "<box>(530,104),(627,408)</box>"}
+{"ref_id": 24811, "expression": "bike prego lady sitting on", "predicted_bbox": [0.0, 154.0, 327.0, 426.0], "raw_output": "<box>(0,154),(327,426)</box>"}
+{"ref_id": 25056, "expression": "tank on bike", "predicted_bbox": [164.0, 0.0, 305.0, 89.0], "raw_output": "<box>(164,0),(305,89)</box>"}
+{"ref_id": 25076, "expression": "guy at left with phone", "predicted_bbox": [56.0, 63.0, 179.0, 374.0], "raw_output": "<box>(56,63),(179,374)</box>"}
+{"ref_id": 25363, "expression": "the surfboard on ground", "predicted_bbox": [8.0, 376.0, 400.0, 465.0], "raw_output": "<box>(8,376),(400,465)</box>"}
+{"ref_id": 25365, "expression": "surf board girl is holding", "predicted_bbox": [218.0, 83.0, 317.0, 380.0], "raw_output": "<box>(218,83),(317,380)</box>"}
+{"ref_id": 25495, "expression": "to the left of the white cowtail", "predicted_bbox": [3.0, 70.0, 249.0, 475.0], "raw_output": "<box>(3,70),(249,475)</box>"}
+{"ref_id": 25552, "expression": "guy on aptop", "predicted_bbox": [243.0, 97.0, 480.0, 633.0], "raw_output": "<box>(243,97),(480,633)</box>"}
+{"ref_id": 25552, "expression": "man on laptop", "predicted_bbox": [240.0, 95.0, 480.0, 633.0], "raw_output": "<box>(240,95),(480,633)</box>"}
+{"ref_id": 25858, "expression": "blue swirly fabric on the person on the right", "predicted_bbox": [439.0, 65.0, 608.0, 427.0], "raw_output": "<box>(439,65),(608,427)</box>"}
+{"ref_id": 26581, "expression": "holding cake", "predicted_bbox": [309.0, 14.0, 576.0, 422.0], "raw_output": "<box>(309,14),(576,422)</box>"}
+{"ref_id": 26589, "expression": "bag hanging up on fence left", "predicted_bbox": [0.0, 89.0, 137.0, 294.0], "raw_output": "<box>(0,89),(137,294)</box>"}
+{"ref_id": 26590, "expression": "center guy behind fence", "predicted_bbox": [295.0, 0.0, 387.0, 264.0], "raw_output": "<box>(295,0),(387,264)</box>"}
+{"ref_id": 26590, "expression": "man leaning on fence", "predicted_bbox": [294.0, 0.0, 387.0, 256.0], "raw_output": "<box>(294,0),(387,256)</box>"}
+{"ref_id": 26831, "expression": "car behind zebra butt", "predicted_bbox": [430.0, 200.0, 640.0, 357.0], "raw_output": "<box>(430,200),(640,357)</box>"}
+{"ref_id": 26852, "expression": "girl on rgiht", "predicted_bbox": [237.0, 96.0, 610.0, 485.0], "raw_output": "<box>(237,96),(610,485)</box>"}
+{"ref_id": 27069, "expression": "black sheep near front", "predicted_bbox": [275.0, 304.0, 572.0, 560.0], "raw_output": "<box>(275,304),(572,560)</box>"}
+{"ref_id": 27132, "expression": "just to the right of guys earmaybe blurred guy", "predicted_bbox": [380.0, 204.0, 479.0, 516.0], "raw_output": "<box>(380,204),(479,516)</box>"}
+{"ref_id": 27132, "expression": "blurry person behind bowl hatted man", "predicted_bbox": [380.0, 54.0, 531.0, 527.0], "raw_output": "<box>(380,54),(531,527)</box>"}
+{"ref_id": 27225, "expression": "man in black shirt without camera", "predicted_bbox": [48.0, 230.0, 205.0, 456.0], "raw_output": "<box>(48,230),(205,456)</box>"}
+{"ref_id": 27226, "expression": "guy holding wii remote", "predicted_bbox": [194.0, 60.0, 405.0, 637.0], "raw_output": "<box>(194,60),(405,637)</box>"}
+{"ref_id": 27604, "expression": "striped shirt behind birthday child", "predicted_bbox": [340.0, 0.0, 536.0, 257.0], "raw_output": "<box>(340,0),(536,257)</box>"}
+{"ref_id": 27604, "expression": "striped shirt behind little girl", "predicted_bbox": [340.0, 0.0, 537.0, 260.0], "raw_output": "<box>(340,0),(537,260)</box>"}
+{"ref_id": 27605, "expression": "mom holding child", "predicted_bbox": [340.0, 0.0, 640.0, 427.0], "raw_output": "<box>(340,0),(640,427)</box>"}
+{"ref_id": 27605, "expression": "woman holding girl", "predicted_bbox": [340.0, 0.0, 640.0, 427.0], "raw_output": "<box>(340,0),(640,427)</box>"}
+{"ref_id": 28066, "expression": "man carrying woman", "predicted_bbox": [237.0, 54.0, 369.0, 330.0], "raw_output": "<box>(237,54),(369,330)</box>"}
+{"ref_id": 28066, "expression": "person carrying person", "predicted_bbox": [237.0, 54.0, 368.0, 330.0], "raw_output": "<box>(237,54),(368,330)</box>"}
+{"ref_id": 28066, "expression": "person holding girl", "predicted_bbox": [237.0, 54.0, 368.0, 330.0], "raw_output": "<box>(237,54),(368,330)</box>"}
+{"ref_id": 28104, "expression": "brown hair under guy with black phone hand", "predicted_bbox": [150.0, 237.0, 324.0, 375.0], "raw_output": "<box>(150,237),(324,375)</box>"}
+{"ref_id": 28105, "expression": "dark head left of silver phone", "predicted_bbox": [0.0, 197.0, 134.0, 375.0], "raw_output": "<box>(0,197),(134,375)</box>"}
+{"ref_id": 28205, "expression": "the pizza slice has sauce on it", "predicted_bbox": [30.0, 245.0, 287.0, 416.0], "raw_output": "<box>(30,245),(287,416)</box>"}
+{"ref_id": 28205, "expression": "bottom left piece with tomato on it", "predicted_bbox": [30.0, 347.0, 295.0, 586.0], "raw_output": "<box>(30,347),(295,586)</box>"}
+{"ref_id": 28209, "expression": "slice on the bottom right with bananas on it", "predicted_bbox": [380.0, 409.0, 576.0, 595.0], "raw_output": "<box>(380,409),(576,595)</box>"}
+{"ref_id": 28318, "expression": "hidden man behind woman on right", "predicted_bbox": [370.0, 194.0, 640.0, 425.0], "raw_output": "<box>(370,194),(640,425)</box>"}
+{"ref_id": 28579, "expression": "book laying on keyboard", "predicted_bbox": [245.0, 89.0, 573.0, 236.0], "raw_output": "<box>(245,89),(573,236)</box>"}
+{"ref_id": 29016, "expression": "yellow train on track", "predicted_bbox": [254.0, 118.0, 536.0, 340.0], "raw_output": "<box>(254,118),(536,340)</box>"}
+{"ref_id": 29303, "expression": "person with the second umbrella to the left", "predicted_bbox": [158.0, 203.0, 246.0, 427.0], "raw_output": "<box>(158,203),(246,427)</box>"}
+{"ref_id": 29364, "expression": "man carrying surfboard", "predicted_bbox": [193.0, 197.0, 364.0, 580.0], "raw_output": "<box>(193,197),(364,580)</box>"}
+{"ref_id": 29469, "expression": "man holding paper", "predicted_bbox": [358.0, 214.0, 476.0, 520.0], "raw_output": "<box>(358,214),(476,520)</box>"}
+{"ref_id": 29758, "expression": "guy sitting next to lady facing game", "predicted_bbox": [109.0, 238.0, 245.0, 407.0], "raw_output": "<box>(109,238),(245,407)</box>"}
+{"ref_id": 29758, "expression": "man in the black shirt sitting next to the woman", "predicted_bbox": [108.0, 239.0, 234.0, 407.0], "raw_output": "<box>(108,239),(234,407)</box>"}
+{"ref_id": 29787, "expression": "bicycle to the left behind the guy standing up and in front of the motorcycle", "predicted_bbox": [36.0, 147.0, 208.0, 290.0], "raw_output": "<box>(36,147),(208,290)</box>"}
+{"ref_id": 30208, "expression": "man she looked mean cake on left bottom", "predicted_bbox": [89.0, 203.0, 324.0, 435.0], "raw_output": "<box>(89,203),(324,435)</box>"}
+{"ref_id": 30594, "expression": "pillow cushions on couch", "predicted_bbox": [0.0, 85.0, 394.0, 326.0], "raw_output": "<box>(0,85),(394,326)</box>"}
+{"ref_id": 30594, "expression": "pillows on couch", "predicted_bbox": [0.0, 85.0, 396.0, 324.0], "raw_output": "<box>(0,85),(396,324)</box>"}
+{"ref_id": 30594, "expression": "the couch behind the man in red", "predicted_bbox": [0.0, 85.0, 406.0, 327.0], "raw_output": "<box>(0,85),(406,327)</box>"}
+{"ref_id": 30687, "expression": "middle giraffe between the two", "predicted_bbox": [153.0, 40.0, 296.0, 297.0], "raw_output": "<box>(153,40),(296,297)</box>"}
+{"ref_id": 30714, "expression": "kid next to girl in pink pants", "predicted_bbox": [289.0, 85.0, 370.0, 294.0], "raw_output": "<box>(289,85),(370,294)</box>"}
+{"ref_id": 30793, "expression": "man in black with hat looking at red motocycley", "predicted_bbox": [68.0, 0.0, 173.0, 195.0], "raw_output": "<box>(68,0),(173,195)</box>"}
+{"ref_id": 31118, "expression": "girl with brown hair closest to camera hair in a bun", "predicted_bbox": [67.0, 304.0, 258.0, 475.0], "raw_output": "<box>(67,304),(258,475)</box>"}
+{"ref_id": 31496, "expression": "middle cow next to the 6", "predicted_bbox": [370.0, 198.0, 524.0, 335.0], "raw_output": "<box>(370,198),(524,335)</box>"}
+{"ref_id": 31833, "expression": "girl on phone", "predicted_bbox": [8.0, 30.0, 167.0, 640.0], "raw_output": "<box>(8,30),(167,640)</box>"}
+{"ref_id": 31833, "expression": "girl on phone", "predicted_bbox": [8.0, 30.0, 169.0, 640.0], "raw_output": "<box>(8,30),(169,640)</box>"}
+{"ref_id": 31833, "expression": "lady on phone", "predicted_bbox": [8.0, 30.0, 169.0, 640.0], "raw_output": "<box>(8,30),(169,640)</box>"}
+{"ref_id": 32249, "expression": "person with white arm standing next to tree on left", "predicted_bbox": [4.0, 50.0, 67.0, 302.0], "raw_output": "<box>(4,50),(67,302)</box>"}
+{"ref_id": 32249, "expression": "background person behind lamp", "predicted_bbox": [4.0, 50.0, 67.0, 303.0], "raw_output": "<box>(4,50),(67,303)</box>"}
+{"ref_id": 32250, "expression": "dude on the very top left wearing a black jacket with hoody", "predicted_bbox": [3.0, 49.0, 65.0, 302.0], "raw_output": "<box>(3,49),(65,302)</box>"}
+{"ref_id": 32251, "expression": "dude with umbrella right", "predicted_bbox": [285.0, 130.0, 546.0, 627.0], "raw_output": "<box>(285,130),(546,627)</box>"}
+{"ref_id": 32284, "expression": "chair girl is sitting on", "predicted_bbox": [154.0, 117.0, 446.0, 413.0], "raw_output": "<box>(154,117),(446,413)</box>"}
+{"ref_id": 32284, "expression": "blue chair under woman", "predicted_bbox": [154.0, 117.0, 448.0, 416.0], "raw_output": "<box>(154,117),(448,416)</box>"}
+{"ref_id": 32411, "expression": "the person standing in front of the sitting boy on the phone he is wearing black pants and a black shirt", "predicted_bbox": [457.0, 0.0, 538.0, 206.0], "raw_output": "<box>(457,0),(538,206)</box>"}
+{"ref_id": 32411, "expression": "person standing in front of guy on phone", "predicted_bbox": [458.0, 0.0, 539.0, 197.0], "raw_output": "<box>(458,0),(539,197)</box>"}
+{"ref_id": 32412, "expression": "guy with phone", "predicted_bbox": [470.0, 103.0, 640.0, 359.0], "raw_output": "<box>(470,103),(640,359)</box>"}
+{"ref_id": 32596, "expression": "middle guy looking at book", "predicted_bbox": [124.0, 120.0, 235.0, 331.0], "raw_output": "<box>(124,120),(235,331)</box>"}
+{"ref_id": 32627, "expression": "lady standing behind mans arm", "predicted_bbox": [198.0, 93.0, 307.0, 546.0], "raw_output": "<box>(198,93),(307,546)</box>"}
+{"ref_id": 32627, "expression": "woman on step at left", "predicted_bbox": [63.0, 59.0, 247.0, 548.0], "raw_output": "<box>(63,59),(247,548)</box>"}
+{"ref_id": 32668, "expression": "wine bottle with blue stripe on label", "predicted_bbox": [300.0, 0.0, 397.0, 308.0], "raw_output": "<box>(300,0),(397,308)</box>"}
+{"ref_id": 32847, "expression": "the blue umbrella over the man", "predicted_bbox": [163.0, 257.0, 600.0, 524.0], "raw_output": "<box>(163,257),(600,524)</box>"}
+{"ref_id": 33051, "expression": "legs of small elephant under the big one", "predicted_bbox": [26.0, 178.0, 193.0, 425.0], "raw_output": "<box>(26,178),(193,425)</box>"}
+{"ref_id": 33070, "expression": "motorcycle with man in orange shirt on it", "predicted_bbox": [439.0, 150.0, 640.0, 308.0], "raw_output": "<box>(439,150),(640,308)</box>"}
+{"ref_id": 33072, "expression": "click the motorcycle that the girl with the pink shirt is riding", "predicted_bbox": [98.0, 156.0, 273.0, 330.0], "raw_output": "<box>(98,156),(273,330)</box>"}
+{"ref_id": 33072, "expression": "the bike ridden by pink shirt white jacket click wheel", "predicted_bbox": [98.0, 156.0, 273.0, 330.0], "raw_output": "<box>(98,156),(273,330)</box>"}
+{"ref_id": 33509, "expression": "so close you were right on the edge woman", "predicted_bbox": [97.0, 6.0, 280.0, 633.0], "raw_output": "<box>(97,6),(280,633)</box>"}
+{"ref_id": 33728, "expression": "table and anything on it in lower photo", "predicted_bbox": [0.0, 305.0, 610.0, 604.0], "raw_output": "<box>(0,305),(610,604)</box>"}
+{"ref_id": 34201, "expression": "guy behind right of guy with cow", "predicted_bbox": [457.0, 30.0, 486.0, 73.0], "raw_output": "<box>(457,30),(486,73)</box>"}
+{"ref_id": 34252, "expression": "black area to right of man in tshir near legs", "predicted_bbox": [430.0, 275.0, 548.0, 475.0], "raw_output": "<box>(430,275),(548,475)</box>"}
+{"ref_id": 34254, "expression": "man in white shirt in front of white poster board", "predicted_bbox": [157.0, 190.0, 336.0, 480.0], "raw_output": "<box>(157,190),(336,480)</box>"}
+{"ref_id": 34519, "expression": "man behind skateboard cut off a bit", "predicted_bbox": [106.0, 98.0, 179.0, 453.0], "raw_output": "<box>(106,98),(179,453)</box>"}
+{"ref_id": 34519, "expression": "man behind guy on skateboard", "predicted_bbox": [105.0, 103.0, 184.0, 456.0], "raw_output": "<box>(105,103),(184,456)</box>"}
+{"ref_id": 34520, "expression": "a man on a skateboard", "predicted_bbox": [135.0, 14.0, 287.0, 569.0], "raw_output": "<box>(135,14),(287,569)</box>"}
+{"ref_id": 34894, "expression": "bottom part of green stuff in middle of plate", "predicted_bbox": [220.0, 215.0, 436.0, 437.0], "raw_output": "<box>(220,215),(436,437)</box>"}
+{"ref_id": 35022, "expression": "giraffe in front of woman to right", "predicted_bbox": [130.0, 164.0, 365.0, 442.0], "raw_output": "<box>(130,164),(365,442)</box>"}
+{"ref_id": 35049, "expression": "man with no shirt on skateboard", "predicted_bbox": [340.0, 75.0, 556.0, 468.0], "raw_output": "<box>(340,75),(556,468)</box>"}
+{"ref_id": 35094, "expression": "the broccli piece up front in the bowl it is touching the bowl", "predicted_bbox": [220.0, 248.0, 370.0, 395.0], "raw_output": "<box>(220,248),(370,395)</box>"}
+{"ref_id": 35359, "expression": "person on left purple", "predicted_bbox": [0.0, 0.0, 223.0, 427.0], "raw_output": "<box>(0,0),(223,427)</box>"}
+{"ref_id": 35432, "expression": "car on right with licenseplate", "predicted_bbox": [513.0, 408.0, 640.0, 490.0], "raw_output": "<box>(513,408),(640,490)</box>"}
+{"ref_id": 35947, "expression": "man with phone red shirt watch texting", "predicted_bbox": [0.0, 176.0, 293.0, 475.0], "raw_output": "<box>(0,176),(293,475)</box>"}
+{"ref_id": 35948, "expression": "man in white shirt checking cell phone", "predicted_bbox": [407.0, 168.0, 639.0, 425.0], "raw_output": "<box>(407,168),(639,425)</box>"}
+{"ref_id": 35949, "expression": "man on le t wglasses", "predicted_bbox": [46.0, 147.0, 305.0, 479.0], "raw_output": "<box>(46,147),(305,479)</box>"}
+{"ref_id": 36097, "expression": "donut above cinnaroll", "predicted_bbox": [104.0, 163.0, 425.0, 497.0], "raw_output": "<box>(104,163),(425,497)</box>"}
+{"ref_id": 36122, "expression": "gamer on left long hair", "predicted_bbox": [113.0, 98.0, 330.0, 475.0], "raw_output": "<box>(113,98),(330,475)</box>"}
+{"ref_id": 36139, "expression": "table surface bottom right next to napkin", "predicted_bbox": [304.0, 417.0, 605.0, 475.0], "raw_output": "<box>(304,417),(605,475)</box>"}
+{"ref_id": 36383, "expression": "blue cloth in front of lady", "predicted_bbox": [30.0, 546.0, 480.0, 640.0], "raw_output": "<box>(30,546),(480,640)</box>"}
+{"ref_id": 36520, "expression": "chair she sitting on", "predicted_bbox": [65.0, 174.0, 309.0, 475.0], "raw_output": "<box>(65,174),(309,475)</box>"}
+{"ref_id": 36577, "expression": "table top to the left of pizza", "predicted_bbox": [0.0, 85.0, 169.0, 427.0], "raw_output": "<box>(0,85),(169,427)</box>"}
+{"ref_id": 36577, "expression": "area left of pizza", "predicted_bbox": [0.0, 85.0, 163.0, 194.0], "raw_output": "<box>(0,85),(163,194)</box>"}
+{"ref_id": 36578, "expression": "table on right side of pizza", "predicted_bbox": [490.0, 135.0, 640.0, 427.0], "raw_output": "<box>(490,135),(640,427)</box>"}
+{"ref_id": 36684, "expression": "gal touching hair", "predicted_bbox": [439.0, 125.0, 587.0, 326.0], "raw_output": "<box>(439,125),(587,326)</box>"}
+{"ref_id": 36688, "expression": "guy in strip shirt on laptop", "predicted_bbox": [273.0, 169.0, 475.0, 348.0], "raw_output": "<box>(273,169),(475,348)</box>"}
+{"ref_id": 36766, "expression": "girl on right black t", "predicted_bbox": [145.0, 73.0, 490.0, 336.0], "raw_output": "<box>(145,73),(490,336)</box>"}
+{"ref_id": 36856, "expression": "person behind the main person in blue top", "predicted_bbox": [358.0, 130.0, 529.0, 406.0], "raw_output": "<box>(358,130),(529,406)</box>"}
+{"ref_id": 37081, "expression": "person with blue umbrella", "predicted_bbox": [235.0, 249.0, 307.0, 476.0], "raw_output": "<box>(235,249),(307,476)</box>"}
+{"ref_id": 37109, "expression": "animals rear behind man on the right", "predicted_bbox": [209.0, 7.0, 534.0, 446.0], "raw_output": "<box>(209,7),(534,446)</box>"}
+{"ref_id": 37109, "expression": "horse just right of guy", "predicted_bbox": [460.0, 98.0, 597.0, 380.0], "raw_output": "<box>(460,98),(597,380)</box>"}
+{"ref_id": 37113, "expression": "table top around bowl", "predicted_bbox": [0.0, 94.0, 427.0, 586.0], "raw_output": "<box>(0,94),(427,586)</box>"}
+{"ref_id": 37113, "expression": "white area behind bears head", "predicted_bbox": [73.0, 18.0, 376.0, 204.0], "raw_output": "<box>(73,18),(376,204)</box>"}
+{"ref_id": 37247, "expression": "near left", "predicted_bbox": [0.0, 394.0, 427.0, 640.0], "raw_output": "<box>(0,394),(427,640)</box>"}
+{"ref_id": 37690, "expression": "he is holding a freebee", "predicted_bbox": [140.0, 75.0, 453.0, 426.0], "raw_output": "<box>(140,75),(453,426)</box>"}
+{"ref_id": 37692, "expression": "guy on right with sun visor", "predicted_bbox": [473.0, 125.0, 639.0, 427.0], "raw_output": "<box>(473,125),(639,427)</box>"}
+{"ref_id": 37693, "expression": "man behind frisbee man", "predicted_bbox": [73.0, 60.0, 254.0, 422.0], "raw_output": "<box>(73,60),(254,422)</box>"}
+{"ref_id": 37837, "expression": "seat in front of people", "predicted_bbox": [0.0, 146.0, 173.0, 480.0], "raw_output": "<box>(0,146),(173,480)</box>"}
+{"ref_id": 37837, "expression": "white cover in front of guy", "predicted_bbox": [0.0, 145.0, 173.0, 480.0], "raw_output": "<box>(0,145),(173,480)</box>"}
+{"ref_id": 37838, "expression": "white seat cushion behind guy", "predicted_bbox": [0.0, 145.0, 173.0, 480.0], "raw_output": "<box>(0,145),(173,480)</box>"}
+{"ref_id": 37838, "expression": "behind guys head", "predicted_bbox": [397.0, 150.0, 518.0, 294.0], "raw_output": "<box>(397,150),(518,294)</box>"}
+{"ref_id": 37943, "expression": "black under plate", "predicted_bbox": [135.0, 298.0, 640.0, 427.0], "raw_output": "<box>(135,298),(640,427)</box>"}
+{"ref_id": 38082, "expression": "tiny girl throwing to the huge guy with no shirt", "predicted_bbox": [260.0, 317.0, 374.0, 589.0], "raw_output": "<box>(260,317),(374,589)</box>"}
+{"ref_id": 38110, "expression": "chair that the man on the right is sitting on", "predicted_bbox": [473.0, 245.0, 640.0, 422.0], "raw_output": "<box>(473,245),(640,422)</box>"}
+{"ref_id": 38269, "expression": "black space above right monitors", "predicted_bbox": [309.0, 0.0, 640.0, 135.0], "raw_output": "<box>(309,0),(640,135)</box>"}
+{"ref_id": 38332, "expression": "guy right behind meter", "predicted_bbox": [370.0, 240.0, 415.0, 338.0], "raw_output": "<box>(370,240),(415,338)</box>"}
+{"ref_id": 38430, "expression": "the boy behind the boy blowing out the candle on the left", "predicted_bbox": [43.0, 25.0, 230.0, 387.0], "raw_output": "<box>(43,25),(230,387)</box>"}
+{"ref_id": 38430, "expression": "girl directly behind woman to the left", "predicted_bbox": [43.0, 25.0, 230.0, 386.0], "raw_output": "<box>(43,25),(230,386)</box>"}
+{"ref_id": 38497, "expression": "person on far left under umbrella", "predicted_bbox": [30.0, 285.0, 149.0, 587.0], "raw_output": "<box>(30,285),(149,587)</box>"}
+{"ref_id": 38500, "expression": "man on right gray suit", "predicted_bbox": [526.0, 173.0, 604.0, 418.0], "raw_output": "<box>(526,173),(604,418)</box>"}
+{"ref_id": 38501, "expression": "man has glasses black suit blue striped tie next to woman with glass and gray suit", "predicted_bbox": [357.0, 164.0, 428.0, 409.0], "raw_output": "<box>(357,164),(428,409)</box>"}
+{"ref_id": 38503, "expression": "group of three people not on the stairs on the left the woman in the middle", "predicted_bbox": [184.0, 226.0, 253.0, 479.0], "raw_output": "<box>(184,226),(253,479)</box>"}
+{"ref_id": 38538, "expression": "girl on right in purple", "predicted_bbox": [287.0, 254.0, 376.0, 560.0], "raw_output": "<box>(287,254),(376,560)</box>"}
+{"ref_id": 38865, "expression": "inside of tub under the window", "predicted_bbox": [0.0, 317.0, 245.0, 498.0], "raw_output": "<box>(0,317),(245,498)</box>"}
+{"ref_id": 38886, "expression": "far left person next to colorful guy", "predicted_bbox": [0.0, 18.0, 74.0, 605.0], "raw_output": "<box>(0,18),(74,605)</box>"}
+{"ref_id": 38988, "expression": "giraffe head near boy", "predicted_bbox": [367.0, 0.0, 640.0, 358.0], "raw_output": "<box>(367,0),(640,358)</box>"}
+{"ref_id": 39001, "expression": "the vase holding the roses in front", "predicted_bbox": [146.0, 305.0, 397.0, 427.0], "raw_output": "<box>(146,305),(397,427)</box>"}
+{"ref_id": 39329, "expression": "baseball player behind the batter", "predicted_bbox": [246.0, 57.0, 348.0, 310.0], "raw_output": "<box>(246,57),(348,310)</box>"}
+{"ref_id": 39681, "expression": "the blade thing on the top jet", "predicted_bbox": [56.0, 43.0, 427.0, 239.0], "raw_output": "<box>(56,43),(427,239)</box>"}
+{"ref_id": 39767, "expression": "person under the arm of the person with white stripes on shirt", "predicted_bbox": [109.0, 467.0, 213.0, 640.0], "raw_output": "<box>(109,467),(213,640)</box>"}
+{"ref_id": 39939, "expression": "the wine glass the the animal is on top of the one with not very much wine", "predicted_bbox": [276.0, 280.0, 390.0, 548.0], "raw_output": "<box>(276,280),(390,548)</box>"}
+{"ref_id": 39939, "expression": "glass under that gerbil thingy", "predicted_bbox": [278.0, 279.0, 390.0, 546.0], "raw_output": "<box>(278,279),(390,546)</box>"}
+{"ref_id": 39941, "expression": "black shirt behind chick", "predicted_bbox": [164.0, 0.0, 285.0, 157.0], "raw_output": "<box>(164,0),(285,157)</box>"}
+{"ref_id": 40007, "expression": "girl in pink on skateboard", "predicted_bbox": [390.0, 156.0, 478.0, 431.0], "raw_output": "<box>(390,156),(478,431)</box>"}
+{"ref_id": 40007, "expression": "girl on skate board", "predicted_bbox": [390.0, 154.0, 476.0, 431.0], "raw_output": "<box>(390,154),(476,431)</box>"}
+{"ref_id": 40007, "expression": "little girl in blue helmet on skateboard", "predicted_bbox": [394.0, 156.0, 478.0, 430.0], "raw_output": "<box>(394,156),(478,430)</box>"}
+{"ref_id": 40028, "expression": "man behind rafael in middle", "predicted_bbox": [217.0, 0.0, 453.0, 348.0], "raw_output": "<box>(217,0),(453,348)</box>"}
+{"ref_id": 40029, "expression": "player on left in white shirt", "predicted_bbox": [0.0, 3.0, 367.0, 524.0], "raw_output": "<box>(0,3),(367,524)</box>"}
+{"ref_id": 40241, "expression": "man sitting on edge of pier", "predicted_bbox": [187.0, 4.0, 339.0, 150.0], "raw_output": "<box>(187,4),(339,150)</box>"}
+{"ref_id": 40397, "expression": "sheep on right loking at us", "predicted_bbox": [348.0, 120.0, 640.0, 359.0], "raw_output": "<box>(348,120),(640,359)</box>"}
+{"ref_id": 40398, "expression": "sheep that looks like he is drinking in the back", "predicted_bbox": [237.0, 9.0, 465.0, 228.0], "raw_output": "<box>(237,9),(465,228)</box>"}
+{"ref_id": 40557, "expression": "guy on left making pizza", "predicted_bbox": [63.0, 0.0, 365.0, 341.0], "raw_output": "<box>(63,0),(365,341)</box>"}
+{"ref_id": 40801, "expression": "lady holding baby", "predicted_bbox": [107.0, 134.0, 315.0, 489.0], "raw_output": "<box>(107,134),(315,489)</box>"}
+{"ref_id": 40801, "expression": "woman holding child", "predicted_bbox": [108.0, 134.0, 315.0, 479.0], "raw_output": "<box>(108,134),(315,479)</box>"}
+{"ref_id": 41165, "expression": "person eating donut", "predicted_bbox": [28.0, 103.0, 304.0, 375.0], "raw_output": "<box>(28,103),(304,375)</box>"}
+{"ref_id": 41166, "expression": "person with his back to the camera", "predicted_bbox": [283.0, 156.0, 440.0, 375.0], "raw_output": "<box>(283,156),(440,375)</box>"}
+{"ref_id": 41179, "expression": "guy on the rightit was a little lower", "predicted_bbox": [403.0, 125.0, 609.0, 427.0], "raw_output": "<box>(403,125),(609,427)</box>"}
+{"ref_id": 41282, "expression": "gray and black thing under big black thing", "predicted_bbox": [300.0, 348.0, 556.0, 449.0], "raw_output": "<box>(300,348),(556,449)</box>"}
+{"ref_id": 41295, "expression": "the train on the left side but still near the middle", "predicted_bbox": [98.0, 194.0, 350.0, 296.0], "raw_output": "<box>(98,194),(350,296)</box>"}
+{"ref_id": 41374, "expression": "the man with the laptop on the right", "predicted_bbox": [473.0, 235.0, 600.0, 479.0], "raw_output": "<box>(473,235),(600,479)</box>"}
+{"ref_id": 41375, "expression": "left man on bench", "predicted_bbox": [80.0, 147.0, 163.0, 245.0], "raw_output": "<box>(80,147),(163,245)</box>"}
+{"ref_id": 41436, "expression": "girl with phone", "predicted_bbox": [153.0, 117.0, 270.0, 328.0], "raw_output": "<box>(153,117),(270,328)</box>"}
+{"ref_id": 41436, "expression": "girl holding a phone", "predicted_bbox": [153.0, 117.0, 270.0, 329.0], "raw_output": "<box>(153,117),(270,329)</box>"}
+{"ref_id": 41571, "expression": "food on plate", "predicted_bbox": [309.0, 254.0, 486.0, 357.0], "raw_output": "<box>(309,254),(486,357)</box>"}
+{"ref_id": 41571, "expression": "cake on plate nearest us", "predicted_bbox": [309.0, 254.0, 487.0, 364.0], "raw_output": "<box>(309,254),(487,364)</box>"}
+{"ref_id": 41571, "expression": "dessrt on white plate", "predicted_bbox": [209.0, 246.0, 640.0, 423.0], "raw_output": "<box>(209,246),(640,423)</box>"}
+{"ref_id": 41750, "expression": "guy grabbing the other guys legs", "predicted_bbox": [16.0, 270.0, 273.0, 422.0], "raw_output": "<box>(16,270),(273,422)</box>"}
+{"ref_id": 41750, "expression": "the guy holding the guys leg", "predicted_bbox": [10.0, 273.0, 274.0, 422.0], "raw_output": "<box>(10,273),(274,422)</box>"}
+{"ref_id": 41751, "expression": "man in black holding ball", "predicted_bbox": [169.0, 54.0, 380.0, 370.0], "raw_output": "<box>(169,54),(380,370)</box>"}
+{"ref_id": 42303, "expression": "woman on bed", "predicted_bbox": [378.0, 64.0, 539.0, 260.0], "raw_output": "<box>(378,64),(539,260)</box>"}
+{"ref_id": 42303, "expression": "guy on bed", "predicted_bbox": [379.0, 64.0, 538.0, 260.0], "raw_output": "<box>(379,64),(538,260)</box>"}
+{"ref_id": 42303, "expression": "person on bed in hat", "predicted_bbox": [379.0, 64.0, 538.0, 260.0], "raw_output": "<box>(379,64),(538,260)</box>"}
+{"ref_id": 42394, "expression": "person with umbrella", "predicted_bbox": [403.0, 205.0, 531.0, 479.0], "raw_output": "<box>(403,205),(531,479)</box>"}
+{"ref_id": 42394, "expression": "person with umbrella", "predicted_bbox": [403.0, 205.0, 530.0, 479.0], "raw_output": "<box>(403,205),(530,479)</box>"}
+{"ref_id": 42516, "expression": "red vehicle next to motorcycleright", "predicted_bbox": [384.0, 0.0, 640.0, 275.0], "raw_output": "<box>(384,0),(640,275)</box>"}
+{"ref_id": 42762, "expression": "man bottom right red shirt blue scarf on head", "predicted_bbox": [375.0, 254.0, 476.0, 420.0], "raw_output": "<box>(375,254),(476,420)</box>"}
+{"ref_id": 42764, "expression": "guy on bottom left blue suit", "predicted_bbox": [145.0, 217.0, 230.0, 422.0], "raw_output": "<box>(145,217),(230,422)</box>"}
+{"ref_id": 42838, "expression": "a big chair in front of tv", "predicted_bbox": [360.0, 214.0, 587.0, 442.0], "raw_output": "<box>(360,214),(587,442)</box>"}
+{"ref_id": 43043, "expression": "block to right of bear", "predicted_bbox": [73.0, 28.0, 286.0, 420.0], "raw_output": "<box>(73,28),(286,420)</box>"}
+{"ref_id": 43044, "expression": "red book on magazine", "predicted_bbox": [415.0, 173.0, 586.0, 420.0], "raw_output": "<box>(415,173),(586,420)</box>"}
+{"ref_id": 43077, "expression": "a bottle on a table", "predicted_bbox": [183.0, 174.0, 250.0, 396.0], "raw_output": "<box>(183,174),(250,396)</box>"}
+{"ref_id": 43583, "expression": "person bottom left touching frisbee", "predicted_bbox": [148.0, 265.0, 317.0, 420.0], "raw_output": "<box>(148,265),(317,420)</box>"}
+{"ref_id": 43625, "expression": "zebra behind the other one", "predicted_bbox": [97.0, 108.0, 403.0, 356.0], "raw_output": "<box>(97,108),(403,356)</box>"}
+{"ref_id": 44074, "expression": "floor next to the girl", "predicted_bbox": [134.0, 395.0, 640.0, 478.0], "raw_output": "<box>(134,395),(640,478)</box>"}
+{"ref_id": 44075, "expression": "girl laying her head on it", "predicted_bbox": [69.0, 130.0, 640.0, 425.0], "raw_output": "<box>(69,130),(640,425)</box>"}
+{"ref_id": 44559, "expression": "bus next to the gray car", "predicted_bbox": [108.0, 146.0, 317.0, 305.0], "raw_output": "<box>(108,146),(317,305)</box>"}
+{"ref_id": 44905, "expression": "biscuit sandwich on plat in the back next to silver sauce cup", "predicted_bbox": [58.0, 26.0, 203.0, 149.0], "raw_output": "<box>(58,26),(203,149)</box>"}
+{"ref_id": 44906, "expression": "the biscuit on the front plate", "predicted_bbox": [40.0, 293.0, 235.0, 500.0], "raw_output": "<box>(40,293),(235,500)</box>"}
+{"ref_id": 45239, "expression": "half umbrella behind the guys head on the left", "predicted_bbox": [34.0, 79.0, 250.0, 176.0], "raw_output": "<box>(34,79),(250,176)</box>"}
+{"ref_id": 45239, "expression": "umbrella behind mans head on left", "predicted_bbox": [36.0, 0.0, 457.0, 178.0], "raw_output": "<box>(36,0),(457,178)</box>"}
+{"ref_id": 45519, "expression": "black space beside blond lady on the left", "predicted_bbox": [93.0, 230.0, 224.0, 475.0], "raw_output": "<box>(93,230),(224,475)</box>"}
+{"ref_id": 45519, "expression": "person just left of eater", "predicted_bbox": [93.0, 230.0, 224.0, 475.0], "raw_output": "<box>(93,230),(224,475)</box>"}
+{"ref_id": 45519, "expression": "hoodie to the left of eating girls arm", "predicted_bbox": [90.0, 230.0, 224.0, 475.0], "raw_output": "<box>(90,230),(224,475)</box>"}
+{"ref_id": 45878, "expression": "flower pot on left above gargoyle", "predicted_bbox": [0.0, 67.0, 195.0, 134.0], "raw_output": "<box>(0,67),(195,134)</box>"}
+{"ref_id": 46046, "expression": "vase on left flowers", "predicted_bbox": [25.0, 249.0, 167.0, 453.0], "raw_output": "<box>(25,249),(167,453)</box>"}
+{"ref_id": 46046, "expression": "cuo wth flowers painted on it", "predicted_bbox": [25.0, 249.0, 167.0, 450.0], "raw_output": "<box>(25,249),(167,450)</box>"}
+{"ref_id": 46047, "expression": "white vase behind red thing", "predicted_bbox": [198.0, 143.0, 405.0, 436.0], "raw_output": "<box>(198,143),(405,436)</box>"}
+{"ref_id": 47433, "expression": "bike behind blue one", "predicted_bbox": [37.0, 78.0, 209.0, 246.0], "raw_output": "<box>(37,78),(209,246)</box>"}
+{"ref_id": 47472, "expression": "rear bus next to old dude in brown", "predicted_bbox": [0.0, 63.0, 174.0, 359.0], "raw_output": "<box>(0,63),(174,359)</box>"}
+{"ref_id": 47669, "expression": "girl next to beard guy", "predicted_bbox": [209.0, 143.0, 345.0, 475.0], "raw_output": "<box>(209,143),(345,475)</box>"}
+{"ref_id": 47690, "expression": "bottom of plate green right below red", "predicted_bbox": [184.0, 279.0, 285.0, 360.0], "raw_output": "<box>(184,279),(285,360)</box>"}
+{"ref_id": 47690, "expression": "2 front most broccoli at bottom of picture above the orange partbelow red tomato", "predicted_bbox": [184.0, 275.0, 286.0, 360.0], "raw_output": "<box>(184,275),(286,360)</box>"}
+{"ref_id": 48065, "expression": "bed near window", "predicted_bbox": [153.0, 294.0, 476.0, 480.0], "raw_output": "<box>(153,294),(476,480)</box>"}
+{"ref_id": 49113, "expression": "laptop behind the pole in the middle", "predicted_bbox": [168.0, 19.0, 357.0, 224.0], "raw_output": "<box>(168,19),(357,224)</box>"}
+{"ref_id": 49529, "expression": "sitting person above dog", "predicted_bbox": [5.0, 0.0, 413.0, 356.0], "raw_output": "<box>(5,0),(413,356)</box>"}
+{"ref_id": 49529, "expression": "person above dog", "predicted_bbox": [56.0, 0.0, 413.0, 348.0], "raw_output": "<box>(56,0),(413,348)</box>"}
+{"ref_id": 49530, "expression": "chair above dog", "predicted_bbox": [107.0, 0.0, 483.0, 169.0], "raw_output": "<box>(107,0),(483,169)</box>"}
+{"ref_id": 49530, "expression": "the white chair right above the dog", "predicted_bbox": [153.0, 0.0, 476.0, 178.0], "raw_output": "<box>(153,0),(476,178)</box>"}
+{"ref_id": 49785, "expression": "tire on right bike", "predicted_bbox": [475.0, 230.0, 639.0, 385.0], "raw_output": "<box>(475,230),(639,385)</box>"}

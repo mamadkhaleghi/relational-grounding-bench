@@ -1,0 +1,103 @@
+2026-07-13 11:38:33,301 | relation_prompted | INFO | Loaded 395 examples from /home/m/Documents/My_Projects/Github_Enhancement/relational-grounding-bench/data/splits/refcoco_val_relational.jsonl
+2026-07-13 11:38:33,301 | relation_prompted | INFO | Loaded relations for 51208 COCO ids
+Loading weights:   0%|          | 0/824 [00:00<?, ?it/s]Loading weights:   0%|          | 1/824 [00:00<06:54,  1.98it/s]/home/m/miniconda3/envs/rgb/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:213: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+Loading weights:   0%|          | 4/824 [00:00<01:45,  7.76it/s]Loading weights:   2%|▏         | 16/824 [00:00<00:26, 30.95it/s]Loading weights:   3%|▎         | 28/824 [00:00<00:16, 47.71it/s]Loading weights:   5%|▍         | 40/824 [00:01<00:12, 60.39it/s]Loading weights:   6%|▋         | 52/824 [00:01<00:11, 69.28it/s]Loading weights:   8%|▊         | 64/824 [00:01<00:10, 75.21it/s]Loading weights:   9%|▉         | 76/824 [00:01<00:09, 79.84it/s]Loading weights:  11%|█         | 88/824 [00:01<00:08, 83.65it/s]Loading weights:  12%|█▏        | 100/824 [00:01<00:08, 85.79it/s]Loading weights:  14%|█▎        | 112/824 [00:01<00:08, 87.54it/s]Loading weights:  15%|█▌        | 124/824 [00:01<00:07, 89.21it/s]Loading weights:  17%|█▋        | 136/824 [00:02<00:07, 90.56it/s]Loading weights:  18%|█▊        | 148/824 [00:02<00:07, 89.77it/s]Loading weights:  19%|█▉        | 159/824 [00:02<00:07, 94.67it/s]Loading weights:  21%|██        | 171/824 [00:02<00:06, 100.08it/s]Loading weights:  22%|██▏       | 185/824 [00:02<00:06, 106.38it/s]Loading weights:  24%|██▍       | 197/824 [00:02<00:06, 100.63it/s]Loading weights:  25%|██▌       | 209/824 [00:02<00:06, 95.63it/s] Loading weights:  27%|██▋       | 221/824 [00:02<00:06, 95.06it/s]Loading weights:  28%|██▊       | 233/824 [00:03<00:06, 92.76it/s]Loading weights:  30%|██▉       | 245/824 [00:03<00:06, 93.29it/s]Loading weights:  31%|███       | 257/824 [00:03<00:06, 91.23it/s]Loading weights:  33%|███▎      | 269/824 [00:03<00:06, 91.67it/s]Loading weights:  34%|███▍      | 281/824 [00:03<00:05, 92.79it/s]Loading weights:  35%|███▌      | 292/824 [00:03<00:05, 96.59it/s]Loading weights:  37%|███▋      | 303/824 [00:03<00:05, 98.12it/s]Loading weights:  38%|███▊      | 313/824 [00:03<00:06, 85.02it/s]Loading weights:  39%|███▉      | 322/824 [00:04<00:08, 61.14it/s]Loading weights:  40%|████      | 330/824 [00:04<00:09, 51.55it/s]Loading weights:  41%|████▏     | 340/824 [00:04<00:08, 56.52it/s]Loading weights:  43%|████▎     | 351/824 [00:04<00:07, 61.13it/s]Loading weights:  43%|████▎     | 358/824 [00:04<00:08, 57.54it/s]Loading weights:  44%|████▍     | 365/824 [00:05<00:09, 48.41it/s]Loading weights:  46%|████▌     | 376/824 [00:05<00:08, 54.35it/s]Loading weights:  47%|████▋     | 387/824 [00:05<00:07, 59.15it/s]Loading weights:  48%|████▊     | 394/824 [00:05<00:07, 54.83it/s]Loading weights:  49%|████▊     | 400/824 [00:05<00:07, 53.96it/s]Loading weights:  50%|█████     | 412/824 [00:05<00:06, 63.25it/s]Loading weights:  51%|█████▏    | 423/824 [00:05<00:05, 73.42it/s]Loading weights:  53%|█████▎    | 440/824 [00:06<00:04, 95.92it/s]Loading weights:  58%|█████▊    | 478/824 [00:06<00:02, 166.24it/s]Loading weights:  62%|██████▏   | 514/824 [00:06<00:01, 216.38it/s]Loading weights:  67%|██████▋   | 550/824 [00:06<00:01, 252.54it/s]Loading weights:  71%|███████▏  | 588/824 [00:06<00:00, 283.57it/s]Loading weights:  76%|███████▋  | 630/824 [00:06<00:00, 316.88it/s]Loading weights:  81%|████████  | 666/824 [00:06<00:00, 321.65it/s]Loading weights:  85%|████████▍ | 699/824 [00:06<00:00, 301.35it/s]Loading weights:  89%|████████▉ | 732/824 [00:06<00:00, 301.31it/s]Loading weights:  93%|█████████▎| 763/824 [00:07<00:00, 298.41it/s]Loading weights:  96%|█████████▋| 794/824 [00:07<00:00, 299.60it/s]Loading weights: 100%|██████████| 824/824 [00:07<00:00, 113.45it/s]
+/home/m/miniconda3/envs/rgb/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+2026-07-13 11:39:37,791 | relation_prompted | INFO | Processed 50 / 395 examples
+2026-07-13 11:40:24,053 | relation_prompted | INFO | Processed 100 / 395 examples
+2026-07-13 11:41:10,008 | relation_prompted | INFO | Processed 150 / 395 examples
+2026-07-13 11:41:56,263 | relation_prompted | INFO | Processed 200 / 395 examples
+2026-07-13 11:42:46,771 | relation_prompted | INFO | Processed 250 / 395 examples
+2026-07-13 11:43:35,369 | relation_prompted | INFO | Processed 300 / 395 examples
+2026-07-13 11:44:22,332 | relation_prompted | INFO | Processed 350 / 395 examples
+2026-07-13 11:45:04,804 | relation_prompted | INFO | Wrote predictions to /home/m/Documents/My_Projects/Github_Enhancement/relational-grounding-bench/results/predictions_condB_refcoco_val_relational_all.jsonl
+2026-07-13 11:46:20,382 | relation_prompted | INFO | Loaded 2368 examples from /home/m/Documents/My_Projects/Github_Enhancement/relational-grounding-bench/data/splits/refcoco_val_positional.jsonl
+2026-07-13 11:46:20,382 | relation_prompted | INFO | Loaded relations for 51208 COCO ids
+Loading weights:   0%|          | 0/824 [00:00<?, ?it/s]Loading weights:   0%|          | 1/824 [00:00<07:06,  1.93it/s]/home/m/miniconda3/envs/rgb/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:213: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+Loading weights:   0%|          | 4/824 [00:00<01:49,  7.50it/s]Loading weights:   2%|▏         | 16/824 [00:00<00:26, 30.50it/s]Loading weights:   3%|▎         | 28/824 [00:00<00:16, 47.59it/s]Loading weights:   5%|▍         | 40/824 [00:01<00:13, 60.18it/s]Loading weights:   6%|▋         | 52/824 [00:01<00:11, 68.52it/s]Loading weights:   8%|▊         | 64/824 [00:01<00:10, 75.55it/s]Loading weights:   9%|▉         | 76/824 [00:01<00:09, 80.13it/s]Loading weights:  11%|█         | 88/824 [00:01<00:08, 83.32it/s]Loading weights:  12%|█▏        | 100/824 [00:01<00:08, 84.83it/s]Loading weights:  13%|█▎        | 111/824 [00:01<00:07, 90.21it/s]Loading weights:  15%|█▍        | 123/824 [00:01<00:07, 90.03it/s]Loading weights:  16%|█▋        | 135/824 [00:02<00:07, 90.71it/s]Loading weights:  18%|█▊        | 147/824 [00:02<00:07, 91.53it/s]Loading weights:  19%|█▉        | 159/824 [00:02<00:07, 89.35it/s]Loading weights:  21%|██        | 171/824 [00:02<00:07, 88.92it/s]Loading weights:  22%|██▏       | 183/824 [00:02<00:07, 89.37it/s]Loading weights:  24%|██▎       | 195/824 [00:02<00:07, 88.66it/s]Loading weights:  25%|██▍       | 204/824 [00:02<00:07, 87.17it/s]Loading weights:  26%|██▌       | 213/824 [00:02<00:07, 83.75it/s]Loading weights:  27%|██▋       | 222/824 [00:03<00:07, 78.19it/s]Loading weights:  28%|██▊       | 233/824 [00:03<00:07, 79.37it/s]Loading weights:  30%|██▉       | 244/824 [00:03<00:07, 82.07it/s]Loading weights:  31%|███       | 255/824 [00:03<00:06, 82.76it/s]Loading weights:  32%|███▏      | 264/824 [00:03<00:06, 83.02it/s]Loading weights:  33%|███▎      | 273/824 [00:03<00:07, 73.00it/s]Loading weights:  34%|███▍      | 281/824 [00:03<00:08, 63.92it/s]Loading weights:  36%|███▌      | 293/824 [00:04<00:07, 70.56it/s]Loading weights:  37%|███▋      | 305/824 [00:04<00:06, 76.83it/s]Loading weights:  41%|████▏     | 340/824 [00:04<00:03, 138.69it/s]Loading weights:  47%|████▋     | 387/824 [00:04<00:02, 216.29it/s]Loading weights:  52%|█████▏    | 431/824 [00:04<00:01, 273.51it/s]Loading weights:  72%|███████▏  | 594/824 [00:04<00:00, 636.50it/s]Loading weights:  81%|████████  | 664/824 [00:04<00:00, 590.01it/s]Loading weights:  88%|████████▊ | 728/824 [00:04<00:00, 467.68it/s]Loading weights:  95%|█████████▍| 782/824 [00:05<00:00, 429.76it/s]Loading weights: 100%|██████████| 824/824 [00:05<00:00, 155.74it/s]
+/home/m/miniconda3/envs/rgb/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+2026-07-13 11:47:27,225 | relation_prompted | INFO | Processed 50 / 2368 examples
+2026-07-13 11:48:10,999 | relation_prompted | INFO | Processed 100 / 2368 examples
+2026-07-13 11:48:55,396 | relation_prompted | INFO | Processed 150 / 2368 examples
+2026-07-13 11:49:39,937 | relation_prompted | INFO | Processed 200 / 2368 examples
+2026-07-13 11:50:26,189 | relation_prompted | INFO | Processed 250 / 2368 examples
+2026-07-13 11:51:11,577 | relation_prompted | INFO | Processed 300 / 2368 examples
+2026-07-13 11:51:56,773 | relation_prompted | INFO | Processed 350 / 2368 examples
+2026-07-13 11:52:43,912 | relation_prompted | INFO | Processed 400 / 2368 examples
+2026-07-13 11:53:33,337 | relation_prompted | INFO | Processed 450 / 2368 examples
+2026-07-13 11:54:19,246 | relation_prompted | INFO | Processed 500 / 2368 examples
+2026-07-13 11:55:05,929 | relation_prompted | INFO | Processed 550 / 2368 examples
+2026-07-13 11:55:55,026 | relation_prompted | INFO | Processed 600 / 2368 examples
+2026-07-13 11:56:48,650 | relation_prompted | INFO | Processed 650 / 2368 examples
+2026-07-13 11:57:37,175 | relation_prompted | INFO | Processed 700 / 2368 examples
+2026-07-13 11:58:25,732 | relation_prompted | INFO | Processed 750 / 2368 examples
+2026-07-13 11:59:12,680 | relation_prompted | INFO | Processed 800 / 2368 examples
+2026-07-13 12:00:01,148 | relation_prompted | INFO | Processed 850 / 2368 examples
+2026-07-13 12:00:50,618 | relation_prompted | INFO | Processed 900 / 2368 examples
+2026-07-13 12:01:36,715 | relation_prompted | INFO | Processed 950 / 2368 examples
+2026-07-13 12:02:24,661 | relation_prompted | INFO | Processed 1000 / 2368 examples
+2026-07-13 12:03:15,087 | relation_prompted | INFO | Processed 1050 / 2368 examples
+2026-07-13 12:04:04,287 | relation_prompted | INFO | Processed 1100 / 2368 examples
+2026-07-13 12:04:50,868 | relation_prompted | INFO | Processed 1150 / 2368 examples
+2026-07-13 12:05:43,066 | relation_prompted | INFO | Processed 1200 / 2368 examples
+2026-07-13 12:06:31,553 | relation_prompted | INFO | Processed 1250 / 2368 examples
+2026-07-13 12:07:23,138 | relation_prompted | INFO | Processed 1300 / 2368 examples
+2026-07-13 12:08:10,417 | relation_prompted | INFO | Processed 1350 / 2368 examples
+2026-07-13 12:08:57,623 | relation_prompted | INFO | Processed 1400 / 2368 examples
+2026-07-13 12:09:46,863 | relation_prompted | INFO | Processed 1450 / 2368 examples
+2026-07-13 12:10:31,870 | relation_prompted | INFO | Processed 1500 / 2368 examples
+2026-07-13 12:11:17,698 | relation_prompted | INFO | Processed 1550 / 2368 examples
+2026-07-13 12:12:05,054 | relation_prompted | INFO | Processed 1600 / 2368 examples
+2026-07-13 12:12:54,416 | relation_prompted | INFO | Processed 1650 / 2368 examples
+2026-07-13 12:13:40,875 | relation_prompted | INFO | Processed 1700 / 2368 examples
+2026-07-13 12:14:30,318 | relation_prompted | INFO | Processed 1750 / 2368 examples
+2026-07-13 12:15:17,990 | relation_prompted | INFO | Processed 1800 / 2368 examples
+2026-07-13 12:16:08,702 | relation_prompted | INFO | Processed 1850 / 2368 examples
+2026-07-13 12:16:57,238 | relation_prompted | INFO | Processed 1900 / 2368 examples
+2026-07-13 12:17:43,952 | relation_prompted | INFO | Processed 1950 / 2368 examples
+2026-07-13 12:18:32,778 | relation_prompted | INFO | Processed 2000 / 2368 examples
+2026-07-13 12:19:18,267 | relation_prompted | INFO | Processed 2050 / 2368 examples
+2026-07-13 12:20:05,369 | relation_prompted | INFO | Processed 2100 / 2368 examples
+2026-07-13 12:20:56,689 | relation_prompted | INFO | Processed 2150 / 2368 examples
+2026-07-13 12:21:46,547 | relation_prompted | INFO | Processed 2200 / 2368 examples
+2026-07-13 12:22:35,076 | relation_prompted | INFO | Processed 2250 / 2368 examples
+2026-07-13 12:23:25,335 | relation_prompted | INFO | Processed 2300 / 2368 examples
+2026-07-13 12:24:15,208 | relation_prompted | INFO | Processed 2350 / 2368 examples
+2026-07-13 12:24:32,210 | relation_prompted | INFO | Wrote predictions to /home/m/Documents/My_Projects/Github_Enhancement/relational-grounding-bench/results/predictions_condB_refcoco_val_positional_all.jsonl
+2026-07-13 12:26:16,437 | relation_prompted | INFO | Loaded 1286 examples from /home/m/Documents/My_Projects/Github_Enhancement/relational-grounding-bench/data/splits/refcoco_val_attribute.jsonl
+2026-07-13 12:26:16,437 | relation_prompted | INFO | Loaded relations for 51208 COCO ids
+Loading weights:   0%|          | 0/824 [00:00<?, ?it/s]Loading weights:   0%|          | 1/824 [00:00<03:56,  3.48it/s]/home/m/miniconda3/envs/rgb/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:213: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+Loading weights:   0%|          | 4/824 [00:00<01:07, 12.12it/s]Loading weights:   2%|▏         | 16/824 [00:00<00:19, 41.83it/s]Loading weights:   3%|▎         | 28/824 [00:00<00:13, 59.19it/s]Loading weights:   5%|▍         | 40/824 [00:00<00:11, 69.65it/s]Loading weights:   6%|▋         | 52/824 [00:00<00:10, 76.33it/s]Loading weights:   8%|▊         | 64/824 [00:01<00:09, 80.73it/s]Loading weights:  11%|█         | 87/824 [00:01<00:06, 112.13it/s]Loading weights:  12%|█▏        | 99/824 [00:01<00:06, 103.86it/s]Loading weights:  13%|█▎        | 111/824 [00:01<00:07, 99.82it/s]Loading weights:  15%|█▍        | 123/824 [00:01<00:07, 95.76it/s]Loading weights:  16%|█▋        | 135/824 [00:01<00:07, 87.47it/s]Loading weights:  17%|█▋        | 144/824 [00:01<00:07, 87.85it/s]Loading weights:  19%|█▊        | 153/824 [00:02<00:08, 75.25it/s]Loading weights:  20%|█▉        | 161/824 [00:02<00:09, 71.27it/s]Loading weights:  21%|██        | 172/824 [00:02<00:08, 80.22it/s]Loading weights:  22%|██▏       | 184/824 [00:02<00:07, 82.79it/s]Loading weights:  24%|██▍       | 196/824 [00:02<00:07, 86.61it/s]Loading weights:  25%|██▌       | 208/824 [00:02<00:06, 89.44it/s]Loading weights:  27%|██▋       | 219/824 [00:02<00:06, 94.44it/s]Loading weights:  28%|██▊       | 231/824 [00:02<00:06, 94.59it/s]Loading weights:  29%|██▉       | 243/824 [00:02<00:06, 96.31it/s]Loading weights:  31%|███       | 255/824 [00:03<00:05, 95.75it/s]Loading weights:  32%|███▏      | 267/824 [00:03<00:05, 96.22it/s]Loading weights:  34%|███▍      | 279/824 [00:03<00:05, 93.84it/s]Loading weights:  35%|███▌      | 291/824 [00:03<00:05, 92.18it/s]Loading weights:  37%|███▋      | 303/824 [00:03<00:05, 93.58it/s]Loading weights:  38%|███▊      | 315/824 [00:03<00:05, 92.22it/s]Loading weights:  39%|███▉      | 325/824 [00:03<00:05, 94.07it/s]Loading weights:  41%|████      | 335/824 [00:04<00:05, 85.91it/s]Loading weights:  42%|████▏     | 344/824 [00:04<00:05, 80.40it/s]Loading weights:  43%|████▎     | 353/824 [00:04<00:06, 73.33it/s]Loading weights:  44%|████▍     | 365/824 [00:04<00:05, 77.47it/s]Loading weights:  46%|████▌     | 376/824 [00:04<00:05, 85.23it/s]Loading weights:  47%|████▋     | 388/824 [00:04<00:05, 85.68it/s]Loading weights:  49%|████▊     | 400/824 [00:04<00:04, 85.88it/s]Loading weights:  50%|█████     | 412/824 [00:04<00:04, 86.59it/s]Loading weights:  51%|█████▏    | 424/824 [00:05<00:04, 85.56it/s]Loading weights:  55%|█████▍    | 452/824 [00:05<00:02, 130.44it/s]Loading weights:  59%|█████▉    | 490/824 [00:05<00:01, 190.51it/s]Loading weights:  64%|██████▍   | 526/824 [00:05<00:01, 234.59it/s]Loading weights:  68%|██████▊   | 564/824 [00:05<00:00, 270.28it/s]Loading weights:  73%|███████▎  | 600/824 [00:05<00:00, 292.00it/s]Loading weights:  77%|███████▋  | 637/824 [00:05<00:00, 313.93it/s]Loading weights:  82%|████████▏ | 676/824 [00:05<00:00, 334.49it/s]Loading weights:  87%|████████▋ | 714/824 [00:05<00:00, 345.36it/s]Loading weights:  91%|█████████▏| 752/824 [00:06<00:00, 353.41it/s]Loading weights:  96%|█████████▌| 788/824 [00:06<00:00, 354.52it/s]Loading weights: 100%|██████████| 824/824 [00:06<00:00, 314.06it/s]Loading weights: 100%|██████████| 824/824 [00:06<00:00, 131.51it/s]
+/home/m/miniconda3/envs/rgb/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+2026-07-13 12:27:19,062 | relation_prompted | INFO | Processed 50 / 1286 examples
+2026-07-13 12:28:01,764 | relation_prompted | INFO | Processed 100 / 1286 examples
+2026-07-13 12:28:47,152 | relation_prompted | INFO | Processed 150 / 1286 examples
+2026-07-13 12:29:33,304 | relation_prompted | INFO | Processed 200 / 1286 examples
+2026-07-13 12:30:19,974 | relation_prompted | INFO | Processed 250 / 1286 examples
+2026-07-13 12:31:03,568 | relation_prompted | INFO | Processed 300 / 1286 examples
+2026-07-13 12:31:53,415 | relation_prompted | INFO | Processed 350 / 1286 examples
+2026-07-13 12:32:38,238 | relation_prompted | INFO | Processed 400 / 1286 examples
+2026-07-13 12:33:26,997 | relation_prompted | INFO | Processed 450 / 1286 examples
+2026-07-13 12:34:16,823 | relation_prompted | INFO | Processed 500 / 1286 examples
+2026-07-13 12:35:03,638 | relation_prompted | INFO | Processed 550 / 1286 examples
+2026-07-13 12:35:49,324 | relation_prompted | INFO | Processed 600 / 1286 examples
+2026-07-13 12:36:35,758 | relation_prompted | INFO | Processed 650 / 1286 examples
+2026-07-13 12:37:23,541 | relation_prompted | INFO | Processed 700 / 1286 examples
+2026-07-13 12:38:11,419 | relation_prompted | INFO | Processed 750 / 1286 examples
+2026-07-13 12:39:00,122 | relation_prompted | INFO | Processed 800 / 1286 examples
+2026-07-13 12:39:45,618 | relation_prompted | INFO | Processed 850 / 1286 examples
+2026-07-13 12:40:33,004 | relation_prompted | INFO | Processed 900 / 1286 examples
+2026-07-13 12:41:24,210 | relation_prompted | INFO | Processed 950 / 1286 examples
+2026-07-13 12:42:11,346 | relation_prompted | INFO | Processed 1000 / 1286 examples
+2026-07-13 12:42:58,467 | relation_prompted | INFO | Processed 1050 / 1286 examples
+2026-07-13 12:43:48,201 | relation_prompted | INFO | Processed 1100 / 1286 examples
+2026-07-13 12:44:35,087 | relation_prompted | INFO | Processed 1150 / 1286 examples
+2026-07-13 12:45:22,296 | relation_prompted | INFO | Processed 1200 / 1286 examples
+2026-07-13 12:46:16,589 | relation_prompted | INFO | Processed 1250 / 1286 examples
+2026-07-13 12:46:51,247 | relation_prompted | INFO | Wrote predictions to /home/m/Documents/My_Projects/Github_Enhancement/relational-grounding-bench/results/predictions_condB_refcoco_val_attribute_all.jsonl

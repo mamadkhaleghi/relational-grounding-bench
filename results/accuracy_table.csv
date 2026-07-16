@@ -1,0 +1,13 @@
+condition,dataset,split,subset,n_examples,accuracy_at_iou50
+A,refcoco,val,relational,395,0.6886
+A,refcoco,val,positional,2368,0.8771
+A,refcoco,val,attribute,1286,0.8616
+B,refcoco,val,relational,395,0.6557
+B,refcoco,val,positional,2368,0.8526
+B,refcoco,val,attribute,1286,0.8577
+C,refcoco,val,relational,395,0.7899
+C,refcoco,val,positional,2368,0.9117
+C,refcoco,val,attribute,1286,0.9355
+D,refcoco,val,relational,395,0.7848
+D,refcoco,val,positional,2368,0.9079
+D,refcoco,val,attribute,1286,0.9292

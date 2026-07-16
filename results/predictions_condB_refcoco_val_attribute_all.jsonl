@@ -1,0 +1,1286 @@
+{"ref_id": 276, "expression": "gurl", "predicted_bbox": [143.0, 448.0, 335.0, 644.0], "raw_output": "<box>(143,448,335,644)"}
+{"ref_id": 276, "expression": "girl in purple", "predicted_bbox": [143.0, 448.0, 335.0, 644.0], "raw_output": "<box>(143,448,335,644)"}
+{"ref_id": 277, "expression": "woman in shorts", "predicted_bbox": [329.0, 270.0, 420.0, 635.0], "raw_output": "<box>(329,270,420,635)"}
+{"ref_id": 278, "expression": "psn boy", "predicted_bbox": [36.0, 127.0, 194.0, 365.0], "raw_output": "<box>(36,127,194,365)"}
+{"ref_id": 281, "expression": "girl pink", "predicted_bbox": [186.0, 90.0, 305.0, 274.0], "raw_output": "<box>(186,90,305,274)"}
+{"ref_id": 281, "expression": "pink gir", "predicted_bbox": [187.0, 90.0, 304.0, 275.0], "raw_output": "<box>(187,90,304,275)"}
+{"ref_id": 395, "expression": "person in white sleeping far away", "predicted_bbox": [0.0, 53.0, 240.0, 360.0], "raw_output": "<box>(0,53,240,360)"}
+{"ref_id": 396, "expression": "asleep", "predicted_bbox": [0.0, 53.0, 240.0, 360.0], "raw_output": "<box>(0,53,240,360)"}
+{"ref_id": 396, "expression": "sleeping woman", "predicted_bbox": [0.0, 139.0, 228.0, 357.0], "raw_output": "<box>(0,139,228,357)"}
+{"ref_id": 398, "expression": "green vegetable with leaves", "predicted_bbox": [265.0, 179.0, 604.0, 476.0], "raw_output": "<box>(265,179,604,476)"}
+{"ref_id": 398, "expression": "green vegie", "predicted_bbox": [264.0, 180.0, 603.0, 476.0], "raw_output": "<box>(264,180,603,476)\n"}
+{"ref_id": 466, "expression": "quilt", "predicted_bbox": [85.0, 147.0, 587.0, 390.0], "raw_output": "<box>(85,147,587,390)"}
+{"ref_id": 466, "expression": "bed", "predicted_bbox": [84.0, 145.0, 587.0, 390.0], "raw_output": "<box>(84,145,587,390)"}
+{"ref_id": 466, "expression": "bedspread", "predicted_bbox": [83.0, 145.0, 587.0, 390.0], "raw_output": "<box>(83,145,587,390)"}
+{"ref_id": 571, "expression": "man in black coat", "predicted_bbox": [549.0, 130.0, 644.0, 387.0], "raw_output": "<box>(549,130,644,387)"}
+{"ref_id": 571, "expression": "referee", "predicted_bbox": [549.0, 130.0, 644.0, 384.0], "raw_output": "<box>(549,130,644,384)"}
+{"ref_id": 571, "expression": "guy in khakis", "predicted_bbox": [345.0, 87.0, 509.0, 456.0], "raw_output": "<box>(345,87,509,456)"}
+{"ref_id": 572, "expression": "hitter", "predicted_bbox": [345.0, 87.0, 509.0, 454.0], "raw_output": "<box>(345,87,509,454)"}
+{"ref_id": 572, "expression": "player", "predicted_bbox": [345.0, 87.0, 509.0, 454.0], "raw_output": "<box>(345,87,509,454)"}
+{"ref_id": 572, "expression": "tennis player in white shirt", "predicted_bbox": [345.0, 87.0, 509.0, 456.0], "raw_output": "<box>(345,87,509,456)"}
+{"ref_id": 610, "expression": "dude in blue shirt tie", "predicted_bbox": [0.0, 30.0, 247.0, 635.0], "raw_output": "<box>(0,30,247,635)"}
+{"ref_id": 610, "expression": "man", "predicted_bbox": [0.0, 30.0, 247.0, 635.0], "raw_output": "<box>(0,30,247,635)\n"}
+{"ref_id": 611, "expression": "lady", "predicted_bbox": [235.0, 117.0, 420.0, 637.0], "raw_output": "<box>(235,117,420,637)\n"}
+{"ref_id": 611, "expression": "pink", "predicted_bbox": [234.0, 117.0, 420.0, 635.0], "raw_output": "<box>(234,117,420,635)\n"}
+{"ref_id": 611, "expression": "woman", "predicted_bbox": [234.0, 117.0, 420.0, 635.0], "raw_output": "<box>(234,117,420,635)\n"}
+{"ref_id": 768, "expression": "blue shirt", "predicted_bbox": [304.0, 91.0, 502.0, 367.0], "raw_output": "<box>(304,91,502,367)\n"}
+{"ref_id": 768, "expression": "man in blue shirt", "predicted_bbox": [305.0, 91.0, 498.0, 367.0], "raw_output": "<box>(305,91,498,367)"}
+{"ref_id": 769, "expression": "guy white shirt with shorts and strap", "predicted_bbox": [230.0, 105.0, 346.0, 457.0], "raw_output": "<box>(230,105,346,457)"}
+{"ref_id": 788, "expression": "man in jersey", "predicted_bbox": [97.0, 203.0, 280.0, 346.0], "raw_output": "<box>(97,203,280,346)"}
+{"ref_id": 791, "expression": "couch with squares", "predicted_bbox": [0.0, 439.0, 256.0, 616.0], "raw_output": "<box>(0,439,256,616)"}
+{"ref_id": 961, "expression": "red turck close to us", "predicted_bbox": [0.0, 39.0, 287.0, 469.0], "raw_output": "<box>(0,39,287,469)"}
+{"ref_id": 961, "expression": "red bus", "predicted_bbox": [0.0, 39.0, 287.0, 475.0], "raw_output": "<box>(0,39,287,475)"}
+{"ref_id": 962, "expression": "all white bus", "predicted_bbox": [245.0, 150.0, 506.0, 387.0], "raw_output": "<box>(245,150,506,387)"}
+{"ref_id": 1175, "expression": "dude whos way too cool to wear a purple tshirt", "predicted_bbox": [249.0, 143.0, 398.0, 415.0], "raw_output": "<box>(249,143,398,415)</box>"}
+{"ref_id": 1175, "expression": "man not in purple", "predicted_bbox": [390.0, 157.0, 492.0, 418.0], "raw_output": "<box>(390,157,492,418)"}
+{"ref_id": 1176, "expression": "boy in purple wearing dark glasses", "predicted_bbox": [390.0, 157.0, 492.0, 418.0], "raw_output": "<box>(390,157,492,418)"}
+{"ref_id": 1178, "expression": "guy sitting", "predicted_bbox": [89.0, 257.0, 243.0, 419.0], "raw_output": "<box>(89,257,243,419)"}
+{"ref_id": 1307, "expression": "large bag", "predicted_bbox": [265.0, 30.0, 549.0, 438.0], "raw_output": "<box>(265,30,549,438)"}
+{"ref_id": 1307, "expression": "big one", "predicted_bbox": [265.0, 30.0, 549.0, 438.0], "raw_output": "<box>(265,30,549,438)"}
+{"ref_id": 1307, "expression": "tall suitcase", "predicted_bbox": [265.0, 30.0, 549.0, 438.0], "raw_output": "<box>(265,30,549,438)"}
+{"ref_id": 1350, "expression": "man", "predicted_bbox": [76.0, 115.0, 328.0, 374.0], "raw_output": "<box>(76,115,328,374)\n"}
+{"ref_id": 1351, "expression": "girl", "predicted_bbox": [270.0, 114.0, 563.0, 440.0], "raw_output": "<box>(270,114,563,440)\n"}
+{"ref_id": 1351, "expression": "woman", "predicted_bbox": [270.0, 114.0, 563.0, 440.0], "raw_output": "<box>(270,114,563,440)\n"}
+{"ref_id": 1351, "expression": "person wfolded arms", "predicted_bbox": [270.0, 114.0, 563.0, 440.0], "raw_output": "<box>(270,114,563,440)\n"}
+{"ref_id": 1384, "expression": "yellow cab", "predicted_bbox": [298.0, 284.0, 587.0, 446.0], "raw_output": "<box>(298,284,587,446)\n"}
+{"ref_id": 1384, "expression": "yellow", "predicted_bbox": [298.0, 284.0, 587.0, 446.0], "raw_output": "<box>(298,284,587,446)"}
+{"ref_id": 1384, "expression": "taxi", "predicted_bbox": [298.0, 284.0, 587.0, 446.0], "raw_output": "<box>(298,284,587,446)"}
+{"ref_id": 1461, "expression": "banana leftmiddle", "predicted_bbox": [0.0, 0.0, 386.0, 154.0], "raw_output": "<box>(0,0,386,154)"}
+{"ref_id": 1461, "expression": "biggest banana", "predicted_bbox": [0.0, 0.0, 386.0, 154.0], "raw_output": "<box>(0,0,386,154)"}
+{"ref_id": 1807, "expression": "lady in purpl asian", "predicted_bbox": [319.0, 187.0, 490.0, 536.0], "raw_output": "<box>(319,187,490,536)"}
+{"ref_id": 1807, "expression": "woman in purple standing up", "predicted_bbox": [317.0, 186.0, 490.0, 537.0], "raw_output": "<box>(317,186,490,537)"}
+{"ref_id": 1807, "expression": "the lady in purple", "predicted_bbox": [319.0, 187.0, 490.0, 536.0], "raw_output": "<box>(319,187,490,536)"}
+{"ref_id": 1808, "expression": "woman", "predicted_bbox": [43.0, 40.0, 317.0, 635.0], "raw_output": "<box>(43,40,317,635)"}
+{"ref_id": 1808, "expression": "woman black jacket", "predicted_bbox": [43.0, 39.0, 318.0, 637.0], "raw_output": "<box>(43,39,318,637)"}
+{"ref_id": 1808, "expression": "her", "predicted_bbox": [43.0, 39.0, 318.0, 637.0], "raw_output": "<box>(43,39,318,637)\n"}
+{"ref_id": 1925, "expression": "guy against wall", "predicted_bbox": [350.0, 36.0, 497.0, 255.0], "raw_output": "<box>(350,36,497,255)"}
+{"ref_id": 1926, "expression": "the player", "predicted_bbox": [264.0, 67.0, 395.0, 398.0], "raw_output": "<box>(264,67,395,398)"}
+{"ref_id": 2003, "expression": "green and purple book", "predicted_bbox": [138.0, 14.0, 253.0, 160.0], "raw_output": "<box>(138,14,253,160)"}
+{"ref_id": 2004, "expression": "bible", "predicted_bbox": [137.0, 14.0, 253.0, 160.0], "raw_output": "<box>(137,14,253,160)"}
+{"ref_id": 2004, "expression": "purple bible", "predicted_bbox": [138.0, 14.0, 253.0, 160.0], "raw_output": "<box>(138,14,253,160)"}
+{"ref_id": 2004, "expression": "purple book", "predicted_bbox": [137.0, 14.0, 253.0, 160.0], "raw_output": "<box>(137,14,253,160)"}
+{"ref_id": 2020, "expression": "girls jacket", "predicted_bbox": [8.0, 167.0, 264.0, 415.0], "raw_output": "<box>(8,167,264,415)"}
+{"ref_id": 2021, "expression": "guy facing camera", "predicted_bbox": [259.0, 87.0, 360.0, 364.0], "raw_output": "<box>(259,87,360,364)"}
+{"ref_id": 2021, "expression": "man", "predicted_bbox": [259.0, 89.0, 360.0, 364.0], "raw_output": "<box>(259,89,360,364)"}
+{"ref_id": 2037, "expression": "yelllow", "predicted_bbox": [295.0, 138.0, 460.0, 387.0], "raw_output": "<box>(295,138,460,387)\n"}
+{"ref_id": 2037, "expression": "tall guy yellow shirt", "predicted_bbox": [294.0, 138.0, 460.0, 387.0], "raw_output": "<box>(294,138,460,387)"}
+{"ref_id": 2038, "expression": "short guy", "predicted_bbox": [430.0, 202.0, 567.0, 388.0], "raw_output": "<box>(430,202,567,388)"}
+{"ref_id": 2184, "expression": "man with mask on", "predicted_bbox": [463.0, 127.0, 598.0, 470.0], "raw_output": "<box>(463,127,598,470)"}
+{"ref_id": 2410, "expression": "two seater facing us", "predicted_bbox": [54.0, 206.0, 470.0, 415.0], "raw_output": "<box>(54,206,470,415)"}
+{"ref_id": 2410, "expression": "far couch", "predicted_bbox": [130.0, 164.0, 357.0, 280.0], "raw_output": "<box>(130,164,357,280)"}
+{"ref_id": 2411, "expression": "sofa near camera", "predicted_bbox": [53.0, 206.0, 470.0, 415.0], "raw_output": "<box>(53,206,470,415)"}
+{"ref_id": 2751, "expression": "girl", "predicted_bbox": [89.0, 167.0, 420.0, 613.0], "raw_output": "<box>(89,167,420,613)"}
+{"ref_id": 2751, "expression": "person playing tennis", "predicted_bbox": [89.0, 167.0, 420.0, 609.0], "raw_output": "<box>(89,167,420,609)"}
+{"ref_id": 2751, "expression": "player", "predicted_bbox": [89.0, 167.0, 420.0, 609.0], "raw_output": "<box>(89,167,420,609)"}
+{"ref_id": 2764, "expression": "woman sitting in chair", "predicted_bbox": [534.0, 90.0, 644.0, 420.0], "raw_output": "<box>(534,90,644,420)"}
+{"ref_id": 2765, "expression": "orange shirt", "predicted_bbox": [217.0, 90.0, 504.0, 468.0], "raw_output": "<box>(217,90,504,468)"}
+{"ref_id": 2765, "expression": "boy in orange", "predicted_bbox": [217.0, 90.0, 504.0, 468.0], "raw_output": "<box>(217,90,504,468)"}
+{"ref_id": 2765, "expression": "kid", "predicted_bbox": [217.0, 90.0, 503.0, 468.0], "raw_output": "<box>(217,90,503,468)"}
+{"ref_id": 2789, "expression": "man", "predicted_bbox": [324.0, 235.0, 408.0, 476.0], "raw_output": "<box>(324,235,408,476)\n"}
+{"ref_id": 2790, "expression": "boy red pants", "predicted_bbox": [197.0, 276.0, 345.0, 470.0], "raw_output": "<box>(197,276,345,470)</box>"}
+{"ref_id": 2790, "expression": "little kid red snow pants", "predicted_bbox": [196.0, 275.0, 348.0, 470.0], "raw_output": "<box>(196,275,348,470)</box>"}
+{"ref_id": 2790, "expression": "red pants", "predicted_bbox": [197.0, 276.0, 345.0, 470.0], "raw_output": "<box>(197,276,345,470)\n"}
+{"ref_id": 2813, "expression": "main giraffe", "predicted_bbox": [56.0, 54.0, 280.0, 447.0], "raw_output": "<box>(56,54,280,447)"}
+{"ref_id": 2930, "expression": "arms that are stretched out", "predicted_bbox": [109.0, 46.0, 481.0, 415.0], "raw_output": "<box>(109,46,481,415)"}
+{"ref_id": 2931, "expression": "yeah haha number 33", "predicted_bbox": [109.0, 18.0, 479.0, 415.0], "raw_output": "<box>(109,18,479,415)\n"}
+{"ref_id": 2931, "expression": "33", "predicted_bbox": [109.0, 18.0, 479.0, 415.0], "raw_output": "<box>(109,18,479,415)\n"}
+{"ref_id": 2931, "expression": "33", "predicted_bbox": [109.0, 18.0, 479.0, 415.0], "raw_output": "<box>(109,18,479,415)\n"}
+{"ref_id": 3202, "expression": "the man", "predicted_bbox": [139.0, 187.0, 374.0, 415.0], "raw_output": "<box>(139,187,374,415)"}
+{"ref_id": 3202, "expression": "guy with head down", "predicted_bbox": [139.0, 187.0, 374.0, 415.0], "raw_output": "<box>(139,187,374,415)"}
+{"ref_id": 3253, "expression": "guy in white", "predicted_bbox": [0.0, 34.0, 200.0, 338.0], "raw_output": "<box>(0,34,200,338)"}
+{"ref_id": 3254, "expression": "arms up", "predicted_bbox": [204.0, 78.0, 465.0, 463.0], "raw_output": "<box>(204,78,465,463)"}
+{"ref_id": 3254, "expression": "blue coat", "predicted_bbox": [205.0, 78.0, 469.0, 463.0], "raw_output": "<box>(205,78,469,463)"}
+{"ref_id": 3254, "expression": "man wearing skiis", "predicted_bbox": [78.0, 415.0, 230.0, 500.0], "raw_output": "<box>(78,415,230,500)"}
+{"ref_id": 3362, "expression": "vase", "predicted_bbox": [273.0, 270.0, 334.0, 456.0], "raw_output": "<box>(273,270,334,456)"}
+{"ref_id": 3362, "expression": "flowers", "predicted_bbox": [160.0, 87.0, 490.0, 453.0], "raw_output": "<box>(160,87,490,453)"}
+{"ref_id": 3362, "expression": "vase and flowers", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [274, 273, 335, 456], \"label\": \"vase and flowers\"}\n]\n```"}
+{"ref_id": 3370, "expression": "big picec", "predicted_bbox": [39.0, 230.0, 234.0, 530.0], "raw_output": "<box>(39,230,234,530)"}
+{"ref_id": 3479, "expression": "black shirt", "predicted_bbox": [107.0, 249.0, 280.0, 415.0], "raw_output": "<box>(107,249,280,415)"}
+{"ref_id": 3700, "expression": "man wearing flame shirt", "predicted_bbox": [28.0, 0.0, 236.0, 415.0], "raw_output": "<box>(28,0,236,415)"}
+{"ref_id": 3701, "expression": "red skirt", "predicted_bbox": [220.0, 130.0, 384.0, 405.0], "raw_output": "<box>(220,130,384,405)"}
+{"ref_id": 3701, "expression": "woman red and white dress", "predicted_bbox": [220.0, 0.0, 394.0, 405.0], "raw_output": "<box>(220,0),(394,405)"}
+{"ref_id": 3701, "expression": "woman with red skirt", "predicted_bbox": [220.0, 0.0, 398.0, 405.0], "raw_output": "<box>(220,0,398,405)"}
+{"ref_id": 3702, "expression": "pink sweater", "predicted_bbox": [305.0, 29.0, 644.0, 415.0], "raw_output": "<box>(305,29,644,415)"}
+{"ref_id": 3745, "expression": "38", "predicted_bbox": [56.0, 70.0, 290.0, 360.0], "raw_output": "<box>(56,70,290,360)\n"}
+{"ref_id": 3745, "expression": "boy in a red shirt", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [57, 69, 289, 360], \"label\": \"boy in a red shirt\"}\n]\n```"}
+{"ref_id": 3745, "expression": "red shirt", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [57, 69, 289, 360], \"label\": \"red shirt\"}\n]\n```"}
+{"ref_id": 3746, "expression": "in green", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [295, 20, 548, 396], \"label\": \"in green\"}\n]\n```"}
+{"ref_id": 3852, "expression": "elephant", "predicted_bbox": [80.0, 59.0, 534.0, 415.0], "raw_output": "<box>(80,59,534,415)"}
+{"ref_id": 3852, "expression": "elephant", "predicted_bbox": [80.0, 59.0, 534.0, 415.0], "raw_output": "<box>(80,59,534,415)"}
+{"ref_id": 3852, "expression": "elephant", "predicted_bbox": [80.0, 59.0, 534.0, 415.0], "raw_output": "<box>(80,59,534,415)"}
+{"ref_id": 3890, "expression": "man white shirt", "predicted_bbox": [340.0, 0.0, 644.0, 219.0], "raw_output": "<box>(340,0,644,219)"}
+{"ref_id": 3890, "expression": "man in usa tee", "predicted_bbox": [340.0, 0.0, 644.0, 218.0], "raw_output": "<box>(340,0,644,218)"}
+{"ref_id": 3891, "expression": "blue shirt", "predicted_bbox": [179.0, 0.0, 335.0, 168.0], "raw_output": "<box>(179,0,335,168)"}
+{"ref_id": 3891, "expression": "blue guy", "predicted_bbox": [179.0, 0.0, 335.0, 168.0], "raw_output": "<box>(179,0,335,168)"}
+{"ref_id": 3925, "expression": "fat man purple shirt", "predicted_bbox": [28.0, 270.0, 174.0, 635.0], "raw_output": "<box>(28,270,174,635)"}
+{"ref_id": 3925, "expression": "purple shirt", "predicted_bbox": [26.0, 270.0, 174.0, 635.0], "raw_output": "<box>(26,270,174,635)"}
+{"ref_id": 3925, "expression": "guy in purple", "predicted_bbox": [28.0, 270.0, 173.0, 641.0], "raw_output": "<box>(28,270,173,641)"}
+{"ref_id": 3926, "expression": "man in black white shorts", "predicted_bbox": [248.0, 197.0, 370.0, 635.0], "raw_output": "<box>(248,197,370,635)"}
+{"ref_id": 3926, "expression": "guy in black nad white shorts", "predicted_bbox": [248.0, 197.0, 370.0, 635.0], "raw_output": "<box>(248,197,370,635)\n"}
+{"ref_id": 4115, "expression": "green chair", "predicted_bbox": [409.0, 258.0, 530.0, 367.0], "raw_output": "<box>(409,258,530,367)"}
+{"ref_id": 4115, "expression": "green couch", "predicted_bbox": [409.0, 258.0, 530.0, 367.0], "raw_output": "<box>(409,258,530,367)"}
+{"ref_id": 4115, "expression": "green chair", "predicted_bbox": [409.0, 258.0, 530.0, 367.0], "raw_output": "<box>(409,258,530,367)"}
+{"ref_id": 4116, "expression": "white sofa", "predicted_bbox": [113.0, 201.0, 304.0, 295.0], "raw_output": "<box>(113,201,304,295)"}
+{"ref_id": 4116, "expression": "white couch", "predicted_bbox": [113.0, 201.0, 304.0, 295.0], "raw_output": "<box>(113,201,304,295)"}
+{"ref_id": 4133, "expression": "guy guy yellow with sunglass", "predicted_bbox": [0.0, 0.0, 307.0, 420.0], "raw_output": "<box>(0,0,307,420)"}
+{"ref_id": 4133, "expression": "the girl in the yellow shirt is scared for her life sweetie", "predicted_bbox": [135.0, 147.0, 303.0, 306.0], "raw_output": "<box>(135,147,303,306)"}
+{"ref_id": 4133, "expression": "woman in yellow shirt", "predicted_bbox": [135.0, 147.0, 303.0, 306.0], "raw_output": "<box>(135,147,303,306)"}
+{"ref_id": 4134, "expression": "girl in black", "predicted_bbox": [15.0, 203.0, 129.0, 367.0], "raw_output": "<box>(15,203,129,367)"}
+{"ref_id": 4135, "expression": "person in blue hunched over", "predicted_bbox": [53.0, 279.0, 216.0, 420.0], "raw_output": "<box>(53,279,216,420)"}
+{"ref_id": 4136, "expression": "guy in plaid", "predicted_bbox": [0.0, 0.0, 114.0, 186.0], "raw_output": "<box>(0,0,114,186)"}
+{"ref_id": 4136, "expression": "mr plaid", "predicted_bbox": [0.0, 130.0, 64.0, 245.0], "raw_output": "<box>(0,130,64,245)"}
+{"ref_id": 4137, "expression": "man in all red", "predicted_bbox": [86.0, 59.0, 230.0, 214.0], "raw_output": "<box>(86,59,230,214)"}
+{"ref_id": 4137, "expression": "red shirt", "predicted_bbox": [86.0, 59.0, 304.0, 270.0], "raw_output": "<box>(86,59,304,270)"}
+{"ref_id": 4474, "expression": "srry lady in black", "predicted_bbox": [146.0, 105.0, 312.0, 476.0], "raw_output": "<box>(146,105,312,476)\n"}
+{"ref_id": 4474, "expression": "woman", "predicted_bbox": [146.0, 105.0, 312.0, 476.0], "raw_output": "<box>(146,105,312,476)\n"}
+{"ref_id": 4476, "expression": "dude with gray jacket looking at you", "predicted_bbox": [147.0, 83.0, 450.0, 476.0], "raw_output": "<box>(147,83,450,476)\n"}
+{"ref_id": 4584, "expression": "big pizza", "predicted_bbox": [0.0, 289.0, 456.0, 637.0], "raw_output": "<box>(0,289,456,637)"}
+{"ref_id": 4585, "expression": "tall glass", "predicted_bbox": [0.0, 184.0, 75.0, 330.0], "raw_output": "<box>(0,184,75,330)"}
+{"ref_id": 4585, "expression": "the empty water glass", "predicted_bbox": [0.0, 183.0, 75.0, 334.0], "raw_output": "<box>(0,183,75,334)"}
+{"ref_id": 4694, "expression": "28", "predicted_bbox": [294.0, 337.0, 395.0, 540.0], "raw_output": "<box>(294,337,395,540)\n"}
+{"ref_id": 4694, "expression": "batter", "predicted_bbox": [294.0, 337.0, 395.0, 540.0], "raw_output": "<box>(294,337,395,540)\n"}
+{"ref_id": 4694, "expression": "batter", "predicted_bbox": [294.0, 337.0, 395.0, 540.0], "raw_output": "<box>(294,337,395,540)\n"}
+{"ref_id": 4695, "expression": "umpire", "predicted_bbox": [230.0, 405.0, 379.0, 614.0], "raw_output": "<box>(230,405,379,614)\n"}
+{"ref_id": 4695, "expression": "man in black bent over", "predicted_bbox": [230.0, 406.0, 379.0, 615.0], "raw_output": "<box>(230,406,379,615)"}
+{"ref_id": 4695, "expression": "ump", "predicted_bbox": [230.0, 406.0, 379.0, 615.0], "raw_output": "<box>(230,406,379,615)\n"}
+{"ref_id": 4725, "expression": "person wearing pink", "predicted_bbox": [69.0, 214.0, 163.0, 470.0], "raw_output": "<box>(69,214,163,470)"}
+{"ref_id": 4725, "expression": "pink jacket", "predicted_bbox": [74.0, 213.0, 160.0, 475.0], "raw_output": "<box>(74,213,160,475)\n"}
+{"ref_id": 4808, "expression": "zebra", "predicted_bbox": [57.0, 169.0, 487.0, 637.0], "raw_output": "<box>(57,169,487,637)"}
+{"ref_id": 4808, "expression": "whole zebra", "predicted_bbox": [57.0, 169.0, 487.0, 637.0], "raw_output": "<box>(57,169,487,637)"}
+{"ref_id": 4828, "expression": "person in purple stripes", "predicted_bbox": [334.0, 0.0, 619.0, 235.0], "raw_output": "<box>(334,0,619,235)"}
+{"ref_id": 4828, "expression": "kid in purple strpe shirt", "predicted_bbox": [334.0, 0.0, 619.0, 235.0], "raw_output": "<box>(334,0,619,235)"}
+{"ref_id": 4832, "expression": "woman in blue shirt", "predicted_bbox": [0.0, 0.0, 619.0, 278.0], "raw_output": "<box>(0,0,619,278)"}
+{"ref_id": 4964, "expression": "n177xy plane", "predicted_bbox": [178.0, 130.0, 506.0, 214.0], "raw_output": "<box>(178,130,506,214)"}
+{"ref_id": 4965, "expression": "close plane", "predicted_bbox": [0.0, 189.0, 643.0, 405.0], "raw_output": "<box>(0,189,643,405)"}
+{"ref_id": 5188, "expression": "large boat", "predicted_bbox": [198.0, 107.0, 469.0, 253.0], "raw_output": "<box>(198,107,469,253)"}
+{"ref_id": 5188, "expression": "distant boat", "predicted_bbox": [198.0, 107.0, 469.0, 253.0], "raw_output": "<box>(198,107,469,253)"}
+{"ref_id": 5304, "expression": "mom skier", "predicted_bbox": [48.0, 3.0, 207.0, 495.0], "raw_output": "<box>(48,3,207,495)"}
+{"ref_id": 5304, "expression": "woman", "predicted_bbox": [49.0, 3.0, 207.0, 486.0], "raw_output": "<box>(49,3,207,486)"}
+{"ref_id": 5305, "expression": "kid", "predicted_bbox": [156.0, 114.0, 370.0, 558.0], "raw_output": "<box>(156,114,370,558)"}
+{"ref_id": 5305, "expression": "skier in red", "predicted_bbox": [156.0, 114.0, 370.0, 559.0], "raw_output": "<box>(156,114,370,559)"}
+{"ref_id": 5437, "expression": "bear face", "predicted_bbox": [80.0, 117.0, 236.0, 349.0], "raw_output": "<box>(80,117,236,349)\n"}
+{"ref_id": 5437, "expression": "bigbear", "predicted_bbox": [80.0, 117.0, 239.0, 346.0], "raw_output": "<box>(80,117,239,346)"}
+{"ref_id": 5437, "expression": "full view bear", "predicted_bbox": [79.0, 118.0, 236.0, 340.0], "raw_output": "<box>(79,118,236,340)\n"}
+{"ref_id": 5723, "expression": "girl with pink dress", "predicted_bbox": [130.0, 204.0, 235.0, 504.0], "raw_output": "<box>(130,204,235,504)"}
+{"ref_id": 5726, "expression": "dumb guy", "predicted_bbox": [0.0, 169.0, 173.0, 504.0], "raw_output": "<box>(0,169,173,504)"}
+{"ref_id": 5834, "expression": "motorcycle guy is on", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [19, 187, 392, 624], \"label\": \"motorcycle guy is on\"}\n]\n```"}
+{"ref_id": 5834, "expression": "motorcycle", "predicted_bbox": [19.0, 187.0, 390.0, 624.0], "raw_output": "<box>(19,187,390,624)"}
+{"ref_id": 5834, "expression": "bike", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [18, 190, 392, 625], \"label\": \"bike\"},\n\t{\"bbox_2d\": [0, 140, 107, 290], \"label\": \"bike\"}\n]\n```"}
+{"ref_id": 5849, "expression": "man in glasses and blue and white tie", "predicted_bbox": [109.0, 138.0, 257.0, 416.0], "raw_output": "<box>(109,138,257,416)"}
+{"ref_id": 5850, "expression": "the one being interviewed", "predicted_bbox": [283.0, 96.0, 485.0, 415.0], "raw_output": "<box>(283,96,485,415)"}
+{"ref_id": 5850, "expression": "person interviwed", "predicted_bbox": [284.0, 97.0, 483.0, 415.0], "raw_output": "<box>(284,97,483,415)"}
+{"ref_id": 5850, "expression": "man being interviewed", "predicted_bbox": [284.0, 97.0, 483.0, 415.0], "raw_output": "<box>(284,97,483,415)"}
+{"ref_id": 5852, "expression": "blond woman", "predicted_bbox": [398.0, 207.0, 644.0, 415.0], "raw_output": "<box>(398,207,644,415)"}
+{"ref_id": 6437, "expression": "serving surface", "predicted_bbox": [0.0, 257.0, 643.0, 448.0], "raw_output": "<box>(0,257,643,448)"}
+{"ref_id": 6437, "expression": "table that the food is on", "predicted_bbox": [0.0, 257.0, 643.0, 448.0], "raw_output": "<box>(0,257,643,448)"}
+{"ref_id": 6438, "expression": "checkered tablecloth", "predicted_bbox": [409.0, 137.0, 638.0, 305.0], "raw_output": "<box>(409,137,638,305)"}
+{"ref_id": 6438, "expression": "checkered table cloth", "predicted_bbox": [409.0, 137.0, 638.0, 305.0], "raw_output": "<box>(409,137,638,305)"}
+{"ref_id": 6438, "expression": "checkered table cloth", "predicted_bbox": [409.0, 137.0, 638.0, 305.0], "raw_output": "<box>(409,137,638,305)"}
+{"ref_id": 6469, "expression": "i meant giraffee", "predicted_bbox": [58.0, 360.0, 257.0, 574.0], "raw_output": "<box>(58,360,257,574)"}
+{"ref_id": 6470, "expression": "baby giraffe", "predicted_bbox": [59.0, 360.0, 257.0, 574.0], "raw_output": "<box>(59,360,257,574)"}
+{"ref_id": 6470, "expression": "small giraffe", "predicted_bbox": [58.0, 360.0, 257.0, 574.0], "raw_output": "<box>(58,360,257,574)"}
+{"ref_id": 6470, "expression": "small giraffe", "predicted_bbox": [58.0, 360.0, 257.0, 574.0], "raw_output": "<box>(58,360,257,574)"}
+{"ref_id": 6504, "expression": "biggest laptop", "predicted_bbox": [39.0, 75.0, 324.0, 270.0], "raw_output": "<box>(39,75,324,270)"}
+{"ref_id": 6504, "expression": "large laptop", "predicted_bbox": [39.0, 75.0, 324.0, 270.0], "raw_output": "<box>(39,75,324,270)"}
+{"ref_id": 6504, "expression": "big laptop", "predicted_bbox": [39.0, 75.0, 324.0, 270.0], "raw_output": "<box>(39,75,324,270)"}
+{"ref_id": 6505, "expression": "laptop with green keyboard", "predicted_bbox": [234.0, 115.0, 446.0, 317.0], "raw_output": "<box>(234,115,446,317)"}
+{"ref_id": 6505, "expression": "green keyboard", "predicted_bbox": [234.0, 115.0, 446.0, 317.0], "raw_output": "<box>(234,115,446,317)"}
+{"ref_id": 6505, "expression": "open laptop facing us", "predicted_bbox": [39.0, 75.0, 324.0, 270.0], "raw_output": "<box>(39,75,324,270)"}
+{"ref_id": 6506, "expression": "jeans", "predicted_bbox": [119.0, 0.0, 293.0, 114.0], "raw_output": "<box>(119,0,293,114)"}
+{"ref_id": 6611, "expression": "old guy", "predicted_bbox": [0.0, 24.0, 253.0, 386.0], "raw_output": "<box>(0,24,253,386)"}
+{"ref_id": 6612, "expression": "white shirt", "predicted_bbox": [304.0, 0.0, 460.0, 215.0], "raw_output": "<box>(304,0,460,215)\n"}
+{"ref_id": 6612, "expression": "waiter in white shirt", "predicted_bbox": [305.0, 0.0, 460.0, 217.0], "raw_output": "<box>(305,0,460,217)\n"}
+{"ref_id": 6613, "expression": "woman in purple", "predicted_bbox": [300.0, 40.0, 540.0, 306.0], "raw_output": "<box>(300,40,540,306)"}
+{"ref_id": 6734, "expression": "man with glasses and red tie", "predicted_bbox": [139.0, 47.0, 268.0, 235.0], "raw_output": "<box>(139,47,268,235)"}
+{"ref_id": 6734, "expression": "guy with red tie", "predicted_bbox": [139.0, 48.0, 270.0, 235.0], "raw_output": "<box>(139,48,270,235)"}
+{"ref_id": 6736, "expression": "lady white", "predicted_bbox": [460.0, 80.0, 643.0, 335.0], "raw_output": "<box>(460,80,643,335)"}
+{"ref_id": 6737, "expression": "senator john kerry", "predicted_bbox": [139.0, 40.0, 408.0, 297.0], "raw_output": "<box>(139,40,408,297)"}
+{"ref_id": 7053, "expression": "main guy", "predicted_bbox": [19.0, 23.0, 615.0, 608.0], "raw_output": "<box>(19,23,615,608)"}
+{"ref_id": 7295, "expression": "wine glass bottomright", "predicted_bbox": [274.0, 580.0, 396.0, 644.0], "raw_output": "<box>(274,580,396,644)"}
+{"ref_id": 7296, "expression": "wineglass closer to woman", "predicted_bbox": [39.0, 427.0, 160.0, 638.0], "raw_output": "<box>(39,427,160,638)"}
+{"ref_id": 7296, "expression": "wine glass", "predicted_bbox": [40.0, 398.0, 165.0, 644.0], "raw_output": "<box>(40,398,165,644)"}
+{"ref_id": 7296, "expression": "glass", "predicted_bbox": [39.0, 426.0, 158.0, 637.0], "raw_output": "<box>(39,426,158,637)"}
+{"ref_id": 7353, "expression": "table", "predicted_bbox": [9.0, 18.0, 607.0, 605.0], "raw_output": "<box>(9,18,607,605)"}
+{"ref_id": 7552, "expression": "umbrella", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [0, 0, 643, 298], \"label\": \"umbrella\"}\n]\n```"}
+{"ref_id": 7553, "expression": "yep", "predicted_bbox": [198.0, 207.0, 351.0, 324.0], "raw_output": "<box>(198,207,351,324)"}
+{"ref_id": 7708, "expression": "man with jurassic park hat", "predicted_bbox": [65.0, 80.0, 357.0, 354.0], "raw_output": "<box>(65,80,357,354)"}
+{"ref_id": 7709, "expression": "girl in red jacket leaning down", "predicted_bbox": [347.0, 10.0, 539.0, 238.0], "raw_output": "<box>(347,10,539,238)"}
+{"ref_id": 7709, "expression": "woman with red jacket", "predicted_bbox": [348.0, 17.0, 536.0, 230.0], "raw_output": "<box>(348,17,536,230)"}
+{"ref_id": 8436, "expression": "bottomleft white goat", "predicted_bbox": [19.0, 254.0, 300.0, 476.0], "raw_output": "<box>(19,254,300,476)"}
+{"ref_id": 8445, "expression": "yuh", "predicted_bbox": [160.0, 65.0, 593.0, 476.0], "raw_output": "<box>(160,65,593,476)"}
+{"ref_id": 8448, "expression": "woman", "predicted_bbox": [160.0, 64.0, 593.0, 476.0], "raw_output": "<box>(160,64,593,476)"}
+{"ref_id": 8448, "expression": "woman", "predicted_bbox": [160.0, 64.0, 593.0, 476.0], "raw_output": "<box>(160,64,593,476)"}
+{"ref_id": 8448, "expression": "girl", "predicted_bbox": [160.0, 64.0, 593.0, 476.0], "raw_output": "<box>(160,64,593,476)"}
+{"ref_id": 8538, "expression": "babby", "predicted_bbox": [117.0, 180.0, 354.0, 426.0], "raw_output": "<box>(117,180,354,426)"}
+{"ref_id": 8538, "expression": "baby goat", "predicted_bbox": [117.0, 180.0, 354.0, 426.0], "raw_output": "<box>(117,180,354,426)"}
+{"ref_id": 8538, "expression": "baby", "predicted_bbox": [117.0, 180.0, 354.0, 426.0], "raw_output": "<box>(117,180,354,426)"}
+{"ref_id": 8556, "expression": "dude in plaid", "predicted_bbox": [40.0, 85.0, 203.0, 486.0], "raw_output": "<box>(40,85,203,486)"}
+{"ref_id": 8834, "expression": "black couch", "predicted_bbox": [39.0, 285.0, 416.0, 470.0], "raw_output": "<box>(39,285,416,470)"}
+{"ref_id": 8834, "expression": "black couch", "predicted_bbox": [39.0, 285.0, 416.0, 470.0], "raw_output": "<box>(39,285,416,470)"}
+{"ref_id": 8834, "expression": "dark couch", "predicted_bbox": [39.0, 285.0, 416.0, 470.0], "raw_output": "<box>(39,285,416,470)"}
+{"ref_id": 8835, "expression": "white couch", "predicted_bbox": [134.0, 235.0, 379.0, 328.0], "raw_output": "<box>(134,235,379,328)"}
+{"ref_id": 8835, "expression": "white couch", "predicted_bbox": [134.0, 235.0, 379.0, 326.0], "raw_output": "<box>(134,235,379,326)"}
+{"ref_id": 9003, "expression": "monitor with the screen on", "predicted_bbox": [340.0, 87.0, 490.0, 256.0], "raw_output": "<box>(340,87,490,256)"}
+{"ref_id": 9003, "expression": "white screen", "predicted_bbox": [340.0, 87.0, 490.0, 256.0], "raw_output": "<box>(340,87,490,256)"}
+{"ref_id": 9014, "expression": "man onright", "predicted_bbox": [430.0, 3.0, 644.0, 378.0], "raw_output": "<box>(430,3,644,378)"}
+{"ref_id": 9131, "expression": "blue shirt woman", "predicted_bbox": [80.0, 230.0, 290.0, 476.0], "raw_output": "<box>(80,230,290,476)"}
+{"ref_id": 9131, "expression": "girl blue", "predicted_bbox": [80.0, 230.0, 290.0, 476.0], "raw_output": "<box>(80,230,290,476)"}
+{"ref_id": 9133, "expression": "the lady in red", "predicted_bbox": [350.0, 147.0, 490.0, 328.0], "raw_output": "<box>(350,147,490,328)"}
+{"ref_id": 9133, "expression": "the person in red and a hat", "predicted_bbox": [350.0, 147.0, 490.0, 326.0], "raw_output": "<box>(350,147,490,326)\n"}
+{"ref_id": 9180, "expression": "hands", "predicted_bbox": [448.0, 0.0, 643.0, 290.0], "raw_output": "<box>(448,0,643,290)"}
+{"ref_id": 9316, "expression": "guy blue", "predicted_bbox": [380.0, 57.0, 471.0, 316.0], "raw_output": "<box>(380,57,471,316)"}
+{"ref_id": 9316, "expression": "man in blue", "predicted_bbox": [380.0, 57.0, 471.0, 316.0], "raw_output": "<box>(380,57,471,316)"}
+{"ref_id": 9317, "expression": "girl", "predicted_bbox": [130.0, 70.0, 400.0, 495.0], "raw_output": "<box>(130,70,400,495)"}
+{"ref_id": 9317, "expression": "tennis player", "predicted_bbox": [130.0, 71.0, 400.0, 495.0], "raw_output": "<box>(130,71,400,495)"}
+{"ref_id": 9317, "expression": "woman", "predicted_bbox": [130.0, 71.0, 401.0, 495.0], "raw_output": "<box>(130,71,401,495)"}
+{"ref_id": 9388, "expression": "tats chick", "predicted_bbox": [3.0, 180.0, 420.0, 637.0], "raw_output": "<box>(3,180,420,637)"}
+{"ref_id": 9388, "expression": "woman", "predicted_bbox": [3.0, 180.0, 420.0, 637.0], "raw_output": "<box>(3,180,420,637)"}
+{"ref_id": 9389, "expression": "man", "predicted_bbox": [0.0, 18.0, 264.0, 637.0], "raw_output": "<box>(0,18,264,637)"}
+{"ref_id": 9389, "expression": "guy standing", "predicted_bbox": [0.0, 18.0, 264.0, 637.0], "raw_output": "<box>(0,18,264,637)"}
+{"ref_id": 9389, "expression": "man", "predicted_bbox": [0.0, 19.0, 264.0, 637.0], "raw_output": "<box>(0,19,264,637)"}
+{"ref_id": 9498, "expression": "girl in purple shirt seated", "predicted_bbox": [275.0, 214.0, 326.0, 468.0], "raw_output": "<box>(275,214,326,468)"}
+{"ref_id": 9577, "expression": "man", "predicted_bbox": [213.0, 18.0, 600.0, 415.0], "raw_output": "<box>(213,18,600,415)\n"}
+{"ref_id": 9577, "expression": "white jacket", "predicted_bbox": [240.0, 18.0, 603.0, 415.0], "raw_output": "<box>(240,18,603,415)\n"}
+{"ref_id": 9577, "expression": "white coat", "predicted_bbox": [243.0, 18.0, 600.0, 415.0], "raw_output": "<box>(243,18,600,415)\n"}
+{"ref_id": 9578, "expression": "red shirt", "predicted_bbox": [60.0, 53.0, 249.0, 415.0], "raw_output": "<box>(60,53,249,415)"}
+{"ref_id": 9578, "expression": "woman", "predicted_bbox": [60.0, 53.0, 249.0, 415.0], "raw_output": "<box>(60,53,249,415)"}
+{"ref_id": 9578, "expression": "red jacket", "predicted_bbox": [60.0, 53.0, 249.0, 415.0], "raw_output": "<box>(60,53,249,415)"}
+{"ref_id": 9671, "expression": "driver visible", "predicted_bbox": [304.0, 267.0, 335.0, 290.0], "raw_output": "<box>(304,267,335,290)\n"}
+{"ref_id": 9681, "expression": "blue guy", "predicted_bbox": [350.0, 124.0, 596.0, 587.0], "raw_output": "<box>(350,124,596,587)"}
+{"ref_id": 9681, "expression": "blue shirt", "predicted_bbox": [350.0, 124.0, 596.0, 587.0], "raw_output": "<box>(350,124,596,587)"}
+{"ref_id": 9825, "expression": "man in yellow shirt", "predicted_bbox": [307.0, 245.0, 460.0, 415.0], "raw_output": "<box>(307,245,460,415)"}
+{"ref_id": 9825, "expression": "man in yellow", "predicted_bbox": [308.0, 245.0, 460.0, 415.0], "raw_output": "<box>(308,245,460,415)"}
+{"ref_id": 9825, "expression": "yellow shirt", "predicted_bbox": [307.0, 245.0, 460.0, 415.0], "raw_output": "<box>(307,245,460,415)"}
+{"ref_id": 10322, "expression": "woman striped shirt", "predicted_bbox": [176.0, 43.0, 308.0, 415.0], "raw_output": "<box>(176,43,308,415)"}
+{"ref_id": 10323, "expression": "man standing in white t", "predicted_bbox": [315.0, 20.0, 452.0, 306.0], "raw_output": "<box>(315,20,452,306)"}
+{"ref_id": 10323, "expression": "standing white shirt", "predicted_bbox": [316.0, 20.0, 453.0, 308.0], "raw_output": "<box>(316,20,453,308)"}
+{"ref_id": 10325, "expression": "kid in blk", "predicted_bbox": [468.0, 90.0, 607.0, 353.0], "raw_output": "<box>(468,90,607,353)"}
+{"ref_id": 10325, "expression": "kid in black arms out", "predicted_bbox": [468.0, 90.0, 607.0, 352.0], "raw_output": "<box>(468,90,607,352)"}
+{"ref_id": 10326, "expression": "sitting girl", "predicted_bbox": [379.0, 230.0, 486.0, 415.0], "raw_output": "<box>(379,230,486,415)"}
+{"ref_id": 10326, "expression": "seated woman in black", "predicted_bbox": [379.0, 230.0, 486.0, 415.0], "raw_output": "<box>(379,230,486,415)"}
+{"ref_id": 10327, "expression": "sitting with white hat", "predicted_bbox": [240.0, 256.0, 430.0, 415.0], "raw_output": "<box>(240,256,430,415)"}
+{"ref_id": 10327, "expression": "trucker hat", "predicted_bbox": [287.0, 256.0, 364.0, 320.0], "raw_output": "<box>(287,256,364,320)\n"}
+{"ref_id": 10544, "expression": "kid skating", "predicted_bbox": [283.0, 67.0, 634.0, 385.0], "raw_output": "<box>(283,67,634,385)\n"}
+{"ref_id": 10544, "expression": "purple kid", "predicted_bbox": [283.0, 65.0, 634.0, 380.0], "raw_output": "<box>(283,65,634,380)\n"}
+{"ref_id": 10545, "expression": "white hat black shirt guy", "predicted_bbox": [285.0, 124.0, 357.0, 340.0], "raw_output": "<box>(285,124,357,340)"}
+{"ref_id": 10547, "expression": "the guy in the blue plaid shirt", "predicted_bbox": [109.0, 97.0, 213.0, 374.0], "raw_output": "<box>(109,97,213,374)"}
+{"ref_id": 10547, "expression": "eft blue shirt", "predicted_bbox": [109.0, 97.0, 213.0, 374.0], "raw_output": "<box>(109,97,213,374)\n"}
+{"ref_id": 10552, "expression": "man black bag", "predicted_bbox": [239.0, 74.0, 368.0, 415.0], "raw_output": "<box>(239,74,368,415)"}
+{"ref_id": 10553, "expression": "man texting", "predicted_bbox": [64.0, 65.0, 238.0, 415.0], "raw_output": "<box>(64,65,238,415)"}
+{"ref_id": 10693, "expression": "blk cow", "predicted_bbox": [0.0, 223.0, 204.0, 644.0], "raw_output": "<box>(0,223,204,644)"}
+{"ref_id": 10693, "expression": "black cow", "predicted_bbox": [0.0, 223.0, 204.0, 644.0], "raw_output": "<box>(0,223,204,644)"}
+{"ref_id": 10694, "expression": "brown cow", "predicted_bbox": [38.0, 57.0, 420.0, 637.0], "raw_output": "<box>(38,57,420,637)"}
+{"ref_id": 10694, "expression": "cow with horns", "predicted_bbox": [38.0, 57.0, 420.0, 637.0], "raw_output": "<box>(38,57,420,637)"}
+{"ref_id": 10694, "expression": "brown", "predicted_bbox": [39.0, 58.0, 420.0, 637.0], "raw_output": "<box>(39,58,420,637)"}
+{"ref_id": 10769, "expression": "cow up frt good job", "predicted_bbox": [30.0, 98.0, 590.0, 436.0], "raw_output": "<box>(30,98,590,436)\n"}
+{"ref_id": 10782, "expression": "pink and white girl", "predicted_bbox": [290.0, 193.0, 453.0, 476.0], "raw_output": "<box>(290,193,453,476)"}
+{"ref_id": 10782, "expression": "girl wearing pinkf", "predicted_bbox": [290.0, 193.0, 453.0, 476.0], "raw_output": "<box>(290,193,453,476)"}
+{"ref_id": 10782, "expression": "kid", "predicted_bbox": [289.0, 193.0, 453.0, 476.0], "raw_output": "<box>(289,193,453,476)"}
+{"ref_id": 10783, "expression": "man", "predicted_bbox": [0.0, 0.0, 316.0, 476.0], "raw_output": "<box>(0,0,316,476)"}
+{"ref_id": 10783, "expression": "man", "predicted_bbox": [0.0, 0.0, 317.0, 476.0], "raw_output": "<box>(0,0,317,476)"}
+{"ref_id": 10797, "expression": "blue truck", "predicted_bbox": [0.0, 130.0, 159.0, 336.0], "raw_output": "<box>(0,130,159,336)"}
+{"ref_id": 10797, "expression": "blue mercedes truck", "predicted_bbox": [0.0, 130.0, 159.0, 336.0], "raw_output": "<box>(0,130,159,336)"}
+{"ref_id": 10798, "expression": "big truck", "predicted_bbox": [65.0, 40.0, 583.0, 451.0], "raw_output": "<box>(65,40,583,451)"}
+{"ref_id": 10798, "expression": "white truck", "predicted_bbox": [65.0, 40.0, 583.0, 451.0], "raw_output": "<box>(65,40,583,451)"}
+{"ref_id": 10798, "expression": "white truck", "predicted_bbox": [65.0, 40.0, 583.0, 451.0], "raw_output": "<box>(65,40,583,451)"}
+{"ref_id": 10806, "expression": "catcher", "predicted_bbox": [176.0, 219.0, 368.0, 369.0], "raw_output": "<box>(176,219,368,369)"}
+{"ref_id": 10806, "expression": "catcher", "predicted_bbox": [178.0, 219.0, 368.0, 369.0], "raw_output": "<box>(178,219,368,369)"}
+{"ref_id": 10806, "expression": "catcher yet again", "predicted_bbox": [176.0, 219.0, 368.0, 369.0], "raw_output": "<box>(176,219,368,369)"}
+{"ref_id": 10807, "expression": "umpire", "predicted_bbox": [47.0, 158.0, 169.0, 369.0], "raw_output": "<box>(47,158,169,369)"}
+{"ref_id": 10807, "expression": "umpire", "predicted_bbox": [47.0, 158.0, 169.0, 369.0], "raw_output": "<box>(47,158,169,369)"}
+{"ref_id": 11111, "expression": "broccoli", "predicted_bbox": [304.0, 16.0, 476.0, 225.0], "raw_output": "<box>(304,16,476,225)\n"}
+{"ref_id": 11176, "expression": "one standing in white shirt", "predicted_bbox": [337.0, 10.0, 504.0, 360.0], "raw_output": "<box>(337,10,504,360)"}
+{"ref_id": 11177, "expression": "man sitting in black shirt", "predicted_bbox": [24.0, 89.0, 290.0, 360.0], "raw_output": "<box>(24,89,290,360)"}
+{"ref_id": 11177, "expression": "man with armos folded", "predicted_bbox": [24.0, 89.0, 293.0, 360.0], "raw_output": "<box>(24,89,293,360)"}
+{"ref_id": 11177, "expression": "arms crossed", "predicted_bbox": [24.0, 89.0, 293.0, 360.0], "raw_output": "<box>(24,89,293,360)"}
+{"ref_id": 11369, "expression": "green chair", "predicted_bbox": [13.0, 267.0, 209.0, 415.0], "raw_output": "<box>(13,267,209,415)"}
+{"ref_id": 11369, "expression": "green chair", "predicted_bbox": [13.0, 267.0, 209.0, 415.0], "raw_output": "<box>(13,267,209,415)"}
+{"ref_id": 11371, "expression": "pale green chair", "predicted_bbox": [13.0, 267.0, 209.0, 415.0], "raw_output": "<box>(13,267,209,415)"}
+{"ref_id": 11371, "expression": "green chair", "predicted_bbox": [13.0, 267.0, 209.0, 415.0], "raw_output": "<box>(13,267,209,415)"}
+{"ref_id": 11371, "expression": "green chair", "predicted_bbox": [13.0, 267.0, 209.0, 415.0], "raw_output": "<box>(13,267,209,415)"}
+{"ref_id": 11556, "expression": "lady in black shirt and blue pants", "predicted_bbox": [204.0, 98.0, 350.0, 416.0], "raw_output": "<box>(204,98,350,416)"}
+{"ref_id": 11557, "expression": "man in striped apron doing dishes", "predicted_bbox": [350.0, 108.0, 437.0, 365.0], "raw_output": "<box>(350,108,437,365)\n"}
+{"ref_id": 11557, "expression": "person bending washing dishes", "predicted_bbox": [403.0, 136.0, 578.0, 329.0], "raw_output": "<box>(403,136,578,329)"}
+{"ref_id": 11557, "expression": "dude bending", "predicted_bbox": [398.0, 135.0, 579.0, 340.0], "raw_output": "<box>(398,135,579,340)"}
+{"ref_id": 11613, "expression": "monkey backpack", "predicted_bbox": [407.0, 123.0, 615.0, 361.0], "raw_output": "<box>(407,123,615,361)\n"}
+{"ref_id": 11613, "expression": "monkeying around", "predicted_bbox": [407.0, 123.0, 615.0, 360.0], "raw_output": "<box>(407,123,615,360)\n"}
+{"ref_id": 11615, "expression": "boy", "predicted_bbox": [104.0, 76.0, 265.0, 503.0], "raw_output": "<box>(104,76,265,503)"}
+{"ref_id": 11615, "expression": "kid", "predicted_bbox": [104.0, 76.0, 265.0, 503.0], "raw_output": "<box>(104,76,265,503)"}
+{"ref_id": 11811, "expression": "guy in blue hat", "predicted_bbox": [34.0, 60.0, 278.0, 644.0], "raw_output": "<box>(34,60,278,644)"}
+{"ref_id": 11811, "expression": "blue hat white shirt", "predicted_bbox": [34.0, 60.0, 278.0, 644.0], "raw_output": "<box>(34,60,278,644)"}
+{"ref_id": 11812, "expression": "man in brown shirt", "predicted_bbox": [76.0, 64.0, 358.0, 644.0], "raw_output": "<box>(76,64,358,644)"}
+{"ref_id": 11812, "expression": "brown shirt", "predicted_bbox": [78.0, 65.0, 359.0, 644.0], "raw_output": "<box>(78,65,359,644)\n"}
+{"ref_id": 11812, "expression": "guy in brown shirt", "predicted_bbox": [78.0, 65.0, 359.0, 644.0], "raw_output": "<box>(78,65,359,644)"}
+{"ref_id": 11919, "expression": "adult bear", "predicted_bbox": [374.0, 80.0, 590.0, 406.0], "raw_output": "<box>(374,80,590,406)"}
+{"ref_id": 11952, "expression": "man black shirt", "predicted_bbox": [304.0, 97.0, 395.0, 476.0], "raw_output": "<box>(304,97,395,476)\n"}
+{"ref_id": 11952, "expression": "manin black", "predicted_bbox": [300.0, 220.0, 334.0, 419.0], "raw_output": "<box>(300,220,334,419)\n"}
+{"ref_id": 11952, "expression": "guy in black", "predicted_bbox": [300.0, 224.0, 330.0, 419.0], "raw_output": "<box>(300,224,330,419)\n"}
+{"ref_id": 12051, "expression": "man in red", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [94, 0, 238, 205], \"label\": \"man in red\"}\n]\n```"}
+{"ref_id": 12051, "expression": "man in red shirt putting something in his mouth", "predicted_bbox": [94.0, 0.0, 238.0, 205.0], "raw_output": "<box>(94,0,238,205)\n"}
+{"ref_id": 12052, "expression": "person red shirt with glasses", "predicted_bbox": [0.0, 53.0, 204.0, 306.0], "raw_output": "<box>(0,53,204,306)\n"}
+{"ref_id": 12052, "expression": "red shirt looks liek linus torvalds", "predicted_bbox": [94.0, 0.0, 238.0, 205.0], "raw_output": "<box>(94,0,238,205)\n"}
+{"ref_id": 12053, "expression": "guy", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [430, 179, 644, 476], \"label\": \"guy\"}\n]\n```"}
+{"ref_id": 12054, "expression": "withe fat shirt", "predicted_bbox": [275.0, 53.0, 486.0, 320.0], "raw_output": "<box>(275,53,486,320)\n"}
+{"ref_id": 12055, "expression": "table", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [0, 34, 644, 476], \"label\": \"table\"}\n]\n```"}
+{"ref_id": 12055, "expression": "frotn table", "predicted_bbox": [0.0, 238.0, 485.0, 476.0], "raw_output": "<box>(0,238,485,476)\n"}
+{"ref_id": 12059, "expression": "blue chair against the island", "predicted_bbox": [74.0, 198.0, 205.0, 326.0], "raw_output": "<box>(74,198,205,326)"}
+{"ref_id": 12073, "expression": "the man", "predicted_bbox": [119.0, 64.0, 336.0, 504.0], "raw_output": "<box>(119,64,336,504)"}
+{"ref_id": 12073, "expression": "man", "predicted_bbox": [119.0, 64.0, 336.0, 504.0], "raw_output": "<box>(119,64,336,504)"}
+{"ref_id": 12073, "expression": "man with glasses", "predicted_bbox": [119.0, 64.0, 336.0, 504.0], "raw_output": "<box>(119,64,336,504)"}
+{"ref_id": 12074, "expression": "lady", "predicted_bbox": [0.0, 163.0, 124.0, 504.0], "raw_output": "<box>(0,163,124,504)"}
+{"ref_id": 12074, "expression": "girl", "predicted_bbox": [0.0, 163.0, 124.0, 504.0], "raw_output": "<box>(0,163,124,504)"}
+{"ref_id": 12074, "expression": "girl", "predicted_bbox": [0.0, 163.0, 124.0, 504.0], "raw_output": "<box>(0,163,124,504)"}
+{"ref_id": 12141, "expression": "man", "predicted_bbox": [80.0, 26.0, 324.0, 448.0], "raw_output": "<box>(80,26,324,448)"}
+{"ref_id": 12141, "expression": "man", "predicted_bbox": [80.0, 26.0, 327.0, 448.0], "raw_output": "<box>(80,26,327,448)"}
+{"ref_id": 12142, "expression": "sitting", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [269, 170, 443, 345], \"label\": \"sitting\"}\n]\n```"}
+{"ref_id": 12142, "expression": "sitting person", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [269, 170, 443, 345], \"label\": \"sitting person\"}\n]\n```"}
+{"ref_id": 12142, "expression": "lady sitting", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [269, 170, 443, 345], \"label\": \"lady sitting\"}\n]\n```"}
+{"ref_id": 12343, "expression": "catcher", "predicted_bbox": [0.0, 203.0, 184.0, 415.0], "raw_output": "<box>(0,203,184,415)"}
+{"ref_id": 12343, "expression": "the catcher", "predicted_bbox": [0.0, 203.0, 184.0, 416.0], "raw_output": "<box>(0,203,184,416)"}
+{"ref_id": 12344, "expression": "hitter", "predicted_bbox": [239.0, 84.0, 496.0, 400.0], "raw_output": "<box>(239,84,496,400)"}
+{"ref_id": 12344, "expression": "player hitting", "predicted_bbox": [239.0, 84.0, 496.0, 400.0], "raw_output": "<box>(239,84,496,400)"}
+{"ref_id": 12344, "expression": "batter", "predicted_bbox": [239.0, 84.0, 496.0, 400.0], "raw_output": "<box>(239,84,496,400)"}
+{"ref_id": 12385, "expression": "the bus", "predicted_bbox": [203.0, 98.0, 517.0, 340.0], "raw_output": "<box>(203,98,517,340)"}
+{"ref_id": 12500, "expression": "orange shirt", "predicted_bbox": [295.0, 148.0, 447.0, 415.0], "raw_output": "<box>(295,148,447,415)"}
+{"ref_id": 12500, "expression": "the orange tshirt great game have a good one", "predicted_bbox": [304.0, 150.0, 448.0, 415.0], "raw_output": "<box>(304,150,448,415)"}
+{"ref_id": 12502, "expression": "white hair man", "predicted_bbox": [398.0, 107.0, 546.0, 415.0], "raw_output": "<box>(398,107,546,415)\n"}
+{"ref_id": 12502, "expression": "white shirt tasting", "predicted_bbox": [398.0, 107.0, 546.0, 415.0], "raw_output": "<box>(398,107,546,415)\n"}
+{"ref_id": 12502, "expression": "guy i white", "predicted_bbox": [398.0, 107.0, 546.0, 415.0], "raw_output": "<box>(398,107,546,415)\n"}
+{"ref_id": 12503, "expression": "woman", "predicted_bbox": [119.0, 103.0, 406.0, 375.0], "raw_output": "<box>(119,103,406,375)\n"}
+{"ref_id": 12503, "expression": "woman feeding man", "predicted_bbox": [117.0, 103.0, 409.0, 380.0], "raw_output": "<box>(117,103,409,380)\n"}
+{"ref_id": 12503, "expression": "lady feeding old guy", "predicted_bbox": [118.0, 103.0, 409.0, 375.0], "raw_output": "<box>(118,103,409,375)\n"}
+{"ref_id": 12529, "expression": "person black shirt facing away no backpack", "predicted_bbox": [420.0, 225.0, 520.0, 419.0], "raw_output": "<box>(420,225,520,419)"}
+{"ref_id": 12530, "expression": "green shirt lady", "predicted_bbox": [103.0, 258.0, 190.0, 415.0], "raw_output": "<box>(103,258,190,415)"}
+{"ref_id": 12531, "expression": "person in white with white hat", "predicted_bbox": [330.0, 202.0, 398.0, 415.0], "raw_output": "<box>(330,202,398,415)"}
+{"ref_id": 12683, "expression": "child in striped pants", "predicted_bbox": [293.0, 165.0, 407.0, 476.0], "raw_output": "<box>(293,165,407,476)"}
+{"ref_id": 12684, "expression": "girl in blue pants", "predicted_bbox": [0.0, 167.0, 135.0, 476.0], "raw_output": "<box>(0,167,135,476)"}
+{"ref_id": 12685, "expression": "guy bending over", "predicted_bbox": [104.0, 76.0, 269.0, 408.0], "raw_output": "<box>(104,76,269,408)"}
+{"ref_id": 12685, "expression": "guy bending over", "predicted_bbox": [104.0, 76.0, 268.0, 409.0], "raw_output": "<box>(104,76,268,409)"}
+{"ref_id": 12686, "expression": "red shirt", "predicted_bbox": [430.0, 0.0, 570.0, 406.0], "raw_output": "<box>(430,0,570,406)"}
+{"ref_id": 12686, "expression": "red stripes", "predicted_bbox": [430.0, 0.0, 570.0, 406.0], "raw_output": "<box>(430,0,570,406)\n"}
+{"ref_id": 13069, "expression": "black motocicle", "predicted_bbox": [390.0, 165.0, 644.0, 387.0], "raw_output": "<box>(390,165,644,387)"}
+{"ref_id": 13346, "expression": "girls legs in redpink pants", "predicted_bbox": [0.0, 253.0, 126.0, 348.0], "raw_output": "<box>(0,253,126,348)"}
+{"ref_id": 13346, "expression": "pink pants", "predicted_bbox": [0.0, 253.0, 124.0, 336.0], "raw_output": "<box>(0,253,124,336)"}
+{"ref_id": 13346, "expression": "red pants", "predicted_bbox": [0.0, 253.0, 124.0, 336.0], "raw_output": "<box>(0,253,124,336)\n"}
+{"ref_id": 13348, "expression": "green shirt", "predicted_bbox": [320.0, 9.0, 460.0, 470.0], "raw_output": "<box>(320,9,460,470)\n"}
+{"ref_id": 13348, "expression": "green shirt", "predicted_bbox": [320.0, 9.0, 460.0, 470.0], "raw_output": "<box>(320,9,460,470)\n"}
+{"ref_id": 13348, "expression": "green shirt", "predicted_bbox": [320.0, 9.0, 460.0, 470.0], "raw_output": "<box>(320,9,460,470)\n"}
+{"ref_id": 13349, "expression": "purple pantsuit", "predicted_bbox": [164.0, 205.0, 357.0, 441.0], "raw_output": "<box>(164,205,357,441)"}
+{"ref_id": 13349, "expression": "woman in purple", "predicted_bbox": [163.0, 204.0, 357.0, 441.0], "raw_output": "<box>(163,204,357,441)"}
+{"ref_id": 13349, "expression": "woman sitting down", "predicted_bbox": [163.0, 204.0, 357.0, 441.0], "raw_output": "<box>(163,204,357,441)"}
+{"ref_id": 13372, "expression": "kid", "predicted_bbox": [50.0, 30.0, 407.0, 504.0], "raw_output": "<box>(50,30,407,504)"}
+{"ref_id": 13683, "expression": "ambulance", "predicted_bbox": [489.0, 45.0, 644.0, 229.0], "raw_output": "<box>(489,45,644,229)"}
+{"ref_id": 13683, "expression": "ambulance", "predicted_bbox": [489.0, 45.0, 644.0, 229.0], "raw_output": "<box>(489,45,644,229)"}
+{"ref_id": 13684, "expression": "red truck", "predicted_bbox": [85.0, 89.0, 586.0, 378.0], "raw_output": "<box>(85,89,586,378)"}
+{"ref_id": 13684, "expression": "red truck", "predicted_bbox": [84.0, 86.0, 590.0, 379.0], "raw_output": "<box>(84,86,590,379)"}
+{"ref_id": 13684, "expression": "truck", "predicted_bbox": [85.0, 86.0, 590.0, 379.0], "raw_output": "<box>(85,86,590,379)"}
+{"ref_id": 13940, "expression": "tallest boy", "predicted_bbox": [319.0, 95.0, 408.0, 437.0], "raw_output": "<box>(319,95,408,437)"}
+{"ref_id": 13940, "expression": "tallest kid", "predicted_bbox": [319.0, 94.0, 408.0, 437.0], "raw_output": "<box>(319,94,408,437)"}
+{"ref_id": 13940, "expression": "tallest boy", "predicted_bbox": [319.0, 94.0, 408.0, 437.0], "raw_output": "<box>(319,94,408,437)"}
+{"ref_id": 14035, "expression": "hitter", "predicted_bbox": [0.0, 113.0, 392.0, 644.0], "raw_output": "<box>(0,113,392,644)"}
+{"ref_id": 14035, "expression": "batter", "predicted_bbox": [0.0, 113.0, 392.0, 644.0], "raw_output": "<box>(0,113,392,644)"}
+{"ref_id": 14035, "expression": "player", "predicted_bbox": [0.0, 113.0, 392.0, 644.0], "raw_output": "<box>(0,113,392,644)"}
+{"ref_id": 14037, "expression": "red color shirt blurry", "predicted_bbox": [369.0, 180.0, 420.0, 644.0], "raw_output": "<box>(369,180,420,644)"}
+{"ref_id": 14037, "expression": "red shirt", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [368, 179, 420, 644], \"label\": \"red shirt\"}\n]\n```"}
+{"ref_id": 14198, "expression": "the slice at 12 oclock", "predicted_bbox": [50.0, 48.0, 309.0, 417.0], "raw_output": "<box>(50,48,309,417)"}
+{"ref_id": 14200, "expression": "slice at 700 if it were a clock", "predicted_bbox": [53.0, 46.0, 574.0, 458.0], "raw_output": "<box>(53,46,574,458)"}
+{"ref_id": 14200, "expression": "7 oclock", "predicted_bbox": [0.0, 3.0, 644.0, 476.0], "raw_output": "<box>(0,3,644,476)"}
+{"ref_id": 14354, "expression": "wii", "predicted_bbox": [167.0, 130.0, 225.0, 358.0], "raw_output": "<box>(167,130,225,358)"}
+{"ref_id": 14354, "expression": "wii", "predicted_bbox": [167.0, 130.0, 225.0, 358.0], "raw_output": "<box>(167,130,225,358)"}
+{"ref_id": 14355, "expression": "remote on rightside", "predicted_bbox": [493.0, 68.0, 580.0, 357.0], "raw_output": "<box>(493,68,580,357)"}
+{"ref_id": 14613, "expression": "player thats jumping", "predicted_bbox": [224.0, 250.0, 316.0, 537.0], "raw_output": "<box>(224,250,316,537)"}
+{"ref_id": 14613, "expression": "this side of net", "predicted_bbox": [0.0, 368.0, 420.0, 579.0], "raw_output": "<box>(0,368,420,579)"}
+{"ref_id": 14613, "expression": "guy jumping", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [224, 250, 367, 550], \"label\": \"guy jumping\"}\n]\n```"}
+{"ref_id": 14701, "expression": "computer", "predicted_bbox": [0.0, 0.0, 153.0, 79.0], "raw_output": "<box>(0,0,153,79)"}
+{"ref_id": 14701, "expression": "the laptop", "predicted_bbox": [154.0, 106.0, 243.0, 137.0], "raw_output": "<box>(154,106,243,137)"}
+{"ref_id": 15288, "expression": "green jacket", "predicted_bbox": [348.0, 176.0, 430.0, 405.0], "raw_output": "<box>(348,176,430,405)"}
+{"ref_id": 15288, "expression": "woman in light colored clothing", "predicted_bbox": [347.0, 178.0, 430.0, 405.0], "raw_output": "<box>(347,178,430,405)"}
+{"ref_id": 15512, "expression": "green one", "predicted_bbox": [350.0, 24.0, 550.0, 419.0], "raw_output": "<box>(350,24,550,419)"}
+{"ref_id": 15512, "expression": "green one", "predicted_bbox": [350.0, 24.0, 550.0, 419.0], "raw_output": "<box>(350,24,550,419)"}
+{"ref_id": 15512, "expression": "green chair", "predicted_bbox": [350.0, 24.0, 550.0, 419.0], "raw_output": "<box>(350,24,550,419)"}
+{"ref_id": 15522, "expression": "yrk 9856", "predicted_bbox": [94.0, 279.0, 149.0, 320.0], "raw_output": "<box>(94,279,149,320)"}
+{"ref_id": 15537, "expression": "piece of donut", "predicted_bbox": [84.0, 75.0, 609.0, 423.0], "raw_output": "<box>(84,75,609,423)"}
+{"ref_id": 15538, "expression": "powdered sugar", "predicted_bbox": [0.0, 89.0, 643.0, 476.0], "raw_output": "<box>(0,89,643,476)"}
+{"ref_id": 15538, "expression": "dessert", "predicted_bbox": [84.0, 76.0, 609.0, 423.0], "raw_output": "<box>(84,76,609,423)"}
+{"ref_id": 15587, "expression": "black horse", "predicted_bbox": [370.0, 14.0, 635.0, 415.0], "raw_output": "<box>(370,14,635,415)"}
+{"ref_id": 15589, "expression": "white horse", "predicted_bbox": [264.0, 143.0, 415.0, 415.0], "raw_output": "<box>(264,143,415,415)"}
+{"ref_id": 15789, "expression": "lady in white coat", "predicted_bbox": [104.0, 96.0, 235.0, 336.0], "raw_output": "<box>(104,96,235,336)"}
+{"ref_id": 15789, "expression": "ladie jacket walking bike", "predicted_bbox": [104.0, 95.0, 236.0, 336.0], "raw_output": "<box>(104,95,236,336)"}
+{"ref_id": 15789, "expression": "white coat", "predicted_bbox": [104.0, 95.0, 236.0, 336.0], "raw_output": "<box>(104,95,236,336)"}
+{"ref_id": 16135, "expression": "carrots", "predicted_bbox": [403.0, 347.0, 562.0, 539.0], "raw_output": "<box>(403,347,562,539)\n"}
+{"ref_id": 16136, "expression": "container with the sliced strawberries", "predicted_bbox": [13.0, 317.0, 405.0, 568.0], "raw_output": "<box>(13,317,405,568)"}
+{"ref_id": 16141, "expression": "player in white clothes", "predicted_bbox": [134.0, 105.0, 270.0, 336.0], "raw_output": "<box>(134,105,270,336)"}
+{"ref_id": 16142, "expression": "player in orange", "predicted_bbox": [235.0, 67.0, 370.0, 384.0], "raw_output": "<box>(235,67,370,384)"}
+{"ref_id": 16142, "expression": "orange tee", "predicted_bbox": [235.0, 124.0, 350.0, 267.0], "raw_output": "<box>(235,124,350,267)"}
+{"ref_id": 16142, "expression": "woman in orange", "predicted_bbox": [235.0, 67.0, 370.0, 384.0], "raw_output": "<box>(235,67,370,384)"}
+{"ref_id": 16525, "expression": "woman in black", "predicted_bbox": [148.0, 85.0, 327.0, 306.0], "raw_output": "<box>(148,85,327,306)"}
+{"ref_id": 16525, "expression": "lady in black", "predicted_bbox": [149.0, 85.0, 327.0, 306.0], "raw_output": "<box>(149,85,327,306)"}
+{"ref_id": 16563, "expression": "cow head", "predicted_bbox": [80.0, 163.0, 247.0, 395.0], "raw_output": "<box>(80,163,247,395)"}
+{"ref_id": 16582, "expression": "brown frosting with sprinkles", "predicted_bbox": [300.0, 74.0, 568.0, 329.0], "raw_output": "<box>(300,74,568,329)\n"}
+{"ref_id": 16582, "expression": "chochlate doughnut", "predicted_bbox": [297.0, 68.0, 570.0, 324.0], "raw_output": "<box>(297,68,570,324)\n"}
+{"ref_id": 16582, "expression": "chocalate doughnut", "predicted_bbox": [298.0, 70.0, 569.0, 324.0], "raw_output": "<box>(298,70,569,324)\n"}
+{"ref_id": 16584, "expression": "topcenter donut", "predicted_bbox": [170.0, 0.0, 409.0, 168.0], "raw_output": "<box>(170,0,409,168)\n"}
+{"ref_id": 16585, "expression": "zig zag donut", "predicted_bbox": [300.0, 74.0, 568.0, 329.0], "raw_output": "<box>(300,74,568,329)\n"}
+{"ref_id": 16585, "expression": "brown donut with white drizzle", "predicted_bbox": [460.0, 239.0, 644.0, 528.0], "raw_output": "<box>(460,239,644,528)\n"}
+{"ref_id": 16587, "expression": "pinkered donut", "predicted_bbox": [17.0, 228.0, 285.0, 496.0], "raw_output": "<box>(17,228,285,496)\n"}
+{"ref_id": 16587, "expression": "pink", "predicted_bbox": [18.0, 227.0, 286.0, 503.0], "raw_output": "<box>(18,227,286,503)\n"}
+{"ref_id": 16587, "expression": "pink donut", "predicted_bbox": [18.0, 227.0, 286.0, 503.0], "raw_output": "<box>(18,227,286,503)"}
+{"ref_id": 16588, "expression": "white donut with brown sprinkles", "predicted_bbox": [300.0, 74.0, 568.0, 329.0], "raw_output": "<box>(300,74,568,329)"}
+{"ref_id": 16588, "expression": "white frosting brown sprinkles", "predicted_bbox": [297.0, 68.0, 570.0, 324.0], "raw_output": "<box>(297,68,570,324)\n"}
+{"ref_id": 16599, "expression": "floral print", "predicted_bbox": [136.0, 120.0, 307.0, 476.0], "raw_output": "<box>(136,120,307,476)\n"}
+{"ref_id": 16613, "expression": "the baby", "predicted_bbox": [287.0, 86.0, 409.0, 359.0], "raw_output": "<box>(287,86,409,359)"}
+{"ref_id": 16613, "expression": "kid", "predicted_bbox": [287.0, 86.0, 409.0, 359.0], "raw_output": "<box>(287,86,409,359)"}
+{"ref_id": 16613, "expression": "in purple", "predicted_bbox": [287.0, 86.0, 409.0, 359.0], "raw_output": "<box>(287,86,409,359)\n"}
+{"ref_id": 16614, "expression": "man in blue jacket", "predicted_bbox": [193.0, 0.0, 345.0, 347.0], "raw_output": "<box>(193,0,345,347)\n"}
+{"ref_id": 16614, "expression": "guy in blue", "predicted_bbox": [193.0, 0.0, 345.0, 347.0], "raw_output": "<box>(193,0,345,347)"}
+{"ref_id": 16695, "expression": "woman", "predicted_bbox": [224.0, 165.0, 430.0, 415.0], "raw_output": "<box>(224,165,430,415)"}
+{"ref_id": 16695, "expression": "girl", "predicted_bbox": [224.0, 165.0, 430.0, 415.0], "raw_output": "<box>(224,165,430,415)"}
+{"ref_id": 16695, "expression": "lady", "predicted_bbox": [224.0, 163.0, 425.0, 415.0], "raw_output": "<box>(224,163,425,415)"}
+{"ref_id": 16696, "expression": "guy", "predicted_bbox": [360.0, 78.0, 644.0, 415.0], "raw_output": "<box>(360,78,644,415)"}
+{"ref_id": 16696, "expression": "yellow shirt", "predicted_bbox": [360.0, 78.0, 644.0, 415.0], "raw_output": "<box>(360,78,644,415)"}
+{"ref_id": 16696, "expression": "man", "predicted_bbox": [360.0, 78.0, 644.0, 415.0], "raw_output": "<box>(360,78,644,415)"}
+{"ref_id": 16847, "expression": "red freight car", "predicted_bbox": [493.0, 185.0, 644.0, 300.0], "raw_output": "<box>(493,185,644,300)"}
+{"ref_id": 16847, "expression": "tight red car", "predicted_bbox": [493.0, 185.0, 644.0, 300.0], "raw_output": "<box>(493,185,644,300)"}
+{"ref_id": 16848, "expression": "train", "predicted_bbox": [89.0, 120.0, 497.0, 350.0], "raw_output": "<box>(89,120,497,350)"}
+{"ref_id": 16848, "expression": "train", "predicted_bbox": [89.0, 120.0, 497.0, 350.0], "raw_output": "<box>(89,120,497,350)"}
+{"ref_id": 16848, "expression": "train", "predicted_bbox": [89.0, 120.0, 497.0, 350.0], "raw_output": "<box>(89,120,497,350)"}
+{"ref_id": 16941, "expression": "scary", "predicted_bbox": [80.0, 134.0, 256.0, 476.0], "raw_output": "<box>(80,134,256,476)"}
+{"ref_id": 16941, "expression": "kid with mask", "predicted_bbox": [80.0, 134.0, 256.0, 476.0], "raw_output": "<box>(80,134,256,476)"}
+{"ref_id": 16942, "expression": "guy without mask", "predicted_bbox": [80.0, 297.0, 254.0, 476.0], "raw_output": "<box>(80,297,254,476)"}
+{"ref_id": 17091, "expression": "black computer typing", "predicted_bbox": [239.0, 160.0, 375.0, 328.0], "raw_output": "<box>(239,160,375,328)"}
+{"ref_id": 17091, "expression": "laptop being used", "predicted_bbox": [53.0, 160.0, 209.0, 304.0], "raw_output": "<box>(53,160,209,304)"}
+{"ref_id": 17092, "expression": "yellow laptop", "predicted_bbox": [53.0, 160.0, 209.0, 304.0], "raw_output": "<box>(53,160,209,304)"}
+{"ref_id": 17092, "expression": "white cpu", "predicted_bbox": [448.0, 125.0, 504.0, 363.0], "raw_output": "<box>(448,125,504,363)"}
+{"ref_id": 17092, "expression": "white laptop", "predicted_bbox": [53.0, 160.0, 209.0, 304.0], "raw_output": "<box>(53,160,209,304)"}
+{"ref_id": 17361, "expression": "skateboard guy", "predicted_bbox": [224.0, 209.0, 350.0, 607.0], "raw_output": "<box>(224,209,350,607)"}
+{"ref_id": 17361, "expression": "weekender skateboard douce", "predicted_bbox": [203.0, 594.0, 389.0, 637.0], "raw_output": "<box>(203,594,389,637)"}
+{"ref_id": 17796, "expression": "girl", "predicted_bbox": [78.0, 165.0, 349.0, 415.0], "raw_output": "<box>(78,165,349,415)"}
+{"ref_id": 17829, "expression": "brown soup", "predicted_bbox": [370.0, 140.0, 506.0, 268.0], "raw_output": "<box>(370,140,506,268)"}
+{"ref_id": 17840, "expression": "snowboarder with blue pants", "predicted_bbox": [497.0, 103.0, 576.0, 438.0], "raw_output": "<box>(497,103,576,438)"}
+{"ref_id": 17840, "expression": "snowboarder blue pants", "predicted_bbox": [497.0, 103.0, 576.0, 438.0], "raw_output": "<box>(497,103,576,438)\n"}
+{"ref_id": 18401, "expression": "man in brown shirt", "predicted_bbox": [159.0, 18.0, 304.0, 387.0], "raw_output": "<box>(159,18,304,387)"}
+{"ref_id": 18401, "expression": "hahahabrown shirt dork hahah", "predicted_bbox": [158.0, 19.0, 304.0, 387.0], "raw_output": "<box>(158,19,304,387)\n"}
+{"ref_id": 18401, "expression": "brown shirt", "predicted_bbox": [158.0, 19.0, 304.0, 387.0], "raw_output": "<box>(158,19,304,387)"}
+{"ref_id": 18402, "expression": "diving guy", "predicted_bbox": [304.0, 130.0, 586.0, 287.0], "raw_output": "<box>(304,130,586,287)\n"}
+{"ref_id": 18691, "expression": "bikr ri", "predicted_bbox": [74.0, 20.0, 368.0, 403.0], "raw_output": "<box>(74,20,368,403)\n"}
+{"ref_id": 18716, "expression": "man in white shirt", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [5, 26, 230, 274], \"label\": \"man in white shirt\"}\n]\n```"}
+{"ref_id": 18717, "expression": "guy bending over", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [179, 65, 458, 553], \"label\": \"guy bending over\"}\n]\n```"}
+{"ref_id": 18717, "expression": "man in blue shirt", "predicted_bbox": [179.0, 65.0, 458.0, 553.0], "raw_output": "<box>(179,65,458,553)"}
+{"ref_id": 18717, "expression": "light blue person", "predicted_bbox": [179.0, 65.0, 458.0, 553.0], "raw_output": "<box>(179,65,458,553)"}
+{"ref_id": 18718, "expression": "black sheep with man in white shirt", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [0, 234, 235, 343], \"label\": \"black sheep with man in white shirt\"}\n]\n```"}
+{"ref_id": 18832, "expression": "rigth animal", "predicted_bbox": [304.0, 56.0, 447.0, 258.0], "raw_output": "<box>(304,56,447,258)"}
+{"ref_id": 18836, "expression": "thumps up at the stop sign", "predicted_bbox": [146.0, 308.0, 245.0, 504.0], "raw_output": "<box>(146,308,245,504)"}
+{"ref_id": 18836, "expression": "cool guy with sunglasses", "predicted_bbox": [146.0, 308.0, 245.0, 504.0], "raw_output": "<box>(146,308,245,504)"}
+{"ref_id": 19210, "expression": "pink bed", "predicted_bbox": [0.0, 385.0, 284.0, 536.0], "raw_output": "<box>(0,385,284,536)"}
+{"ref_id": 19212, "expression": "laft sand", "predicted_bbox": [0.0, 0.0, 475.0, 392.0], "raw_output": "<box>(0,0,475,392)"}
+{"ref_id": 19410, "expression": "girl with dog", "predicted_bbox": [20.0, 34.0, 256.0, 415.0], "raw_output": "<box>(20,34,256,415)"}
+{"ref_id": 19410, "expression": "girl with dog", "predicted_bbox": [19.0, 34.0, 256.0, 415.0], "raw_output": "<box>(19,34,256,415)"}
+{"ref_id": 19411, "expression": "gal bending", "predicted_bbox": [408.0, 26.0, 617.0, 415.0], "raw_output": "<box>(408,26,617,415)"}
+{"ref_id": 19411, "expression": "pink skirt", "predicted_bbox": [473.0, 125.0, 618.0, 260.0], "raw_output": "<box>(473,125,618,260)"}
+{"ref_id": 19411, "expression": "girl pink skirt", "predicted_bbox": [409.0, 26.0, 618.0, 415.0], "raw_output": "<box>(409,26,618,415)"}
+{"ref_id": 19524, "expression": "man in black", "predicted_bbox": [50.0, 208.0, 193.0, 564.0], "raw_output": "<box>(50,208,193,564)"}
+{"ref_id": 20051, "expression": "taller giraffe", "predicted_bbox": [349.0, 0.0, 644.0, 308.0], "raw_output": "<box>(349,0),(644,308)"}
+{"ref_id": 20159, "expression": "table laptop is on", "predicted_bbox": [58.0, 367.0, 459.0, 420.0], "raw_output": "<box>(58,367,459,420)"}
+{"ref_id": 20159, "expression": "laptop table", "predicted_bbox": [57.0, 368.0, 459.0, 420.0], "raw_output": "<box>(57,368,459,420)"}
+{"ref_id": 20346, "expression": "clock facing down", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [0, 134, 359, 578], \"label\": \"clock facing down\"}\n]\n```"}
+{"ref_id": 20600, "expression": "further giraffee", "predicted_bbox": [134.0, 115.0, 390.0, 415.0], "raw_output": "<box>(134,115,390,415)"}
+{"ref_id": 20601, "expression": "righty gir", "predicted_bbox": [134.0, 115.0, 609.0, 415.0], "raw_output": "<box>(134,115,609,415)\n"}
+{"ref_id": 21014, "expression": "coach dude is laying on", "predicted_bbox": [0.0, 93.0, 487.0, 205.0], "raw_output": "<box>(0,93,487,205)"}
+{"ref_id": 21014, "expression": "brown couch", "predicted_bbox": [0.0, 37.0, 644.0, 345.0], "raw_output": "<box>(0,37,644,345)"}
+{"ref_id": 21014, "expression": "any part of brown couch", "predicted_bbox": [0.0, 38.0, 644.0, 340.0], "raw_output": "<box>(0,38,644,340)"}
+{"ref_id": 21087, "expression": "tofu dog not the sign", "predicted_bbox": [435.0, 97.0, 634.0, 340.0], "raw_output": "<box>(435,97,634,340)"}
+{"ref_id": 21117, "expression": "little elephant", "predicted_bbox": [330.0, 197.0, 496.0, 371.0], "raw_output": "<box>(330,197,496,371)"}
+{"ref_id": 21117, "expression": "small elephant", "predicted_bbox": [330.0, 198.0, 495.0, 371.0], "raw_output": "<box>(330,198,495,371)"}
+{"ref_id": 21118, "expression": "big elephant", "predicted_bbox": [30.0, 14.0, 416.0, 370.0], "raw_output": "<box>(30,14,416,370)"}
+{"ref_id": 21118, "expression": "the larger elephant", "predicted_bbox": [30.0, 14.0, 417.0, 369.0], "raw_output": "<box>(30,14,417,369)"}
+{"ref_id": 21118, "expression": "big elephant", "predicted_bbox": [30.0, 14.0, 416.0, 370.0], "raw_output": "<box>(30,14,416,370)"}
+{"ref_id": 21175, "expression": "baby elephant", "predicted_bbox": [203.0, 69.0, 514.0, 317.0], "raw_output": "<box>(203,69,514,317)"}
+{"ref_id": 21175, "expression": "baby elephant", "predicted_bbox": [203.0, 68.0, 514.0, 317.0], "raw_output": "<box>(203,68,514,317)"}
+{"ref_id": 21175, "expression": "baby elephant", "predicted_bbox": [203.0, 68.0, 514.0, 317.0], "raw_output": "<box>(203,68,514,317)"}
+{"ref_id": 21290, "expression": "kid", "predicted_bbox": [317.0, 89.0, 450.0, 290.0], "raw_output": "<box>(317,89,450,290)"}
+{"ref_id": 21290, "expression": "child", "predicted_bbox": [317.0, 89.0, 450.0, 290.0], "raw_output": "<box>(317,89,450,290)"}
+{"ref_id": 21291, "expression": "man", "predicted_bbox": [25.0, 54.0, 297.0, 443.0], "raw_output": "<box>(25,54,297,443)\n"}
+{"ref_id": 21291, "expression": "man", "predicted_bbox": [26.0, 54.0, 297.0, 448.0], "raw_output": "<box>(26,54,297,448)\n"}
+{"ref_id": 21840, "expression": "watermelon", "predicted_bbox": [200.0, 20.0, 364.0, 205.0], "raw_output": "<box>(200,20,364,205)"}
+{"ref_id": 21840, "expression": "oranges", "predicted_bbox": [38.0, 19.0, 254.0, 207.0], "raw_output": "<box>(38,19,254,207)\n"}
+{"ref_id": 21841, "expression": "red peppers", "predicted_bbox": [397.0, 18.0, 580.0, 216.0], "raw_output": "<box>(397,18,580,216)\n"}
+{"ref_id": 21874, "expression": "guy", "predicted_bbox": [0.0, 23.0, 184.0, 364.0], "raw_output": "<box>(0,23,184,364)"}
+{"ref_id": 21875, "expression": "girl in brown", "predicted_bbox": [183.0, 45.0, 490.0, 360.0], "raw_output": "<box>(183,45,490,360)"}
+{"ref_id": 21946, "expression": "man", "predicted_bbox": [378.0, 16.0, 644.0, 470.0], "raw_output": "<box>(378,16,644,470)\n"}
+{"ref_id": 21946, "expression": "guy", "predicted_bbox": [378.0, 16.0, 644.0, 470.0], "raw_output": "<box>(378,16,644,470)\n"}
+{"ref_id": 21947, "expression": "the girl", "predicted_bbox": [170.0, 94.0, 438.0, 476.0], "raw_output": "<box>(170,94,438,476)"}
+{"ref_id": 21947, "expression": "lady", "predicted_bbox": [170.0, 93.0, 450.0, 476.0], "raw_output": "<box>(170,93,450,476)\n"}
+{"ref_id": 21947, "expression": "woman", "predicted_bbox": [170.0, 94.0, 436.0, 476.0], "raw_output": "<box>(170,94,436,476)\n"}
+{"ref_id": 21948, "expression": "10 shirt", "predicted_bbox": [78.0, 193.0, 354.0, 581.0], "raw_output": "<box>(78,193,354,581)"}
+{"ref_id": 21948, "expression": "10", "predicted_bbox": [78.0, 193.0, 354.0, 582.0], "raw_output": "<box>(78,193,354,582)"}
+{"ref_id": 21948, "expression": "number 10", "predicted_bbox": [78.0, 193.0, 356.0, 584.0], "raw_output": "<box>(78,193,356,584)"}
+{"ref_id": 21949, "expression": "yellow", "predicted_bbox": [230.0, 85.0, 354.0, 367.0], "raw_output": "<box>(230,85,354,367)"}
+{"ref_id": 21949, "expression": "yellow", "predicted_bbox": [230.0, 86.0, 354.0, 327.0], "raw_output": "<box>(230,86,354,327)"}
+{"ref_id": 21949, "expression": "ref", "predicted_bbox": [230.0, 85.0, 354.0, 297.0], "raw_output": "<box>(230,85,354,297)"}
+{"ref_id": 21950, "expression": "guy in blue", "predicted_bbox": [283.0, 190.0, 470.0, 576.0], "raw_output": "<box>(283,190,470,576)"}
+{"ref_id": 21963, "expression": "white girl", "predicted_bbox": [160.0, 24.0, 315.0, 387.0], "raw_output": "<box>(160,24,315,387)"}
+{"ref_id": 21963, "expression": "woman", "predicted_bbox": [160.0, 24.0, 315.0, 387.0], "raw_output": "<box>(160,24,315,387)"}
+{"ref_id": 21963, "expression": "woman standing", "predicted_bbox": [160.0, 25.0, 314.0, 387.0], "raw_output": "<box>(160,25,314,387)"}
+{"ref_id": 22009, "expression": "woman sitting", "predicted_bbox": [348.0, 220.0, 590.0, 436.0], "raw_output": "<box>(348,220,590,436)"}
+{"ref_id": 22009, "expression": "sitting person", "predicted_bbox": [348.0, 220.0, 590.0, 436.0], "raw_output": "<box>(348,220,590,436)"}
+{"ref_id": 22067, "expression": "d shirt", "predicted_bbox": [489.0, 103.0, 607.0, 399.0], "raw_output": "<box>(489,103,607,399)"}
+{"ref_id": 22068, "expression": "16", "predicted_bbox": [187.0, 139.0, 250.0, 224.0], "raw_output": "<box>(187,139,250,224)"}
+{"ref_id": 22068, "expression": "girl blue shirt", "predicted_bbox": [118.0, 0.0, 439.0, 415.0], "raw_output": "<box>(118,0,439,415)"}
+{"ref_id": 22068, "expression": "16", "predicted_bbox": [187.0, 139.0, 250.0, 224.0], "raw_output": "<box>(187,139,250,224)"}
+{"ref_id": 22069, "expression": "woman wearing gray", "predicted_bbox": [0.0, 0.0, 385.0, 415.0], "raw_output": "<box>(0,0,385,415)"}
+{"ref_id": 22074, "expression": "woman", "predicted_bbox": [0.0, 98.0, 134.0, 556.0], "raw_output": "<box>(0,98,134,556)"}
+{"ref_id": 22075, "expression": "man", "predicted_bbox": [130.0, 17.0, 450.0, 609.0], "raw_output": "<box>(130,17,450,609)"}
+{"ref_id": 22075, "expression": "man", "predicted_bbox": [130.0, 17.0, 450.0, 609.0], "raw_output": "<box>(130,17,450,609)"}
+{"ref_id": 22075, "expression": "a man in a suit", "predicted_bbox": [130.0, 17.0, 450.0, 609.0], "raw_output": "<box>(130,17,450,609)"}
+{"ref_id": 22093, "expression": "pizza being cut into", "predicted_bbox": [0.0, 278.0, 476.0, 635.0], "raw_output": "<box>(0,278,476,635)\n"}
+{"ref_id": 22093, "expression": "far food", "predicted_bbox": [0.0, 279.0, 476.0, 635.0], "raw_output": "<box>(0,279,476,635)\n"}
+{"ref_id": 22094, "expression": "the pink stuff", "predicted_bbox": [64.0, 319.0, 457.0, 500.0], "raw_output": "<box>(64,319,457,500)\n"}
+{"ref_id": 22094, "expression": "pink", "predicted_bbox": [65.0, 319.0, 476.0, 508.0], "raw_output": "<box>(65,319,476,508)\n"}
+{"ref_id": 22146, "expression": "baseball player going for a handshake", "predicted_bbox": [445.0, 96.0, 520.0, 328.0], "raw_output": "<box>(445,96,520,328)\n"}
+{"ref_id": 22184, "expression": "mexican blue shirt", "predicted_bbox": [430.0, 108.0, 536.0, 253.0], "raw_output": "<box>(430,108,536,253)\n"}
+{"ref_id": 22184, "expression": "guy in solid blue", "predicted_bbox": [516.0, 107.0, 643.0, 318.0], "raw_output": "<box>(516,107,643,318)"}
+{"ref_id": 22185, "expression": "man in hat and sunglasses", "predicted_bbox": [330.0, 84.0, 519.0, 256.0], "raw_output": "<box>(330,84,519,256)"}
+{"ref_id": 22186, "expression": "man eating", "predicted_bbox": [0.0, 34.0, 420.0, 476.0], "raw_output": "<box>(0,34,420,476)"}
+{"ref_id": 22186, "expression": "man in striped shirt", "predicted_bbox": [0.0, 35.0, 420.0, 476.0], "raw_output": "<box>(0,35,420,476)"}
+{"ref_id": 22186, "expression": "man stuffing his mouth", "predicted_bbox": [0.0, 35.0, 420.0, 476.0], "raw_output": "<box>(0,35,420,476)"}
+{"ref_id": 22197, "expression": "white chair", "predicted_bbox": [317.0, 408.0, 456.0, 637.0], "raw_output": "<box>(317,408,456,637)"}
+{"ref_id": 22198, "expression": "blue chair", "predicted_bbox": [283.0, 170.0, 476.0, 415.0], "raw_output": "<box>(283,170,476,415)"}
+{"ref_id": 22198, "expression": "blue chair", "predicted_bbox": [283.0, 170.0, 476.0, 415.0], "raw_output": "<box>(283,170,476,415)"}
+{"ref_id": 22198, "expression": "blue chair", "predicted_bbox": [283.0, 170.0, 476.0, 415.0], "raw_output": "<box>(283,170,476,415)"}
+{"ref_id": 22264, "expression": "man with glass in his hand", "predicted_bbox": [0.0, 0.0, 354.0, 415.0], "raw_output": "<box>(0,0,354,415)"}
+{"ref_id": 22264, "expression": "man drinking", "predicted_bbox": [0.0, 0.0, 349.0, 415.0], "raw_output": "<box>(0,0,349,415)"}
+{"ref_id": 22465, "expression": "white car", "predicted_bbox": [468.0, 0.0, 643.0, 237.0], "raw_output": "<box>(468,0,643,237)"}
+{"ref_id": 22465, "expression": "white can", "predicted_bbox": [468.0, 0.0, 643.0, 237.0], "raw_output": "<box>(468,0,643,237)"}
+{"ref_id": 22467, "expression": "crazy bike", "predicted_bbox": [65.0, 38.0, 570.0, 413.0], "raw_output": "<box>(65,38,570,413)"}
+{"ref_id": 22502, "expression": "black", "predicted_bbox": [374.0, 95.0, 644.0, 415.0], "raw_output": "<box>(374,95,644,415)"}
+{"ref_id": 22502, "expression": "black", "predicted_bbox": [374.0, 95.0, 644.0, 415.0], "raw_output": "<box>(374,95,644,415)"}
+{"ref_id": 22503, "expression": "man in white t shirt", "predicted_bbox": [168.0, 159.0, 407.0, 415.0], "raw_output": "<box>(168,159,407,415)\n"}
+{"ref_id": 22503, "expression": "white shirt", "predicted_bbox": [168.0, 159.0, 407.0, 415.0], "raw_output": "<box>(168,159,407,415)\n"}
+{"ref_id": 22503, "expression": "white shirt", "predicted_bbox": [168.0, 159.0, 407.0, 415.0], "raw_output": "<box>(168,159,407,415)\n"}
+{"ref_id": 22519, "expression": "im hungry red shirt", "predicted_bbox": [384.0, 50.0, 447.0, 119.0], "raw_output": "<box>(384,50,447,119)\n"}
+{"ref_id": 22520, "expression": "tennis player", "predicted_bbox": [257.0, 123.0, 380.0, 390.0], "raw_output": "<box>(257,123,380,390)\n"}
+{"ref_id": 22520, "expression": "tennis player in white", "predicted_bbox": [257.0, 123.0, 380.0, 390.0], "raw_output": "<box>(257,123,380,390)"}
+{"ref_id": 22520, "expression": "tennis player", "predicted_bbox": [257.0, 123.0, 380.0, 390.0], "raw_output": "<box>(257,123,380,390)\n"}
+{"ref_id": 22559, "expression": "player in white", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [30, 167, 184, 415], \"label\": \"player in white\"}\n]\n```"}
+{"ref_id": 22560, "expression": "batter", "predicted_bbox": [0.0, 0.0, 637.0, 415.0], "raw_output": "<box>(0,0,637,415)"}
+{"ref_id": 22560, "expression": "player", "predicted_bbox": [0.0, 0.0, 635.0, 415.0], "raw_output": "<box>(0,0,635,415)"}
+{"ref_id": 22560, "expression": "the player not the bat", "predicted_bbox": [0.0, 0.0, 635.0, 415.0], "raw_output": "<box>(0,0,635,415)"}
+{"ref_id": 22624, "expression": "woman with black jacket", "predicted_bbox": [508.0, 40.0, 603.0, 267.0], "raw_output": "<box>(508,40,603,267)"}
+{"ref_id": 22625, "expression": "kid batting", "predicted_bbox": [230.0, 45.0, 406.0, 394.0], "raw_output": "<box>(230,45,406,394)"}
+{"ref_id": 22758, "expression": "lady smiling", "predicted_bbox": [70.0, 85.0, 380.0, 644.0], "raw_output": "<box>(70,85,380,644)"}
+{"ref_id": 22758, "expression": "woman", "predicted_bbox": [70.0, 84.0, 379.0, 635.0], "raw_output": "<box>(70,84,379,635)"}
+{"ref_id": 22995, "expression": "pink stripped sofa", "predicted_bbox": [0.0, 209.0, 334.0, 395.0], "raw_output": "<box>(0,209,334,395)"}
+{"ref_id": 22995, "expression": "pink sofa", "predicted_bbox": [0.0, 210.0, 334.0, 395.0], "raw_output": "<box>(0,210,334,395)"}
+{"ref_id": 23047, "expression": "tennis player", "predicted_bbox": [170.0, 68.0, 534.0, 580.0], "raw_output": "<box>(170,68,534,580)\n"}
+{"ref_id": 23197, "expression": "dog with frisbee", "predicted_bbox": [320.0, 245.0, 476.0, 438.0], "raw_output": "<box>(320,245,476,438)"}
+{"ref_id": 23279, "expression": "sitting cow", "predicted_bbox": [309.0, 187.0, 586.0, 349.0], "raw_output": "<box>(309,187,586,349)"}
+{"ref_id": 23354, "expression": "man in red", "predicted_bbox": [0.0, 253.0, 114.0, 419.0], "raw_output": "<box>(0,253,114,419)"}
+{"ref_id": 23355, "expression": "bald guy", "predicted_bbox": [270.0, 304.0, 485.0, 419.0], "raw_output": "<box>(270,304,485,419)"}
+{"ref_id": 23481, "expression": "mans arm", "predicted_bbox": [0.0, 0.0, 589.0, 476.0], "raw_output": "<box>(0,0,589,476)"}
+{"ref_id": 23481, "expression": "pedophile arm", "predicted_bbox": [0.0, 0.0, 589.0, 476.0], "raw_output": "<box>(0,0,589,476)"}
+{"ref_id": 23481, "expression": "adult arms", "predicted_bbox": [0.0, 0.0, 589.0, 476.0], "raw_output": "<box>(0,0,589,476)"}
+{"ref_id": 23482, "expression": "little boy", "predicted_bbox": [0.0, 8.0, 593.0, 476.0], "raw_output": "<box>(0,8,593,476)"}
+{"ref_id": 23482, "expression": "toddler", "predicted_bbox": [0.0, 8.0, 593.0, 476.0], "raw_output": "<box>(0,8,593,476)"}
+{"ref_id": 23482, "expression": "kid", "predicted_bbox": [0.0, 7.0, 593.0, 476.0], "raw_output": "<box>(0,7,593,476)"}
+{"ref_id": 23521, "expression": "black guy in", "predicted_bbox": [465.0, 153.0, 550.0, 358.0], "raw_output": "<box>(465,153,550,358)"}
+{"ref_id": 23521, "expression": "umpire", "predicted_bbox": [465.0, 153.0, 550.0, 358.0], "raw_output": "<box>(465,153,550,358)\n"}
+{"ref_id": 23522, "expression": "catcher", "predicted_bbox": [250.0, 116.0, 419.0, 350.0], "raw_output": "<box>(250,116,419,350)"}
+{"ref_id": 23522, "expression": "catcher", "predicted_bbox": [250.0, 116.0, 419.0, 350.0], "raw_output": "<box>(250,116,419,350)"}
+{"ref_id": 23523, "expression": "5", "predicted_bbox": [116.0, 109.0, 218.0, 357.0], "raw_output": "<box>(116,109,218,357)\n"}
+{"ref_id": 23523, "expression": "batter", "predicted_bbox": [115.0, 109.0, 218.0, 360.0], "raw_output": "<box>(115,109,218,360)\n"}
+{"ref_id": 23523, "expression": "pujols 5", "predicted_bbox": [116.0, 109.0, 218.0, 357.0], "raw_output": "<box>(116,109,218,357)\n"}
+{"ref_id": 23641, "expression": "cookbook", "predicted_bbox": [70.0, 50.0, 369.0, 178.0], "raw_output": "<box>(70,50,369,178)"}
+{"ref_id": 23641, "expression": "book", "predicted_bbox": [70.0, 50.0, 369.0, 178.0], "raw_output": "<box>(70,50,369,178)"}
+{"ref_id": 23643, "expression": "mouse let", "predicted_bbox": [14.0, 135.0, 247.0, 246.0], "raw_output": "<box>(14,135,247,246)"}
+{"ref_id": 23730, "expression": "red hat skateboarder", "predicted_bbox": [70.0, 106.0, 275.0, 398.0], "raw_output": "<box>(70,106,275,398)"}
+{"ref_id": 23731, "expression": "blue boy", "predicted_bbox": [240.0, 298.0, 406.0, 637.0], "raw_output": "<box>(240,298,406,637)"}
+{"ref_id": 23731, "expression": "child green helmet", "predicted_bbox": [240.0, 298.0, 406.0, 637.0], "raw_output": "<box>(240,298,406,637)"}
+{"ref_id": 23731, "expression": "kid in blue", "predicted_bbox": [240.0, 297.0, 406.0, 635.0], "raw_output": "<box>(240,297,406,635)"}
+{"ref_id": 23776, "expression": "woman", "predicted_bbox": [0.0, 273.0, 285.0, 644.0], "raw_output": "<box>(0,273,285,644)"}
+{"ref_id": 23776, "expression": "woman", "predicted_bbox": [0.0, 273.0, 285.0, 644.0], "raw_output": "<box>(0,273,285,644)"}
+{"ref_id": 23776, "expression": "woman", "predicted_bbox": [0.0, 273.0, 284.0, 635.0], "raw_output": "<box>(0,273,284,635)"}
+{"ref_id": 23777, "expression": "creep", "predicted_bbox": [0.0, 0.0, 420.0, 357.0], "raw_output": "<box>(0,0,420,357)"}
+{"ref_id": 23777, "expression": "man", "predicted_bbox": [194.0, 130.0, 420.0, 637.0], "raw_output": "<box>(194,130,420,637)"}
+{"ref_id": 23886, "expression": "guy", "predicted_bbox": [430.0, 6.0, 625.0, 415.0], "raw_output": "<box>(430,6,625,415)"}
+{"ref_id": 23886, "expression": "guy in white shirt", "predicted_bbox": [430.0, 7.0, 625.0, 415.0], "raw_output": "<box>(430,7,625,415)"}
+{"ref_id": 23886, "expression": "man", "predicted_bbox": [435.0, 6.0, 620.0, 415.0], "raw_output": "<box>(435,6,620,415)"}
+{"ref_id": 23887, "expression": "gilf", "predicted_bbox": [194.0, 35.0, 436.0, 415.0], "raw_output": "<box>(194,35,436,415)\n"}
+{"ref_id": 23887, "expression": "old woman being overwhelmed by modern technology", "predicted_bbox": [194.0, 36.0, 435.0, 415.0], "raw_output": "<box>(194,36,435,415)"}
+{"ref_id": 23897, "expression": "windows", "predicted_bbox": [189.0, 176.0, 543.0, 330.0], "raw_output": "<box>(189,176,543,330)"}
+{"ref_id": 23950, "expression": "the laptop that is booting up", "predicted_bbox": [350.0, 290.0, 564.0, 438.0], "raw_output": "<box>(350,290,564,438)"}
+{"ref_id": 23951, "expression": "small laptop with animal", "predicted_bbox": [89.0, 315.0, 330.0, 467.0], "raw_output": "<box>(89,315,330,467)"}
+{"ref_id": 23951, "expression": "small lighted monitor", "predicted_bbox": [195.0, 316.0, 334.0, 410.0], "raw_output": "<box>(195,316,334,410)"}
+{"ref_id": 23954, "expression": "screen with glare", "predicted_bbox": [37.0, 258.0, 200.0, 406.0], "raw_output": "<box>(37,258,200,406)\n"}
+{"ref_id": 24079, "expression": "short black hair backpack lady", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [304, 156, 607, 476], \"label\": \"short black hair backpack lady\"}\n]\n```"}
+{"ref_id": 24081, "expression": "woman pouring drinks", "predicted_bbox": [134.0, 30.0, 345.0, 290.0], "raw_output": "<box>(134,30,345,290)"}
+{"ref_id": 24081, "expression": "woman with a turbanhi", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [134, 30, 345, 290], \"label\": \"woman with a turbanhi\"}\n]\n```"}
+{"ref_id": 24153, "expression": "girl", "predicted_bbox": [43.0, 30.0, 479.0, 425.0], "raw_output": "<box>(43,30,479,425)"}
+{"ref_id": 24153, "expression": "chick", "predicted_bbox": [43.0, 30.0, 479.0, 425.0], "raw_output": "<box>(43,30,479,425)"}
+{"ref_id": 24153, "expression": "girl", "predicted_bbox": [43.0, 30.0, 479.0, 425.0], "raw_output": "<box>(43,30,479,425)"}
+{"ref_id": 24167, "expression": "man", "predicted_bbox": [253.0, 4.0, 644.0, 359.0], "raw_output": "<box>(253,4,644,359)"}
+{"ref_id": 24167, "expression": "dude", "predicted_bbox": [250.0, 3.0, 644.0, 359.0], "raw_output": "<box>(250,3,644,359)"}
+{"ref_id": 24167, "expression": "man thumb up", "predicted_bbox": [253.0, 4.0, 644.0, 359.0], "raw_output": "<box>(253,4,644,359)"}
+{"ref_id": 24168, "expression": "woman in purple", "predicted_bbox": [0.0, 43.0, 405.0, 364.0], "raw_output": "<box>(0,43,405,364)"}
+{"ref_id": 24168, "expression": "woman", "predicted_bbox": [0.0, 43.0, 405.0, 364.0], "raw_output": "<box>(0,43,405,364)"}
+{"ref_id": 24168, "expression": "purple shirt", "predicted_bbox": [0.0, 43.0, 405.0, 364.0], "raw_output": "<box>(0,43,405,364)"}
+{"ref_id": 24234, "expression": "girl standing blue vest black shirt", "predicted_bbox": [360.0, 9.0, 450.0, 187.0], "raw_output": "<box>(360,9,450,187)"}
+{"ref_id": 24234, "expression": "girl blue gray vest", "predicted_bbox": [360.0, 9.0, 450.0, 187.0], "raw_output": "<box>(360,9,450,187)"}
+{"ref_id": 24234, "expression": "woman standing in blue vest", "predicted_bbox": [360.0, 9.0, 447.0, 185.0], "raw_output": "<box>(360,9,447,185)"}
+{"ref_id": 24235, "expression": "lady leaning", "predicted_bbox": [54.0, 7.0, 143.0, 189.0], "raw_output": "<box>(54,7,143,189)"}
+{"ref_id": 24301, "expression": "woman in dark sweater", "predicted_bbox": [497.0, 58.0, 603.0, 381.0], "raw_output": "<box>(497,58,603,381)"}
+{"ref_id": 24301, "expression": "woman with black suitcase", "predicted_bbox": [450.0, 253.0, 546.0, 387.0], "raw_output": "<box>(450,253,546,387)\n"}
+{"ref_id": 24302, "expression": "the cop farleft", "predicted_bbox": [16.0, 63.0, 145.0, 389.0], "raw_output": "<box>(16,63,145,389)"}
+{"ref_id": 24304, "expression": "woman i n red jacket with luggage", "predicted_bbox": [273.0, 119.0, 378.0, 400.0], "raw_output": "<box>(273,119,378,400)\n"}
+{"ref_id": 24304, "expression": "girl red", "predicted_bbox": [273.0, 118.0, 379.0, 400.0], "raw_output": "<box>(273,118,379,400)\n"}
+{"ref_id": 24304, "expression": "girl in red", "predicted_bbox": [273.0, 118.0, 379.0, 401.0], "raw_output": "<box>(273,118,379,401)"}
+{"ref_id": 24337, "expression": "orange slice in a fruit salad", "predicted_bbox": [0.0, 175.0, 283.0, 364.0], "raw_output": "<box>(0,175,283,364)\n"}
+{"ref_id": 24484, "expression": "blue shirt", "predicted_bbox": [309.0, 87.0, 534.0, 415.0], "raw_output": "<box>(309,87,534,415)"}
+{"ref_id": 24484, "expression": "blue shirt", "predicted_bbox": [309.0, 87.0, 534.0, 415.0], "raw_output": "<box>(309,87,534,415)"}
+{"ref_id": 24484, "expression": "navy shirt", "predicted_bbox": [309.0, 87.0, 534.0, 415.0], "raw_output": "<box>(309,87,534,415)"}
+{"ref_id": 24485, "expression": "yellow soccer player", "predicted_bbox": [36.0, 20.0, 319.0, 415.0], "raw_output": "<box>(36,20,319,415)"}
+{"ref_id": 24485, "expression": "yellow", "predicted_bbox": [37.0, 20.0, 319.0, 415.0], "raw_output": "<box>(37,20,319,415)\n"}
+{"ref_id": 24869, "expression": "man wearing black", "predicted_bbox": [220.0, 0.0, 476.0, 315.0], "raw_output": "<box>(220,0,476,315)"}
+{"ref_id": 24870, "expression": "girl in black", "predicted_bbox": [0.0, 184.0, 235.0, 586.0], "raw_output": "<box>(0,184,235,586)"}
+{"ref_id": 24871, "expression": "girl in white tank", "predicted_bbox": [217.0, 316.0, 476.0, 559.0], "raw_output": "<box>(217,316,476,559)\n"}
+{"ref_id": 24871, "expression": "white tank glasses", "predicted_bbox": [217.0, 316.0, 476.0, 559.0], "raw_output": "<box>(217,316,476,559)\n"}
+{"ref_id": 24920, "expression": "bald guy", "predicted_bbox": [456.0, 23.0, 644.0, 348.0], "raw_output": "<box>(456,23,644,348)"}
+{"ref_id": 24921, "expression": "black shirt", "predicted_bbox": [369.0, 108.0, 475.0, 334.0], "raw_output": "<box>(369,108,475,334)\n"}
+{"ref_id": 24921, "expression": "man in black", "predicted_bbox": [369.0, 108.0, 475.0, 337.0], "raw_output": "<box>(369,108,475,337)"}
+{"ref_id": 24921, "expression": "guy in black", "predicted_bbox": [369.0, 108.0, 475.0, 336.0], "raw_output": "<box>(369,108,475,336)"}
+{"ref_id": 25076, "expression": "dude with jacket", "predicted_bbox": [54.0, 60.0, 179.0, 360.0], "raw_output": "<box>(54,60,179,360)"}
+{"ref_id": 25206, "expression": "main bus", "predicted_bbox": [223.0, 120.0, 487.0, 275.0], "raw_output": "<box>(223,120,487,275)"}
+{"ref_id": 25363, "expression": "surf board laying down", "predicted_bbox": [8.0, 375.0, 396.0, 465.0], "raw_output": "<box>(8,375,396,465)"}
+{"ref_id": 25363, "expression": "horizontal surfboard", "predicted_bbox": [8.0, 375.0, 396.0, 465.0], "raw_output": "<box>(8,375,396,465)"}
+{"ref_id": 25364, "expression": "blue standing board", "predicted_bbox": [86.0, 94.0, 173.0, 395.0], "raw_output": "<box>(86,94,173,395)"}
+{"ref_id": 25364, "expression": "blue board standing up", "predicted_bbox": [86.0, 93.0, 174.0, 395.0], "raw_output": "<box>(86,93,174,395)"}
+{"ref_id": 25365, "expression": "brown board", "predicted_bbox": [219.0, 84.0, 316.0, 379.0], "raw_output": "<box>(219,84,316,379)"}
+{"ref_id": 25365, "expression": "the standing womans board is nice", "predicted_bbox": [219.0, 83.0, 317.0, 379.0], "raw_output": "<box>(219,83,317,379)"}
+{"ref_id": 25496, "expression": "brown cows white tail", "predicted_bbox": [14.0, 69.0, 250.0, 470.0], "raw_output": "<box>(14,69,250,470)"}
+{"ref_id": 25496, "expression": "black cow butt", "predicted_bbox": [0.0, 69.0, 253.0, 476.0], "raw_output": "<box>(0,69,253,476)"}
+{"ref_id": 25497, "expression": "brown cow facing us", "predicted_bbox": [205.0, 79.0, 493.0, 476.0], "raw_output": "<box>(205,79,493,476)"}
+{"ref_id": 25497, "expression": "cow facing us", "predicted_bbox": [206.0, 79.0, 493.0, 475.0], "raw_output": "<box>(206,79,493,475)"}
+{"ref_id": 25498, "expression": "rear end of brown cow", "predicted_bbox": [389.0, 117.0, 644.0, 470.0], "raw_output": "<box>(389,117,644,470)"}
+{"ref_id": 25507, "expression": "catcher", "predicted_bbox": [498.0, 187.0, 610.0, 415.0], "raw_output": "<box>(498,187,610,415)\n"}
+{"ref_id": 25507, "expression": "catcher", "predicted_bbox": [498.0, 187.0, 610.0, 415.0], "raw_output": "<box>(498,187,610,415)\n"}
+{"ref_id": 25507, "expression": "catcher in white", "predicted_bbox": [503.0, 189.0, 611.0, 417.0], "raw_output": "<box>(503,189,611,417)\n"}
+{"ref_id": 25508, "expression": "batter", "predicted_bbox": [108.0, 140.0, 405.0, 430.0], "raw_output": "<box>(108,140,405,430)"}
+{"ref_id": 25508, "expression": "batter", "predicted_bbox": [108.0, 140.0, 405.0, 430.0], "raw_output": "<box>(108,140,405,430)"}
+{"ref_id": 25508, "expression": "batter", "predicted_bbox": [108.0, 140.0, 405.0, 430.0], "raw_output": "<box>(108,140,405,430)"}
+{"ref_id": 25551, "expression": "green shirt", "predicted_bbox": [213.0, 249.0, 358.0, 436.0], "raw_output": "<box>(213,249,358,436)"}
+{"ref_id": 25551, "expression": "guy brown shirt", "predicted_bbox": [213.0, 250.0, 360.0, 448.0], "raw_output": "<box>(213,250,360,448)"}
+{"ref_id": 25611, "expression": "smiling man", "predicted_bbox": [398.0, 0.0, 644.0, 476.0], "raw_output": "<box>(398,0),(644,476)"}
+{"ref_id": 25612, "expression": "blond", "predicted_bbox": [0.0, 143.0, 440.0, 476.0], "raw_output": "<box>(0,143,440,476)\n"}
+{"ref_id": 25612, "expression": "blond", "predicted_bbox": [0.0, 143.0, 440.0, 476.0], "raw_output": "<box>(0,143,440,476)\n"}
+{"ref_id": 25613, "expression": "man standing", "predicted_bbox": [398.0, 0.0, 644.0, 476.0], "raw_output": "<box>(398,0),(644,476)"}
+{"ref_id": 25613, "expression": "man standing", "predicted_bbox": [398.0, 0.0, 644.0, 476.0], "raw_output": "<box>(398,0),(644,476)"}
+{"ref_id": 25858, "expression": "womans green and blue dress", "predicted_bbox": [447.0, 65.0, 613.0, 415.0], "raw_output": "<box>(447,65,613,415)\n"}
+{"ref_id": 25858, "expression": "female in blue clothing", "predicted_bbox": [449.0, 65.0, 617.0, 415.0], "raw_output": "<box>(449,65,617,415)"}
+{"ref_id": 26222, "expression": "bowl of soup", "predicted_bbox": [345.0, 56.0, 600.0, 270.0], "raw_output": "<box>(345,56,600,270)"}
+{"ref_id": 26222, "expression": "the square bowl", "predicted_bbox": [340.0, 53.0, 601.0, 270.0], "raw_output": "<box>(340,53,601,270)"}
+{"ref_id": 26222, "expression": "soup", "predicted_bbox": [345.0, 56.0, 600.0, 270.0], "raw_output": "<box>(345,56,600,270)"}
+{"ref_id": 26223, "expression": "tuna bowl", "predicted_bbox": [0.0, 19.0, 294.0, 253.0], "raw_output": "<box>(0,19,294,253)"}
+{"ref_id": 26224, "expression": "bowl of vegetables", "predicted_bbox": [184.0, 203.0, 512.0, 476.0], "raw_output": "<box>(184,203,512,476)"}
+{"ref_id": 26224, "expression": "peas", "predicted_bbox": [204.0, 253.0, 480.0, 467.0], "raw_output": "<box>(204,253,480,467)\n"}
+{"ref_id": 26293, "expression": "black lady", "predicted_bbox": [380.0, 84.0, 621.0, 476.0], "raw_output": "<box>(380,84,621,476)"}
+{"ref_id": 26336, "expression": "checkered shirt", "predicted_bbox": [25.0, 249.0, 120.0, 460.0], "raw_output": "<box>(25,249,120,460)"}
+{"ref_id": 26336, "expression": "person in a checked shirt", "predicted_bbox": [25.0, 249.0, 120.0, 463.0], "raw_output": "<box>(25,249,120,463)"}
+{"ref_id": 26337, "expression": "woman", "predicted_bbox": [430.0, 65.0, 597.0, 487.0], "raw_output": "<box>(430,65,597,487)"}
+{"ref_id": 26338, "expression": "guy reading", "predicted_bbox": [49.0, 113.0, 406.0, 598.0], "raw_output": "<box>(49,113,406,598)"}
+{"ref_id": 26338, "expression": "eminem looking guy reading paper", "predicted_bbox": [50.0, 113.0, 407.0, 600.0], "raw_output": "<box>(50,113,407,600)"}
+{"ref_id": 26338, "expression": "man seated", "predicted_bbox": [49.0, 113.0, 407.0, 602.0], "raw_output": "<box>(49,113,407,602)"}
+{"ref_id": 26484, "expression": "man in darker 4 shirt", "predicted_bbox": [250.0, 86.0, 443.0, 460.0], "raw_output": "<box>(250,86,443,460)"}
+{"ref_id": 26484, "expression": "white short 4", "predicted_bbox": [13.0, 159.0, 286.0, 550.0], "raw_output": "<box>(13,159,286,550)"}
+{"ref_id": 26485, "expression": "guy in white shirt", "predicted_bbox": [249.0, 86.0, 445.0, 460.0], "raw_output": "<box>(249,86,445,460)"}
+{"ref_id": 26485, "expression": "guy in white", "predicted_bbox": [249.0, 86.0, 445.0, 460.0], "raw_output": "<box>(249,86,445,460)"}
+{"ref_id": 26580, "expression": "person leaning towards table", "predicted_bbox": [0.0, 173.0, 116.0, 415.0], "raw_output": "<box>(0,173,116,415)"}
+{"ref_id": 26580, "expression": "man bending", "predicted_bbox": [0.0, 173.0, 116.0, 415.0], "raw_output": "<box>(0,173,116,415)\n"}
+{"ref_id": 26581, "expression": "lady with cake", "predicted_bbox": [340.0, 10.0, 578.0, 415.0], "raw_output": "<box>(340,10,578,415)"}
+{"ref_id": 26582, "expression": "man yellow shirt", "predicted_bbox": [267.0, 80.0, 384.0, 285.0], "raw_output": "<box>(267,80,384,285)\n"}
+{"ref_id": 26582, "expression": "man light yellow shirt", "predicted_bbox": [267.0, 80.0, 384.0, 285.0], "raw_output": "<box>(267,80,384,285)\n"}
+{"ref_id": 26832, "expression": "gray car", "predicted_bbox": [0.0, 185.0, 314.0, 436.0], "raw_output": "<box>(0,185,314,436)"}
+{"ref_id": 26852, "expression": "girl", "predicted_bbox": [237.0, 95.0, 614.0, 490.0], "raw_output": "<box>(237,95,614,490)\n"}
+{"ref_id": 26852, "expression": "woman", "predicted_bbox": [237.0, 95.0, 614.0, 490.0], "raw_output": "<box>(237,95,614,490)"}
+{"ref_id": 26853, "expression": "boy", "predicted_bbox": [135.0, 89.0, 450.0, 511.0], "raw_output": "<box>(135,89,450,511)\n"}
+{"ref_id": 26853, "expression": "boy", "predicted_bbox": [135.0, 89.0, 450.0, 511.0], "raw_output": "<box>(135,89,450,511)\n"}
+{"ref_id": 26853, "expression": "boy", "predicted_bbox": [135.0, 89.0, 450.0, 510.0], "raw_output": "<box>(135,89,450,510)\n"}
+{"ref_id": 26863, "expression": "red shirt kid", "predicted_bbox": [228.0, 50.0, 354.0, 386.0], "raw_output": "<box>(228,50,354,386)\n"}
+{"ref_id": 27008, "expression": "blurry person", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [554, 3, 644, 198], \"label\": \"blurry person\"}\n]\n```"}
+{"ref_id": 27008, "expression": "man at the far end of the field", "predicted_bbox": [554.0, 3.0, 643.0, 197.0], "raw_output": "<box>(554,3,643,197)"}
+{"ref_id": 27009, "expression": "catcher", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [349, 250, 618, 415], \"label\": \"catcher\"}\n]\n```"}
+{"ref_id": 27009, "expression": "catcher", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [349, 250, 618, 415], \"label\": \"catcher\"}\n]\n```"}
+{"ref_id": 27010, "expression": "batter", "predicted_bbox": [93.0, 87.0, 615.0, 409.0], "raw_output": "<box>(93,87,615,409)"}
+{"ref_id": 27010, "expression": "gibson", "predicted_bbox": [94.0, 87.0, 615.0, 403.0], "raw_output": "<box>(94,87,615,403)"}
+{"ref_id": 27118, "expression": "blue car", "predicted_bbox": [439.0, 198.0, 644.0, 415.0], "raw_output": "<box>(439,198,644,415)"}
+{"ref_id": 27119, "expression": "white car", "predicted_bbox": [0.0, 219.0, 198.0, 423.0], "raw_output": "<box>(0,219,198,423)"}
+{"ref_id": 27119, "expression": "gray car", "predicted_bbox": [0.0, 218.0, 197.0, 423.0], "raw_output": "<box>(0,218,197,423)"}
+{"ref_id": 27133, "expression": "face", "predicted_bbox": [84.0, 157.0, 390.0, 476.0], "raw_output": "<box>(84,157,390,476)"}
+{"ref_id": 27133, "expression": "man", "predicted_bbox": [13.0, 10.0, 532.0, 644.0], "raw_output": "<box>(13,10,532,644)"}
+{"ref_id": 27133, "expression": "guy", "predicted_bbox": [13.0, 10.0, 532.0, 644.0], "raw_output": "<box>(13,10,532,644)"}
+{"ref_id": 27225, "expression": "black tshirt dude", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [49, 228, 206, 453], \"label\": \"black tshirt dude\"}\n]\n```"}
+{"ref_id": 27226, "expression": "tallest", "predicted_bbox": [187.0, 60.0, 405.0, 637.0], "raw_output": "<box>(187,60,405,637)"}
+{"ref_id": 27226, "expression": "guy standing", "predicted_bbox": [184.0, 60.0, 407.0, 635.0], "raw_output": "<box>(184,60,407,635)"}
+{"ref_id": 27292, "expression": "guy orange shirt", "predicted_bbox": [430.0, 12.0, 504.0, 302.0], "raw_output": "<box>(430,12,504,302)"}
+{"ref_id": 27292, "expression": "orange shirt", "predicted_bbox": [430.0, 12.0, 504.0, 302.0], "raw_output": "<box>(430,12,504,302)"}
+{"ref_id": 27293, "expression": "boy in black", "predicted_bbox": [86.0, 4.0, 297.0, 359.0], "raw_output": "<box>(86,4,297,359)"}
+{"ref_id": 27426, "expression": "the bread only", "predicted_bbox": [0.0, 114.0, 273.0, 469.0], "raw_output": "<box>(0,114,273,469)"}
+{"ref_id": 27426, "expression": "piece of bread", "predicted_bbox": [0.0, 114.0, 273.0, 469.0], "raw_output": "<box>(0,114,273,469)"}
+{"ref_id": 27427, "expression": "salad stuff with ketchup on", "predicted_bbox": [223.0, 34.0, 644.0, 470.0], "raw_output": "<box>(223,34,644,470)"}
+{"ref_id": 27427, "expression": "lettuce", "predicted_bbox": [250.0, 34.0, 644.0, 470.0], "raw_output": "<box>(250,34,644,470)"}
+{"ref_id": 27543, "expression": "man cloestest to us", "predicted_bbox": [374.0, 98.0, 635.0, 415.0], "raw_output": "<box>(374,98,635,415)"}
+{"ref_id": 27603, "expression": "red shirt", "predicted_bbox": [50.0, 0.0, 253.0, 248.0], "raw_output": "<box>(50,0,253,248)"}
+{"ref_id": 27603, "expression": "boy red shirt", "predicted_bbox": [50.0, 0.0, 253.0, 249.0], "raw_output": "<box>(50,0,253,249)"}
+{"ref_id": 27603, "expression": "red shirt", "predicted_bbox": [50.0, 0.0, 253.0, 248.0], "raw_output": "<box>(50,0,253,248)"}
+{"ref_id": 27606, "expression": "little girl", "predicted_bbox": [270.0, 13.0, 584.0, 419.0], "raw_output": "<box>(270,13,584,419)"}
+{"ref_id": 27606, "expression": "little girl", "predicted_bbox": [270.0, 13.0, 584.0, 419.0], "raw_output": "<box>(270,13,584,419)"}
+{"ref_id": 27606, "expression": "girl", "predicted_bbox": [270.0, 13.0, 584.0, 419.0], "raw_output": "<box>(270,13,584,419)"}
+{"ref_id": 27701, "expression": "guy in color", "predicted_bbox": [78.0, 94.0, 183.0, 356.0], "raw_output": "<box>(78,94,183,356)"}
+{"ref_id": 27701, "expression": "tallest guy", "predicted_bbox": [78.0, 94.0, 183.0, 356.0], "raw_output": "<box>(78,94,183,356)"}
+{"ref_id": 27701, "expression": "hawaii shirt", "predicted_bbox": [79.0, 134.0, 180.0, 235.0], "raw_output": "<box>(79,134,180,235)\n"}
+{"ref_id": 27702, "expression": "kid wearing black", "predicted_bbox": [119.0, 195.0, 208.0, 436.0], "raw_output": "<box>(119,195,208,436)"}
+{"ref_id": 27825, "expression": "player", "predicted_bbox": [453.0, 206.0, 644.0, 504.0], "raw_output": "<box>(453,206,644,504)"}
+{"ref_id": 27826, "expression": "red shirt", "predicted_bbox": [264.0, 65.0, 380.0, 504.0], "raw_output": "<box>(264,65,380,504)"}
+{"ref_id": 27826, "expression": "man in red", "predicted_bbox": [263.0, 65.0, 380.0, 497.0], "raw_output": "<box>(263,65,380,497)"}
+{"ref_id": 27826, "expression": "red shirt", "predicted_bbox": [264.0, 65.0, 380.0, 504.0], "raw_output": "<box>(264,65,380,504)"}
+{"ref_id": 27827, "expression": "girl heading towards man in red shirt", "predicted_bbox": [170.0, 65.0, 289.0, 453.0], "raw_output": "<box>(170,65,289,453)"}
+{"ref_id": 27827, "expression": "girl", "predicted_bbox": [170.0, 65.0, 289.0, 453.0], "raw_output": "<box>(170,65,289,453)"}
+{"ref_id": 27827, "expression": "girl", "predicted_bbox": [170.0, 65.0, 289.0, 453.0], "raw_output": "<box>(170,65,289,453)"}
+{"ref_id": 27982, "expression": "man in blue", "predicted_bbox": [289.0, 20.0, 425.0, 360.0], "raw_output": "<box>(289,20,425,360)"}
+{"ref_id": 28067, "expression": "lady being held", "predicted_bbox": [239.0, 54.0, 467.0, 330.0], "raw_output": "<box>(239,54,467,330)"}
+{"ref_id": 28067, "expression": "person carried", "predicted_bbox": [239.0, 54.0, 467.0, 330.0], "raw_output": "<box>(239,54,467,330)"}
+{"ref_id": 28067, "expression": "person carried", "predicted_bbox": [239.0, 54.0, 467.0, 330.0], "raw_output": "<box>(239,54,467,330)"}
+{"ref_id": 28106, "expression": "black haired woman", "predicted_bbox": [150.0, 78.0, 436.0, 360.0], "raw_output": "<box>(150,78,436,360)"}
+{"ref_id": 28193, "expression": "person in red and white shirt", "predicted_bbox": [334.0, 35.0, 469.0, 367.0], "raw_output": "<box>(334,35,469,367)"}
+{"ref_id": 28194, "expression": "leftest kid", "predicted_bbox": [168.0, 59.0, 263.0, 340.0], "raw_output": "<box>(168,59,263,340)"}
+{"ref_id": 28207, "expression": "slice at 12 oclock", "predicted_bbox": [30.0, 65.0, 249.0, 417.0], "raw_output": "<box>(30,65,249,417)\n"}
+{"ref_id": 28209, "expression": "slice with a bunch of black dots", "predicted_bbox": [30.0, 245.0, 289.0, 416.0], "raw_output": "<box>(30,245,289,416)\n"}
+{"ref_id": 28319, "expression": "guy", "predicted_bbox": [154.0, 86.0, 380.0, 415.0], "raw_output": "<box>(154,86,380,415)"}
+{"ref_id": 28319, "expression": "dudes shirt", "predicted_bbox": [154.0, 83.0, 386.0, 415.0], "raw_output": "<box>(154,83,386,415)"}
+{"ref_id": 28319, "expression": "man", "predicted_bbox": [154.0, 86.0, 387.0, 415.0], "raw_output": "<box>(154,86,387,415)\n"}
+{"ref_id": 28320, "expression": "lady black hair", "predicted_bbox": [275.0, 60.0, 603.0, 415.0], "raw_output": "<box>(275,60,603,415)"}
+{"ref_id": 28556, "expression": "catcher", "predicted_bbox": [37.0, 184.0, 260.0, 365.0], "raw_output": "<box>(37,184,260,365)\n"}
+{"ref_id": 28556, "expression": "catcher", "predicted_bbox": [37.0, 184.0, 260.0, 365.0], "raw_output": "<box>(37,184,260,365)\n"}
+{"ref_id": 28556, "expression": "catcher", "predicted_bbox": [37.0, 184.0, 260.0, 365.0], "raw_output": "<box>(37,184,260,365)\n"}
+{"ref_id": 28557, "expression": "the batter", "predicted_bbox": [248.0, 115.0, 449.0, 340.0], "raw_output": "<box>(248,115,449,340)\n"}
+{"ref_id": 28557, "expression": "batter", "predicted_bbox": [248.0, 115.0, 449.0, 340.0], "raw_output": "<box>(248,115,449,340)\n"}
+{"ref_id": 28557, "expression": "batta batta batta", "predicted_bbox": [384.0, 90.0, 417.0, 136.0], "raw_output": "<box>(384,90,417,136)\n"}
+{"ref_id": 28578, "expression": "europe sign", "predicted_bbox": [247.0, 89.0, 643.0, 235.0], "raw_output": "<box>(247,89,643,235)"}
+{"ref_id": 28578, "expression": "europe", "predicted_bbox": [246.0, 89.0, 643.0, 235.0], "raw_output": "<box>(246,89,643,235)"}
+{"ref_id": 28578, "expression": "book that says europe", "predicted_bbox": [247.0, 89.0, 643.0, 235.0], "raw_output": "<box>(247,89,643,235)"}
+{"ref_id": 28931, "expression": "table cloth with glasses", "predicted_bbox": [150.0, 413.0, 507.0, 476.0], "raw_output": "<box>(150,413,507,476)\n"}
+{"ref_id": 28933, "expression": "party girl", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [98, 30, 234, 275], \"label\": \"party girl\"}\n]\n```"}
+{"ref_id": 28933, "expression": "woman in black standing", "predicted_bbox": [98.0, 30.0, 235.0, 274.0], "raw_output": "<box>(98,30,235,274)"}
+{"ref_id": 28933, "expression": "lady standing", "predicted_bbox": [98.0, 30.0, 235.0, 274.0], "raw_output": "<box>(98,30,235,274)"}
+{"ref_id": 28934, "expression": "man with hands up", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [385, 140, 600, 409], \"label\": \"man with hands up\"}\n]\n```"}
+{"ref_id": 29014, "expression": "the catcher", "predicted_bbox": [473.0, 108.0, 576.0, 410.0], "raw_output": "<box>(473,108,576,410)\n"}
+{"ref_id": 29014, "expression": "catcher", "predicted_bbox": [473.0, 108.0, 579.0, 410.0], "raw_output": "<box>(473,108,579,410)\n"}
+{"ref_id": 29015, "expression": "blue shirt", "predicted_bbox": [160.0, 143.0, 271.0, 385.0], "raw_output": "<box>(160,143,271,385)\n"}
+{"ref_id": 29015, "expression": "blue shirt running", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [160, 143, 272, 385], \"label\": \"blue shirt running\"}\n]\n```"}
+{"ref_id": 29015, "expression": "the player in blue is in motion", "predicted_bbox": [160.0, 143.0, 272.0, 385.0], "raw_output": "<box>(160,143,272,385)"}
+{"ref_id": 29016, "expression": "yellow train", "predicted_bbox": [257.0, 119.0, 536.0, 340.0], "raw_output": "<box>(257,119,536,340)"}
+{"ref_id": 29016, "expression": "yellow", "predicted_bbox": [257.0, 119.0, 536.0, 340.0], "raw_output": "<box>(257,119,536,340)"}
+{"ref_id": 29138, "expression": "sitting guy", "predicted_bbox": [337.0, 125.0, 460.0, 280.0], "raw_output": "<box>(337,125,460,280)"}
+{"ref_id": 29139, "expression": "freaky guy", "predicted_bbox": [0.0, 0.0, 145.0, 336.0], "raw_output": "<box>(0,0,145,336)"}
+{"ref_id": 29139, "expression": "man standing", "predicted_bbox": [0.0, 0.0, 145.0, 336.0], "raw_output": "<box>(0,0,145,336)"}
+{"ref_id": 29152, "expression": "dog laying down with long tongue", "predicted_bbox": [3.0, 208.0, 379.0, 436.0], "raw_output": "<box>(3,208,379,436)"}
+{"ref_id": 29152, "expression": "black dog", "predicted_bbox": [3.0, 208.0, 379.0, 436.0], "raw_output": "<box>(3,208,379,436)"}
+{"ref_id": 29331, "expression": "legs", "predicted_bbox": [183.0, 104.0, 337.0, 336.0], "raw_output": "<box>(183,104,337,336)"}
+{"ref_id": 29331, "expression": "woman in heels", "predicted_bbox": [183.0, 105.0, 337.0, 340.0], "raw_output": "<box>(183,105,337,340)"}
+{"ref_id": 29331, "expression": "legs with heels", "predicted_bbox": [183.0, 105.0, 337.0, 340.0], "raw_output": "<box>(183,105,337,340)"}
+{"ref_id": 29365, "expression": "naked kid", "predicted_bbox": [0.0, 270.0, 130.0, 596.0], "raw_output": "<box>(0,270,130,596)"}
+{"ref_id": 29433, "expression": "man sitting on edge by bats", "predicted_bbox": [180.0, 24.0, 305.0, 267.0], "raw_output": "<box>(180,24,305,267)"}
+{"ref_id": 29434, "expression": "player standing", "predicted_bbox": [403.0, 6.0, 527.0, 308.0], "raw_output": "<box>(403,6,527,308)"}
+{"ref_id": 29434, "expression": "player 13", "predicted_bbox": [405.0, 6.0, 527.0, 308.0], "raw_output": "<box>(405,6,527,308)"}
+{"ref_id": 29434, "expression": "number 13", "predicted_bbox": [405.0, 6.0, 527.0, 308.0], "raw_output": "<box>(405,6,527,308)"}
+{"ref_id": 29469, "expression": "coach reading off game plan", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [360, 214, 475, 523], \"label\": \"coach reading off game plan\"}\n]\n```"}
+{"ref_id": 29470, "expression": "pitcher", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [17, 68, 475, 603], \"label\": \"pitcher\"}\n]\n```"}
+{"ref_id": 29470, "expression": "pitcher", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [17, 68, 475, 603], \"label\": \"pitcher\"}\n]\n```"}
+{"ref_id": 29470, "expression": "pitcher", "predicted_bbox": [17.0, 68.0, 475.0, 603.0], "raw_output": "<box>(17,68,475,603)"}
+{"ref_id": 29757, "expression": "guy with hot dog", "predicted_bbox": [179.0, 30.0, 614.0, 476.0], "raw_output": "<box>(179,30,614,476)"}
+{"ref_id": 29759, "expression": "woman in white", "predicted_bbox": [10.0, 276.0, 183.0, 476.0], "raw_output": "<box>(10,276,183,476)"}
+{"ref_id": 30199, "expression": "hot dude", "predicted_bbox": [243.0, 20.0, 644.0, 580.0], "raw_output": "<box>(243,20,644,580)"}
+{"ref_id": 30199, "expression": "man", "predicted_bbox": [240.0, 23.0, 644.0, 580.0], "raw_output": "<box>(240,23,644,580)"}
+{"ref_id": 30199, "expression": "man", "predicted_bbox": [240.0, 23.0, 644.0, 580.0], "raw_output": "<box>(240,23,644,580)"}
+{"ref_id": 30200, "expression": "woman", "predicted_bbox": [0.0, 114.0, 335.0, 580.0], "raw_output": "<box>(0,114,335,580)"}
+{"ref_id": 30200, "expression": "woman", "predicted_bbox": [0.0, 114.0, 335.0, 580.0], "raw_output": "<box>(0,114,335,580)"}
+{"ref_id": 30206, "expression": "pink cake", "predicted_bbox": [98.0, 105.0, 287.0, 234.0], "raw_output": "<box>(98,105,287,234)\n"}
+{"ref_id": 30339, "expression": "round all white cock", "predicted_bbox": [493.0, 108.0, 593.0, 227.0], "raw_output": "<box>(493,108,593,227)"}
+{"ref_id": 30340, "expression": "black and yellow clock", "predicted_bbox": [290.0, 417.0, 443.0, 578.0], "raw_output": "<box>(290,417,443,578)"}
+{"ref_id": 30342, "expression": "blue clock", "predicted_bbox": [190.0, 270.0, 315.0, 388.0], "raw_output": "<box>(190,270,315,388)"}
+{"ref_id": 30593, "expression": "red shirt", "predicted_bbox": [24.0, 59.0, 278.0, 413.0], "raw_output": "<box>(24,59,278,413)"}
+{"ref_id": 30593, "expression": "red sweathsirt", "predicted_bbox": [24.0, 59.0, 278.0, 413.0], "raw_output": "<box>(24,59,278,413)"}
+{"ref_id": 30593, "expression": "man in red hoodie", "predicted_bbox": [24.0, 59.0, 278.0, 413.0], "raw_output": "<box>(24,59,278,413)"}
+{"ref_id": 30595, "expression": "the striped chair", "predicted_bbox": [259.0, 117.0, 630.0, 468.0], "raw_output": "<box>(259,117,630,468)"}
+{"ref_id": 30711, "expression": "adukt", "predicted_bbox": [24.0, 0.0, 167.0, 359.0], "raw_output": "<box>(24,0,167,359)"}
+{"ref_id": 30711, "expression": "guy instructing blue coat", "predicted_bbox": [24.0, 0.0, 167.0, 359.0], "raw_output": "<box>(24,0,167,359)"}
+{"ref_id": 30712, "expression": "girl pink pants", "predicted_bbox": [157.0, 64.0, 243.0, 289.0], "raw_output": "<box>(157,64,243,289)"}
+{"ref_id": 30712, "expression": "pink", "predicted_bbox": [157.0, 64.0, 243.0, 289.0], "raw_output": "<box>(157,64,243,289)"}
+{"ref_id": 30793, "expression": "man in black jacket and hat", "predicted_bbox": [68.0, 0.0, 173.0, 249.0], "raw_output": "<box>(68,0,173,249)"}
+{"ref_id": 30859, "expression": "smaller giraffe", "predicted_bbox": [4.0, 76.0, 289.0, 599.0], "raw_output": "<box>(4,76,289,599)"}
+{"ref_id": 31118, "expression": "girl infront with long sleeved blue sweeter", "predicted_bbox": [68.0, 174.0, 300.0, 476.0], "raw_output": "<box>(68,174,300,476)"}
+{"ref_id": 31482, "expression": "outstretched arm", "predicted_bbox": [79.0, 0.0, 316.0, 274.0], "raw_output": "<box>(79,0,316,274)"}
+{"ref_id": 31482, "expression": "man pointing", "predicted_bbox": [0.0, 0.0, 336.0, 498.0], "raw_output": "<box>(0,0,336,498)"}
+{"ref_id": 31483, "expression": "man in hat", "predicted_bbox": [0.0, 0.0, 336.0, 498.0], "raw_output": "<box>(0,0,336,498)"}
+{"ref_id": 31483, "expression": "guy in hat", "predicted_bbox": [0.0, 0.0, 336.0, 504.0], "raw_output": "<box>(0,0,336,504)"}
+{"ref_id": 31483, "expression": "this guy", "predicted_bbox": [0.0, 0.0, 336.0, 504.0], "raw_output": "<box>(0,0,336,504)"}
+{"ref_id": 31496, "expression": "dark cow", "predicted_bbox": [0.0, 126.0, 423.0, 350.0], "raw_output": "<box>(0,126,423,350)"}
+{"ref_id": 31496, "expression": "cow head", "predicted_bbox": [203.0, 125.0, 426.0, 348.0], "raw_output": "<box>(203,125,426,348)"}
+{"ref_id": 31834, "expression": "guy in tan jacket", "predicted_bbox": [183.0, 19.0, 336.0, 507.0], "raw_output": "<box>(183,19,336,507)"}
+{"ref_id": 31834, "expression": "guy with tan jacket", "predicted_bbox": [183.0, 19.0, 336.0, 507.0], "raw_output": "<box>(183,19,336,507)"}
+{"ref_id": 31834, "expression": "man in tan coat", "predicted_bbox": [183.0, 19.0, 336.0, 507.0], "raw_output": "<box>(183,19,336,507)"}
+{"ref_id": 31920, "expression": "lady in blue", "predicted_bbox": [389.0, 79.0, 590.0, 476.0], "raw_output": "<box>(389,79,590,476)</box>"}
+{"ref_id": 31921, "expression": "man in plaid shirt", "predicted_bbox": [19.0, 43.0, 325.0, 476.0], "raw_output": "<box>(19,43,325,476)"}
+{"ref_id": 31921, "expression": "guy in plaid shirt", "predicted_bbox": [19.0, 43.0, 325.0, 476.0], "raw_output": "<box>(19,43,325,476)"}
+{"ref_id": 32136, "expression": "guy in white shirtgetting ready to be axed", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [430, 65, 607, 419], \"label\": \"guy in white shirtgetting ready to be axed\"}\n]\n```"}
+{"ref_id": 32136, "expression": "main guy", "predicted_bbox": [114.0, 0.0, 380.0, 415.0], "raw_output": "<box>(114,0,380,415)"}
+{"ref_id": 32284, "expression": "chair shes sitting in not her", "predicted_bbox": [0.0, 73.0, 110.0, 248.0], "raw_output": "<box>(0,73,110,248)"}
+{"ref_id": 32411, "expression": "guy standing with black shirt and dark jeans", "predicted_bbox": [459.0, 0.0, 538.0, 196.0], "raw_output": "<box>(459,0,538,196)"}
+{"ref_id": 32412, "expression": "guy sitting", "predicted_bbox": [473.0, 98.0, 644.0, 350.0], "raw_output": "<box>(473,98,644,350)"}
+{"ref_id": 32413, "expression": "woman", "predicted_bbox": [150.0, 83.0, 506.0, 439.0], "raw_output": "<box>(150,83,506,439)"}
+{"ref_id": 32413, "expression": "lady", "predicted_bbox": [150.0, 83.0, 506.0, 439.0], "raw_output": "<box>(150,83,506,439)"}
+{"ref_id": 32413, "expression": "woman", "predicted_bbox": [150.0, 83.0, 504.0, 439.0], "raw_output": "<box>(150,83,504,439)"}
+{"ref_id": 32626, "expression": "sorry the heshe with the british flag on", "predicted_bbox": [63.0, 59.0, 247.0, 540.0], "raw_output": "<box>(63,59,247,540)"}
+{"ref_id": 32626, "expression": "woman in british flag dress", "predicted_bbox": [197.0, 86.0, 305.0, 540.0], "raw_output": "<box>(197,86,305,540)"}
+{"ref_id": 32626, "expression": "red dress person sunglasses", "predicted_bbox": [63.0, 59.0, 247.0, 540.0], "raw_output": "<box>(63,59,247,540)\n"}
+{"ref_id": 32627, "expression": "the girl in the black shorts", "predicted_bbox": [63.0, 59.0, 247.0, 540.0], "raw_output": "<box>(63,59,247,540)"}
+{"ref_id": 32628, "expression": "person in pink except the hat", "predicted_bbox": [53.0, 164.0, 420.0, 637.0], "raw_output": "<box>(53,164,420,637)\n"}
+{"ref_id": 32628, "expression": "pinkshirt", "predicted_bbox": [53.0, 164.0, 420.0, 637.0], "raw_output": "<box>(53,164,420,637)\n"}
+{"ref_id": 32667, "expression": "bottle", "predicted_bbox": [39.0, 0.0, 168.0, 384.0], "raw_output": "<box>(39,0,168,384)\n"}
+{"ref_id": 32668, "expression": "white label wine bottle with blue strip", "predicted_bbox": [300.0, 0.0, 400.0, 308.0], "raw_output": "<box>(300,0,400,308)"}
+{"ref_id": 32847, "expression": "umbrella", "predicted_bbox": [160.0, 253.0, 604.0, 619.0], "raw_output": "<box>(160,253,604,619)"}
+{"ref_id": 33051, "expression": "yes", "predicted_bbox": [187.0, 120.0, 563.0, 443.0], "raw_output": "<box>(187,120,563,443)"}
+{"ref_id": 33071, "expression": "red b", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [217, 238, 520, 336], \"label\": \"red b\"}\n]\n```"}
+{"ref_id": 33280, "expression": "the closed phone", "predicted_bbox": [253.0, 0.0, 524.0, 186.0], "raw_output": "<box>(253,0),(524,186)"}
+{"ref_id": 33281, "expression": "phone with keyboard", "predicted_bbox": [20.0, 160.0, 364.0, 467.0], "raw_output": "<box>(20,160,364,467)"}
+{"ref_id": 33281, "expression": "slide phone", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [253, 0, 524, 186], \"label\": \"slide phone\"}\n]\n```"}
+{"ref_id": 33405, "expression": "striped shirt", "predicted_bbox": [0.0, 46.0, 503.0, 644.0], "raw_output": "<box>(0,46,503,644)"}
+{"ref_id": 33405, "expression": "lady in black", "predicted_bbox": [0.0, 0.0, 504.0, 637.0], "raw_output": "<box>(0,0,504,637)"}
+{"ref_id": 33406, "expression": "boy", "predicted_bbox": [24.0, 287.0, 416.0, 635.0], "raw_output": "<box>(24,287,416,635)"}
+{"ref_id": 33406, "expression": "boy", "predicted_bbox": [25.0, 287.0, 416.0, 637.0], "raw_output": "<box>(25,287,416,637)"}
+{"ref_id": 33406, "expression": "boy", "predicted_bbox": [26.0, 287.0, 415.0, 637.0], "raw_output": "<box>(26,287,415,637)"}
+{"ref_id": 33508, "expression": "stalker guy", "predicted_bbox": [0.0, 59.0, 78.0, 283.0], "raw_output": "<box>(0,59,78,283)"}
+{"ref_id": 33509, "expression": "yellow coat", "predicted_bbox": [97.0, 86.0, 275.0, 418.0], "raw_output": "<box>(97,86,275,418)"}
+{"ref_id": 33509, "expression": "person in pic", "predicted_bbox": [0.0, 59.0, 78.0, 283.0], "raw_output": "<box>(0,59,78,283)"}
+{"ref_id": 33536, "expression": "sitting giraffe", "predicted_bbox": [185.0, 230.0, 379.0, 504.0], "raw_output": "<box>(185,230,379,504)"}
+{"ref_id": 33536, "expression": "giraffe sitting", "predicted_bbox": [185.0, 230.0, 379.0, 504.0], "raw_output": "<box>(185,230,379,504)"}
+{"ref_id": 33537, "expression": "standing giraffe", "predicted_bbox": [39.0, 0.0, 342.0, 386.0], "raw_output": "<box>(39,0,342,386)"}
+{"ref_id": 33537, "expression": "big giraffe", "predicted_bbox": [39.0, 0.0, 342.0, 386.0], "raw_output": "<box>(39,0,342,386)"}
+{"ref_id": 33729, "expression": "bad looking pizza ontop photoleft of candle", "predicted_bbox": [18.0, 36.0, 350.0, 297.0], "raw_output": "<box>(18,36,350,297)"}
+{"ref_id": 33790, "expression": "bike headlight pointed at us", "predicted_bbox": [340.0, 115.0, 446.0, 178.0], "raw_output": "<box>(340,115,446,178)\n"}
+{"ref_id": 34037, "expression": "benz", "predicted_bbox": [460.0, 103.0, 644.0, 238.0], "raw_output": "<box>(460,103,644,238)\n"}
+{"ref_id": 34037, "expression": "silver benz", "predicted_bbox": [460.0, 103.0, 644.0, 238.0], "raw_output": "<box>(460,103,644,238)"}
+{"ref_id": 34038, "expression": "black veh", "predicted_bbox": [25.0, 118.0, 397.0, 286.0], "raw_output": "<box>(25,118,397,286)"}
+{"ref_id": 34038, "expression": "black suvcar", "predicted_bbox": [25.0, 119.0, 396.0, 287.0], "raw_output": "<box>(25,119,396,287)"}
+{"ref_id": 34038, "expression": "main black car", "predicted_bbox": [25.0, 118.0, 396.0, 287.0], "raw_output": "<box>(25,118,396,287)"}
+{"ref_id": 34202, "expression": "man in blue", "predicted_bbox": [435.0, 0.0, 586.0, 592.0], "raw_output": "<box>(435,0,586,592)"}
+{"ref_id": 34202, "expression": "man in blue shirt", "predicted_bbox": [435.0, 0.0, 586.0, 592.0], "raw_output": "<box>(435,0,586,592)"}
+{"ref_id": 34202, "expression": "man leading cow", "predicted_bbox": [435.0, 0.0, 616.0, 592.0], "raw_output": "<box>(435,0,616,592)"}
+{"ref_id": 34251, "expression": "girl", "predicted_bbox": [338.0, 179.0, 450.0, 476.0], "raw_output": "<box>(338,179,450,476)"}
+{"ref_id": 34252, "expression": "dude sitting with face covered in black", "predicted_bbox": [430.0, 270.0, 550.0, 476.0], "raw_output": "<box>(430,270,550,476)"}
+{"ref_id": 34254, "expression": "guy in white shirt swinging", "predicted_bbox": [159.0, 187.0, 334.0, 476.0], "raw_output": "<box>(159,187,334,476)\n"}
+{"ref_id": 34278, "expression": "i can see its rear end", "predicted_bbox": [1.0, 43.0, 250.0, 246.0], "raw_output": "<box>(1,43,250,246)"}
+{"ref_id": 34278, "expression": "big elephant butt", "predicted_bbox": [0.0, 43.0, 259.0, 246.0], "raw_output": "<box>(0,43,259,246)"}
+{"ref_id": 34281, "expression": "baby", "predicted_bbox": [357.0, 168.0, 604.0, 379.0], "raw_output": "<box>(357,168,604,379)"}
+{"ref_id": 34372, "expression": "naked arm", "predicted_bbox": [364.0, 290.0, 495.0, 442.0], "raw_output": "<box>(364,290,495,442)\n"}
+{"ref_id": 34373, "expression": "yellow shirt", "predicted_bbox": [0.0, 263.0, 219.0, 476.0], "raw_output": "<box>(0,263,219,476)\n"}
+{"ref_id": 34374, "expression": "lady in blue shirt", "predicted_bbox": [173.0, 284.0, 365.0, 440.0], "raw_output": "<box>(173,284,365,440)"}
+{"ref_id": 34374, "expression": "bright blue shirt", "predicted_bbox": [173.0, 284.0, 365.0, 440.0], "raw_output": "<box>(173,284,365,440)"}
+{"ref_id": 34519, "expression": "skater", "predicted_bbox": [137.0, 10.0, 289.0, 564.0], "raw_output": "<box>(137,10,289,564)"}
+{"ref_id": 34520, "expression": "man on skateboard", "predicted_bbox": [137.0, 10.0, 289.0, 564.0], "raw_output": "<box>(137,10,289,564)"}
+{"ref_id": 34520, "expression": "skateboarder", "predicted_bbox": [137.0, 10.0, 289.0, 564.0], "raw_output": "<box>(137,10,289,564)"}
+{"ref_id": 34572, "expression": "black car", "predicted_bbox": [510.0, 37.0, 644.0, 208.0], "raw_output": "<box>(510,37,644,208)"}
+{"ref_id": 34573, "expression": "red car", "predicted_bbox": [370.0, 20.0, 604.0, 121.0], "raw_output": "<box>(370,20,604,121)"}
+{"ref_id": 34573, "expression": "red car", "predicted_bbox": [370.0, 20.0, 604.0, 121.0], "raw_output": "<box>(370,20,604,121)"}
+{"ref_id": 34573, "expression": "red car", "predicted_bbox": [370.0, 20.0, 604.0, 121.0], "raw_output": "<box>(370,20,604,121)"}
+{"ref_id": 34573, "expression": "red car parked", "predicted_bbox": [370.0, 20.0, 604.0, 121.0], "raw_output": "<box>(370,20,604,121)"}
+{"ref_id": 34593, "expression": "the guy in black", "predicted_bbox": [230.0, 185.0, 426.0, 415.0], "raw_output": "<box>(230,185,426,415)"}
+{"ref_id": 34593, "expression": "the man in black", "predicted_bbox": [230.0, 185.0, 426.0, 415.0], "raw_output": "<box>(230,185,426,415)"}
+{"ref_id": 34593, "expression": "guy in black", "predicted_bbox": [230.0, 185.0, 426.0, 415.0], "raw_output": "<box>(230,185,426,415)"}
+{"ref_id": 34594, "expression": "dude in white", "predicted_bbox": [0.0, 19.0, 295.0, 415.0], "raw_output": "<box>(0,19,295,415)"}
+{"ref_id": 34594, "expression": "person in white", "predicted_bbox": [0.0, 19.0, 295.0, 415.0], "raw_output": "<box>(0,19,295,415)"}
+{"ref_id": 34644, "expression": "guy in gray shirt", "predicted_bbox": [189.0, 90.0, 457.0, 380.0], "raw_output": "<box>(189,90,457,380)"}
+{"ref_id": 34644, "expression": "white shirt", "predicted_bbox": [189.0, 90.0, 457.0, 380.0], "raw_output": "<box>(189,90,457,380)\n"}
+{"ref_id": 34817, "expression": "guy in white", "predicted_bbox": [173.0, 58.0, 394.0, 350.0], "raw_output": "<box>(173,58,394,350)"}
+{"ref_id": 34817, "expression": "man in white shirt", "predicted_bbox": [173.0, 58.0, 394.0, 350.0], "raw_output": "<box>(173,58,394,350)"}
+{"ref_id": 34818, "expression": "green guy", "predicted_bbox": [103.0, 45.0, 276.0, 350.0], "raw_output": "<box>(103,45,276,350)"}
+{"ref_id": 34818, "expression": "green dude", "predicted_bbox": [103.0, 45.0, 276.0, 350.0], "raw_output": "<box>(103,45,276,350)"}
+{"ref_id": 34818, "expression": "guy in greem", "predicted_bbox": [103.0, 45.0, 276.0, 350.0], "raw_output": "<box>(103,45,276,350)"}
+{"ref_id": 34893, "expression": "bigger one", "predicted_bbox": [30.0, 48.0, 596.0, 540.0], "raw_output": "<box>(30,48,596,540)"}
+{"ref_id": 34904, "expression": "the brown leather couch", "predicted_bbox": [284.0, 156.0, 470.0, 239.0], "raw_output": "<box>(284,156,470,239)"}
+{"ref_id": 34904, "expression": "loveseat", "predicted_bbox": [285.0, 156.0, 470.0, 239.0], "raw_output": "<box>(285,156,470,239)"}
+{"ref_id": 35021, "expression": "any giraffe", "predicted_bbox": [130.0, 164.0, 367.0, 508.0], "raw_output": "<box>(130,164,367,508)"}
+{"ref_id": 35021, "expression": "any of the giraffes", "predicted_bbox": [130.0, 164.0, 367.0, 508.0], "raw_output": "<box>(130,164,367,508)"}
+{"ref_id": 35021, "expression": "any girafee", "predicted_bbox": [130.0, 164.0, 367.0, 508.0], "raw_output": "<box>(130,164,367,508)"}
+{"ref_id": 35022, "expression": "largest", "predicted_bbox": [130.0, 164.0, 367.0, 508.0], "raw_output": "<box>(130,164,367,508)"}
+{"ref_id": 35049, "expression": "man no shirt", "predicted_bbox": [340.0, 70.0, 556.0, 468.0], "raw_output": "<box>(340,70,556,468)"}
+{"ref_id": 35049, "expression": "shirtless skater", "predicted_bbox": [340.0, 71.0, 556.0, 468.0], "raw_output": "<box>(340,71,556,468)"}
+{"ref_id": 35050, "expression": "green shorts", "predicted_bbox": [278.0, 26.0, 379.0, 325.0], "raw_output": "<box>(278,26,379,325)"}
+{"ref_id": 35050, "expression": "guy in black shirt and green shorts", "predicted_bbox": [260.0, 25.0, 378.0, 329.0], "raw_output": "<box>(260,25,378,329)"}
+{"ref_id": 35051, "expression": "black shirt", "predicted_bbox": [139.0, 47.0, 295.0, 440.0], "raw_output": "<box>(139,47,295,440)"}
+{"ref_id": 35052, "expression": "girl wearing pink shorts", "predicted_bbox": [0.0, 26.0, 137.0, 430.0], "raw_output": "<box>(0,26,137,430)"}
+{"ref_id": 35095, "expression": "yep", "predicted_bbox": [30.0, 58.0, 590.0, 446.0], "raw_output": "<box>(30,58,590,446)"}
+{"ref_id": 35095, "expression": "most prominent brocolli piece", "predicted_bbox": [220.0, 243.0, 371.0, 395.0], "raw_output": "<box>(220,243,371,395)"}
+{"ref_id": 35104, "expression": "bater", "predicted_bbox": [230.0, 171.0, 435.0, 450.0], "raw_output": "<box>(230,171,435,450)\n"}
+{"ref_id": 35104, "expression": "batter", "predicted_bbox": [230.0, 170.0, 435.0, 450.0], "raw_output": "<box>(230,170,435,450)"}
+{"ref_id": 35104, "expression": "batter", "predicted_bbox": [230.0, 170.0, 435.0, 450.0], "raw_output": "<box>(230,170,435,450)"}
+{"ref_id": 35105, "expression": "catcher", "predicted_bbox": [0.0, 287.0, 164.0, 476.0], "raw_output": "<box>(0,287,164,476)"}
+{"ref_id": 35105, "expression": "umpire", "predicted_bbox": [0.0, 287.0, 164.0, 476.0], "raw_output": "<box>(0,287,164,476)"}
+{"ref_id": 35105, "expression": "catcher", "predicted_bbox": [0.0, 287.0, 164.0, 476.0], "raw_output": "<box>(0,287,164,476)"}
+{"ref_id": 35216, "expression": "leg up kid", "predicted_bbox": [230.0, 137.0, 469.0, 618.0], "raw_output": "<box>(230,137,469,618)"}
+{"ref_id": 35216, "expression": "karate kid", "predicted_bbox": [0.0, 34.0, 297.0, 276.0], "raw_output": "<box>(0,34,297,276)"}
+{"ref_id": 35351, "expression": "man standing", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [78, 0, 324, 305], \"label\": \"man standing\"}\n]\n```"}
+{"ref_id": 35351, "expression": "homeless guy with red hat", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [78, 0, 324, 305], \"label\": \"homeless guy with red hat\"}\n]\n```"}
+{"ref_id": 35351, "expression": "blue jacket", "predicted_bbox": [78.0, 0.0, 324.0, 305.0], "raw_output": "<box>(78,0,324,305)"}
+{"ref_id": 35352, "expression": "green jacket", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [340, 87, 580, 429], \"label\": \"green jacket\"}\n]\n```"}
+{"ref_id": 35353, "expression": "dog with a vest", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [0, 283, 276, 476], \"label\": \"dog with a vest\"}\n]\n```"}
+{"ref_id": 35353, "expression": "dog in yellow", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [0, 283, 276, 476], \"label\": \"dog in yellow\"}\n]\n```"}
+{"ref_id": 35354, "expression": "brown doge", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [247, 298, 563, 470], \"label\": \"brown doge\"}\n]\n```"}
+{"ref_id": 35354, "expression": "brown dog without shirt", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [248, 297, 563, 470], \"label\": \"brown dog without shirt\"}\n]\n```"}
+{"ref_id": 35357, "expression": "chick", "predicted_bbox": [374.0, 118.0, 539.0, 415.0], "raw_output": "<box>(374,118,539,415)"}
+{"ref_id": 35359, "expression": "purple shirt", "predicted_bbox": [0.0, 0.0, 223.0, 415.0], "raw_output": "<box>(0,0,223,415)"}
+{"ref_id": 35948, "expression": "white shirt guy", "predicted_bbox": [358.0, 167.0, 584.0, 365.0], "raw_output": "<box>(358,167,584,365)"}
+{"ref_id": 35949, "expression": "man in blue", "predicted_bbox": [48.0, 146.0, 305.0, 476.0], "raw_output": "<box>(48,146,305,476)"}
+{"ref_id": 35949, "expression": "guy blue shirt", "predicted_bbox": [48.0, 147.0, 305.0, 469.0], "raw_output": "<box>(48,147,305,469)"}
+{"ref_id": 36039, "expression": "child", "predicted_bbox": [109.0, 187.0, 324.0, 385.0], "raw_output": "<box>(109,187,324,385)"}
+{"ref_id": 36039, "expression": "kid in red", "predicted_bbox": [109.0, 187.0, 324.0, 385.0], "raw_output": "<box>(109,187,324,385)"}
+{"ref_id": 36039, "expression": "baby", "predicted_bbox": [109.0, 187.0, 324.0, 385.0], "raw_output": "<box>(109,187,324,385)\n"}
+{"ref_id": 36040, "expression": "older guy", "predicted_bbox": [297.0, 203.0, 644.0, 415.0], "raw_output": "<box>(297,203,644,415)"}
+{"ref_id": 36040, "expression": "dad", "predicted_bbox": [297.0, 203.0, 644.0, 415.0], "raw_output": "<box>(297,203,644,415)\n"}
+{"ref_id": 36086, "expression": "the man in red", "predicted_bbox": [340.0, 0.0, 644.0, 470.0], "raw_output": "<box>(340,0,644,470)"}
+{"ref_id": 36086, "expression": "man in red", "predicted_bbox": [340.0, 0.0, 644.0, 476.0], "raw_output": "<box>(340,0,644,476)"}
+{"ref_id": 36086, "expression": "red shirt", "predicted_bbox": [340.0, 0.0, 644.0, 476.0], "raw_output": "<box>(340,0,644,476)"}
+{"ref_id": 36087, "expression": "blue shirt", "predicted_bbox": [0.0, 134.0, 325.0, 476.0], "raw_output": "<box>(0,134,325,476)"}
+{"ref_id": 36097, "expression": "donut wrapped in paper", "predicted_bbox": [30.0, 275.0, 194.0, 408.0], "raw_output": "<box>(30,275,194,408)"}
+{"ref_id": 36098, "expression": "swirly danish", "predicted_bbox": [0.0, 364.0, 215.0, 579.0], "raw_output": "<box>(0,364,215,579)"}
+{"ref_id": 36099, "expression": "long wiener thing", "predicted_bbox": [105.0, 163.0, 427.0, 498.0], "raw_output": "<box>(105,163,427,498)"}
+{"ref_id": 36137, "expression": "woman white shirt", "predicted_bbox": [426.0, 53.0, 567.0, 328.0], "raw_output": "<box>(426,53,567,328)\n"}
+{"ref_id": 36139, "expression": "coffee table has to been wood area only", "predicted_bbox": [0.0, 345.0, 644.0, 476.0], "raw_output": "<box>(0,345,644,476)"}
+{"ref_id": 36140, "expression": "table covered with snacks and drinks", "predicted_bbox": [0.0, 340.0, 644.0, 476.0], "raw_output": "<box>(0,340,644,476)"}
+{"ref_id": 36140, "expression": "table", "predicted_bbox": [0.0, 345.0, 644.0, 476.0], "raw_output": "<box>(0,345,644,476)"}
+{"ref_id": 36140, "expression": "table with food", "predicted_bbox": [0.0, 345.0, 644.0, 476.0], "raw_output": "<box>(0,345,644,476)"}
+{"ref_id": 36201, "expression": "red boat", "predicted_bbox": [320.0, 141.0, 644.0, 415.0], "raw_output": "<box>(320,141,644,415)"}
+{"ref_id": 36483, "expression": "guy in black", "predicted_bbox": [189.0, 43.0, 326.0, 235.0], "raw_output": "<box>(189,43,326,235)"}
+{"ref_id": 36483, "expression": "standing", "predicted_bbox": [189.0, 43.0, 326.0, 235.0], "raw_output": "<box>(189,43,326,235)"}
+{"ref_id": 36483, "expression": "person bending over", "predicted_bbox": [189.0, 43.0, 327.0, 235.0], "raw_output": "<box>(189,43,327,235)"}
+{"ref_id": 36484, "expression": "white shirt", "predicted_bbox": [65.0, 103.0, 297.0, 332.0], "raw_output": "<box>(65,103,297,332)"}
+{"ref_id": 36484, "expression": "teens slateboarding", "predicted_bbox": [189.0, 43.0, 326.0, 235.0], "raw_output": "<box>(189,43,326,235)"}
+{"ref_id": 36520, "expression": "womans chair", "predicted_bbox": [67.0, 174.0, 439.0, 470.0], "raw_output": "<box>(67,174,439,470)"}
+{"ref_id": 36521, "expression": "that her foot is on", "predicted_bbox": [230.0, 226.0, 415.0, 470.0], "raw_output": "<box>(230,226,415,470)"}
+{"ref_id": 36521, "expression": "chair her foot is on", "predicted_bbox": [304.0, 170.0, 485.0, 469.0], "raw_output": "<box>(304,170,485,469)"}
+{"ref_id": 36521, "expression": "chair with foot on", "predicted_bbox": [67.0, 173.0, 480.0, 475.0], "raw_output": "<box>(67,173,480,475)"}
+{"ref_id": 36684, "expression": "girl", "predicted_bbox": [443.0, 125.0, 609.0, 327.0], "raw_output": "<box>(443,125,609,327)"}
+{"ref_id": 36684, "expression": "blond woman", "predicted_bbox": [443.0, 125.0, 609.0, 327.0], "raw_output": "<box>(443,125,609,327)"}
+{"ref_id": 36685, "expression": "guy by the red wall with arms crossed", "predicted_bbox": [0.0, 0.0, 98.0, 304.0], "raw_output": "<box>(0,0,98,304)"}
+{"ref_id": 36687, "expression": "guy standing by white wall we cant see his face", "predicted_bbox": [374.0, 0.0, 503.0, 228.0], "raw_output": "<box>(374,0,503,228)"}
+{"ref_id": 36688, "expression": "man in plaid shirt", "predicted_bbox": [273.0, 169.0, 475.0, 348.0], "raw_output": "<box>(273,169,475,348)"}
+{"ref_id": 36688, "expression": "man with blue plaid shirt", "predicted_bbox": [275.0, 169.0, 473.0, 348.0], "raw_output": "<box>(275,169,473,348)"}
+{"ref_id": 36732, "expression": "white and light brown breasts", "predicted_bbox": [150.0, 354.0, 336.0, 471.0], "raw_output": "<box>(150,354,336,471)"}
+{"ref_id": 36765, "expression": "girl white", "predicted_bbox": [98.0, 43.0, 205.0, 336.0], "raw_output": "<box>(98,43,205,336)"}
+{"ref_id": 36765, "expression": "girl", "predicted_bbox": [98.0, 43.0, 205.0, 336.0], "raw_output": "<box>(98,43,205,336)"}
+{"ref_id": 36765, "expression": "white shirt", "predicted_bbox": [98.0, 43.0, 205.0, 336.0], "raw_output": "<box>(98,43,205,336)"}
+{"ref_id": 36854, "expression": "girl in green stripped shirt", "predicted_bbox": [458.0, 97.0, 644.0, 439.0], "raw_output": "<box>(458,97,644,439)\n"}
+{"ref_id": 36856, "expression": "girl long sleeve blue", "predicted_bbox": [359.0, 128.0, 534.0, 406.0], "raw_output": "<box>(359,128,534,406)"}
+{"ref_id": 36857, "expression": "girl eating", "predicted_bbox": [94.0, 48.0, 403.0, 476.0], "raw_output": "<box>(94,48,403,476)"}
+{"ref_id": 36857, "expression": "main girl", "predicted_bbox": [93.0, 48.0, 405.0, 476.0], "raw_output": "<box>(93,48,405,476)\n"}
+{"ref_id": 36857, "expression": "main girl", "predicted_bbox": [94.0, 48.0, 405.0, 476.0], "raw_output": "<box>(94,48,405,476)"}
+{"ref_id": 36886, "expression": "blu", "predicted_bbox": [75.0, 126.0, 278.0, 243.0], "raw_output": "<box>(75,126,278,243)\n"}
+{"ref_id": 36886, "expression": "blue pohen", "predicted_bbox": [75.0, 126.0, 278.0, 243.0], "raw_output": "<box>(75,126,278,243)"}
+{"ref_id": 36886, "expression": "blue phone", "predicted_bbox": [75.0, 126.0, 278.0, 243.0], "raw_output": "<box>(75,126,278,243)"}
+{"ref_id": 36988, "expression": "black bike", "predicted_bbox": [0.0, 93.0, 274.0, 348.0], "raw_output": "<box>(0,93,274,348)"}
+{"ref_id": 36989, "expression": "red bike", "predicted_bbox": [168.0, 30.0, 597.0, 409.0], "raw_output": "<box>(168,30,597,409)"}
+{"ref_id": 37106, "expression": "man in checkered shirt", "predicted_bbox": [7.0, 103.0, 254.0, 386.0], "raw_output": "<box>(7,103,254,386)"}
+{"ref_id": 37108, "expression": "big cow with legs tied", "predicted_bbox": [209.0, 6.0, 543.0, 438.0], "raw_output": "<box>(209,6,543,438)"}
+{"ref_id": 37108, "expression": "big ow", "predicted_bbox": [209.0, 6.0, 537.0, 438.0], "raw_output": "<box>(209,6,537,438)"}
+{"ref_id": 37108, "expression": "u had it cow butt", "predicted_bbox": [209.0, 7.0, 543.0, 438.0], "raw_output": "<box>(209,7,543,438)"}
+{"ref_id": 37421, "expression": "they guy facing us black shirt", "predicted_bbox": [48.0, 35.0, 380.0, 415.0], "raw_output": "<box>(48,35,380,415)"}
+{"ref_id": 37421, "expression": "man looking at us", "predicted_bbox": [48.0, 35.0, 380.0, 415.0], "raw_output": "<box>(48,35,380,415)"}
+{"ref_id": 37421, "expression": "person facing forward", "predicted_bbox": [48.0, 35.0, 380.0, 415.0], "raw_output": "<box>(48,35,380,415)"}
+{"ref_id": 37422, "expression": "sitting man", "predicted_bbox": [463.0, 205.0, 644.0, 414.0], "raw_output": "<box>(463,205,644,414)"}
+{"ref_id": 37477, "expression": "levitating guy", "predicted_bbox": [94.0, 148.0, 206.0, 413.0], "raw_output": "<box>(94,148,206,413)"}
+{"ref_id": 37653, "expression": "coffee", "predicted_bbox": [153.0, 443.0, 387.0, 602.0], "raw_output": "<box>(153,443,387,602)"}
+{"ref_id": 37690, "expression": "blue guy", "predicted_bbox": [143.0, 75.0, 450.0, 415.0], "raw_output": "<box>(143,75,450,415)"}
+{"ref_id": 37690, "expression": "teal shirt", "predicted_bbox": [143.0, 75.0, 450.0, 415.0], "raw_output": "<box>(143,75,450,415)\n"}
+{"ref_id": 37691, "expression": "runner in white", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [423, 0, 567, 232], \"label\": \"runner in white\"}\n]\n```"}
+{"ref_id": 37838, "expression": "pillow for a man", "predicted_bbox": [0.0, 143.0, 175.0, 476.0], "raw_output": "<box>(0,143,175,476)"}
+{"ref_id": 37839, "expression": "guy with headphones", "predicted_bbox": [164.0, 109.0, 463.0, 475.0], "raw_output": "<box>(164,109,463,475)\n"}
+{"ref_id": 37839, "expression": "man", "predicted_bbox": [163.0, 109.0, 465.0, 476.0], "raw_output": "<box>(163,109,465,476)\n"}
+{"ref_id": 37840, "expression": "pink shirt", "predicted_bbox": [203.0, 159.0, 624.0, 476.0], "raw_output": "<box>(203,159,624,476)\n"}
+{"ref_id": 37840, "expression": "woman", "predicted_bbox": [204.0, 159.0, 623.0, 476.0], "raw_output": "<box>(204,159,623,476)\n"}
+{"ref_id": 37840, "expression": "pink", "predicted_bbox": [204.0, 159.0, 623.0, 476.0], "raw_output": "<box>(204,159,623,476)\n"}
+{"ref_id": 37842, "expression": "plane leading the pack", "predicted_bbox": [160.0, 17.0, 359.0, 184.0], "raw_output": "<box>(160,17,359,184)"}
+{"ref_id": 37842, "expression": "plane leading the way", "predicted_bbox": [159.0, 17.0, 360.0, 184.0], "raw_output": "<box>(159,17,360,184)"}
+{"ref_id": 37942, "expression": "macaroni", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [0, 183, 240, 397], \"label\": \"macaroni\"}\n]\n```"}
+{"ref_id": 37943, "expression": "rim of plate with all the food", "predicted_bbox": [209.0, 208.0, 643.0, 357.0], "raw_output": "<box>(209,208,643,357)"}
+{"ref_id": 37980, "expression": "older woman", "predicted_bbox": [235.0, 0.0, 644.0, 415.0], "raw_output": "<box>(235,0,644,415)"}
+{"ref_id": 37980, "expression": "woman", "predicted_bbox": [236.0, 0.0, 644.0, 415.0], "raw_output": "<box>(236,0,644,415)"}
+{"ref_id": 37981, "expression": "baby", "predicted_bbox": [134.0, 80.0, 467.0, 415.0], "raw_output": "<box>(134,80,467,415)"}
+{"ref_id": 37981, "expression": "baby", "predicted_bbox": [134.0, 80.0, 467.0, 415.0], "raw_output": "<box>(134,80,467,415)"}
+{"ref_id": 37981, "expression": "boy", "predicted_bbox": [135.0, 80.0, 467.0, 415.0], "raw_output": "<box>(135,80,467,415)"}
+{"ref_id": 38084, "expression": "no shirt", "predicted_bbox": [30.0, 215.0, 260.0, 559.0], "raw_output": "<box>(30,215,260,559)"}
+{"ref_id": 38084, "expression": "bot with no shirt", "predicted_bbox": [30.0, 215.0, 260.0, 560.0], "raw_output": "<box>(30,215,260,560)"}
+{"ref_id": 38084, "expression": "shirtless idiot running", "predicted_bbox": [30.0, 215.0, 260.0, 560.0], "raw_output": "<box>(30,215,260,560)"}
+{"ref_id": 38109, "expression": "purple guy", "predicted_bbox": [85.0, 137.0, 209.0, 396.0], "raw_output": "<box>(85,137,209,396)"}
+{"ref_id": 38111, "expression": "empty gray chair with light wood", "predicted_bbox": [24.0, 250.0, 168.0, 419.0], "raw_output": "<box>(24,250,168,419)"}
+{"ref_id": 38332, "expression": "man by meter", "predicted_bbox": [103.0, 160.0, 317.0, 644.0], "raw_output": "<box>(103,160,317,644)"}
+{"ref_id": 38431, "expression": "kid blowing the candle", "predicted_bbox": [174.0, 0.0, 536.0, 448.0], "raw_output": "<box>(174,0,536,448)"}
+{"ref_id": 38431, "expression": "blowing out candles person", "predicted_bbox": [130.0, 0.0, 548.0, 476.0], "raw_output": "<box>(130,0,548,476)"}
+{"ref_id": 38497, "expression": "girl with no faceleft", "predicted_bbox": [30.0, 249.0, 165.0, 597.0], "raw_output": "<box>(30,249,165,597)"}
+{"ref_id": 38498, "expression": "girl wearing pink converse", "predicted_bbox": [308.0, 186.0, 475.0, 584.0], "raw_output": "<box>(308,186,475,584)"}
+{"ref_id": 38538, "expression": "girl in solid purple raincoat", "predicted_bbox": [284.0, 253.0, 376.0, 570.0], "raw_output": "<box>(284,253,376,570)"}
+{"ref_id": 38538, "expression": "girl purple", "predicted_bbox": [283.0, 254.0, 376.0, 570.0], "raw_output": "<box>(283,254,376,570)"}
+{"ref_id": 38677, "expression": "yellow pants", "predicted_bbox": [130.0, 24.0, 265.0, 309.0], "raw_output": "<box>(130,24,265,309)"}
+{"ref_id": 38677, "expression": "yellow pants", "predicted_bbox": [130.0, 24.0, 265.0, 309.0], "raw_output": "<box>(130,24,265,309)"}
+{"ref_id": 38678, "expression": "boy in blue shirt", "predicted_bbox": [253.0, 50.0, 524.0, 396.0], "raw_output": "<box>(253,50,524,396)"}
+{"ref_id": 38865, "expression": "bathtub", "predicted_bbox": [0.0, 324.0, 238.0, 504.0], "raw_output": "<box>(0,324,238,504)"}
+{"ref_id": 38865, "expression": "bathtub", "predicted_bbox": [0.0, 324.0, 236.0, 504.0], "raw_output": "<box>(0,324,236,504)"}
+{"ref_id": 38888, "expression": "man in blue jacket", "predicted_bbox": [36.0, 0.0, 465.0, 616.0], "raw_output": "<box>(36,0,465,616)"}
+{"ref_id": 39005, "expression": "red head", "predicted_bbox": [293.0, 98.0, 475.0, 443.0], "raw_output": "<box>(293,98,475,443)"}
+{"ref_id": 39005, "expression": "woman", "predicted_bbox": [290.0, 98.0, 475.0, 443.0], "raw_output": "<box>(290,98,475,443)"}
+{"ref_id": 39006, "expression": "boy", "predicted_bbox": [83.0, 104.0, 295.0, 448.0], "raw_output": "<box>(83,104,295,448)\n"}
+{"ref_id": 39084, "expression": "large elephant", "predicted_bbox": [0.0, 148.0, 379.0, 612.0], "raw_output": "<box>(0,148,379,612)"}
+{"ref_id": 39330, "expression": "batter", "predicted_bbox": [263.0, 89.0, 557.0, 404.0], "raw_output": "<box>(263,89,557,404)"}
+{"ref_id": 39330, "expression": "batter", "predicted_bbox": [263.0, 89.0, 557.0, 404.0], "raw_output": "<box>(263,89,557,404)"}
+{"ref_id": 39330, "expression": "batter", "predicted_bbox": [263.0, 89.0, 557.0, 404.0], "raw_output": "<box>(263,89,557,404)"}
+{"ref_id": 39343, "expression": "botttom", "predicted_bbox": [47.0, 439.0, 405.0, 586.0], "raw_output": "<box>(47,439,405,586)"}
+{"ref_id": 39682, "expression": "gray plane", "predicted_bbox": [0.0, 43.0, 420.0, 479.0], "raw_output": "<box>(0,43,420,479)"}
+{"ref_id": 39768, "expression": "guy with black shirt", "predicted_bbox": [0.0, 345.0, 231.0, 637.0], "raw_output": "<box>(0,345,231,637)"}
+{"ref_id": 39790, "expression": "catcher", "predicted_bbox": [0.0, 184.0, 193.0, 357.0], "raw_output": "<box>(0,184,193,357)"}
+{"ref_id": 39790, "expression": "catcher", "predicted_bbox": [0.0, 184.0, 193.0, 357.0], "raw_output": "<box>(0,184,193,357)"}
+{"ref_id": 39790, "expression": "catcher", "predicted_bbox": [0.0, 184.0, 193.0, 357.0], "raw_output": "<box>(0,184,193,357)"}
+{"ref_id": 39791, "expression": "batter", "predicted_bbox": [309.0, 87.0, 500.0, 364.0], "raw_output": "<box>(309,87,500,364)"}
+{"ref_id": 39791, "expression": "batter", "predicted_bbox": [309.0, 87.0, 500.0, 364.0], "raw_output": "<box>(309,87,500,364)"}
+{"ref_id": 39791, "expression": "batter", "predicted_bbox": [309.0, 87.0, 500.0, 364.0], "raw_output": "<box>(309,87,500,364)"}
+{"ref_id": 39803, "expression": "a woman in a blue jacket", "predicted_bbox": [190.0, 83.0, 327.0, 445.0], "raw_output": "<box>(190,83,327,445)"}
+{"ref_id": 39803, "expression": "blue jacket on woman", "predicted_bbox": [189.0, 83.0, 326.0, 440.0], "raw_output": "<box>(189,83,326,440)"}
+{"ref_id": 39804, "expression": "man red hat", "predicted_bbox": [297.0, 6.0, 453.0, 448.0], "raw_output": "<box>(297,6,453,448)"}
+{"ref_id": 39804, "expression": "person in red hat", "predicted_bbox": [298.0, 6.0, 450.0, 447.0], "raw_output": "<box>(298,6,450,447)"}
+{"ref_id": 39938, "expression": "the lady", "predicted_bbox": [0.0, 3.0, 224.0, 476.0], "raw_output": "<box>(0,3,224,476)"}
+{"ref_id": 39938, "expression": "lady", "predicted_bbox": [0.0, 3.0, 224.0, 476.0], "raw_output": "<box>(0,3,224,476)"}
+{"ref_id": 39938, "expression": "woman", "predicted_bbox": [0.0, 3.0, 224.0, 476.0], "raw_output": "<box>(0,3,224,476)"}
+{"ref_id": 39939, "expression": "empty wine glass", "predicted_bbox": [318.0, 559.0, 440.0, 644.0], "raw_output": "<box>(318,559,440,644)"}
+{"ref_id": 39940, "expression": "wine", "predicted_bbox": [327.0, 435.0, 436.0, 508.0], "raw_output": "<box>(327,435,436,508)\n"}
+{"ref_id": 39940, "expression": "glass close to us with little wine in it", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [319, 330, 456, 644], \"label\": \"glass close to us with little wine in it\"}\n]\n```"}
+{"ref_id": 39940, "expression": "glass with wine still in it", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [319, 330, 456, 644], \"label\": \"glass with wine still in it\"}\n]\n```"}
+{"ref_id": 40006, "expression": "man bent over", "predicted_bbox": [247.0, 120.0, 365.0, 353.0], "raw_output": "<box>(247,120,365,353)"}
+{"ref_id": 40006, "expression": "guy bending over", "predicted_bbox": [247.0, 120.0, 365.0, 353.0], "raw_output": "<box>(247,120,365,353)"}
+{"ref_id": 40008, "expression": "red hoodie", "predicted_bbox": [456.0, 50.0, 608.0, 431.0], "raw_output": "<box>(456,50,608,431)"}
+{"ref_id": 40027, "expression": "black shirt in crowd", "predicted_bbox": [50.0, 98.0, 267.0, 274.0], "raw_output": "<box>(50,98,267,274)"}
+{"ref_id": 40027, "expression": "the guy in black", "predicted_bbox": [50.0, 98.0, 267.0, 274.0], "raw_output": "<box>(50,98,267,274)"}
+{"ref_id": 40029, "expression": "the player in white", "predicted_bbox": [0.0, 3.0, 369.0, 532.0], "raw_output": "<box>(0,3,369,532)"}
+{"ref_id": 40030, "expression": "man in red shirt playing tenniss", "predicted_bbox": [304.0, 35.0, 644.0, 527.0], "raw_output": "<box>(304,35,644,527)"}
+{"ref_id": 40121, "expression": "sliced bananbas", "predicted_bbox": [169.0, 180.0, 334.0, 350.0], "raw_output": "<box>(169,180,334,350)"}
+{"ref_id": 40121, "expression": "banna", "predicted_bbox": [169.0, 183.0, 334.0, 350.0], "raw_output": "<box>(169,183,334,350)"}
+{"ref_id": 40121, "expression": "bananas", "predicted_bbox": [168.0, 183.0, 334.0, 350.0], "raw_output": "<box>(168,183,334,350)"}
+{"ref_id": 40124, "expression": "guy with white shirt", "predicted_bbox": [143.0, 0.0, 420.0, 546.0], "raw_output": "<box>(143,0,420,546)"}
+{"ref_id": 40124, "expression": "sleeved arm", "predicted_bbox": [143.0, 0.0, 420.0, 516.0], "raw_output": "<box>(143,0,420,516)"}
+{"ref_id": 40126, "expression": "bare arm", "predicted_bbox": [143.0, 0.0, 420.0, 516.0], "raw_output": "<box>(143,0,420,516)"}
+{"ref_id": 40126, "expression": "bare arm cutting", "predicted_bbox": [143.0, 0.0, 420.0, 516.0], "raw_output": "<box>(143,0,420,516)"}
+{"ref_id": 40166, "expression": "player number 25", "predicted_bbox": [354.0, 204.0, 467.0, 419.0], "raw_output": "<box>(354,204,467,419)"}
+{"ref_id": 40166, "expression": "25", "predicted_bbox": [354.0, 206.0, 470.0, 415.0], "raw_output": "<box>(354,206,470,415)"}
+{"ref_id": 40167, "expression": "batter swinging", "predicted_bbox": [8.0, 34.0, 306.0, 415.0], "raw_output": "<box>(8,34,306,415)"}
+{"ref_id": 40167, "expression": "batter guy whos swinging", "predicted_bbox": [9.0, 34.0, 306.0, 415.0], "raw_output": "<box>(9,34,306,415)"}
+{"ref_id": 40242, "expression": "guy", "predicted_bbox": [308.0, 57.0, 460.0, 269.0], "raw_output": "<box>(308,57,460,269)"}
+{"ref_id": 40242, "expression": "blue shirt", "predicted_bbox": [308.0, 57.0, 460.0, 269.0], "raw_output": "<box>(308,57,460,269)"}
+{"ref_id": 40242, "expression": "man", "predicted_bbox": [308.0, 57.0, 460.0, 269.0], "raw_output": "<box>(308,57,460,269)"}
+{"ref_id": 40310, "expression": "blue truck", "predicted_bbox": [0.0, 304.0, 126.0, 475.0], "raw_output": "<box>(0,304,126,475)"}
+{"ref_id": 40310, "expression": "blue truck", "predicted_bbox": [0.0, 304.0, 125.0, 470.0], "raw_output": "<box>(0,304,125,470)"}
+{"ref_id": 40311, "expression": "a truck parked", "predicted_bbox": [0.0, 298.0, 134.0, 475.0], "raw_output": "<box>(0,298,134,475)"}
+{"ref_id": 40311, "expression": "blackgreen truck", "predicted_bbox": [120.0, 260.0, 523.0, 494.0], "raw_output": "<box>(120,260,523,494)"}
+{"ref_id": 40311, "expression": "black truck", "predicted_bbox": [120.0, 263.0, 520.0, 494.0], "raw_output": "<box>(120,263,520,494)"}
+{"ref_id": 40312, "expression": "white bus", "predicted_bbox": [517.0, 213.0, 616.0, 540.0], "raw_output": "<box>(517,213,616,540)"}
+{"ref_id": 40318, "expression": "red case", "predicted_bbox": [37.0, 74.0, 360.0, 335.0], "raw_output": "<box>(37,74,360,335)"}
+{"ref_id": 40557, "expression": "hes the focal point", "predicted_bbox": [63.0, 0.0, 367.0, 340.0], "raw_output": "<box>(63,0,367,340)"}
+{"ref_id": 40680, "expression": "cat licking", "predicted_bbox": [316.0, 184.0, 490.0, 415.0], "raw_output": "<box>(316,184,490,415)\n"}
+{"ref_id": 40693, "expression": "guy with red logo on shirt", "predicted_bbox": [19.0, 87.0, 214.0, 486.0], "raw_output": "<box>(19,87,214,486)"}
+{"ref_id": 40694, "expression": "donut eater", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [160, 34, 476, 635], \"label\": \"donut eater\"}\n]\n```"}
+{"ref_id": 40694, "expression": "guy getting donut", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [160, 34, 476, 635], \"label\": \"guy getting donut\"}\n]\n```"}
+{"ref_id": 40694, "expression": "jacket", "predicted_bbox": [209.0, 104.0, 476.0, 635.0], "raw_output": "<box>(209,104,476,635)"}
+{"ref_id": 40720, "expression": "woman", "predicted_bbox": [285.0, 56.0, 443.0, 470.0], "raw_output": "<box>(285,56,443,470)\n"}
+{"ref_id": 40721, "expression": "tie", "predicted_bbox": [254.0, 116.0, 287.0, 259.0], "raw_output": "<box>(254,116,287,259)\n"}
+{"ref_id": 40721, "expression": "guy white", "predicted_bbox": [160.0, 30.0, 314.0, 470.0], "raw_output": "<box>(160,30,314,470)\n"}
+{"ref_id": 40721, "expression": "tie guy", "predicted_bbox": [160.0, 28.0, 314.0, 470.0], "raw_output": "<box>(160,28,314,470)\n"}
+{"ref_id": 40800, "expression": "man with a donut necklace", "predicted_bbox": [320.0, 54.0, 476.0, 409.0], "raw_output": "<box>(320,54,476,409)\n"}
+{"ref_id": 40801, "expression": "woman", "predicted_bbox": [109.0, 134.0, 315.0, 568.0], "raw_output": "<box>(109,134,315,568)"}
+{"ref_id": 40802, "expression": "little boy with arm raised", "predicted_bbox": [73.0, 240.0, 376.0, 559.0], "raw_output": "<box>(73,240,376,559)"}
+{"ref_id": 40802, "expression": "boy", "predicted_bbox": [74.0, 239.0, 376.0, 580.0], "raw_output": "<box>(74,239,376,580)"}
+{"ref_id": 40802, "expression": "baby in arms", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [73, 240, 376, 589], \"label\": \"baby in arms\"}\n]\n```"}
+{"ref_id": 40935, "expression": "guy in yellow", "predicted_bbox": [150.0, 147.0, 576.0, 476.0], "raw_output": "<box>(150,147,576,476)"}
+{"ref_id": 40935, "expression": "man with yellow tshirt", "predicted_bbox": [150.0, 147.0, 576.0, 476.0], "raw_output": "<box>(150,147,576,476)"}
+{"ref_id": 40935, "expression": "yellow shirt", "predicted_bbox": [150.0, 147.0, 576.0, 476.0], "raw_output": "<box>(150,147,576,476)"}
+{"ref_id": 41090, "expression": "person squatting", "predicted_bbox": [96.0, 345.0, 240.0, 527.0], "raw_output": "<box>(96,345,240,527)"}
+{"ref_id": 41090, "expression": "guy crouching down", "predicted_bbox": [96.0, 345.0, 240.0, 527.0], "raw_output": "<box>(96,345,240,527)"}
+{"ref_id": 41090, "expression": "man kneelin", "predicted_bbox": [96.0, 345.0, 240.0, 527.0], "raw_output": "<box>(96,345,240,527)"}
+{"ref_id": 41091, "expression": "dude flipping", "predicted_bbox": [4.0, 30.0, 556.0, 579.0], "raw_output": "<box>(4,30,556,579)"}
+{"ref_id": 41091, "expression": "main guy", "predicted_bbox": [0.0, 30.0, 554.0, 579.0], "raw_output": "<box>(0,30,554,579)"}
+{"ref_id": 41091, "expression": "dancer", "predicted_bbox": [4.0, 30.0, 556.0, 579.0], "raw_output": "<box>(4,30,556,579)"}
+{"ref_id": 41149, "expression": "catcher", "predicted_bbox": [130.0, 219.0, 286.0, 400.0], "raw_output": "<box>(130,219,286,400)"}
+{"ref_id": 41149, "expression": "catcher", "predicted_bbox": [130.0, 219.0, 286.0, 400.0], "raw_output": "<box>(130,219,286,400)"}
+{"ref_id": 41149, "expression": "catcher", "predicted_bbox": [130.0, 219.0, 286.0, 400.0], "raw_output": "<box>(130,219,286,400)"}
+{"ref_id": 41150, "expression": "referee", "predicted_bbox": [0.0, 156.0, 207.0, 408.0], "raw_output": "<box>(0,156,207,408)"}
+{"ref_id": 41150, "expression": "ump", "predicted_bbox": [0.0, 156.0, 207.0, 409.0], "raw_output": "<box>(0,156,207,409)"}
+{"ref_id": 41150, "expression": "guy in black", "predicted_bbox": [0.0, 156.0, 204.0, 408.0], "raw_output": "<box>(0,156,204,408)"}
+{"ref_id": 41165, "expression": "donut lady", "predicted_bbox": [24.0, 103.0, 305.0, 360.0], "raw_output": "<box>(24,103,305,360)"}
+{"ref_id": 41165, "expression": "woman eating", "predicted_bbox": [3.0, 104.0, 305.0, 360.0], "raw_output": "<box>(3,104,305,360)"}
+{"ref_id": 41178, "expression": "black shirt man", "predicted_bbox": [76.0, 65.0, 259.0, 415.0], "raw_output": "<box>(76,65,259,415)"}
+{"ref_id": 41178, "expression": "blue shirt", "predicted_bbox": [75.0, 64.0, 259.0, 415.0], "raw_output": "<box>(75,64,259,415)"}
+{"ref_id": 41179, "expression": "tie man", "predicted_bbox": [405.0, 123.0, 611.0, 415.0], "raw_output": "<box>(405,123,611,415)\n"}
+{"ref_id": 41179, "expression": "khaki suit douchebag grin blue tie", "predicted_bbox": [406.0, 123.0, 612.0, 415.0], "raw_output": "<box>(406,123,612,415)\n"}
+{"ref_id": 41272, "expression": "kid in blue shirt", "predicted_bbox": [430.0, 156.0, 620.0, 497.0], "raw_output": "<box>(430,156,620,497)"}
+{"ref_id": 41272, "expression": "girl in blue", "predicted_bbox": [430.0, 156.0, 620.0, 497.0], "raw_output": "<box>(430,156,620,497)"}
+{"ref_id": 41273, "expression": "kid in white shirt", "predicted_bbox": [203.0, 87.0, 379.0, 415.0], "raw_output": "<box>(203,87,379,415)"}
+{"ref_id": 41282, "expression": "umbrella with pole", "predicted_bbox": [300.0, 347.0, 556.0, 548.0], "raw_output": "<box>(300,347,556,548)"}
+{"ref_id": 41283, "expression": "big umbrella", "predicted_bbox": [30.0, 29.0, 560.0, 547.0], "raw_output": "<box>(30,29,560,547)"}
+{"ref_id": 41482, "expression": "half pizza", "predicted_bbox": [139.0, 220.0, 504.0, 415.0], "raw_output": "<box>(139,220,504,415)"}
+{"ref_id": 41482, "expression": "the pizza mouth", "predicted_bbox": [139.0, 220.0, 504.0, 415.0], "raw_output": "<box>(139,220,504,415)\n"}
+{"ref_id": 41593, "expression": "elephant", "predicted_bbox": [293.0, 195.0, 580.0, 387.0], "raw_output": "<box>(293,195,580,387)\n"}
+{"ref_id": 41593, "expression": "elephant with trunk showing", "predicted_bbox": [294.0, 195.0, 583.0, 387.0], "raw_output": "<box>(294,195,583,387)"}
+{"ref_id": 41751, "expression": "man", "predicted_bbox": [0.0, 0.0, 73.0, 415.0], "raw_output": "<box>(0,0,73,415)\n"}
+{"ref_id": 41751, "expression": "man being tackled", "predicted_bbox": [13.0, 269.0, 274.0, 415.0], "raw_output": "<box>(13,269,274,415)"}
+{"ref_id": 41752, "expression": "dat ass", "predicted_bbox": [456.0, 243.0, 644.0, 389.0], "raw_output": "<box>(456,243,644,389)\n"}
+{"ref_id": 41752, "expression": "15", "predicted_bbox": [403.0, 0.0, 644.0, 415.0], "raw_output": "<box>(403,0,644,415)"}
+{"ref_id": 41752, "expression": "15", "predicted_bbox": [403.0, 1.0, 644.0, 415.0], "raw_output": "<box>(403,1,644,415)"}
+{"ref_id": 42291, "expression": "giraffe", "predicted_bbox": [317.0, 125.0, 546.0, 410.0], "raw_output": "<box>(317,125,546,410)"}
+{"ref_id": 42291, "expression": "giraffee eating tree", "predicted_bbox": [317.0, 126.0, 544.0, 410.0], "raw_output": "<box>(317,126,544,410)"}
+{"ref_id": 42291, "expression": "giraffe", "predicted_bbox": [317.0, 125.0, 546.0, 410.0], "raw_output": "<box>(317,125,546,410)"}
+{"ref_id": 42395, "expression": "hand", "predicted_bbox": [0.0, 219.0, 163.0, 476.0], "raw_output": "<box>(0,219,163,476)"}
+{"ref_id": 42395, "expression": "lefthand on pic", "predicted_bbox": [0.0, 218.0, 164.0, 476.0], "raw_output": "<box>(0,218,164,476)"}
+{"ref_id": 42466, "expression": "glasses", "predicted_bbox": [50.0, 78.0, 149.0, 106.0], "raw_output": "<box>(50,78,149,106)\n"}
+{"ref_id": 42466, "expression": "woman biting nails", "predicted_bbox": [0.0, 19.0, 248.0, 395.0], "raw_output": "<box>(0,19,248,395)"}
+{"ref_id": 42467, "expression": "kid black shirt", "predicted_bbox": [307.0, 29.0, 586.0, 254.0], "raw_output": "<box>(307,29,586,254)"}
+{"ref_id": 42467, "expression": "kid", "predicted_bbox": [304.0, 29.0, 587.0, 260.0], "raw_output": "<box>(304,29,587,260)"}
+{"ref_id": 42546, "expression": "uppermost boat", "predicted_bbox": [0.0, 0.0, 406.0, 189.0], "raw_output": "<box>(0,0,406,189)"}
+{"ref_id": 42687, "expression": "kid with blk mark on face", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [234, 98, 415, 637], \"label\": \"kid with blk mark on face\"}\n]\n```"}
+{"ref_id": 42752, "expression": "standing cow", "predicted_bbox": [297.0, 176.0, 583.0, 384.0], "raw_output": "<box>(297,176,583,384)"}
+{"ref_id": 42753, "expression": "dark cow", "predicted_bbox": [64.0, 257.0, 338.0, 370.0], "raw_output": "<box>(64,257,338,370)"}
+{"ref_id": 42763, "expression": "person in red bottomcenter", "predicted_bbox": [280.0, 274.0, 395.0, 415.0], "raw_output": "<box>(280,274,395,415)"}
+{"ref_id": 42764, "expression": "guy in suit", "predicted_bbox": [145.0, 216.0, 230.0, 419.0], "raw_output": "<box>(145,216,230,419)"}
+{"ref_id": 42821, "expression": "chocolate", "predicted_bbox": [19.0, 304.0, 338.0, 597.0], "raw_output": "<box>(19,304,338,597)"}
+{"ref_id": 42821, "expression": "chocalatesprinkles", "predicted_bbox": [20.0, 305.0, 340.0, 600.0], "raw_output": "<box>(20,305,340,600)"}
+{"ref_id": 42822, "expression": "pink doughnut", "predicted_bbox": [19.0, 16.0, 318.0, 294.0], "raw_output": "<box>(19,16,318,294)"}
+{"ref_id": 42822, "expression": "pink doughnut with frosting", "predicted_bbox": [19.0, 18.0, 317.0, 294.0], "raw_output": "<box>(19,18,317,294)"}
+{"ref_id": 42837, "expression": "couch with sunbean across it", "predicted_bbox": [0.0, 237.0, 296.0, 476.0], "raw_output": "<box>(0,237,296,476)"}
+{"ref_id": 42879, "expression": "a car sitting at an intersection", "predicted_bbox": [278.0, 326.0, 420.0, 415.0], "raw_output": "<box>(278,326,420,415)"}
+{"ref_id": 42880, "expression": "black car", "predicted_bbox": [503.0, 298.0, 644.0, 415.0], "raw_output": "<box>(503,298,644,415)"}
+{"ref_id": 42902, "expression": "the girl", "predicted_bbox": [30.0, 137.0, 569.0, 401.0], "raw_output": "<box>(30,137,569,401)"}
+{"ref_id": 42902, "expression": "pink shirt girl", "predicted_bbox": [34.0, 137.0, 569.0, 401.0], "raw_output": "<box>(34,137,569,401)"}
+{"ref_id": 42902, "expression": "pink shirt", "predicted_bbox": [34.0, 137.0, 569.0, 401.0], "raw_output": "<box>(34,137,569,401)\n"}
+{"ref_id": 42968, "expression": "green bottle", "predicted_bbox": [60.0, 0.0, 173.0, 269.0], "raw_output": "<box>(60,0,173,269)"}
+{"ref_id": 42969, "expression": "purple label", "predicted_bbox": [378.0, 0.0, 481.0, 235.0], "raw_output": "<box>(378,0,481,235)"}
+{"ref_id": 42969, "expression": "purple bottle", "predicted_bbox": [397.0, 0.0, 485.0, 236.0], "raw_output": "<box>(397,0,485,236)"}
+{"ref_id": 42969, "expression": "purple bottle", "predicted_bbox": [398.0, 0.0, 482.0, 236.0], "raw_output": "<box>(398,0,482,236)"}
+{"ref_id": 43040, "expression": "joy", "predicted_bbox": [78.0, 30.0, 286.0, 415.0], "raw_output": "<box>(78,30,286,415)"}
+{"ref_id": 43040, "expression": "joy book", "predicted_bbox": [76.0, 30.0, 285.0, 415.0], "raw_output": "<box>(76,30,285,415)"}
+{"ref_id": 43041, "expression": "book with strandt", "predicted_bbox": [269.0, 78.0, 534.0, 415.0], "raw_output": "<box>(269,78,534,415)"}
+{"ref_id": 43041, "expression": "midlle phamplet with baptist", "predicted_bbox": [269.0, 78.0, 534.0, 415.0], "raw_output": "<box>(269,78,534,415)"}
+{"ref_id": 43041, "expression": "i am a proud baptist i would love that book", "predicted_bbox": [269.0, 78.0, 534.0, 415.0], "raw_output": "<box>(269,78,534,415)"}
+{"ref_id": 43042, "expression": "thats not my puppy", "predicted_bbox": [418.0, 170.0, 593.0, 416.0], "raw_output": "<box>(418,170,593,416)"}
+{"ref_id": 43043, "expression": "yellow book by purple bear", "predicted_bbox": [150.0, 153.0, 286.0, 415.0], "raw_output": "<box>(150,153,286,415)"}
+{"ref_id": 43045, "expression": "yellow book this little baby", "predicted_bbox": [337.0, 160.0, 534.0, 415.0], "raw_output": "<box>(337,160,534,415)"}
+{"ref_id": 43045, "expression": "stars", "predicted_bbox": [336.0, 164.0, 500.0, 419.0], "raw_output": "<box>(336,164,500,419)"}
+{"ref_id": 43046, "expression": "book to far rightwhite", "predicted_bbox": [465.0, 98.0, 643.0, 378.0], "raw_output": "<box>(465,98,643,378)"}
+{"ref_id": 43202, "expression": "red motorcycle", "predicted_bbox": [68.0, 97.0, 293.0, 415.0], "raw_output": "<box>(68,97,293,415)"}
+{"ref_id": 43202, "expression": "red bike", "predicted_bbox": [68.0, 97.0, 293.0, 415.0], "raw_output": "<box>(68,97,293,415)"}
+{"ref_id": 43371, "expression": "big zebra", "predicted_bbox": [70.0, 43.0, 596.0, 384.0], "raw_output": "<box>(70,43,596,384)"}
+{"ref_id": 43371, "expression": "adult zebra", "predicted_bbox": [70.0, 43.0, 596.0, 383.0], "raw_output": "<box>(70,43,596,383)"}
+{"ref_id": 43371, "expression": "adult zebra", "predicted_bbox": [70.0, 43.0, 596.0, 385.0], "raw_output": "<box>(70,43,596,385)"}
+{"ref_id": 43372, "expression": "bb zebra", "predicted_bbox": [70.0, 43.0, 596.0, 385.0], "raw_output": "<box>(70,43,596,385)"}
+{"ref_id": 43372, "expression": "baby", "predicted_bbox": [179.0, 123.0, 386.0, 390.0], "raw_output": "<box>(179,123,386,390)"}
+{"ref_id": 43372, "expression": "baby zebra", "predicted_bbox": [179.0, 124.0, 386.0, 390.0], "raw_output": "<box>(179,124,386,390)"}
+{"ref_id": 43407, "expression": "the woman", "predicted_bbox": [0.0, 107.0, 259.0, 443.0], "raw_output": "<box>(0,107,259,443)"}
+{"ref_id": 43407, "expression": "woman", "predicted_bbox": [0.0, 107.0, 259.0, 443.0], "raw_output": "<box>(0,107,259,443)"}
+{"ref_id": 43408, "expression": "old man", "predicted_bbox": [243.0, 57.0, 644.0, 448.0], "raw_output": "<box>(243,57,644,448)"}
+{"ref_id": 43408, "expression": "man", "predicted_bbox": [243.0, 58.0, 644.0, 443.0], "raw_output": "<box>(243,58,644,443)\n"}
+{"ref_id": 43441, "expression": "guy in the chair", "predicted_bbox": [463.0, 0.0, 644.0, 329.0], "raw_output": "<box>(463,0,644,329)"}
+{"ref_id": 43441, "expression": "referee", "predicted_bbox": [463.0, 0.0, 644.0, 328.0], "raw_output": "<box>(463,0,644,328)"}
+{"ref_id": 43441, "expression": "guy in chair", "predicted_bbox": [463.0, 0.0, 644.0, 328.0], "raw_output": "<box>(463,0,644,328)"}
+{"ref_id": 43442, "expression": "player", "predicted_bbox": [190.0, 106.0, 453.0, 327.0], "raw_output": "<box>(190,106,453,327)"}
+{"ref_id": 43442, "expression": "the man lunging", "predicted_bbox": [190.0, 107.0, 453.0, 326.0], "raw_output": "<box>(190,107,453,326)"}
+{"ref_id": 43442, "expression": "person in white", "predicted_bbox": [190.0, 107.0, 438.0, 325.0], "raw_output": "<box>(190,107,438,325)"}
+{"ref_id": 43451, "expression": "person facing us", "predicted_bbox": [0.0, 0.0, 213.0, 476.0], "raw_output": "<box>(0,0,213,476)"}
+{"ref_id": 43584, "expression": "red shirt", "predicted_bbox": [356.0, 174.0, 568.0, 384.0], "raw_output": "<box>(356,174,568,384)"}
+{"ref_id": 43626, "expression": "fromt zebra", "predicted_bbox": [98.0, 107.0, 596.0, 413.0], "raw_output": "<box>(98,107,596,413)"}
+{"ref_id": 44036, "expression": "shirtless guy", "predicted_bbox": [48.0, 279.0, 203.0, 546.0], "raw_output": "<box>(48,279,203,546)"}
+{"ref_id": 44036, "expression": "shirtless guy", "predicted_bbox": [48.0, 279.0, 203.0, 546.0], "raw_output": "<box>(48,279,203,546)"}
+{"ref_id": 44037, "expression": "old man in orange", "predicted_bbox": [19.0, 187.0, 106.0, 453.0], "raw_output": "<box>(19,187,106,453)"}
+{"ref_id": 44037, "expression": "guy in red shirt strips", "predicted_bbox": [19.0, 187.0, 106.0, 453.0], "raw_output": "<box>(19,187,106,453)\n"}
+{"ref_id": 44038, "expression": "person with blue shirt", "predicted_bbox": [30.0, 400.0, 281.0, 644.0], "raw_output": "<box>(30,400,281,644)"}
+{"ref_id": 44038, "expression": "blue shirt", "predicted_bbox": [30.0, 405.0, 281.0, 644.0], "raw_output": "<box>(30,405,281,644)"}
+{"ref_id": 44074, "expression": "the floor", "predicted_bbox": [136.0, 174.0, 644.0, 470.0], "raw_output": "<box>(136,174,644,470)"}
+{"ref_id": 44075, "expression": "white blanket by girl face", "predicted_bbox": [120.0, 234.0, 275.0, 462.0], "raw_output": "<box>(120,234,275,462)"}
+{"ref_id": 44075, "expression": "looks like pilow shes layng on", "predicted_bbox": [120.0, 234.0, 275.0, 462.0], "raw_output": "<box>(120,234,275,462)"}
+{"ref_id": 44197, "expression": "guy", "predicted_bbox": [10.0, 53.0, 154.0, 412.0], "raw_output": "<box>(10,53,154,412)"}
+{"ref_id": 44197, "expression": "man in blue jacket", "predicted_bbox": [10.0, 53.0, 154.0, 412.0], "raw_output": "<box>(10,53,154,412)"}
+{"ref_id": 44198, "expression": "woman", "predicted_bbox": [278.0, 43.0, 386.0, 409.0], "raw_output": "<box>(278,43,386,409)"}
+{"ref_id": 44198, "expression": "umbrella lady", "predicted_bbox": [278.0, 43.0, 390.0, 406.0], "raw_output": "<box>(278,43,390,406)"}
+{"ref_id": 44290, "expression": "guy with checked jacket", "predicted_bbox": [0.0, 114.0, 239.0, 476.0], "raw_output": "<box>(0,114,239,476)"}
+{"ref_id": 44383, "expression": "horse", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [198, 207, 603, 415], \"label\": \"horse\"},\n\t{\"bbox_2d\": [538, 190, 644, 415], \"label\": \"horse\"}\n]\n```"}
+{"ref_id": 44383, "expression": "horse", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [203, 209, 604, 415], \"label\": \"horse\"},\n\t{\"bbox_2d\": [538, 197, 644, 415], \"label\": \"horse\"}\n]\n```"}
+{"ref_id": 44383, "expression": "horsie", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [197, 208, 603, 415], \"label\": \"horsie\"}\n]\n```"}
+{"ref_id": 44960, "expression": "white area", "predicted_bbox": [98.0, 97.0, 286.0, 230.0], "raw_output": "<box>(98,97,286,230)"}
+{"ref_id": 44960, "expression": "white thing", "predicted_bbox": [98.0, 97.0, 286.0, 230.0], "raw_output": "<box>(98,97,286,230)"}
+{"ref_id": 44960, "expression": "white folded shirt with bees", "predicted_bbox": [98.0, 97.0, 286.0, 230.0], "raw_output": "<box>(98,97,286,230)"}
+{"ref_id": 45176, "expression": "green woman", "predicted_bbox": [78.0, 74.0, 275.0, 476.0], "raw_output": "<box>(78,74,275,476)"}
+{"ref_id": 45373, "expression": "green jersey", "predicted_bbox": [214.0, 103.0, 339.0, 347.0], "raw_output": "<box>(214,103,339,347)"}
+{"ref_id": 45373, "expression": "player in green", "predicted_bbox": [215.0, 104.0, 338.0, 347.0], "raw_output": "<box>(215,104,338,347)"}
+{"ref_id": 45373, "expression": "man in green", "predicted_bbox": [214.0, 103.0, 339.0, 347.0], "raw_output": "<box>(214,103,339,347)"}
+{"ref_id": 45374, "expression": "red shirt jumping man", "predicted_bbox": [10.0, 106.0, 157.0, 324.0], "raw_output": "<box>(10,106,157,324)"}
+{"ref_id": 45516, "expression": "woman", "predicted_bbox": [173.0, 115.0, 296.0, 418.0], "raw_output": "<box>(173,115,296,418)"}
+{"ref_id": 45516, "expression": "female", "predicted_bbox": [173.0, 114.0, 295.0, 418.0], "raw_output": "<box>(173,114,295,418)"}
+{"ref_id": 45517, "expression": "guy rasing arm", "predicted_bbox": [24.0, 39.0, 187.0, 469.0], "raw_output": "<box>(24,39,187,469)"}
+{"ref_id": 45517, "expression": "white shirt guy serving", "predicted_bbox": null, "raw_output": "```json\n[\n\t{\"bbox_2d\": [25, 39, 187, 469], \"label\": \"white shirt guy serving\"}\n]\n```"}
+{"ref_id": 45517, "expression": "im lifting my arm up so my shorts that are already too short hike up more", "predicted_bbox": [24.0, 39.0, 187.0, 469.0], "raw_output": "<box>(24,39,187,469)\n"}
+{"ref_id": 45518, "expression": "red shirt", "predicted_bbox": [397.0, 98.0, 480.0, 376.0], "raw_output": "<box>(397,98,480,376)"}
+{"ref_id": 45518, "expression": "red shirt", "predicted_bbox": [397.0, 98.0, 480.0, 376.0], "raw_output": "<box>(397,98,480,376)"}
+{"ref_id": 45521, "expression": "girl eating", "predicted_bbox": [180.0, 13.0, 644.0, 470.0], "raw_output": "<box>(180,13,644,470)"}
+{"ref_id": 45521, "expression": "girl", "predicted_bbox": [180.0, 13.0, 644.0, 470.0], "raw_output": "<box>(180,13,644,470)"}
+{"ref_id": 45521, "expression": "girl", "predicted_bbox": [180.0, 14.0, 643.0, 470.0], "raw_output": "<box>(180,14,643,470)"}
+{"ref_id": 45803, "expression": "rice", "predicted_bbox": [390.0, 24.0, 527.0, 126.0], "raw_output": "<box>(390,24,527,126)\n"}
+{"ref_id": 45803, "expression": "rice", "predicted_bbox": [390.0, 24.0, 526.0, 127.0], "raw_output": "<box>(390,24,526,127)\n"}
+{"ref_id": 45919, "expression": "green truck", "predicted_bbox": [0.0, 349.0, 178.0, 504.0], "raw_output": "<box>(0,349,178,504)"}
+{"ref_id": 46045, "expression": "green vaseyou were awesome", "predicted_bbox": [180.0, 60.0, 476.0, 390.0], "raw_output": "<box>(180,60,476,390)"}
+{"ref_id": 46045, "expression": "green thing", "predicted_bbox": [180.0, 60.0, 476.0, 390.0], "raw_output": "<box>(180,60,476,390)"}
+{"ref_id": 46045, "expression": "green", "predicted_bbox": [180.0, 63.0, 476.0, 390.0], "raw_output": "<box>(180,63,476,390)"}
+{"ref_id": 46047, "expression": "beige vase with handles", "predicted_bbox": [197.0, 140.0, 403.0, 435.0], "raw_output": "<box>(197,140,403,435)"}
+{"ref_id": 46105, "expression": "le t guy", "predicted_bbox": [79.0, 146.0, 278.0, 470.0], "raw_output": "<box>(79,146,278,470)\n"}
+{"ref_id": 46524, "expression": "red", "predicted_bbox": [209.0, 137.0, 316.0, 458.0], "raw_output": "<box>(209,137,316,458)"}
+{"ref_id": 46524, "expression": "red jacket guy", "predicted_bbox": [209.0, 138.0, 316.0, 457.0], "raw_output": "<box>(209,138,316,457)"}
+{"ref_id": 46810, "expression": "err black", "predicted_bbox": [0.0, 374.0, 476.0, 644.0], "raw_output": "<box>(0,374,476,644)\n"}
+{"ref_id": 46811, "expression": "wtf hand", "predicted_bbox": [305.0, 428.0, 476.0, 637.0], "raw_output": "<box>(305,428,476,637)\n"}
+{"ref_id": 46812, "expression": "lady in red shirt", "predicted_bbox": [89.0, 0.0, 264.0, 257.0], "raw_output": "<box>(89,0,264,257)"}
+{"ref_id": 46812, "expression": "pink girl staring", "predicted_bbox": [87.0, 0.0, 265.0, 254.0], "raw_output": "<box>(87,0,265,254)"}
+{"ref_id": 46812, "expression": "woman", "predicted_bbox": [87.0, 0.0, 264.0, 253.0], "raw_output": "<box>(87,0,264,253)"}
+{"ref_id": 46956, "expression": "blk car", "predicted_bbox": [63.0, 218.0, 337.0, 380.0], "raw_output": "<box>(63,218,337,380)"}
+{"ref_id": 46956, "expression": "black oldtimey car", "predicted_bbox": [63.0, 218.0, 337.0, 380.0], "raw_output": "<box>(63,218,337,380)"}
+{"ref_id": 47262, "expression": "kids jacket with flowers", "predicted_bbox": [265.0, 197.0, 628.0, 470.0], "raw_output": "<box>(265,197,628,470)"}
+{"ref_id": 47282, "expression": "main choclo", "predicted_bbox": [119.0, 153.0, 420.0, 386.0], "raw_output": "<box>(119,153,420,386)"}
+{"ref_id": 47434, "expression": "blue cycle", "predicted_bbox": [50.0, 34.0, 546.0, 469.0], "raw_output": "<box>(50,34,546,469)"}
+{"ref_id": 47667, "expression": "lady in black with her arm up in the air", "predicted_bbox": [419.0, 105.0, 530.0, 476.0], "raw_output": "<box>(419,105,530,476)"}
+{"ref_id": 47667, "expression": "woan with arm up in the air", "predicted_bbox": [420.0, 105.0, 530.0, 476.0], "raw_output": "<box>(420,105,530,476)"}
+{"ref_id": 47669, "expression": "girl in blue shirt and jeans", "predicted_bbox": [209.0, 143.0, 345.0, 476.0], "raw_output": "<box>(209,143,345,476)"}
+{"ref_id": 47721, "expression": "zebra head", "predicted_bbox": [15.0, 56.0, 239.0, 308.0], "raw_output": "<box>(15,56,239,308)"}
+{"ref_id": 48065, "expression": "bed by window", "predicted_bbox": [153.0, 294.0, 436.0, 470.0], "raw_output": "<box>(153,294,436,470)"}
+{"ref_id": 48594, "expression": "player white uniform", "predicted_bbox": [253.0, 64.0, 527.0, 375.0], "raw_output": "<box>(253,64,527,375)"}
+{"ref_id": 48594, "expression": "man in white", "predicted_bbox": [253.0, 64.0, 527.0, 375.0], "raw_output": "<box>(253,64,527,375)"}
+{"ref_id": 48594, "expression": "guy in white", "predicted_bbox": [215.0, 64.0, 527.0, 375.0], "raw_output": "<box>(215,64,527,375)"}
+{"ref_id": 48675, "expression": "brown stationwagen", "predicted_bbox": [0.0, 68.0, 239.0, 154.0], "raw_output": "<box>(0,68,239,154)"}
+{"ref_id": 48967, "expression": "pizza", "predicted_bbox": [0.0, 227.0, 504.0, 504.0], "raw_output": "<box>(0,227,504,504)"}
+{"ref_id": 48967, "expression": "whole pizza", "predicted_bbox": [0.0, 230.0, 504.0, 504.0], "raw_output": "<box>(0,230,504,504)"}
+{"ref_id": 48967, "expression": "pizzzza", "predicted_bbox": [0.0, 227.0, 504.0, 504.0], "raw_output": "<box>(0,227,504,504)"}
+{"ref_id": 49089, "expression": "woman white scarf", "predicted_bbox": [35.0, 204.0, 197.0, 638.0], "raw_output": "<box>(35,204,197,638)"}
+{"ref_id": 49089, "expression": "woman making a face", "predicted_bbox": [35.0, 204.0, 197.0, 638.0], "raw_output": "<box>(35,204,197,638)"}
+{"ref_id": 49091, "expression": "guy with beard", "predicted_bbox": [143.0, 170.0, 465.0, 637.0], "raw_output": "<box>(143,170,465,637)"}
+{"ref_id": 49112, "expression": "laptop", "predicted_bbox": [130.0, 60.0, 574.0, 415.0], "raw_output": "<box>(130,60,574,415)\n"}
+{"ref_id": 49112, "expression": "computer", "predicted_bbox": [130.0, 60.0, 574.0, 415.0], "raw_output": "<box>(130,60,574,415)"}
+{"ref_id": 49112, "expression": "laptop on", "predicted_bbox": [130.0, 60.0, 574.0, 415.0], "raw_output": "<box>(130,60,574,415)\n"}
+{"ref_id": 49125, "expression": "catcher", "predicted_bbox": [239.0, 205.0, 387.0, 415.0], "raw_output": "<box>(239,205,387,415)\n"}
+{"ref_id": 49125, "expression": "catcher squatting down", "predicted_bbox": [239.0, 205.0, 387.0, 415.0], "raw_output": "<box>(239,205,387,415)"}
+{"ref_id": 49125, "expression": "catcher", "predicted_bbox": [239.0, 205.0, 387.0, 415.0], "raw_output": "<box>(239,205,387,415)\n"}
+{"ref_id": 49126, "expression": "man in blue shirt", "predicted_bbox": [79.0, 68.0, 254.0, 415.0], "raw_output": "<box>(79,68,254,415)"}
+{"ref_id": 49126, "expression": "umpire", "predicted_bbox": [78.0, 69.0, 254.0, 415.0], "raw_output": "<box>(78,69,254,415)\n"}
+{"ref_id": 49127, "expression": "batter", "predicted_bbox": [294.0, 108.0, 453.0, 410.0], "raw_output": "<box>(294,108,453,410)\n"}
+{"ref_id": 49127, "expression": "batter", "predicted_bbox": [294.0, 108.0, 453.0, 410.0], "raw_output": "<box>(294,108,453,410)\n"}
+{"ref_id": 49127, "expression": "batter", "predicted_bbox": [294.0, 108.0, 453.0, 410.0], "raw_output": "<box>(294,108,453,410)\n"}
+{"ref_id": 49173, "expression": "girl wearing black", "predicted_bbox": [176.0, 98.0, 330.0, 475.0], "raw_output": "<box>(176,98,330,475)"}
+{"ref_id": 49174, "expression": "stripe shirt", "predicted_bbox": [437.0, 78.0, 590.0, 476.0], "raw_output": "<box>(437,78,590,476)\n"}
+{"ref_id": 49530, "expression": "white chair", "predicted_bbox": [0.0, 0.0, 483.0, 295.0], "raw_output": "<box>(0,0,483,295)"}
+{"ref_id": 49785, "expression": "bike on far", "predicted_bbox": [0.0, 0.0, 263.0, 284.0], "raw_output": "<box>(0,0,263,284)"}
+{"ref_id": 49787, "expression": "midle motercycle", "predicted_bbox": [140.0, 69.0, 527.0, 386.0], "raw_output": "<box>(140,69,527,386)"}
