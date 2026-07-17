@@ -5,6 +5,41 @@
 
 This repository tests a targeted question in referring-expression comprehension: does explicit relational context, represented as subject-predicate-object triplets, help a small vision-language model ground expressions that require relational reasoning, compared with expressions that rely on frame position or attributes only? The study separates prompt-time relation injection from parameter-efficient fine-tuning to measure whether QLoRA alone closes the relational grounding gap, or whether structured scene context remains useful when the base model is adapted.
 
+## Table of Contents
+
+- [Approach Summary](#approach-summary)
+- [Repository Structure](#repository-structure)
+- [Environment Setup](#environment-setup)
+- [Data Preparation](#data-preparation)
+  - [Download RefCOCO / RefCOCO+ / RefCOCOg Annotations](#download-refcoco--refcoco--refcocog-annotations)
+  - [Download COCO train2014 Images](#download-coco-train2014-images)
+  - [Download Visual Genome Metadata](#download-visual-genome-metadata)
+  - [Run the Data Pipeline](#run-the-data-pipeline)
+  - [Classifier Validation History](#classifier-validation-history)
+- [Manual Classifier Validation](#manual-classifier-validation)
+- [Running the Experiments](#running-the-experiments)
+  - [Full Run Order](#full-run-order)
+  - [Condition A: Zero-Shot Baseline](#condition-a-zero-shot-baseline)
+  - [Condition B: Relation-Prompted Inference](#condition-b-relation-prompted-inference)
+  - [Smoke Tests and Proxy Troubleshooting](#smoke-tests-and-proxy-troubleshooting)
+  - [Condition C: QLoRA Fine-Tuning](#condition-c-qlora-fine-tuning)
+  - [Condition D: QLoRA Fine-Tuning With Relation Context](#condition-d-qlora-fine-tuning-with-relation-context)
+- [Evaluation](#evaluation)
+- [Results](#results)
+- [Accuracy by Condition](#accuracy-by-condition)
+- [LoRA Rank-Sweep Ablation](#lora-rank-sweep-ablation)
+  - [Key Finding](#key-finding)
+  - [Qualitative Examples](#qualitative-examples)
+- [Ablations](#ablations)
+  - [LoRA Rank Sweep](#lora-rank-sweep)
+  - [Number of Injected Relations](#number-of-injected-relations)
+- [Limitations](#limitations)
+- [Relation to Prior Work](#relation-to-prior-work)
+- [Hardware Notes](#hardware-notes)
+- [Citation](#citation)
+- [License](#license)
+- [Contact](#contact)
+
 ## Approach Summary
 
 - Join oracle Visual Genome relation triplets to RefCOCO, RefCOCO+, and RefCOCOg examples through shared COCO image ids.
@@ -653,4 +688,4 @@ MIT. See [LICENSE](LICENSE).
 
 ## Contact
 
-Mir Mohammad Khaleghi (email placeholder)
+Mir Mohammad Khaleghi (mamadkhaleghi1994@gmail.com)

@@ -6,6 +6,8 @@ __pycache__/
 .ruff_cache/
 .coverage
 .vscode/
+.codex/
+.agents/
 htmlcov/
 .venv/
 venv/
