@@ -54,6 +54,19 @@ This repository tests a targeted question in referring-expression comprehension:
 |   |-- __init__.py
 |   |-- test_utils.py
 |   `-- test_classify_expressions.py
+|-- scripts/
+|   |-- ablation_lora_rank_sweep.sh
+|   |-- ablation_vision_tower.sh
+|   |-- download_coco.sh
+|   |-- download_refcoco.sh
+|   |-- download_visual_genome.sh
+|   |-- evaluate_all.sh
+|   |-- prepare_data.sh
+|   |-- run_condition_a.sh
+|   |-- run_condition_b.sh
+|   |-- run_condition_c.sh
+|   |-- run_condition_d.sh
+|   `-- run_full_pipeline.sh
 |-- checkpoints/
 |   `-- .gitkeep
 `-- results/
@@ -400,11 +413,42 @@ results/predictions_condC_refcoco_val_attribute.jsonl
 
 Both QLoRA training scripts save resumable Hugging Face Trainer checkpoints every 50 update steps by default. Use `--save_steps N` to change the interval and `--save_total_limit N` to cap retained checkpoints (default: 3). Checkpoints include optimizer and scheduler state; the final LoRA adapter is still saved directly in `--output_dir` after training completes.
 
-To resume a specific run, repeat the original command with the same stable `--output_dir` and add `--resume_from_checkpoint auto`:
+`scripts/run_condition_c.sh` accepts only the `CONFIG`, `DATASET`, and `SPLIT` environment overrides; it does not forward a resume flag, and there is no separate resume-specific script. To resume that training run, invoke the underlying trainer directly with the same output directory and `--resume_from_checkpoint auto`:
+
+```bash
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    python finetune/train_qlora.py \
+  --config configs/config.yaml \
+  --dataset refcoco \
+  --split train \
+  --max_train_samples 4000 \
+  --lora_rank 8 \
+  --output_dir checkpoints/qlora_r8 \
+  --resume_from_checkpoint auto
+```
+
+After the resumed training finishes, run the inference loop from `scripts/run_condition_c.sh` separately; rerunning the wrapper itself would start training afresh.
+
+```bash
+for subset in relational positional attribute; do
+  env -u ALL_PROXY -u all_proxy \
+      -u HTTP_PROXY -u http_proxy \
+      -u HTTPS_PROXY -u https_proxy \
+      python prompting/finetuned_inference.py \
+    --config configs/config.yaml \
+    --dataset refcoco \
+    --split val \
+    --subset "$subset" \
+    --adapter_dir checkpoints/qlora_r8 \
+    --condition C
+done
+```
 
 For the same run through the Makefile, use `env -u ALL_PROXY -u all_proxy -u HTTP_PROXY -u http_proxy -u HTTPS_PROXY -u https_proxy make finetune DATASET=refcoco LORA_RANK=8 RESUME_FROM_CHECKPOINT=auto`.
 
-`auto` selects the latest `checkpoint-<step>` directory under `--output_dir`, or starts fresh if none exists. To select one checkpoint explicitly, pass its path instead, for example `--resume_from_checkpoint checkpoints/qlora_r8/checkpoint-150`. Omitting `--resume_from_checkpoint` starts a fresh run. The scripts log the selected mode, resolved checkpoint path, and resume step when available. Completed resumed runs also record the resolved checkpoint in the `resumed_from` column of `results/finetune_run_log.csv`; existing rows from the older five-column format are preserved with an empty value in that column.
+`auto` selects the latest `checkpoint-<step>` directory under `--output_dir`, or starts fresh if none exists. To select one checkpoint explicitly, pass its path instead, for example `--resume_from_checkpoint checkpoints/qlora_r8/checkpoint-150`. Omitting `--resume_from_checkpoint` starts a fresh run. The training scripts log the selected mode, resolved checkpoint path, and resume step when available. Completed resumed runs also record the resolved checkpoint in the `resumed_from` column of `results/finetune_run_log.csv`; existing rows from the older five-column format are preserved with an empty value in that column.
 
 The training scripts append completed-run metadata to `results/finetune_run_log.csv` and save adapters under `checkpoints/`.
 
@@ -416,11 +460,42 @@ Train the default rank-8 context adapter and run inference for all three subsets
 bash scripts/run_condition_d.sh
 ```
 
-To resume a specific run, repeat the original command with the same stable `--output_dir` and add `--resume_from_checkpoint auto`:
+`scripts/run_condition_d.sh` accepts only the `CONFIG`, `DATASET`, and `SPLIT` environment overrides; it does not forward a resume flag, and there is no separate resume-specific script. To resume that training run, invoke the underlying context trainer directly with the same output directory and `--resume_from_checkpoint auto`:
+
+```bash
+env -u ALL_PROXY -u all_proxy \
+    -u HTTP_PROXY -u http_proxy \
+    -u HTTPS_PROXY -u https_proxy \
+    python finetune/train_qlora_with_context.py \
+  --config configs/config.yaml \
+  --dataset refcoco \
+  --split train \
+  --max_train_samples 4000 \
+  --lora_rank 8 \
+  --output_dir checkpoints/qlora_context_r8 \
+  --resume_from_checkpoint auto
+```
+
+After the resumed training finishes, run the inference loop from `scripts/run_condition_d.sh` separately; rerunning the wrapper itself would start training afresh.
+
+```bash
+for subset in relational positional attribute; do
+  env -u ALL_PROXY -u all_proxy \
+      -u HTTP_PROXY -u http_proxy \
+      -u HTTPS_PROXY -u https_proxy \
+      python prompting/finetuned_inference.py \
+    --config configs/config.yaml \
+    --dataset refcoco \
+    --split val \
+    --subset "$subset" \
+    --adapter_dir checkpoints/qlora_context_r8 \
+    --condition D
+done
+```
 
 For the same context run through the Makefile, use `env -u ALL_PROXY -u all_proxy -u HTTP_PROXY -u http_proxy -u HTTPS_PROXY -u https_proxy make finetune-context DATASET=refcoco LORA_RANK=8 RESUME_FROM_CHECKPOINT=auto`.
 
-`auto` selects the latest `checkpoint-<step>` directory under `--output_dir`, or starts fresh if none exists. To select one checkpoint explicitly, pass its path instead, for example `--resume_from_checkpoint checkpoints/qlora_context_r8/checkpoint-150`. Omitting `--resume_from_checkpoint` starts a fresh run. The scripts log the selected mode, resolved checkpoint path, and resume step when available. Completed resumed runs also record the resolved checkpoint in the `resumed_from` column of `results/finetune_run_log.csv`; existing rows from the older five-column format are preserved with an empty value in that column.
+`auto` selects the latest `checkpoint-<step>` directory under `--output_dir`, or starts fresh if none exists. To select one checkpoint explicitly, pass its path instead, for example `--resume_from_checkpoint checkpoints/qlora_context_r8/checkpoint-150`. Omitting `--resume_from_checkpoint` starts a fresh run. The training scripts log the selected mode, resolved checkpoint path, and resume step when available. Completed resumed runs also record the resolved checkpoint in the `resumed_from` column of `results/finetune_run_log.csv`; existing rows from the older five-column format are preserved with an empty value in that column.
 
 The base-run script above also runs inference with the default rank-8 context adapter for all three subsets.
 
