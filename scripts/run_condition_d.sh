@@ -15,6 +15,7 @@ env -u ALL_PROXY -u all_proxy \
   --split train \
   --max_train_samples 4000 \
   --lora_rank 8 \
+  --max_relations 10 \
   --output_dir checkpoints/qlora_context_r8
 
 for subset in relational positional attribute; do

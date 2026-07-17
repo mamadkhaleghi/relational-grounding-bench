@@ -306,6 +306,8 @@ Run the full sequence from the repository root with:
 bash scripts/run_full_pipeline.sh
 ```
 
+The full-pipeline script pauses after data preparation so the manual classifier audit can be completed before experiments continue. If the audit has already been completed and its results are saved, bypass only that pause with `SKIP_MANUAL_AUDIT=1 bash scripts/run_full_pipeline.sh`.
+
 Use the script references in the subsections below when you need the standard runs or ablation settings.
 
 ### Condition A: Zero-Shot Baseline
@@ -472,6 +474,7 @@ env -u ALL_PROXY -u all_proxy \
   --split train \
   --max_train_samples 4000 \
   --lora_rank 8 \
+  --max_relations 10 \
   --output_dir checkpoints/qlora_context_r8 \
   --resume_from_checkpoint auto
 ```
