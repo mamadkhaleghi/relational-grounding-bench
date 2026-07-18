@@ -10,6 +10,16 @@ from finetune.train_qlora import (
     resolve_resume_checkpoint,
 )
 
+CURRENT_RUN_LOG_FIELDNAMES = [
+    "rank",
+    "freeze_vision_tower",
+    "peak_mem_mb",
+    "train_seconds",
+    "output_dir",
+    "resumed_from",
+    "max_train_samples",
+]
+
 
 class RecordingLogger:
     def __init__(self):
@@ -125,7 +135,13 @@ def test_resume_from_explicit_checkpoint_rejects_missing_directory(tmp_path):
         resolve_resume_checkpoint(str(missing), tmp_path, RecordingLogger())
 
 
-def test_resume_run_log_migrates_legacy_rows_and_records_checkpoint(tmp_path):
+def read_run_log(log_path):
+    with log_path.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle)
+        return reader.fieldnames, list(reader)
+
+
+def test_resume_run_log_migrates_legacy_v1_rows(tmp_path):
     log_path = tmp_path / "finetune_run_log.csv"
     log_path.write_text(
         "rank,freeze_vision_tower,peak_mem_mb,train_seconds,output_dir\n"
@@ -144,15 +160,135 @@ def test_resume_run_log_migrates_legacy_rows_and_records_checkpoint(tmp_path):
         resumed_from=str(checkpoint),
     )
 
-    with log_path.open(newline="", encoding="utf-8") as handle:
-        rows = list(csv.DictReader(handle))
+    fieldnames, rows = read_run_log(log_path)
 
-    assert rows[0] == {
-        "rank": "4",
-        "freeze_vision_tower": "True",
-        "peak_mem_mb": "100.00",
-        "train_seconds": "10.00",
-        "output_dir": "checkpoints/legacy",
-        "resumed_from": "",
-    }
-    assert rows[1]["resumed_from"] == str(checkpoint)
+    assert fieldnames == CURRENT_RUN_LOG_FIELDNAMES
+    assert rows == [
+        {
+            "rank": "4",
+            "freeze_vision_tower": "True",
+            "peak_mem_mb": "100.00",
+            "train_seconds": "10.00",
+            "output_dir": "checkpoints/legacy",
+            "resumed_from": "",
+            "max_train_samples": "",
+        },
+        {
+            "rank": "8",
+            "freeze_vision_tower": "True",
+            "peak_mem_mb": "200.00",
+            "train_seconds": "20.00",
+            "output_dir": str(tmp_path / "adapter"),
+            "resumed_from": str(checkpoint),
+            "max_train_samples": "",
+        },
+    ]
+
+
+def test_resume_run_log_migrates_legacy_v2_rows(tmp_path):
+    log_path = tmp_path / "finetune_run_log.csv"
+    log_path.write_text(
+        "rank,freeze_vision_tower,peak_mem_mb,train_seconds,output_dir,resumed_from\n"
+        "4,False,100.00,10.00,checkpoints/legacy,checkpoint-10\n",
+        encoding="utf-8",
+    )
+
+    append_run_log(
+        tmp_path,
+        rank=8,
+        freeze=True,
+        peak_mem_mb=200.0,
+        train_seconds=20.0,
+        output_dir=tmp_path / "adapter",
+        resumed_from="checkpoint-20",
+        max_train_samples=4000,
+    )
+
+    fieldnames, rows = read_run_log(log_path)
+
+    assert fieldnames == CURRENT_RUN_LOG_FIELDNAMES
+    assert rows == [
+        {
+            "rank": "4",
+            "freeze_vision_tower": "False",
+            "peak_mem_mb": "100.00",
+            "train_seconds": "10.00",
+            "output_dir": "checkpoints/legacy",
+            "resumed_from": "checkpoint-10",
+            "max_train_samples": "",
+        },
+        {
+            "rank": "8",
+            "freeze_vision_tower": "True",
+            "peak_mem_mb": "200.00",
+            "train_seconds": "20.00",
+            "output_dir": str(tmp_path / "adapter"),
+            "resumed_from": "checkpoint-20",
+            "max_train_samples": "4000",
+        },
+    ]
+
+
+def test_resume_run_log_appends_to_current_schema(tmp_path):
+    log_path = tmp_path / "finetune_run_log.csv"
+    log_path.write_text(
+        ",".join(CURRENT_RUN_LOG_FIELDNAMES)
+        + "\n4,False,100.00,10.00,checkpoints/current,checkpoint-10,2000\n",
+        encoding="utf-8",
+    )
+
+    append_run_log(
+        tmp_path,
+        rank=8,
+        freeze=True,
+        peak_mem_mb=200.0,
+        train_seconds=20.0,
+        output_dir=tmp_path / "adapter",
+        resumed_from=None,
+        max_train_samples=None,
+    )
+
+    fieldnames, rows = read_run_log(log_path)
+
+    assert fieldnames == CURRENT_RUN_LOG_FIELDNAMES
+    assert rows == [
+        {
+            "rank": "4",
+            "freeze_vision_tower": "False",
+            "peak_mem_mb": "100.00",
+            "train_seconds": "10.00",
+            "output_dir": "checkpoints/current",
+            "resumed_from": "checkpoint-10",
+            "max_train_samples": "2000",
+        },
+        {
+            "rank": "8",
+            "freeze_vision_tower": "True",
+            "peak_mem_mb": "200.00",
+            "train_seconds": "20.00",
+            "output_dir": str(tmp_path / "adapter"),
+            "resumed_from": "",
+            "max_train_samples": "",
+        },
+    ]
+
+
+def test_resume_run_log_rejects_reordered_schema(tmp_path):
+    log_path = tmp_path / "finetune_run_log.csv"
+    reordered_fieldnames = CURRENT_RUN_LOG_FIELDNAMES.copy()
+    reordered_fieldnames[0], reordered_fieldnames[1] = (
+        reordered_fieldnames[1],
+        reordered_fieldnames[0],
+    )
+    log_path.write_text(",".join(reordered_fieldnames) + "\n", encoding="utf-8")
+
+    with pytest.raises(InputFileError, match="Unexpected columns"):
+        append_run_log(
+            tmp_path,
+            rank=8,
+            freeze=True,
+            peak_mem_mb=200.0,
+            train_seconds=20.0,
+            output_dir=tmp_path / "adapter",
+            resumed_from=None,
+        )

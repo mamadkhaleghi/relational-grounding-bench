@@ -529,7 +529,7 @@ def append_run_log(
     results_dir.mkdir(parents=True, exist_ok=True)
     log_path = results_dir / "finetune_run_log.csv"
     write_header = not log_path.exists() or log_path.stat().st_size == 0
-    fieldnames = [
+    current_fieldnames = [
         "rank",
         "freeze_vision_tower",
         "peak_mem_mb",
@@ -538,27 +538,30 @@ def append_run_log(
         "resumed_from",
         "max_train_samples",
     ]
-    legacy_fieldnames = fieldnames[:-1]
+    legacy_fieldnames_v1 = current_fieldnames[:-2]
+    legacy_fieldnames_v2 = current_fieldnames[:-1]
 
     if not write_header:
         with log_path.open(newline="", encoding="utf-8") as handle:
             reader = csv.DictReader(handle)
             existing_fieldnames = reader.fieldnames
             legacy_rows = list(reader)
-        if existing_fieldnames == legacy_fieldnames:
+        if existing_fieldnames in (legacy_fieldnames_v1, legacy_fieldnames_v2):
             migrated_path = log_path.with_suffix(f"{log_path.suffix}.tmp")
             with migrated_path.open("w", newline="", encoding="utf-8") as handle:
-                writer = csv.DictWriter(handle, fieldnames=fieldnames)
+                writer = csv.DictWriter(
+                    handle, fieldnames=current_fieldnames, restval=""
+                )
                 writer.writeheader()
                 writer.writerows(legacy_rows)
             migrated_path.replace(log_path)
-        elif existing_fieldnames != fieldnames:
+        elif existing_fieldnames != current_fieldnames:
             raise InputFileError(
                 f"Unexpected columns in run log '{log_path}': {existing_fieldnames}."
             )
 
     with log_path.open("a", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer = csv.DictWriter(handle, fieldnames=current_fieldnames)
         if write_header:
             writer.writeheader()
         writer.writerow(
